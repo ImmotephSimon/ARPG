@@ -5,13 +5,15 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "GameplayMessageRuntime/Public/GameFramework/GameplayMessageSubsystem.h"
-#include "Runtime/Engine/Classes/Engine/GameInstance.h"
-#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
+#include "GameFramework/GameplayMessageSubsystem.h"
+#include "Engine/GameInstance.h"
+#include "GameplayTagContainer.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeGameplayMessageSubsystem() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_UGameInstanceSubsystem();
 GAMEPLAYMESSAGERUNTIME_API UClass* Z_Construct_UClass_UGameplayMessageSubsystem();
 GAMEPLAYMESSAGERUNTIME_API UClass* Z_Construct_UClass_UGameplayMessageSubsystem_NoRegister();
@@ -19,21 +21,17 @@ GAMEPLAYMESSAGERUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayMes
 GAMEPLAYMESSAGERUNTIME_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayMessageListenerHandle();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_GameplayMessageRuntime();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin ScriptStruct FGameplayMessageListenerHandle
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle;
+// ********** Begin ScriptStruct FGameplayMessageListenerHandle ************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle;
 class UScriptStruct* FGameplayMessageListenerHandle::StaticStruct()
 {
-	if (!Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle.OuterSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGameplayMessageListenerHandle, (UObject*)Z_Construct_UPackage__Script_GameplayMessageRuntime(), TEXT("GameplayMessageListenerHandle"));
+		Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGameplayMessageListenerHandle, (UObject*)Z_Construct_UPackage__Script_GameplayMessageRuntime(), TEXT("GameplayMessageListenerHandle"));
 	}
-	return Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle.OuterSingleton;
-}
-template<> GAMEPLAYMESSAGERUNTIME_API UScriptStruct* StaticStruct<FGameplayMessageListenerHandle>()
-{
-	return FGameplayMessageListenerHandle::StaticStruct();
+	return Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle.OuterSingleton;
 }
 struct Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics
 {
@@ -69,7 +67,7 @@ struct Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics
 	static const UECodeGen_Private::FStructParams StructParams;
 };
 const UECodeGen_Private::FWeakObjectPropertyParams Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::NewProp_Subsystem = { "Subsystem", nullptr, (EPropertyFlags)0x0044000000002000, UECodeGen_Private::EPropertyGenFlags::WeakObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameplayMessageListenerHandle, Subsystem), Z_Construct_UClass_UGameplayMessageSubsystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Subsystem_MetaData), NewProp_Subsystem_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::NewProp_Channel = { "Channel", nullptr, (EPropertyFlags)0x0040000000002000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameplayMessageListenerHandle, Channel), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Channel_MetaData), NewProp_Channel_MetaData) }; // 1298103297
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::NewProp_Channel = { "Channel", nullptr, (EPropertyFlags)0x0040000000002000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameplayMessageListenerHandle, Channel), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Channel_MetaData), NewProp_Channel_MetaData) }; // 133831994
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::NewProp_ID = { "ID", nullptr, (EPropertyFlags)0x0040000000002000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FGameplayMessageListenerHandle, ID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ID_MetaData), NewProp_ID_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::NewProp_Subsystem,
@@ -92,27 +90,23 @@ const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayMessag
 };
 UScriptStruct* Z_Construct_UScriptStruct_FGameplayMessageListenerHandle()
 {
-	if (!Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle.InnerSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle.InnerSingleton)
 	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle.InnerSingleton, Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::StructParams);
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle.InnerSingleton, Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle.InnerSingleton;
+	return Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle.InnerSingleton;
 }
-// End ScriptStruct FGameplayMessageListenerHandle
+// ********** End ScriptStruct FGameplayMessageListenerHandle **************************************
 
-// Begin ScriptStruct FGameplayMessageListenerData
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_GameplayMessageListenerData;
+// ********** Begin ScriptStruct FGameplayMessageListenerData **************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData;
 class UScriptStruct* FGameplayMessageListenerData::StaticStruct()
 {
-	if (!Z_Registration_Info_UScriptStruct_GameplayMessageListenerData.OuterSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_GameplayMessageListenerData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGameplayMessageListenerData, (UObject*)Z_Construct_UPackage__Script_GameplayMessageRuntime(), TEXT("GameplayMessageListenerData"));
+		Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGameplayMessageListenerData, (UObject*)Z_Construct_UPackage__Script_GameplayMessageRuntime(), TEXT("GameplayMessageListenerData"));
 	}
-	return Z_Registration_Info_UScriptStruct_GameplayMessageListenerData.OuterSingleton;
-}
-template<> GAMEPLAYMESSAGERUNTIME_API UScriptStruct* StaticStruct<FGameplayMessageListenerData>()
-{
-	return FGameplayMessageListenerData::StaticStruct();
+	return Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData.OuterSingleton;
 }
 struct Z_Construct_UScriptStruct_FGameplayMessageListenerData_Statics
 {
@@ -148,15 +142,15 @@ const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGameplayMessag
 };
 UScriptStruct* Z_Construct_UScriptStruct_FGameplayMessageListenerData()
 {
-	if (!Z_Registration_Info_UScriptStruct_GameplayMessageListenerData.InnerSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData.InnerSingleton)
 	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_GameplayMessageListenerData.InnerSingleton, Z_Construct_UScriptStruct_FGameplayMessageListenerData_Statics::StructParams);
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData.InnerSingleton, Z_Construct_UScriptStruct_FGameplayMessageListenerData_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_GameplayMessageListenerData.InnerSingleton;
+	return Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData.InnerSingleton;
 }
-// End ScriptStruct FGameplayMessageListenerData
+// ********** End ScriptStruct FGameplayMessageListenerData ****************************************
 
-// Begin Class UGameplayMessageSubsystem Function K2_BroadcastMessage
+// ********** Begin Class UGameplayMessageSubsystem Function K2_BroadcastMessage *******************
 struct Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics
 {
 	struct GameplayMessageSubsystem_eventK2_BroadcastMessage_Parms
@@ -188,14 +182,14 @@ struct Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Stati
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::NewProp_Channel = { "Channel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GameplayMessageSubsystem_eventK2_BroadcastMessage_Parms, Channel), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::NewProp_Channel = { "Channel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GameplayMessageSubsystem_eventK2_BroadcastMessage_Parms, Channel), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 133831994
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GameplayMessageSubsystem_eventK2_BroadcastMessage_Parms, Message), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Message_MetaData), NewProp_Message_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::NewProp_Channel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::NewProp_Message,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGameplayMessageSubsystem, nullptr, "K2_BroadcastMessage", nullptr, nullptr, Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::PropPointers), sizeof(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::GameplayMessageSubsystem_eventK2_BroadcastMessage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UGameplayMessageSubsystem, nullptr, "K2_BroadcastMessage", Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::PropPointers), sizeof(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::GameplayMessageSubsystem_eventK2_BroadcastMessage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage_Statics::GameplayMessageSubsystem_eventK2_BroadcastMessage_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage()
 {
@@ -206,9 +200,9 @@ UFunction* Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage()
 	}
 	return ReturnFunction;
 }
-// End Class UGameplayMessageSubsystem Function K2_BroadcastMessage
+// ********** End Class UGameplayMessageSubsystem Function K2_BroadcastMessage *********************
 
-// Begin Class UGameplayMessageSubsystem
+// ********** Begin Class UGameplayMessageSubsystem ************************************************
 void UGameplayMessageSubsystem::StaticRegisterNativesUGameplayMessageSubsystem()
 {
 	UClass* Class = UGameplayMessageSubsystem::StaticClass();
@@ -217,10 +211,34 @@ void UGameplayMessageSubsystem::StaticRegisterNativesUGameplayMessageSubsystem()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UGameplayMessageSubsystem);
+FClassRegistrationInfo Z_Registration_Info_UClass_UGameplayMessageSubsystem;
+UClass* UGameplayMessageSubsystem::GetPrivateStaticClass()
+{
+	using TClass = UGameplayMessageSubsystem;
+	if (!Z_Registration_Info_UClass_UGameplayMessageSubsystem.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("GameplayMessageSubsystem"),
+			Z_Registration_Info_UClass_UGameplayMessageSubsystem.InnerSingleton,
+			StaticRegisterNativesUGameplayMessageSubsystem,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UGameplayMessageSubsystem.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UGameplayMessageSubsystem_NoRegister()
 {
-	return UGameplayMessageSubsystem::StaticClass();
+	return UGameplayMessageSubsystem::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UGameplayMessageSubsystem_Statics
 {
@@ -238,7 +256,7 @@ struct Z_Construct_UClass_UGameplayMessageSubsystem_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage, "K2_BroadcastMessage" }, // 4235780623
+		{ &Z_Construct_UFunction_UGameplayMessageSubsystem_K2_BroadcastMessage, "K2_BroadcastMessage" }, // 1868717763
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -274,29 +292,26 @@ UClass* Z_Construct_UClass_UGameplayMessageSubsystem()
 	}
 	return Z_Registration_Info_UClass_UGameplayMessageSubsystem.OuterSingleton;
 }
-template<> GAMEPLAYMESSAGERUNTIME_API UClass* StaticClass<UGameplayMessageSubsystem>()
-{
-	return UGameplayMessageSubsystem::StaticClass();
-}
 UGameplayMessageSubsystem::UGameplayMessageSubsystem() {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UGameplayMessageSubsystem);
 UGameplayMessageSubsystem::~UGameplayMessageSubsystem() {}
-// End Class UGameplayMessageSubsystem
+// ********** End Class UGameplayMessageSubsystem **************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h__Script_GameplayMessageRuntime_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FGameplayMessageListenerHandle::StaticStruct, Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::NewStructOps, TEXT("GameplayMessageListenerHandle"), &Z_Registration_Info_UScriptStruct_GameplayMessageListenerHandle, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameplayMessageListenerHandle), 2295597265U) },
-		{ FGameplayMessageListenerData::StaticStruct, Z_Construct_UScriptStruct_FGameplayMessageListenerData_Statics::NewStructOps, TEXT("GameplayMessageListenerData"), &Z_Registration_Info_UScriptStruct_GameplayMessageListenerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameplayMessageListenerData), 1223272090U) },
+		{ FGameplayMessageListenerHandle::StaticStruct, Z_Construct_UScriptStruct_FGameplayMessageListenerHandle_Statics::NewStructOps, TEXT("GameplayMessageListenerHandle"), &Z_Registration_Info_UScriptStruct_FGameplayMessageListenerHandle, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameplayMessageListenerHandle), 3995224201U) },
+		{ FGameplayMessageListenerData::StaticStruct, Z_Construct_UScriptStruct_FGameplayMessageListenerData_Statics::NewStructOps, TEXT("GameplayMessageListenerData"), &Z_Registration_Info_UScriptStruct_FGameplayMessageListenerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGameplayMessageListenerData), 542084765U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UGameplayMessageSubsystem, UGameplayMessageSubsystem::StaticClass, TEXT("UGameplayMessageSubsystem"), &Z_Registration_Info_UClass_UGameplayMessageSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGameplayMessageSubsystem), 1007149444U) },
+		{ Z_Construct_UClass_UGameplayMessageSubsystem, UGameplayMessageSubsystem::StaticClass, TEXT("UGameplayMessageSubsystem"), &Z_Registration_Info_UClass_UGameplayMessageSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGameplayMessageSubsystem), 3032581521U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h_1523141913(TEXT("/Script/GameplayMessageRuntime"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h__Script_GameplayMessageRuntime_4119142311(TEXT("/Script/GameplayMessageRuntime"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h__Script_GameplayMessageRuntime_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h__Script_GameplayMessageRuntime_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h__Script_GameplayMessageRuntime_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageSubsystem_h__Script_GameplayMessageRuntime_Statics::ScriptStructInfo),
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

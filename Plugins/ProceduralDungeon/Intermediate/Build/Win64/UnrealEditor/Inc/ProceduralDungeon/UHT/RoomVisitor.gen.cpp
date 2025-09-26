@@ -5,19 +5,21 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Public/RoomVisitor.h"
+#include "RoomVisitor.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeRoomVisitor() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UInterface();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_ARoomLevel_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomVisitor();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomVisitor_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Interface URoomVisitor Function OnRoomEnter
+// ********** Begin Interface URoomVisitor Function OnRoomEnter ************************************
 struct RoomVisitor_eventOnRoomEnter_Parms
 {
 	ARoomLevel* RoomLevel;
@@ -66,7 +68,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URoomV
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::NewProp_RoomLevel,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URoomVisitor, nullptr, "OnRoomEnter", nullptr, nullptr, Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::PropPointers), sizeof(RoomVisitor_eventOnRoomEnter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_URoomVisitor, nullptr, "OnRoomEnter", Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::PropPointers), sizeof(RoomVisitor_eventOnRoomEnter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomVisitor_OnRoomEnter_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(RoomVisitor_eventOnRoomEnter_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_URoomVisitor_OnRoomEnter()
 {
@@ -85,9 +87,9 @@ DEFINE_FUNCTION(IRoomVisitor::execOnRoomEnter)
 	P_THIS->OnRoomEnter_Implementation(Z_Param_RoomLevel);
 	P_NATIVE_END;
 }
-// End Interface URoomVisitor Function OnRoomEnter
+// ********** End Interface URoomVisitor Function OnRoomEnter **************************************
 
-// Begin Interface URoomVisitor Function OnRoomExit
+// ********** Begin Interface URoomVisitor Function OnRoomExit *************************************
 struct RoomVisitor_eventOnRoomExit_Parms
 {
 	ARoomLevel* RoomLevel;
@@ -136,7 +138,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URoomV
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::NewProp_RoomLevel,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URoomVisitor, nullptr, "OnRoomExit", nullptr, nullptr, Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::PropPointers), sizeof(RoomVisitor_eventOnRoomExit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_URoomVisitor, nullptr, "OnRoomExit", Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::PropPointers), sizeof(RoomVisitor_eventOnRoomExit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomVisitor_OnRoomExit_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(RoomVisitor_eventOnRoomExit_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_URoomVisitor_OnRoomExit()
 {
@@ -155,9 +157,9 @@ DEFINE_FUNCTION(IRoomVisitor::execOnRoomExit)
 	P_THIS->OnRoomExit_Implementation(Z_Param_RoomLevel);
 	P_NATIVE_END;
 }
-// End Interface URoomVisitor Function OnRoomExit
+// ********** End Interface URoomVisitor Function OnRoomExit ***************************************
 
-// Begin Interface URoomVisitor
+// ********** Begin Interface URoomVisitor *********************************************************
 void URoomVisitor::StaticRegisterNativesURoomVisitor()
 {
 	UClass* Class = URoomVisitor::StaticClass();
@@ -167,10 +169,34 @@ void URoomVisitor::StaticRegisterNativesURoomVisitor()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(URoomVisitor);
+FClassRegistrationInfo Z_Registration_Info_UClass_URoomVisitor;
+UClass* URoomVisitor::GetPrivateStaticClass()
+{
+	using TClass = URoomVisitor;
+	if (!Z_Registration_Info_UClass_URoomVisitor.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("RoomVisitor"),
+			Z_Registration_Info_UClass_URoomVisitor.InnerSingleton,
+			StaticRegisterNativesURoomVisitor,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_URoomVisitor.InnerSingleton;
+}
 UClass* Z_Construct_UClass_URoomVisitor_NoRegister()
 {
-	return URoomVisitor::StaticClass();
+	return URoomVisitor::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_URoomVisitor_Statics
 {
@@ -178,12 +204,15 @@ struct Z_Construct_UClass_URoomVisitor_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "ModuleRelativePath", "Public/RoomVisitor.h" },
+#if !UE_BUILD_SHIPPING
+		{ "Tooltip", "Interface which adds events to an actor (or a component) when the actor enters/exits a dungeon room." },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_URoomVisitor_OnRoomEnter, "OnRoomEnter" }, // 1467074019
-		{ &Z_Construct_UFunction_URoomVisitor_OnRoomExit, "OnRoomExit" }, // 3544903353
+		{ &Z_Construct_UFunction_URoomVisitor_OnRoomEnter, "OnRoomEnter" }, // 3469763634
+		{ &Z_Construct_UFunction_URoomVisitor_OnRoomExit, "OnRoomExit" }, // 1610290513
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -219,25 +248,21 @@ UClass* Z_Construct_UClass_URoomVisitor()
 	}
 	return Z_Registration_Info_UClass_URoomVisitor.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<URoomVisitor>()
-{
-	return URoomVisitor::StaticClass();
-}
 URoomVisitor::URoomVisitor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(URoomVisitor);
-URoomVisitor::~URoomVisitor() {}
-// End Interface URoomVisitor
+// ********** End Interface URoomVisitor ***********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_URoomVisitor, URoomVisitor::StaticClass, TEXT("URoomVisitor"), &Z_Registration_Info_UClass_URoomVisitor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomVisitor), 4091944047U) },
+		{ Z_Construct_UClass_URoomVisitor, URoomVisitor::StaticClass, TEXT("URoomVisitor"), &Z_Registration_Info_UClass_URoomVisitor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomVisitor), 3888036247U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h_3957904702(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h__Script_ProceduralDungeon_2785387930(TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisitor_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

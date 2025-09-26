@@ -5,19 +5,23 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "DungeonGenerator.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ScriptMacros.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class IReadOnlyRoom;
-class URoomData;
-struct FDoorDef;
 #ifdef PROCEDURALDUNGEON_DungeonGenerator_generated_h
 #error "DungeonGenerator.generated.h already included, missing '#pragma once' in DungeonGenerator.h"
 #endif
 #define PROCEDURALDUNGEON_DungeonGenerator_generated_h
 
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+class IReadOnlyRoom;
+class URoomData;
+struct FDoorDef;
+
+// ********** Begin Class ADungeonGenerator ********************************************************
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool ContinueToAddRoom_Implementation(); \
 	virtual bool IsValidDungeon_Implementation(); \
 	virtual URoomData* ChooseNextRoomData_Implementation(const URoomData* CurrentRoom, TScriptInterface<IReadOnlyRoom> const& CurrentRoomInstance, FDoorDef const& DoorData, int32& DoorIndex); \
@@ -38,44 +42,47 @@ struct FDoorDef;
 	DECLARE_FUNCTION(execChooseFirstRoomData);
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_CALLBACK_WRAPPERS
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_INCLASS_NO_PURE_DECLS \
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_CALLBACK_WRAPPERS
+PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_ADungeonGenerator_NoRegister();
+
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADungeonGenerator(); \
 	friend struct Z_Construct_UClass_ADungeonGenerator_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_ADungeonGenerator_NoRegister(); \
 public: \
-	DECLARE_CLASS(ADungeonGenerator, ADungeonGeneratorBase, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProceduralDungeon"), NO_API) \
+	DECLARE_CLASS2(ADungeonGenerator, ADungeonGeneratorBase, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProceduralDungeon"), Z_Construct_UClass_ADungeonGenerator_NoRegister) \
 	DECLARE_SERIALIZER(ADungeonGenerator)
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_ENHANCED_CONSTRUCTORS \
-private: \
-	/** Private move- and copy-constructors, should never be used */ \
-	ADungeonGenerator(ADungeonGenerator&&); \
-	ADungeonGenerator(const ADungeonGenerator&); \
-public: \
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_ENHANCED_CONSTRUCTORS \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	ADungeonGenerator(ADungeonGenerator&&) = delete; \
+	ADungeonGenerator(const ADungeonGenerator&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ADungeonGenerator); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ADungeonGenerator); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ADungeonGenerator) \
 	NO_API virtual ~ADungeonGenerator();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_35_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_GENERATED_BODY \
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_18_PROLOG
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_CALLBACK_WRAPPERS \
-	FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_38_ENHANCED_CONSTRUCTORS \
+	FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_CALLBACK_WRAPPERS \
+	FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_INCLASS_NO_PURE_DECLS \
+	FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<class ADungeonGenerator>();
+class ADungeonGenerator;
+
+// ********** End Class ADungeonGenerator **********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h
-
+#define CURRENT_FILE_ID FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

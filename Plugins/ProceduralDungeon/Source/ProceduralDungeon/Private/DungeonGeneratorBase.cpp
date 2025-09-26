@@ -1,26 +1,9 @@
-/*
- * MIT License
- *
- * Copyright (c) 2019-2024 Benoit Pelletier
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+// Copyright Benoit Pelletier 2019 - 2025 All Rights Reserved.
+//
+// This software is available under different licenses depending on the source from which it was obtained:
+// - The Fab EULA (https://fab.com/eula) applies when obtained from the Fab marketplace.
+// - The CeCILL-C license (https://cecill.info/licences/Licence_CeCILL-C_V1-en.html) applies when obtained from any other source.
+// Please refer to the accompanying LICENSE file for further details.
 
 #include "DungeonGeneratorBase.h"
 #include "Engine/Engine.h" // GEngine
@@ -29,18 +12,48 @@
 #include "NavigationSystem.h"
 #include "RoomData.h"
 #include "Room.h"
+#include "RoomConnection.h"
 #include "Door.h"
 #include "ProceduralDungeonUtils.h"
 #include "ProceduralDungeonLog.h"
 #include "DungeonGraph.h"
 #include "Components/PrimitiveComponent.h"
 #include "Utils/ReplicationUtils.h"
-
-uint32 ADungeonGeneratorBase::GeneratorCount = 0;
+#include "ProceduralDungeonCustomVersion.h"
+#include "Serialization/MemoryReader.h"
+#include "Serialization/MemoryWriter.h"
+#include "Serialization/StructuredArchive.h"
+#include "Serialization/ObjectAndNameAsStringProxyArchive.h"
+#include "DungeonSaveProxyArchive.h"
+#include "Utils/DungeonSaveUtils.h"
+#include "DrawDebugHelpers.h"
+#include "Utils/CompatUtils.h"
 
 #if UE_VERSION_OLDER_THAN(5, 5, 0)
-#define SetNetUpdateFrequency(X) NetUpdateFrequency = X
+	#define SetNetUpdateFrequency(X) NetUpdateFrequency = X
 #endif
+
+FArchive& operator<<(FArchive& Ar, FDungeonSaveData& Data)
+{
+	FStructuredArchiveFromArchive(Ar).GetSlot() << Data;
+	return Ar;
+}
+
+void operator<<(FStructuredArchiveSlot Slot, FDungeonSaveData& Data)
+{
+	FStructuredArchive::FRecord DungeonRecord = Slot.EnterRecord();
+	DungeonRecord.EnterField(AR_FIELD_NAME("GeneratorId")) << Data.GeneratorId;
+	DungeonRecord.EnterField(AR_FIELD_NAME("Data")) << Data.Data;
+
+	if (IsSaving(Slot))
+	{
+		DungeonLog_Debug("Serialized dungeon into saved data: %s", *Data.GeneratorId.ToString());
+	}
+	else
+	{
+		DungeonLog_Debug("Deserialized dungeon from saved data: %s", *Data.GeneratorId.ToString());
+	}
+}
 
 // Sets default values
 ADungeonGeneratorBase::ADungeonGeneratorBase()
@@ -49,9 +62,8 @@ ADungeonGeneratorBase::ADungeonGeneratorBase()
 	PrimaryActorTick.bCanEverTick = true;
 
 	SeedType = ESeedType::Random;
-	Seed = 123456789; // default Seed
+	Seed = 123456789;		// default Seed
 	SeedIncrement = 123456; // default Seed increment
-	UniqueId = GeneratorCount++; // TODO: make it better than a static increment. It can be increased very quickly in editor when we move an actor.
 	bUseGeneratorTransform = false;
 
 	bAlwaysRelevant = true;
@@ -71,7 +83,6 @@ void ADungeonGeneratorBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
 	FDoRepLifetimeParams Params;
 	Params.bIsPushBased = true;
 	DOREPLIFETIME_WITH_PARAMS(ADungeonGeneratorBase, Seed, Params);
-	DOREPLIFETIME_WITH_PARAMS(ADungeonGeneratorBase, Generation, Params);
 }
 
 bool ADungeonGeneratorBase::ReplicateSubobjects(UActorChannel* Channel, FOutBunch* Bunch, FReplicationFlags* RepFlags)
@@ -81,6 +92,107 @@ bool ADungeonGeneratorBase::ReplicateSubobjects(UActorChannel* Channel, FOutBunc
 	return bWroteSomething;
 }
 
+void ADungeonGeneratorBase::SaveDungeon(FDungeonSaveData& SaveData)
+{
+	if (!HasAnyFlags(RF_WasLoaded))
+	{
+		DungeonLog_Error("Dungeon is not saveable: it has been spawned at runtime. Dungeon Generator must be placed in level to have a stable GUID (to make it saveable).");
+		return;
+	}
+
+	SaveData.GeneratorId = Id;
+	SaveData.Data.Reset(0);
+
+	FMemoryWriter MemWriter(SaveData.Data);
+	SerializeDungeon(MemWriter);
+}
+
+void ADungeonGeneratorBase::LoadDungeon(const FDungeonSaveData& SaveData)
+{
+	if (SaveData.GeneratorId != Id)
+	{
+		DungeonLog_Error("Can't load saved data for dungeon generator %s: saved generator mismatch (%s)", *Id.ToString(), *SaveData.GeneratorId.ToString());
+		return;
+	}
+
+	FMemoryReader MemReader(SaveData.Data);
+	SerializeDungeon(MemReader);
+}
+
+void ADungeonGeneratorBase::SerializeDungeon(FArchive& Archive)
+{
+	FDungeonSaveProxyArchive ProxyArchive(Archive);
+
+	TUniquePtr<FArchiveFormatterType> Formatter = CreateArchiveFormatterFromArchive(ProxyArchive,
+#if WITH_EDITORONLY_DATA
+		bUseJsonSave
+#else
+		false
+#endif
+	);
+	check(nullptr != Formatter);
+	FStructuredArchive StructuredArchive(*Formatter);
+
+	FStructuredArchive::FSlot RootSlot = StructuredArchive.Open();
+	FStructuredArchive::FRecord RootRecord = RootSlot.EnterRecord();
+
+	SerializeObject(RootRecord, Archive.IsLoading());
+}
+
+void ADungeonGeneratorBase::SerializeObject(FStructuredArchive::FRecord& Record, bool bIsLoading)
+{
+	// Set the archive to use the custom version for future compatibility
+	Record.GetUnderlyingArchive().UsingCustomVersion(FProceduralDungeonCustomVersion::GUID);
+
+#if false // This is the way to check for an older version that needs to convert some data into new ones.
+	const int32 DungeonVersion = Ar.CustomVer(FProceduralDungeonCustomVersion::GUID);
+	if (DungeonVersion < FProceduralDungeonCustomVersion::NewVersionThatNeedsDataConversion)
+	{
+		// Convert the data here
+	}
+#endif
+
+	if (!bIsLoading)
+	{
+		DungeonLog_Info("Start Saving Dungeon.");
+		IDungeonSaveInterface::DispatchPreSaveEvent(Graph);
+	}
+	else
+	{
+		DungeonLog_Info("Start Loading Dungeon.");
+	}
+
+	Record.EnterField(AR_FIELD_NAME("Id")) << Id;
+	SerializeScriptProperties(Record.EnterField(AR_FIELD_NAME("Properties")));
+
+	FStructuredArchiveRecord GraphRecord = Record.EnterRecord(AR_FIELD_NAME("Graph"));
+	SerializeUObject(GraphRecord, Graph, bIsLoading);
+
+	if (bIsLoading)
+	{
+		checkf(!IsLoading(), TEXT("Dungeon Generator is already loading."));
+		EnumAddFlags(Flags, EGeneratorFlags::LoadSavedDungeon);
+	}
+	else
+	{
+		DungeonLog_Info("End Saving Dungeon.");
+	}
+}
+
+void ADungeonGeneratorBase::PostActorCreated()
+{
+	Super::PostActorCreated();
+	if (!Id.IsValid())
+	{
+		Id = FGuid::NewGuid();
+		DungeonLog_Debug("New GUID Generated for DungeonGenerator '%s': %s", *GetName(), *Id.ToString());
+	}
+	else
+	{
+		DungeonLog_Debug("Reusing existing GUID for DungeonGenerator '%s': %s", *GetName(), *Id.ToString());
+	}
+}
+
 void ADungeonGeneratorBase::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
@@ -88,16 +200,11 @@ void ADungeonGeneratorBase::PostInitializeComponents()
 	Graph->RegisterAsReplicable(true);
 }
 
-void ADungeonGeneratorBase::BeginPlay()
-{
-	Super::BeginPlay();
-}
-
 void ADungeonGeneratorBase::EndPlay(EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
-	if(EndPlayReason == EEndPlayReason::Destroyed)
-		UnloadAllRooms();
+	if (EndPlayReason == EEndPlayReason::Destroyed)
+		Graph->UnloadAllRooms();
 }
 
 void ADungeonGeneratorBase::Tick(float DeltaTime)
@@ -109,19 +216,22 @@ void ADungeonGeneratorBase::Tick(float DeltaTime)
 void ADungeonGeneratorBase::Generate()
 {
 	// Do it only on server, do nothing on clients
-	if (HasAuthority())
-	{
-		Graph->RequestGeneration();
-	}
+	if (!HasAuthority())
+		return;
+
+	EnumAddFlags(Flags, EGeneratorFlags::Generating);
 }
 
 void ADungeonGeneratorBase::Unload()
 {
 	// Do it only on server, do nothing on clients
 	if (HasAuthority())
-	{
-		Graph->RequestUnload();
-	}
+		return
+
+	// Mark graph as if the room list have been modified.
+	// Doing so will not trigger the generation phase,
+	// thus the resulting dungeon will be empty.
+	Graph->MarkDirty();
 }
 
 void ADungeonGeneratorBase::StartNewDungeon()
@@ -153,7 +263,11 @@ bool ADungeonGeneratorBase::TryPlaceRoom(URoom* const& Room, int DoorIndex, cons
 	Room->SetPositionAndRotationFromDoor(DoorIndex, TargetDoor.Position, TargetDoor.Direction);
 
 	// Test if it fits in the place
-	bool bCanBePlaced = !URoom::Overlap(*Room, Graph->Rooms);
+	bool bCanBePlaced = !URoom::Overlap(*Room, Graph->GetAllRooms());
+	// @TODO: Should be more performant to use voxel bounds instead of room bounds
+	// Also will be mandatory when RoomData will get voxel bounds editor
+	// But for now if the RoomUnit is really small (like (1,1,1)) it is really a bottle neck of performence...
+	//bool bCanBePlaced = !FVoxelBounds::Overlap(Room->GetVoxelBounds(), Graph->GetVoxelBounds());
 
 	// Check that it does not collide with the world too
 	if (bCanBePlaced && bUseWorldCollisionChecks)
@@ -189,13 +303,13 @@ bool ADungeonGeneratorBase::AddRoomToDungeon(URoom* const& Room, const TArray<in
 	// Connect the doors if provided, otherwise try to connect all possible doors
 	if (DoorsToConnect.Num() <= 0)
 	{
-		bConnected = Room->TryConnectToExistingDoors(Graph->GetAllRooms());
+		bConnected = Graph->TryConnectToExistingDoors(Room);
 	}
 	else
 	{
 		for (int DoorIndex : DoorsToConnect)
 		{
-			bConnected |= Room->TryConnectDoor(DoorIndex, Graph->GetAllRooms());
+			bConnected |= Graph->TryConnectDoor(Room, DoorIndex);
 		}
 	}
 
@@ -206,7 +320,7 @@ bool ADungeonGeneratorBase::AddRoomToDungeon(URoom* const& Room, const TArray<in
 		return false;
 	}
 
-	Graph->Rooms.Add(Room);
+	Graph->AddRoom(Room);
 	OnRoomAdded(Room->GetRoomData(), Room);
 	return true;
 }
@@ -224,81 +338,29 @@ bool ADungeonGeneratorBase::CreateDungeon_Implementation()
 	return false;
 }
 
-void ADungeonGeneratorBase::InstantiateRoom(URoom* Room)
+void ADungeonGeneratorBase::ChooseDoorClasses()
 {
-	// Instantiate room
-	Room->Instantiate(GetWorld());
-
-	// Spawn only doors on server
 	if (!HasAuthority())
 		return;
 
-	for (int i = 0; i < Room->GetConnectionCount(); i++)
+	if (!IsGenerating())
+		return;
+
+	for (auto* Conn : Graph->GetAllConnections())
 	{
-		// Get next room
-		URoom* r = Room->GetConnection(i).Get();
-		FIntVector DoorCell = Room->GetDoorWorldPosition(i);
-		EDoorDirection DoorRot = Room->GetDoorWorldOrientation(i);
-		int j = Room->GetOtherDoorIndex(i);
+		check(IsValid(Conn));
 
-		// Don't instantiate door if it's the parent
-		if (!Room->IsDoorInstanced(i))
-		{
-			bool Flipped = false;
-			TSubclassOf<ADoor> DoorClass = ChooseDoor(Room->GetRoomData(), nullptr != r ? r->GetRoomData() : nullptr, Room->GetRoomData()->Doors[i].Type, Flipped);
+		const URoom* RoomA = Conn->GetRoomA().Get();
+		const URoom* RoomB = Conn->GetRoomB().Get();
 
-			if (nullptr != DoorClass)
-			{
-				FVector InstanceDoorPos = GetDungeonRotation().RotateVector(FDoorDef::GetRealDoorPosition(DoorCell, DoorRot)) + GetDungeonOffset();
-				FQuat InstanceDoorRot = GetDungeonRotation() * FRotator(0, 90 * (int8)DoorRot + Flipped * 180, 0).Quaternion();
-				FActorSpawnParameters SpawnParams;
-				SpawnParams.Owner = this;
-				SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-				ADoor* Door = GetWorld()->SpawnActor<ADoor>(DoorClass, InstanceDoorPos, InstanceDoorRot.Rotator(), SpawnParams);
+		const URoomData* RoomAData = (IsValid(RoomA)) ? RoomA->GetRoomData() : nullptr;
+		const URoomData* RoomBData = (IsValid(RoomB)) ? RoomB->GetRoomData() : nullptr;
 
-				if (IsValid(Door))
-				{
-					DoorList.Add(Door);
-					Door->SetConnectingRooms(Room, r);
-					Room->SetDoorInstance(i, Door);
-					if (IsValid(r))
-					{
-						r->SetDoorInstance(j, Door);
-					}
-				}
-				else
-				{
-					DungeonLog_Error("Failed to spawn Door, make sure you set door actor to always spawning.");
-				}
-			}
-		}
-	}
-}
+		const UDoorType* DoorType = URoomConnection::GetDoorType(Conn);
 
-void ADungeonGeneratorBase::LoadAllRooms()
-{
-	// When a level is correct, load all rooms
-	for (URoom* Room : Graph->GetAllRooms())
-	{
-		InstantiateRoom(Room);
-	}
-}
-
-void ADungeonGeneratorBase::UnloadAllRooms()
-{
-	if (HasAuthority())
-	{
-		for (ADoor* Door : DoorList)
-		{
-			Door->Destroy();
-		}
-		DoorList.Empty();
-	}
-
-	for (URoom* Room : Graph->GetAllRooms())
-	{
-		check(Room);
-		Room->Destroy();
+		bool bFlipped = false;
+		TSubclassOf<ADoor> DoorClass = ChooseDoor(RoomAData, RoomA, RoomBData, RoomB, DoorType, bFlipped);
+		Conn->SetDoorClass(DoorClass, bFlipped);
 	}
 }
 
@@ -327,8 +389,7 @@ void ADungeonGeneratorBase::UpdateRoomVisibility()
 
 	TSet<URoom*> RoomsToHide(CurrentPlayerRooms);
 	CurrentPlayerRooms.Empty();
-	FindElementsWithBoundsTest(*Octree, WorldPlayerBox, [this, &RoomsToHide](const FDungeonOctreeElement& Element)
-	{
+	FindElementsWithBoundsTest(*Octree, WorldPlayerBox, [this, &RoomsToHide](const FDungeonOctreeElement& Element) {
 		RoomsToHide.Remove(Element.Room);
 		CurrentPlayerRooms.Add(Element.Room);
 		Element.Room->SetPlayerInside(true);
@@ -373,7 +434,7 @@ void ADungeonGeneratorBase::Reset()
 void ADungeonGeneratorBase::UpdateOctree()
 {
 	Octree->Destroy();
-	for (URoom* r : Graph->Rooms)
+	for (URoom* r : Graph->GetAllRooms())
 	{
 		check(IsValid(r));
 		FBoxCenterAndExtent bounds = r->GetBounds();
@@ -392,7 +453,7 @@ void ADungeonGeneratorBase::UpdateSeed()
 		Seed = Random.GetCurrentSeed();
 		break;
 	case ESeedType::AutoIncrement:
-		if(bShouldIncrement)
+		if (bShouldIncrement)
 			Seed += SeedIncrement;
 		else
 			bShouldIncrement = true;
@@ -406,6 +467,25 @@ void ADungeonGeneratorBase::UpdateSeed()
 	}
 
 	DungeonLog_Info("Seed: %d", Seed);
+}
+
+// @TODO: Place the debug draw in an editor module of the plugin?
+void ADungeonGeneratorBase::DrawDebug() const
+{
+#if ENABLE_DRAW_DEBUG
+	if (!Dungeon::DrawDebug())
+		return;
+
+	#if WITH_EDITORONLY_DATA
+	if (!bDrawDebugDungeonBounds)
+		return;
+	#endif
+
+	const FTransform& Transform = GetDungeonTransform();
+	FBoxCenterAndExtent DungeonBounds = Graph->GetDungeonBounds(); // We don't pass the transform here because we don't wan't the bounds to be rotated.
+	DungeonBounds.Center = Transform.TransformPositionNoScale(DungeonBounds.Center);
+	DrawDebugBox(GetWorld(), DungeonBounds.Center, DungeonBounds.Extent, Transform.GetRotation(), FColor::Yellow);
+#endif
 }
 
 /*
@@ -429,15 +509,18 @@ void ADungeonGeneratorBase::OnStateBegin(EGenerationState State)
 		DungeonLog_Info("======= Begin Unload All Levels =======");
 		Reset();
 		DungeonLog_Info("Nb Room To Unload: %d", Graph->Count());
-		UnloadAllRooms();
+		Graph->UnloadAllRooms();
 		break;
 	case EGenerationState::Generation:
 		DungeonLog_Info("======= Begin Dungeon Generation =======");
 		check(HasAuthority()); // should never generate on clients!
 		FlushNetDormancy();
-		++Generation;
 		UpdateSeed();
-		if (!CreateDungeon())
+		if (CreateDungeon())
+		{
+			OnGenerationSuccess();
+		}
+		else
 		{
 			Graph->Clear();
 			OnGenerationFailed();
@@ -445,12 +528,22 @@ void ADungeonGeneratorBase::OnStateBegin(EGenerationState State)
 		break;
 	case EGenerationState::Initialization:
 		DungeonLog_Info("======= Begin Dungeon Initialization =======");
+
+		if (IsLoadingSavedDungeon())
+		{
+			Graph->RetrieveRoomsFromLoadedData();
+		}
+
 		Graph->SynchronizeRooms();
 		break;
 	case EGenerationState::Load:
 		DungeonLog_Info("======= Begin Load All Levels =======");
 		DungeonLog_Info("Nb Room To Load: %d", Graph->Count());
-		LoadAllRooms();
+		// I've placed `ChooseDoor` here to keep same behavior as before,
+		// but it could be moved during the generation step in a future version
+		// (e.g. in the `FinalizeDungeon` function)
+		ChooseDoorClasses();
+		Graph->LoadAllRooms();
 		break;
 	case EGenerationState::Idle:
 		DungeonLog_Info("======= Ready To Play =======");
@@ -467,12 +560,13 @@ void ADungeonGeneratorBase::OnStateTick(EGenerationState State)
 	{
 	case EGenerationState::Idle:
 		UpdateRoomVisibility();
-		if (Graph->IsDirty())
+		DrawDebug();
+		if (Graph->IsDirty() || IsGenerating() || IsLoadingSavedDungeon())
 			SetState(EGenerationState::Unload);
 		break;
 	case EGenerationState::Unload:
 		if (Graph->AreRoomsUnloaded(CachedTmpRoomCount))
-			SetState((HasAuthority() && Graph->IsRequestingGeneration()) ? EGenerationState::Generation : EGenerationState::Initialization);
+			SetState((HasAuthority() && IsGenerating()) ? EGenerationState::Generation : EGenerationState::Initialization);
 		break;
 	case EGenerationState::Generation:
 		SetState(EGenerationState::Initialization);
@@ -499,10 +593,10 @@ void ADungeonGeneratorBase::OnStateEnd(EGenerationState State)
 		OnPreGeneration();
 
 		nav = UNavigationSystemV1::GetCurrent(GetWorld());
-		if (nullptr != nav)
+		if (nullptr != nav && bRebuildNavmesh)
 		{
 			// Lock navmesh rebuild, so we don't trigger a rebuild for each room loaded/unloaded
-			DungeonLog_Info("Lock navmesh update/rebuild");
+			DungeonLog_Debug("Lock navmesh update/rebuild");
 			nav->AddNavigationBuildLock(ENavigationBuildLock::Custom);
 		}
 		break;
@@ -523,9 +617,17 @@ void ADungeonGeneratorBase::OnStateEnd(EGenerationState State)
 	case EGenerationState::Load:
 		DungeonLog_Info("======= End Load All Levels =======");
 
+		if (IsLoadingSavedDungeon())
+		{
+			IDungeonSaveInterface::DispatchPostLoadEvent(Graph);
+			DungeonLog_Info("End Loading Dungeon.");
+		}
+
+		EnumRemoveFlags(Flags, EGeneratorFlags::Generating | EGeneratorFlags::LoadSavedDungeon);
+
 		// Try to rebuild the navmesh
 		nav = UNavigationSystemV1::GetCurrent(GetWorld());
-		if (nullptr != nav)
+		if (nullptr != nav && bRebuildNavmesh)
 		{
 			DungeonLog_Info("Rebuild navmesh");
 
@@ -547,7 +649,7 @@ void ADungeonGeneratorBase::OnStateEnd(EGenerationState State)
 
 // ===== Default Native Events Implementations =====
 
-TSubclassOf<ADoor> ADungeonGeneratorBase::ChooseDoor_Implementation(const URoomData* CurrentRoom, const URoomData* NextRoom, const UDoorType* DoorType, bool& Flipped)
+TSubclassOf<ADoor> ADungeonGeneratorBase::ChooseDoor_Implementation(const URoomData* CurrentRoom, const URoom* CurrentRoomInstance, const URoomData* NextRoom, const URoom* NextRoomInstance, const UDoorType* DoorType, bool& Flipped)
 {
 	DungeonLog_Error("Error: ChooseDoor not implemented");
 	return nullptr;
@@ -579,6 +681,11 @@ void ADungeonGeneratorBase::OnPostGeneration_Implementation()
 void ADungeonGeneratorBase::OnGenerationInit_Implementation()
 {
 	OnGenerationInitEvent.Broadcast();
+}
+
+void ADungeonGeneratorBase::OnGenerationSuccess_Implementation()
+{
+	OnGenerationSuccessEvent.Broadcast();
 }
 
 void ADungeonGeneratorBase::OnGenerationFailed_Implementation()
@@ -655,13 +762,72 @@ URoom* ADungeonGeneratorBase::GetRoomByIndex(int64 Index) const
 	return Graph->GetRoomByIndex(Index);
 }
 
+void ADungeonGeneratorBase::SaveAllDungeons(const UObject* WorldContextObject, TArray<FDungeonSaveData>& SavedData)
+{
+	UWorld* World = IsValid(WorldContextObject) ? WorldContextObject->GetWorld() : nullptr;
+	if (!IsValid(World))
+	{
+		DungeonLog_Error("Can't save dungeons: no world provided!");
+		return;
+	}
+	TArray<ADungeonGeneratorBase*> Generators;
+	WorldUtils::FindAllActors(World, Generators);
+
+	SavedData.SetNum(Generators.Num());
+
+	for (int i = 0; i < Generators.Num(); ++i)
+	{
+		if (!IsValid(Generators[i]))
+		{
+			DungeonLog_WarningSilent("One of the dungeon is invalid.");
+			continue;
+		}
+
+		DungeonLog_InfoSilent("Saving Dungeon %s", *Generators[i]->Id.ToString());
+		Generators[i]->SaveDungeon(SavedData[i]);
+	}
+}
+
+void ADungeonGeneratorBase::LoadAllDungeons(const UObject* WorldContextObject, const TArray<FDungeonSaveData>& SavedData)
+{
+	UWorld* World = IsValid(WorldContextObject) ? WorldContextObject->GetWorld() : nullptr;
+	if (!IsValid(World))
+	{
+		DungeonLog_Error("Can't load dungeons: no world provided!");
+		return;
+	}
+
+	TMap<FGuid, ADungeonGeneratorBase*> Generators;
+	WorldUtils::MapActors<FGuid, ADungeonGeneratorBase>(World, Generators, [](const ADungeonGeneratorBase* Generator) { return Generator->Id; });
+
+	for (const auto& SavedDatum : SavedData)
+	{
+		auto* FoundGenerator = Generators.Find(SavedDatum.GeneratorId);
+		if (nullptr == FoundGenerator)
+		{
+			DungeonLog_WarningSilent("Generator with ID [%s] does not exists.", *SavedDatum.GeneratorId.ToString());
+			continue;
+		}
+
+		ADungeonGeneratorBase* Generator = *FoundGenerator;
+		if (!IsValid(Generator))
+		{
+			DungeonLog_WarningSilent("Generator with ID [%s] is invalid.", *SavedDatum.GeneratorId.ToString());
+			continue;
+		}
+
+		DungeonLog_InfoSilent("Loading Dungeon %s", *Generator->Id.ToString());
+		Generator->LoadDungeon(SavedDatum);
+	}
+}
+
 void ADungeonGeneratorBase::SetSeed(int32 NewSeed)
 {
 	Seed = static_cast<uint32>(NewSeed);
 	bShouldIncrement = false; // avoid incrementing when SeedType is AutoIncrement
 }
 
-int32 ADungeonGeneratorBase::GetSeed()
+int32 ADungeonGeneratorBase::GetSeed() const
 {
 	return static_cast<int32>(Seed);
 }
@@ -742,12 +908,12 @@ bool FDungeonConsoleCommands::CollectDungeonGenerators(const TCHAR* CommandName,
 		UE_LOG(LogProceduralDungeon, Log, TEXT("[%s] Search for DungeonGenerator actors with name or tag '%s'."), CommandName, *NameOrTag);
 		FString Name(NameOrTag);
 		FName Tag(NameOrTag);
-		World::FindAllActorsByPredicate<ADungeonGeneratorBase>(InWorld, OutGenerators, [&Name, &Tag](const ADungeonGeneratorBase* Generator) { return Generator->GetName() == Name || Generator->ActorHasTag(Tag); });
+		WorldUtils::FindAllActorsByPredicate<ADungeonGeneratorBase>(InWorld, OutGenerators, [&Name, &Tag](const ADungeonGeneratorBase* Generator) { return Generator->GetName() == Name || Generator->ActorHasTag(Tag); });
 	}
 	else
 	{
 		UE_LOG(LogProceduralDungeon, Log, TEXT("[%s] Search for all DungeonGenerator actors."), CommandName);
-		World::FindAllActors(InWorld, OutGenerators);
+		WorldUtils::FindAllActors(InWorld, OutGenerators);
 	}
 
 	// Found no generator

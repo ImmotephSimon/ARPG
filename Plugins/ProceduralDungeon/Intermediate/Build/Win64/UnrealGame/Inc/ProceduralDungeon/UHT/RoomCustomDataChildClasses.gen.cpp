@@ -5,11 +5,13 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Private/Tests/Classes/RoomCustomDataChildClasses.h"
+#include "Tests/Classes/RoomCustomDataChildClasses.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeRoomCustomDataChildClasses() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UCustomDataA();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UCustomDataA_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UCustomDataB();
@@ -18,16 +20,40 @@ PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UCustomDataC();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UCustomDataC_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomCustomData();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UCustomDataA
+// ********** Begin Class UCustomDataA *************************************************************
 void UCustomDataA::StaticRegisterNativesUCustomDataA()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UCustomDataA);
+FClassRegistrationInfo Z_Registration_Info_UClass_UCustomDataA;
+UClass* UCustomDataA::GetPrivateStaticClass()
+{
+	using TClass = UCustomDataA;
+	if (!Z_Registration_Info_UClass_UCustomDataA.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("CustomDataA"),
+			Z_Registration_Info_UClass_UCustomDataA.InnerSingleton,
+			StaticRegisterNativesUCustomDataA,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UCustomDataA.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UCustomDataA_NoRegister()
 {
-	return UCustomDataA::StaticClass();
+	return UCustomDataA::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UCustomDataA_Statics
 {
@@ -63,7 +89,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCustomDataA_Statics::C
 	0,
 	0,
 	0,
-	0x040000A0u,
+	0x048000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomDataA_Statics::Class_MetaDataParams), Z_Construct_UClass_UCustomDataA_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_UCustomDataA()
@@ -74,23 +100,43 @@ UClass* Z_Construct_UClass_UCustomDataA()
 	}
 	return Z_Registration_Info_UClass_UCustomDataA.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<UCustomDataA>()
-{
-	return UCustomDataA::StaticClass();
-}
 UCustomDataA::UCustomDataA(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomDataA);
 UCustomDataA::~UCustomDataA() {}
-// End Class UCustomDataA
+// ********** End Class UCustomDataA ***************************************************************
 
-// Begin Class UCustomDataB
+// ********** Begin Class UCustomDataB *************************************************************
 void UCustomDataB::StaticRegisterNativesUCustomDataB()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UCustomDataB);
+FClassRegistrationInfo Z_Registration_Info_UClass_UCustomDataB;
+UClass* UCustomDataB::GetPrivateStaticClass()
+{
+	using TClass = UCustomDataB;
+	if (!Z_Registration_Info_UClass_UCustomDataB.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("CustomDataB"),
+			Z_Registration_Info_UClass_UCustomDataB.InnerSingleton,
+			StaticRegisterNativesUCustomDataB,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UCustomDataB.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UCustomDataB_NoRegister()
 {
-	return UCustomDataB::StaticClass();
+	return UCustomDataB::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UCustomDataB_Statics
 {
@@ -126,7 +172,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCustomDataB_Statics::C
 	0,
 	0,
 	0,
-	0x040000A0u,
+	0x048000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomDataB_Statics::Class_MetaDataParams), Z_Construct_UClass_UCustomDataB_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_UCustomDataB()
@@ -137,23 +183,43 @@ UClass* Z_Construct_UClass_UCustomDataB()
 	}
 	return Z_Registration_Info_UClass_UCustomDataB.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<UCustomDataB>()
-{
-	return UCustomDataB::StaticClass();
-}
 UCustomDataB::UCustomDataB(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomDataB);
 UCustomDataB::~UCustomDataB() {}
-// End Class UCustomDataB
+// ********** End Class UCustomDataB ***************************************************************
 
-// Begin Class UCustomDataC
+// ********** Begin Class UCustomDataC *************************************************************
 void UCustomDataC::StaticRegisterNativesUCustomDataC()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UCustomDataC);
+FClassRegistrationInfo Z_Registration_Info_UClass_UCustomDataC;
+UClass* UCustomDataC::GetPrivateStaticClass()
+{
+	using TClass = UCustomDataC;
+	if (!Z_Registration_Info_UClass_UCustomDataC.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("CustomDataC"),
+			Z_Registration_Info_UClass_UCustomDataC.InnerSingleton,
+			StaticRegisterNativesUCustomDataC,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UCustomDataC.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UCustomDataC_NoRegister()
 {
-	return UCustomDataC::StaticClass();
+	return UCustomDataC::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UCustomDataC_Statics
 {
@@ -189,7 +255,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCustomDataC_Statics::C
 	0,
 	0,
 	0,
-	0x040000A0u,
+	0x048000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomDataC_Statics::Class_MetaDataParams), Z_Construct_UClass_UCustomDataC_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_UCustomDataC()
@@ -200,27 +266,24 @@ UClass* Z_Construct_UClass_UCustomDataC()
 	}
 	return Z_Registration_Info_UClass_UCustomDataC.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<UCustomDataC>()
-{
-	return UCustomDataC::StaticClass();
-}
 UCustomDataC::UCustomDataC(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomDataC);
 UCustomDataC::~UCustomDataC() {}
-// End Class UCustomDataC
+// ********** End Class UCustomDataC ***************************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCustomDataA, UCustomDataA::StaticClass, TEXT("UCustomDataA"), &Z_Registration_Info_UClass_UCustomDataA, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataA), 691288807U) },
-		{ Z_Construct_UClass_UCustomDataB, UCustomDataB::StaticClass, TEXT("UCustomDataB"), &Z_Registration_Info_UClass_UCustomDataB, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataB), 1316144333U) },
-		{ Z_Construct_UClass_UCustomDataC, UCustomDataC::StaticClass, TEXT("UCustomDataC"), &Z_Registration_Info_UClass_UCustomDataC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataC), 2194376213U) },
+		{ Z_Construct_UClass_UCustomDataA, UCustomDataA::StaticClass, TEXT("UCustomDataA"), &Z_Registration_Info_UClass_UCustomDataA, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataA), 1259433016U) },
+		{ Z_Construct_UClass_UCustomDataB, UCustomDataB::StaticClass, TEXT("UCustomDataB"), &Z_Registration_Info_UClass_UCustomDataB, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataB), 49829015U) },
+		{ Z_Construct_UClass_UCustomDataC, UCustomDataC::StaticClass, TEXT("UCustomDataC"), &Z_Registration_Info_UClass_UCustomDataC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataC), 2117950008U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h_1562996055(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_4256122066(TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

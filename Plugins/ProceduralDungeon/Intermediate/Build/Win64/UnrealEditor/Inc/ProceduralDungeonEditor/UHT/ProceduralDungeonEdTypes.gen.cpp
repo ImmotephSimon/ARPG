@@ -5,29 +5,27 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeonEditor/Private/ProceduralDungeonEdTypes.h"
+#include "ProceduralDungeonEdTypes.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeProceduralDungeonEdTypes() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 PROCEDURALDUNGEONEDITOR_API UScriptStruct* Z_Construct_UScriptStruct_FMargin3D();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeonEditor();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin ScriptStruct FMargin3D
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_Margin3D;
+// ********** Begin ScriptStruct FMargin3D *********************************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FMargin3D;
 class UScriptStruct* FMargin3D::StaticStruct()
 {
-	if (!Z_Registration_Info_UScriptStruct_Margin3D.OuterSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FMargin3D.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_Margin3D.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FMargin3D, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeonEditor(), TEXT("Margin3D"));
+		Z_Registration_Info_UScriptStruct_FMargin3D.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FMargin3D, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeonEditor(), TEXT("Margin3D"));
 	}
-	return Z_Registration_Info_UScriptStruct_Margin3D.OuterSingleton;
-}
-template<> PROCEDURALDUNGEONEDITOR_API UScriptStruct* StaticStruct<FMargin3D>()
-{
-	return FMargin3D::StaticStruct();
+	return Z_Registration_Info_UScriptStruct_FMargin3D.OuterSingleton;
 }
 struct Z_Construct_UScriptStruct_FMargin3D_Statics
 {
@@ -91,24 +89,25 @@ const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMargin3D_Stati
 };
 UScriptStruct* Z_Construct_UScriptStruct_FMargin3D()
 {
-	if (!Z_Registration_Info_UScriptStruct_Margin3D.InnerSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FMargin3D.InnerSingleton)
 	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_Margin3D.InnerSingleton, Z_Construct_UScriptStruct_FMargin3D_Statics::StructParams);
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FMargin3D.InnerSingleton, Z_Construct_UScriptStruct_FMargin3D_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_Margin3D.InnerSingleton;
+	return Z_Registration_Info_UScriptStruct_FMargin3D.InnerSingleton;
 }
-// End ScriptStruct FMargin3D
+// ********** End ScriptStruct FMargin3D ***********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h__Script_ProceduralDungeonEditor_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FMargin3D::StaticStruct, Z_Construct_UScriptStruct_FMargin3D_Statics::NewStructOps, TEXT("Margin3D"), &Z_Registration_Info_UScriptStruct_Margin3D, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMargin3D), 321781792U) },
+		{ FMargin3D::StaticStruct, Z_Construct_UScriptStruct_FMargin3D_Statics::NewStructOps, TEXT("Margin3D"), &Z_Registration_Info_UScriptStruct_FMargin3D, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMargin3D), 2755788825U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h_2783516910(TEXT("/Script/ProceduralDungeonEditor"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h__Script_ProceduralDungeonEditor_1498604831(TEXT("/Script/ProceduralDungeonEditor"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h__Script_ProceduralDungeonEditor_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h__Script_ProceduralDungeonEditor_Statics::ScriptStructInfo),
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

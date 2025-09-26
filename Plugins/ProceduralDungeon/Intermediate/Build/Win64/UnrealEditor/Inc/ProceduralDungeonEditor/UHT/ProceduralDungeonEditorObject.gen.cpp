@@ -5,26 +5,52 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeonEditor/Private/EditorMode/ProceduralDungeonEditorObject.h"
+#include "EditorMode/ProceduralDungeonEditorObject.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeProceduralDungeonEditorObject() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDoorType_NoRegister();
 PROCEDURALDUNGEONEDITOR_API UClass* Z_Construct_UClass_UProceduralDungeonEditorObject();
 PROCEDURALDUNGEONEDITOR_API UClass* Z_Construct_UClass_UProceduralDungeonEditorObject_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeonEditor();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UProceduralDungeonEditorObject
+// ********** Begin Class UProceduralDungeonEditorObject *******************************************
 void UProceduralDungeonEditorObject::StaticRegisterNativesUProceduralDungeonEditorObject()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UProceduralDungeonEditorObject);
+FClassRegistrationInfo Z_Registration_Info_UClass_UProceduralDungeonEditorObject;
+UClass* UProceduralDungeonEditorObject::GetPrivateStaticClass()
+{
+	using TClass = UProceduralDungeonEditorObject;
+	if (!Z_Registration_Info_UClass_UProceduralDungeonEditorObject.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("ProceduralDungeonEditorObject"),
+			Z_Registration_Info_UClass_UProceduralDungeonEditorObject.InnerSingleton,
+			StaticRegisterNativesUProceduralDungeonEditorObject,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UProceduralDungeonEditorObject.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UProceduralDungeonEditorObject_NoRegister()
 {
-	return UProceduralDungeonEditorObject::StaticClass();
+	return UProceduralDungeonEditorObject::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UProceduralDungeonEditorObject_Statics
 {
@@ -79,25 +105,22 @@ UClass* Z_Construct_UClass_UProceduralDungeonEditorObject()
 	}
 	return Z_Registration_Info_UClass_UProceduralDungeonEditorObject.OuterSingleton;
 }
-template<> PROCEDURALDUNGEONEDITOR_API UClass* StaticClass<UProceduralDungeonEditorObject>()
-{
-	return UProceduralDungeonEditorObject::StaticClass();
-}
 UProceduralDungeonEditorObject::UProceduralDungeonEditorObject(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UProceduralDungeonEditorObject);
 UProceduralDungeonEditorObject::~UProceduralDungeonEditorObject() {}
-// End Class UProceduralDungeonEditorObject
+// ********** End Class UProceduralDungeonEditorObject *********************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h__Script_ProceduralDungeonEditor_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UProceduralDungeonEditorObject, UProceduralDungeonEditorObject::StaticClass, TEXT("UProceduralDungeonEditorObject"), &Z_Registration_Info_UClass_UProceduralDungeonEditorObject, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProceduralDungeonEditorObject), 917429285U) },
+		{ Z_Construct_UClass_UProceduralDungeonEditorObject, UProceduralDungeonEditorObject::StaticClass, TEXT("UProceduralDungeonEditorObject"), &Z_Registration_Info_UClass_UProceduralDungeonEditorObject, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProceduralDungeonEditorObject), 1686446622U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h_1528285745(TEXT("/Script/ProceduralDungeonEditor"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h__Script_ProceduralDungeonEditor_1343558536(TEXT("/Script/ProceduralDungeonEditor"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h__Script_ProceduralDungeonEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_EditorMode_ProceduralDungeonEditorObject_h__Script_ProceduralDungeonEditor_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

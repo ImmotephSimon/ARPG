@@ -1,17 +1,18 @@
-"C:\Users\symig\Documents\GitHub\ARPG\Plugins\ProceduralDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProceduralDungeonEditor\PerModuleInline.gen.cpp"
-/FI"C:\Users\symig\Documents\GitHub\ARPG\Intermediate\Build\Win64\x64\SecondTopDownEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h"
-/FI"C:\Users\symig\Documents\GitHub\ARPG\Plugins\ProceduralDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProceduralDungeonEditor\Definitions.ProceduralDungeonEditor.h"
-/Yu"C:\Users\symig\Documents\GitHub\ARPG\Intermediate\Build\Win64\x64\SecondTopDownEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h"
-/Fp"C:\Users\symig\Documents\GitHub\ARPG\Intermediate\Build\Win64\x64\SecondTopDownEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.pch"
-/Fo"C:\Users\symig\Documents\GitHub\ARPG\Plugins\ProceduralDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProceduralDungeonEditor\PerModuleInline.gen.cpp.obj"
-/experimental:log "C:\Users\symig\Documents\GitHub\ARPG\Plugins\ProceduralDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProceduralDungeonEditor\PerModuleInline.gen.cpp.sarif"
-/sourceDependencies "C:\Users\symig\Documents\GitHub\ARPG\Plugins\ProceduralDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProceduralDungeonEditor\PerModuleInline.gen.cpp.dep.json"
-@"C:\Users\symig\Documents\GitHub\ARPG\Plugins\ProceduralDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProceduralDungeonEditor\ProceduralDungeonEditor.Shared.rsp"
+"C:/Users/symig/Documents/GitHub/ARPG 5.6/Plugins/ProceduralDungeon/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProceduralDungeonEditor/PerModuleInline.gen.cpp"
+@"C:/Users/symig/Documents/GitHub/ARPG 5.6/Plugins/ProceduralDungeon/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProceduralDungeonEditor/ProceduralDungeonEditor.Shared.rsp"
+/FI"C:/Users/symig/Documents/GitHub/ARPG 5.6/Intermediate/Build/Win64/x64/SecondTopDownEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
+/FI"C:/Users/symig/Documents/GitHub/ARPG 5.6/Plugins/ProceduralDungeon/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProceduralDungeonEditor/Definitions.ProceduralDungeonEditor.h"
+/Yu"C:/Users/symig/Documents/GitHub/ARPG 5.6/Intermediate/Build/Win64/x64/SecondTopDownEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h"
+/Fp"C:/Users/symig/Documents/GitHub/ARPG 5.6/Intermediate/Build/Win64/x64/SecondTopDownEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.pch"
+/Fo"C:/Users/symig/Documents/GitHub/ARPG 5.6/Plugins/ProceduralDungeon/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProceduralDungeonEditor/PerModuleInline.gen.cpp.obj"
+/experimental:log "C:/Users/symig/Documents/GitHub/ARPG 5.6/Plugins/ProceduralDungeon/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProceduralDungeonEditor/PerModuleInline.gen.cpp.sarif"
+/sourceDependencies "C:/Users/symig/Documents/GitHub/ARPG 5.6/Plugins/ProceduralDungeon/Intermediate/Build/Win64/x64/UnrealEditor/Development/ProceduralDungeonEditor/PerModuleInline.gen.cpp.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi
 /FC
+/diagnostics:caret
 /c
 /Gw
 /Gy
@@ -39,15 +40,14 @@
 /fp:fast
 /Zo
 /Zp8
+/W4
 /we4456
 /we4458
 /we4459
-/we4668
 /wd4244
 /wd4838
 /TP
 /GR-
-/W4
 /std:c++20
 /Zc:preprocessor
 /wd5054

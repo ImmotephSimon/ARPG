@@ -1,26 +1,9 @@
-/*
- * MIT License
- *
- * Copyright (c) 2019-2024 Benoit Pelletier
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+// Copyright Benoit Pelletier 2019 - 2025 All Rights Reserved.
+//
+// This software is available under different licenses depending on the source from which it was obtained:
+// - The Fab EULA (https://fab.com/eula) applies when obtained from the Fab marketplace.
+// - The CeCILL-C license (https://cecill.info/licences/Licence_CeCILL-C_V1-en.html) applies when obtained from any other source.
+// Please refer to the accompanying LICENSE file for further details.
 
 #include "DungeonGenerator.h"
 #include "RoomData.h"
@@ -51,7 +34,8 @@ bool ADungeonGenerator::CreateDungeon_Implementation()
 	bool ValidDungeon = false;
 
 	// generate level until IsValidDungeon return true
-	do {
+	do
+	{
 		TriesLeft--;
 
 		// Reset generation data
@@ -81,7 +65,7 @@ bool ADungeonGenerator::CreateDungeon_Implementation()
 
 		// Create the first room
 		URoom* root = CreateRoomInstance(def);
-		AddRoomToDungeon(root, /*DoorsToConnect = */{}, /*bFailIfNotConnected = */false);
+		AddRoomToDungeon(root, /*DoorsToConnect = */ {}, /*bFailIfNotConnected = */ false);
 
 		// Build the list of rooms
 		TQueueOrStack<URoom*> roomStack(listMode);
@@ -137,9 +121,7 @@ bool ADungeonGenerator::AddNewRooms(URoom& ParentRoom, TArray<URoom*>& AddedRoom
 			continue;
 
 		// Get the door definition in its world position and direction
-		FDoorDef doorDef = ParentRoom.GetRoomData()->Doors[i];
-		doorDef.Position = ParentRoom.RoomToWorld(doorDef.Position);
-		doorDef.Direction = ParentRoom.RoomToWorld(doorDef.Direction);
+		FDoorDef doorDef = ParentRoom.GetDoorDef(i);
 
 		// Get the door definition for the next room
 		const FDoorDef newRoomDoor = doorDef.GetOpposite();
@@ -178,12 +160,7 @@ bool ADungeonGenerator::AddNewRooms(URoom& ParentRoom, TArray<URoom*>& AddedRoom
 
 			// Get all compatible door indices from the chosen room data
 			TArray<int> compatibleDoors;
-			for (int k = 0; k < roomDef->GetNbDoor(); ++k)
-			{
-				if (FDoorDef::AreCompatible(roomDef->Doors[k], doorDef))
-					compatibleDoors.Add(k);
-			}
-
+			roomDef->GetCompatibleDoors(doorDef, compatibleDoors);
 			if (compatibleDoors.Num() <= 0)
 			{
 				DungeonLog_Error("ChooseNextRoomData returned room data '%s' with no compatible door (door type: '%s').", *roomDef->GetName(), *doorDef.GetTypeName());
@@ -228,7 +205,7 @@ bool ADungeonGenerator::AddNewRooms(URoom& ParentRoom, TArray<URoom*>& AddedRoom
 
 		// Plugin-wide setting is deprecated, will be removed in v4.0
 		const bool bConnectAllDoors = bCanLoop && Dungeon::CanLoop();
-		if (AddRoomToDungeon(newRoom, bConnectAllDoors ? TArray<int>{} : TArray<int> {doorIndex}))
+		if (AddRoomToDungeon(newRoom, bConnectAllDoors ? TArray<int> {} : TArray<int> {doorIndex}))
 		{
 			AddedRooms.Add(newRoom);
 		}

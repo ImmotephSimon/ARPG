@@ -5,27 +5,53 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Public/ProceduralDungeonSettings.h"
+#include "ProceduralDungeonSettings.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeProceduralDungeonSettings() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UEnum* Z_Construct_UEnum_Engine_ECollisionChannel();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UProceduralDungeonSettings();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UProceduralDungeonSettings_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UProceduralDungeonSettings
+// ********** Begin Class UProceduralDungeonSettings ***********************************************
 void UProceduralDungeonSettings::StaticRegisterNativesUProceduralDungeonSettings()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UProceduralDungeonSettings);
+FClassRegistrationInfo Z_Registration_Info_UClass_UProceduralDungeonSettings;
+UClass* UProceduralDungeonSettings::GetPrivateStaticClass()
+{
+	using TClass = UProceduralDungeonSettings;
+	if (!Z_Registration_Info_UClass_UProceduralDungeonSettings.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("ProceduralDungeonSettings"),
+			Z_Registration_Info_UClass_UProceduralDungeonSettings.InnerSingleton,
+			StaticRegisterNativesUProceduralDungeonSettings,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UProceduralDungeonSettings.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UProceduralDungeonSettings_NoRegister()
 {
-	return UProceduralDungeonSettings::StaticClass();
+	return UProceduralDungeonSettings::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UProceduralDungeonSettings_Statics
 {
@@ -66,13 +92,18 @@ struct Z_Construct_UClass_UProceduralDungeonSettings_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DoorOffset_MetaData[] = {
 		{ "Category", "General" },
+		{ "ClampMax", "1" },
+		{ "ClampMin", "0" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// The height of the door's base from the room's base (in percentage of the room unit Z)\n" },
 #endif
+		{ "DisplayName", "Default Door Offset" },
 		{ "ModuleRelativePath", "Public/ProceduralDungeonSettings.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "The height of the door's base from the room's base (in percentage of the room unit Z)" },
 #endif
+		{ "UIMax", "1" },
+		{ "UIMin", "0" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanLoop_MetaData[] = {
 		{ "Category", "General" },
@@ -175,6 +206,17 @@ struct Z_Construct_UClass_UProceduralDungeonSettings_Statics
 		{ "ToolTip", "Show room and door outlines in editor and development builds" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bDrawOnlyWhenEditingRooms_MetaData[] = {
+		{ "Category", "Debug" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Show room and door outlines in editor and development builds\n" },
+#endif
+		{ "EditCondition", "DrawDebug" },
+		{ "ModuleRelativePath", "Public/ProceduralDungeonSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Show room and door outlines in editor and development builds" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ShowRoomOrigin_MetaData[] = {
 		{ "Category", "Debug" },
 #if !UE_BUILD_SHIPPING
@@ -257,6 +299,8 @@ struct Z_Construct_UClass_UProceduralDungeonSettings_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_OccludeDynamicActors;
 	static void NewProp_DrawDebug_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_DrawDebug;
+	static void NewProp_bDrawOnlyWhenEditingRooms_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bDrawOnlyWhenEditingRooms;
 	static void NewProp_ShowRoomOrigin_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ShowRoomOrigin;
 	static void NewProp_bFlipDoorArrowSide_SetBit(void* Obj);
@@ -301,6 +345,11 @@ void Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_DrawDebug_Se
 	((UProceduralDungeonSettings*)Obj)->DrawDebug = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_DrawDebug = { "DrawDebug", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UProceduralDungeonSettings), &Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_DrawDebug_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DrawDebug_MetaData), NewProp_DrawDebug_MetaData) };
+void Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_bDrawOnlyWhenEditingRooms_SetBit(void* Obj)
+{
+	((UProceduralDungeonSettings*)Obj)->bDrawOnlyWhenEditingRooms = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_bDrawOnlyWhenEditingRooms = { "bDrawOnlyWhenEditingRooms", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UProceduralDungeonSettings), &Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_bDrawOnlyWhenEditingRooms_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDrawOnlyWhenEditingRooms_MetaData), NewProp_bDrawOnlyWhenEditingRooms_MetaData) };
 void Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_ShowRoomOrigin_SetBit(void* Obj)
 {
 	((UProceduralDungeonSettings*)Obj)->ShowRoomOrigin = 1;
@@ -332,6 +381,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UProcedur
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_OcclusionDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_OccludeDynamicActors,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_DrawDebug,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_bDrawOnlyWhenEditingRooms,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_ShowRoomOrigin,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_bFlipDoorArrowSide,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonSettings_Statics::NewProp_DoorArrowLength,
@@ -368,24 +418,21 @@ UClass* Z_Construct_UClass_UProceduralDungeonSettings()
 	}
 	return Z_Registration_Info_UClass_UProceduralDungeonSettings.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<UProceduralDungeonSettings>()
-{
-	return UProceduralDungeonSettings::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UProceduralDungeonSettings);
 UProceduralDungeonSettings::~UProceduralDungeonSettings() {}
-// End Class UProceduralDungeonSettings
+// ********** End Class UProceduralDungeonSettings *************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UProceduralDungeonSettings, UProceduralDungeonSettings::StaticClass, TEXT("UProceduralDungeonSettings"), &Z_Registration_Info_UClass_UProceduralDungeonSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProceduralDungeonSettings), 3459435738U) },
+		{ Z_Construct_UClass_UProceduralDungeonSettings, UProceduralDungeonSettings::StaticClass, TEXT("UProceduralDungeonSettings"), &Z_Registration_Info_UClass_UProceduralDungeonSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProceduralDungeonSettings), 165858634U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h_2377882780(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h__Script_ProceduralDungeon_1241544248(TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonSettings_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

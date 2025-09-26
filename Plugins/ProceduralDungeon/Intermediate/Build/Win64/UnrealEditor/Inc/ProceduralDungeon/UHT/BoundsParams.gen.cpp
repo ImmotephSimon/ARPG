@@ -5,28 +5,26 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Public/BoundsParams.h"
+#include "BoundsParams.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeBoundsParams() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FBoundsParams();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin ScriptStruct FBoundsParams
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_BoundsParams;
+// ********** Begin ScriptStruct FBoundsParams *****************************************************
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FBoundsParams;
 class UScriptStruct* FBoundsParams::StaticStruct()
 {
-	if (!Z_Registration_Info_UScriptStruct_BoundsParams.OuterSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_BoundsParams.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FBoundsParams, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("BoundsParams"));
+		Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FBoundsParams, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("BoundsParams"));
 	}
-	return Z_Registration_Info_UScriptStruct_BoundsParams.OuterSingleton;
-}
-template<> PROCEDURALDUNGEON_API UScriptStruct* StaticStruct<FBoundsParams>()
-{
-	return FBoundsParams::StaticStruct();
+	return Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton;
 }
 struct Z_Construct_UScriptStruct_FBoundsParams_Statics
 {
@@ -278,24 +276,25 @@ const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBoundsParams_S
 };
 UScriptStruct* Z_Construct_UScriptStruct_FBoundsParams()
 {
-	if (!Z_Registration_Info_UScriptStruct_BoundsParams.InnerSingleton)
+	if (!Z_Registration_Info_UScriptStruct_FBoundsParams.InnerSingleton)
 	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_BoundsParams.InnerSingleton, Z_Construct_UScriptStruct_FBoundsParams_Statics::StructParams);
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FBoundsParams.InnerSingleton, Z_Construct_UScriptStruct_FBoundsParams_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_BoundsParams.InnerSingleton;
+	return Z_Registration_Info_UScriptStruct_FBoundsParams.InnerSingleton;
 }
-// End ScriptStruct FBoundsParams
+// ********** End ScriptStruct FBoundsParams *******************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FBoundsParams::StaticStruct, Z_Construct_UScriptStruct_FBoundsParams_Statics::NewStructOps, TEXT("BoundsParams"), &Z_Registration_Info_UScriptStruct_BoundsParams, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBoundsParams), 3499304364U) },
+		{ FBoundsParams::StaticStruct, Z_Construct_UScriptStruct_FBoundsParams_Statics::NewStructOps, TEXT("BoundsParams"), &Z_Registration_Info_UScriptStruct_FBoundsParams, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBoundsParams), 3987177792U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_640759495(TEXT("/Script/ProceduralDungeon"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_1022927639(TEXT("/Script/ProceduralDungeon"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

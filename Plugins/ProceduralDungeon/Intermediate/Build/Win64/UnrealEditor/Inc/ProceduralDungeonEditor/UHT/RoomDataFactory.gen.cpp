@@ -5,25 +5,51 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeonEditor/Private/Factories/RoomDataFactory.h"
+#include "Factories/RoomDataFactory.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeRoomDataFactory() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 PROCEDURALDUNGEONEDITOR_API UClass* Z_Construct_UClass_URoomDataFactory();
 PROCEDURALDUNGEONEDITOR_API UClass* Z_Construct_UClass_URoomDataFactory_NoRegister();
 UNREALED_API UClass* Z_Construct_UClass_UFactory();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeonEditor();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class URoomDataFactory
+// ********** Begin Class URoomDataFactory *********************************************************
 void URoomDataFactory::StaticRegisterNativesURoomDataFactory()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(URoomDataFactory);
+FClassRegistrationInfo Z_Registration_Info_UClass_URoomDataFactory;
+UClass* URoomDataFactory::GetPrivateStaticClass()
+{
+	using TClass = URoomDataFactory;
+	if (!Z_Registration_Info_UClass_URoomDataFactory.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("RoomDataFactory"),
+			Z_Registration_Info_UClass_URoomDataFactory.InnerSingleton,
+			StaticRegisterNativesURoomDataFactory,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_URoomDataFactory.InnerSingleton;
+}
 UClass* Z_Construct_UClass_URoomDataFactory_NoRegister()
 {
-	return URoomDataFactory::StaticClass();
+	return URoomDataFactory::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_URoomDataFactory_Statics
 {
@@ -67,24 +93,21 @@ UClass* Z_Construct_UClass_URoomDataFactory()
 	}
 	return Z_Registration_Info_UClass_URoomDataFactory.OuterSingleton;
 }
-template<> PROCEDURALDUNGEONEDITOR_API UClass* StaticClass<URoomDataFactory>()
-{
-	return URoomDataFactory::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(URoomDataFactory);
 URoomDataFactory::~URoomDataFactory() {}
-// End Class URoomDataFactory
+// ********** End Class URoomDataFactory ***********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_URoomDataFactory, URoomDataFactory::StaticClass, TEXT("URoomDataFactory"), &Z_Registration_Info_UClass_URoomDataFactory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomDataFactory), 1644853813U) },
+		{ Z_Construct_UClass_URoomDataFactory, URoomDataFactory::StaticClass, TEXT("URoomDataFactory"), &Z_Registration_Info_UClass_URoomDataFactory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomDataFactory), 538178260U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_671135532(TEXT("/Script/ProceduralDungeonEditor"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_2671087351(TEXT("/Script/ProceduralDungeonEditor"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

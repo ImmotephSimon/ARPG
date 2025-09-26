@@ -5,20 +5,22 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "GameFramework/GameplayMessageTypes2.h"
-#include "Templates/IsUEnumClass.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ReflectedTypeAccessors.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #ifdef GAMEPLAYMESSAGERUNTIME_GameplayMessageTypes2_generated_h
 #error "GameplayMessageTypes2.generated.h already included, missing '#pragma once' in GameplayMessageTypes2.h"
 #endif
 #define GAMEPLAYMESSAGERUNTIME_GameplayMessageTypes2_generated_h
 
+#include "Templates/IsUEnumClass.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ReflectedTypeAccessors.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h
 
-
+// ********** Begin Enum EGameplayMessageMatch *****************************************************
 #define FOREACH_ENUM_EGAMEPLAYMESSAGEMATCH(op) \
 	op(EGameplayMessageMatch::ExactMatch) \
 	op(EGameplayMessageMatch::PartialMatch) 
@@ -26,5 +28,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 enum class EGameplayMessageMatch : uint8;
 template<> struct TIsUEnumClass<EGameplayMessageMatch> { enum { Value = true }; };
 template<> GAMEPLAYMESSAGERUNTIME_API UEnum* StaticEnum<EGameplayMessageMatch>();
+// ********** End Enum EGameplayMessageMatch *******************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,24 +5,27 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "BoundsParams.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ScriptMacros.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #ifdef PROCEDURALDUNGEON_BoundsParams_generated_h
 #error "BoundsParams.generated.h already included, missing '#pragma once' in BoundsParams.h"
 #endif
 #define PROCEDURALDUNGEON_BoundsParams_generated_h
 
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_39_GENERATED_BODY \
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+// ********** Begin ScriptStruct FBoundsParams *****************************************************
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_22_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FBoundsParams_Statics; \
 	PROCEDURALDUNGEON_API static class UScriptStruct* StaticStruct();
 
 
-template<> PROCEDURALDUNGEON_API UScriptStruct* StaticStruct<struct FBoundsParams>();
+struct FBoundsParams;
+// ********** End ScriptStruct FBoundsParams *******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h
-
+#define CURRENT_FILE_ID FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

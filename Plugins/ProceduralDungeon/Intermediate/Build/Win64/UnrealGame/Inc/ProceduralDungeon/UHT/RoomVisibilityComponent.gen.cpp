@@ -5,26 +5,52 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Public/RoomVisibilityComponent.h"
+#include "RoomVisibilityComponent.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeRoomVisibilityComponent() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomVisibilityComponent();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomVisibilityComponent_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomVisitor_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UStaticRoomVisibilityComponent();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class URoomVisibilityComponent
+// ********** Begin Class URoomVisibilityComponent *************************************************
 void URoomVisibilityComponent::StaticRegisterNativesURoomVisibilityComponent()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(URoomVisibilityComponent);
+FClassRegistrationInfo Z_Registration_Info_UClass_URoomVisibilityComponent;
+UClass* URoomVisibilityComponent::GetPrivateStaticClass()
+{
+	using TClass = URoomVisibilityComponent;
+	if (!Z_Registration_Info_UClass_URoomVisibilityComponent.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("RoomVisibilityComponent"),
+			Z_Registration_Info_UClass_URoomVisibilityComponent.InnerSingleton,
+			StaticRegisterNativesURoomVisibilityComponent,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_URoomVisibilityComponent.InnerSingleton;
+}
 UClass* Z_Construct_UClass_URoomVisibilityComponent_NoRegister()
 {
-	return URoomVisibilityComponent::StaticClass();
+	return URoomVisibilityComponent::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_URoomVisibilityComponent_Statics
 {
@@ -32,9 +58,11 @@ struct Z_Construct_UClass_URoomVisibilityComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "ProceduralDungeon" },
+		{ "Comment", "// Actor component to manage the visibility of an actor in the dungeon.\n// Use this one if the actor is able to move room.\n// If the actor remains in the same room, use UStaticRoomVisibilityComponent instead.\n" },
 		{ "DisplayName", "Room Visibility" },
 		{ "IncludePath", "RoomVisibilityComponent.h" },
 		{ "ModuleRelativePath", "Public/RoomVisibilityComponent.h" },
+		{ "ToolTip", "Actor component to manage the visibility of an actor in the dungeon.\nUse this one if the actor is able to move room.\nIf the actor remains in the same room, use UStaticRoomVisibilityComponent instead." },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -50,7 +78,7 @@ UObject* (*const Z_Construct_UClass_URoomVisibilityComponent_Statics::DependentS
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_URoomVisibilityComponent_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_URoomVisibilityComponent_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_URoomVisitor_NoRegister, (int32)VTABLE_OFFSET(URoomVisibilityComponent, IRoomVisitor), false },  // 4091944047
+	{ Z_Construct_UClass_URoomVisitor_NoRegister, (int32)VTABLE_OFFSET(URoomVisibilityComponent, IRoomVisitor), false },  // 250557339
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_URoomVisibilityComponent_Statics::ClassParams = {
 	&URoomVisibilityComponent::StaticClass,
@@ -75,24 +103,21 @@ UClass* Z_Construct_UClass_URoomVisibilityComponent()
 	}
 	return Z_Registration_Info_UClass_URoomVisibilityComponent.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<URoomVisibilityComponent>()
-{
-	return URoomVisibilityComponent::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(URoomVisibilityComponent);
 URoomVisibilityComponent::~URoomVisibilityComponent() {}
-// End Class URoomVisibilityComponent
+// ********** End Class URoomVisibilityComponent ***************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_URoomVisibilityComponent, URoomVisibilityComponent::StaticClass, TEXT("URoomVisibilityComponent"), &Z_Registration_Info_UClass_URoomVisibilityComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomVisibilityComponent), 3667167334U) },
+		{ Z_Construct_UClass_URoomVisibilityComponent, URoomVisibilityComponent::StaticClass, TEXT("URoomVisibilityComponent"), &Z_Registration_Info_UClass_URoomVisibilityComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomVisibilityComponent), 3285992912U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_129136697(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h__Script_ProceduralDungeon_2504670130(TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

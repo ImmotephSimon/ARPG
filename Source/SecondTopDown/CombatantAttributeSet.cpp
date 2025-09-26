@@ -198,6 +198,7 @@ void UCombatantAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
             float ExcessDamage = AddShieldCurrent(-Damage);
             if (ExcessDamage > 0.001f) 
             {
+                float OldHealth = GetCurrentHealth();
                 UE_LOG(LogTemp, Warning, TEXT("Health before hit: %f"), GetCurrentHealth());
                 SetCurrentHealth(FMath::Clamp(GetCurrentHealth() - ExcessDamage, 0.0f, GetTotalMaxHealth()));
                 UE_LOG(LogTemp, Warning, TEXT("Health after hit: %f"), GetCurrentHealth());
@@ -205,9 +206,8 @@ void UCombatantAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
                 Character->TriggerHealthChanged();
 
                 // Handle OnDeath
-                if (GetCurrentHealth() <= 0 && !Character->IsDead)
+                if (OldHealth > 0.f && GetCurrentHealth() <= 0.f)
                 {
-                    Character->IsDead = true;
                     Character->OnDeath(DamageInstigator->GetActorForwardVector());
                 }
 

@@ -5,13 +5,15 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Public/DungeonGenerator.h"
-#include "ProceduralDungeon/Public/BoundsParams.h"
-#include "ProceduralDungeon/Public/ProceduralDungeonTypes.h"
+#include "DungeonGenerator.h"
+#include "BoundsParams.h"
+#include "ProceduralDungeonTypes.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeDungeonGenerator() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_ADungeonGenerator();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_ADungeonGenerator_NoRegister();
@@ -22,9 +24,9 @@ PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_EGenerationType
 PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FBoundsParams();
 PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FDoorDef();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class ADungeonGenerator Function ChooseFirstRoomData
+// ********** Begin Class ADungeonGenerator Function ChooseFirstRoomData ***************************
 struct DungeonGenerator_eventChooseFirstRoomData_Parms
 {
 	URoomData* ReturnValue;
@@ -35,7 +37,7 @@ struct DungeonGenerator_eventChooseFirstRoomData_Parms
 	{
 	}
 };
-static const FName NAME_ADungeonGenerator_ChooseFirstRoomData = FName(TEXT("ChooseFirstRoomData"));
+static FName NAME_ADungeonGenerator_ChooseFirstRoomData = FName(TEXT("ChooseFirstRoomData"));
 URoomData* ADungeonGenerator::ChooseFirstRoomData()
 {
 	UFunction* Func = FindFunctionChecked(NAME_ADungeonGenerator_ChooseFirstRoomData);
@@ -55,14 +57,10 @@ struct Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return the RoomData you want as root of the dungeon generation\n" },
-#endif
 		{ "DisplayName", "Choose First Room" },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return the RoomData you want as root of the dungeon generation" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
@@ -74,7 +72,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "ChooseFirstRoomData", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::PropPointers), sizeof(DungeonGenerator_eventChooseFirstRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "ChooseFirstRoomData", Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::PropPointers), sizeof(DungeonGenerator_eventChooseFirstRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(DungeonGenerator_eventChooseFirstRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData()
 {
@@ -92,9 +90,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execChooseFirstRoomData)
 	*(URoomData**)Z_Param__Result=P_THIS->ChooseFirstRoomData_Implementation();
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function ChooseFirstRoomData
+// ********** End Class ADungeonGenerator Function ChooseFirstRoomData *****************************
 
-// Begin Class ADungeonGenerator Function ChooseNextRoomData
+// ********** Begin Class ADungeonGenerator Function ChooseNextRoomData ****************************
 struct DungeonGenerator_eventChooseNextRoomData_Parms
 {
 	const URoomData* CurrentRoom;
@@ -109,7 +107,7 @@ struct DungeonGenerator_eventChooseNextRoomData_Parms
 	{
 	}
 };
-static const FName NAME_ADungeonGenerator_ChooseNextRoomData = FName(TEXT("ChooseNextRoomData"));
+static FName NAME_ADungeonGenerator_ChooseNextRoomData = FName(TEXT("ChooseNextRoomData"));
 URoomData* ADungeonGenerator::ChooseNextRoomData(const URoomData* CurrentRoom, TScriptInterface<IReadOnlyRoom> const& CurrentRoomInstance, FDoorDef const& DoorData, int32& DoorIndex)
 {
 	UFunction* Func = FindFunctionChecked(NAME_ADungeonGenerator_ChooseNextRoomData);
@@ -135,15 +133,11 @@ struct Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "AutoCreateRefTerm", "DoorIndex" },
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Return the RoomData that will be connected to the Current Room\n\x09* @param CurrentRoom [DEPRECATED] Use CurrentRoomInstance->GetRoomData instead.\n\x09* @param CurrentRoomInstance The room instance to which the generator will connect the next room. This interface allows access only to some data.\n\x09* @param DoorData The door of the CurrentRoom on which the next room will be connected (its location in room units, its orientation and its type).\n\x09* @param DoorIndex The index of the door used on the next room to connect to the CurrentRoom.\n\x09* Use -1 for a random (compatible) door, or the door index from the RoomData door array (0 is the first door).\n\x09* WARNING: If the RandomDoor boolean of the RoomData is checked, then it will be considered -1 whatever you set here.\n\x09* @return The room data asset used to instantiate the new room instance (must not be null)\n\x09*/" },
-#endif
+		{ "Comment", "/** Return the RoomData that will be connected to the Current Room\n\x09 * @param CurrentRoom [DEPRECATED] Use CurrentRoomInstance->GetRoomData instead.\n\x09 * @param CurrentRoomInstance The room instance to which the generator will connect the next room. This interface allows access only to some data.\n\x09 * @param DoorData The door of the CurrentRoom on which the next room will be connected (its location in room units, its orientation and its type).\n\x09 * @param DoorIndex The index of the door used on the next room to connect to the CurrentRoom.\n\x09 * Use -1 for a random (compatible) door, or the door index from the RoomData door array (0 is the first door).\n\x09 * WARNING: If the RandomDoor boolean of the RoomData is checked, then it will be considered -1 whatever you set here.\n\x09 * @return The room data asset used to instantiate the new room instance (must not be null)\n\x09 */" },
 		{ "DisplayName", "Choose Next Room" },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
 		{ "ReturnDisplayName", "Room Data" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return the RoomData that will be connected to the Current Room\n@param CurrentRoom [DEPRECATED] Use CurrentRoomInstance->GetRoomData instead.\n@param CurrentRoomInstance The room instance to which the generator will connect the next room. This interface allows access only to some data.\n@param DoorData The door of the CurrentRoom on which the next room will be connected (its location in room units, its orientation and its type).\n@param DoorIndex The index of the door used on the next room to connect to the CurrentRoom.\nUse -1 for a random (compatible) door, or the door index from the RoomData door array (0 is the first door).\nWARNING: If the RandomDoor boolean of the RoomData is checked, then it will be considered -1 whatever you set here.\n@return The room data asset used to instantiate the new room instance (must not be null)" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentRoom_MetaData[] = {
 		{ "NativeConst", "" },
@@ -165,7 +159,7 @@ struct Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::NewProp_CurrentRoom = { "CurrentRoom", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGenerator_eventChooseNextRoomData_Parms, CurrentRoom), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentRoom_MetaData), NewProp_CurrentRoom_MetaData) };
 const UECodeGen_Private::FInterfacePropertyParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::NewProp_CurrentRoomInstance = { "CurrentRoomInstance", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Interface, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGenerator_eventChooseNextRoomData_Parms, CurrentRoomInstance), Z_Construct_UClass_UReadOnlyRoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentRoomInstance_MetaData), NewProp_CurrentRoomInstance_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::NewProp_DoorData = { "DoorData", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGenerator_eventChooseNextRoomData_Parms, DoorData), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorData_MetaData), NewProp_DoorData_MetaData) }; // 3661065545
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::NewProp_DoorData = { "DoorData", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGenerator_eventChooseNextRoomData_Parms, DoorData), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorData_MetaData), NewProp_DoorData_MetaData) }; // 2900168320
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::NewProp_DoorIndex = { "DoorIndex", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGenerator_eventChooseNextRoomData_Parms, DoorIndex), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGenerator_eventChooseNextRoomData_Parms, ReturnValue), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::PropPointers[] = {
@@ -176,7 +170,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "ChooseNextRoomData", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::PropPointers), sizeof(DungeonGenerator_eventChooseNextRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08420C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "ChooseNextRoomData", Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::PropPointers), sizeof(DungeonGenerator_eventChooseNextRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08420C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(DungeonGenerator_eventChooseNextRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData()
 {
@@ -198,9 +192,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execChooseNextRoomData)
 	*(URoomData**)Z_Param__Result=P_THIS->ChooseNextRoomData_Implementation(Z_Param_CurrentRoom,Z_Param_Out_CurrentRoomInstance,Z_Param_Out_DoorData,Z_Param_Out_DoorIndex);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function ChooseNextRoomData
+// ********** End Class ADungeonGenerator Function ChooseNextRoomData ******************************
 
-// Begin Class ADungeonGenerator Function ContinueToAddRoom
+// ********** Begin Class ADungeonGenerator Function ContinueToAddRoom *****************************
 struct DungeonGenerator_eventContinueToAddRoom_Parms
 {
 	bool ReturnValue;
@@ -211,7 +205,7 @@ struct DungeonGenerator_eventContinueToAddRoom_Parms
 	{
 	}
 };
-static const FName NAME_ADungeonGenerator_ContinueToAddRoom = FName(TEXT("ContinueToAddRoom"));
+static FName NAME_ADungeonGenerator_ContinueToAddRoom = FName(TEXT("ContinueToAddRoom"));
 bool ADungeonGenerator::ContinueToAddRoom()
 {
 	UFunction* Func = FindFunctionChecked(NAME_ADungeonGenerator_ContinueToAddRoom);
@@ -231,14 +225,10 @@ struct Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Condition to continue or stop adding room to the dungeon\n" },
-#endif
 		{ "DisplayName", "Continue To Add Room" },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Condition to continue or stop adding room to the dungeon" },
-#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -255,7 +245,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "ContinueToAddRoom", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::PropPointers), sizeof(DungeonGenerator_eventContinueToAddRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "ContinueToAddRoom", Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::PropPointers), sizeof(DungeonGenerator_eventContinueToAddRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(DungeonGenerator_eventContinueToAddRoom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom()
 {
@@ -273,9 +263,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execContinueToAddRoom)
 	*(bool*)Z_Param__Result=P_THIS->ContinueToAddRoom_Implementation();
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function ContinueToAddRoom
+// ********** End Class ADungeonGenerator Function ContinueToAddRoom *******************************
 
-// Begin Class ADungeonGenerator Function CountRoomData
+// ********** Begin Class ADungeonGenerator Function CountRoomData *********************************
 struct Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics
 {
 	struct DungeonGenerator_eventCountRoomData_Parms
@@ -286,15 +276,11 @@ struct Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return the number of a specific RoomData in the dungeon\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return the number of a specific RoomData in the dungeon" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomData;
@@ -309,7 +295,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountRoomData", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::DungeonGenerator_eventCountRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountRoomData", Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::DungeonGenerator_eventCountRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_CountRoomData_Statics::DungeonGenerator_eventCountRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_CountRoomData()
 {
@@ -328,9 +314,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execCountRoomData)
 	*(int32*)Z_Param__Result=P_THIS->CountRoomData(Z_Param_RoomData);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function CountRoomData
+// ********** End Class ADungeonGenerator Function CountRoomData ***********************************
 
-// Begin Class ADungeonGenerator Function CountRoomType
+// ********** Begin Class ADungeonGenerator Function CountRoomType *********************************
 struct Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics
 {
 	struct DungeonGenerator_eventCountRoomType_Parms
@@ -341,15 +327,11 @@ struct Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return the number of a specific RoomData type in the dungeon\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return the number of a specific RoomData type in the dungeon" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomType;
@@ -364,7 +346,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountRoomType", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::DungeonGenerator_eventCountRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountRoomType", Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::DungeonGenerator_eventCountRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_CountRoomType_Statics::DungeonGenerator_eventCountRoomType_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_CountRoomType()
 {
@@ -383,9 +365,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execCountRoomType)
 	*(int32*)Z_Param__Result=P_THIS->CountRoomType(Z_Param_RoomType);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function CountRoomType
+// ********** End Class ADungeonGenerator Function CountRoomType ***********************************
 
-// Begin Class ADungeonGenerator Function CountTotalRoomData
+// ********** Begin Class ADungeonGenerator Function CountTotalRoomData ****************************
 struct Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics
 {
 	struct DungeonGenerator_eventCountTotalRoomData_Parms
@@ -396,15 +378,11 @@ struct Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return the total number of RoomData in the dungeon from the list provided\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return the total number of RoomData in the dungeon from the list provided" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomDataList_Inner;
@@ -422,7 +400,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountTotalRoomData", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::DungeonGenerator_eventCountTotalRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountTotalRoomData", Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::DungeonGenerator_eventCountTotalRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData_Statics::DungeonGenerator_eventCountTotalRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData()
 {
@@ -441,28 +419,24 @@ DEFINE_FUNCTION(ADungeonGenerator::execCountTotalRoomData)
 	*(int32*)Z_Param__Result=P_THIS->CountTotalRoomData(Z_Param_RoomDataList);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function CountTotalRoomData
+// ********** End Class ADungeonGenerator Function CountTotalRoomData ******************************
 
-// Begin Class ADungeonGenerator Function CountTotalRoomType
+// ********** Begin Class ADungeonGenerator Function CountTotalRoomType ****************************
 struct Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics
 {
 	struct DungeonGenerator_eventCountTotalRoomType_Parms
 	{
-		TArray<TSubclassOf<URoomData> > RoomTypeList;
+		TArray<TSubclassOf<URoomData>> RoomTypeList;
 		int32 ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return the total number of RoomData type in the dungeon from the list provided\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return the total number of RoomData type in the dungeon from the list provided" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomTypeList_Inner;
@@ -480,7 +454,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountTotalRoomType", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::DungeonGenerator_eventCountTotalRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "CountTotalRoomType", Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::DungeonGenerator_eventCountTotalRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType_Statics::DungeonGenerator_eventCountTotalRoomType_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType()
 {
@@ -499,26 +473,22 @@ DEFINE_FUNCTION(ADungeonGenerator::execCountTotalRoomType)
 	*(int32*)Z_Param__Result=P_THIS->CountTotalRoomType(Z_Param_RoomTypeList);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function CountTotalRoomType
+// ********** End Class ADungeonGenerator Function CountTotalRoomType ******************************
 
-// Begin Class ADungeonGenerator Function DiscardRoom
+// ********** Begin Class ADungeonGenerator Function DiscardRoom ***********************************
 struct Z_Construct_UFunction_ADungeonGenerator_DiscardRoom_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Must be called in \"Choose Next Room\" function to be used.\n// Tell explicitely the generator we don't want to place a room for a specific door.\n// No error will be thrown when returning a null room data and no further room placement tries occur for this door (skip directly to the next door).\n" },
-#endif
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Must be called in \"Choose Next Room\" function to be used.\nTell explicitely the generator we don't want to place a room for a specific door.\nNo error will be thrown when returning a null room data and no further room placement tries occur for this door (skip directly to the next door)." },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_DiscardRoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "DiscardRoom", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_DiscardRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_DiscardRoom_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_DiscardRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "DiscardRoom", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_DiscardRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_DiscardRoom_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADungeonGenerator_DiscardRoom()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -535,9 +505,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execDiscardRoom)
 	P_THIS->DiscardRoom();
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function DiscardRoom
+// ********** End Class ADungeonGenerator Function DiscardRoom *************************************
 
-// Begin Class ADungeonGenerator Function GetNbRoom
+// ********** Begin Class ADungeonGenerator Function GetNbRoom *************************************
 struct Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics
 {
 	struct DungeonGenerator_eventGetNbRoom_Parms
@@ -547,17 +517,13 @@ struct Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Returns the current number of room in the generated dungeon.\n" },
-#endif
 		{ "CompactNodeTitle", "Room Count" },
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "DisplayName", "Room Count" },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Returns the current number of room in the generated dungeon." },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -569,7 +535,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "GetNbRoom", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::DungeonGenerator_eventGetNbRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "GetNbRoom", Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::DungeonGenerator_eventGetNbRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_GetNbRoom_Statics::DungeonGenerator_eventGetNbRoom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_GetNbRoom()
 {
@@ -587,9 +553,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execGetNbRoom)
 	*(int32*)Z_Param__Result=P_THIS->GetNbRoom();
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function GetNbRoom
+// ********** End Class ADungeonGenerator Function GetNbRoom ***************************************
 
-// Begin Class ADungeonGenerator Function HasAlreadyOneRoomDataFrom
+// ********** Begin Class ADungeonGenerator Function HasAlreadyOneRoomDataFrom *********************
 struct Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics
 {
 	struct DungeonGenerator_eventHasAlreadyOneRoomDataFrom_Parms
@@ -600,15 +566,11 @@ struct Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return true if at least one of the RoomData from the list provided is already in the dungeon\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return true if at least one of the RoomData from the list provided is already in the dungeon" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomDataList_Inner;
@@ -631,7 +593,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyOneRoomDataFrom", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::DungeonGenerator_eventHasAlreadyOneRoomDataFrom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyOneRoomDataFrom", Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::DungeonGenerator_eventHasAlreadyOneRoomDataFrom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom_Statics::DungeonGenerator_eventHasAlreadyOneRoomDataFrom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom()
 {
@@ -650,28 +612,24 @@ DEFINE_FUNCTION(ADungeonGenerator::execHasAlreadyOneRoomDataFrom)
 	*(bool*)Z_Param__Result=P_THIS->HasAlreadyOneRoomDataFrom(Z_Param_RoomDataList);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function HasAlreadyOneRoomDataFrom
+// ********** End Class ADungeonGenerator Function HasAlreadyOneRoomDataFrom ***********************
 
-// Begin Class ADungeonGenerator Function HasAlreadyOneRoomTypeFrom
+// ********** Begin Class ADungeonGenerator Function HasAlreadyOneRoomTypeFrom *********************
 struct Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics
 {
 	struct DungeonGenerator_eventHasAlreadyOneRoomTypeFrom_Parms
 	{
-		TArray<TSubclassOf<URoomData> > RoomTypeList;
+		TArray<TSubclassOf<URoomData>> RoomTypeList;
 		bool ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return true if at least one of the RoomData type from the list provided is already in the dungeon\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return true if at least one of the RoomData type from the list provided is already in the dungeon" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomTypeList_Inner;
@@ -694,7 +652,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyOneRoomTypeFrom", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::DungeonGenerator_eventHasAlreadyOneRoomTypeFrom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyOneRoomTypeFrom", Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::DungeonGenerator_eventHasAlreadyOneRoomTypeFrom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom_Statics::DungeonGenerator_eventHasAlreadyOneRoomTypeFrom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom()
 {
@@ -713,9 +671,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execHasAlreadyOneRoomTypeFrom)
 	*(bool*)Z_Param__Result=P_THIS->HasAlreadyOneRoomTypeFrom(Z_Param_RoomTypeList);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function HasAlreadyOneRoomTypeFrom
+// ********** End Class ADungeonGenerator Function HasAlreadyOneRoomTypeFrom ***********************
 
-// Begin Class ADungeonGenerator Function HasAlreadyRoomData
+// ********** Begin Class ADungeonGenerator Function HasAlreadyRoomData ****************************
 struct Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics
 {
 	struct DungeonGenerator_eventHasAlreadyRoomData_Parms
@@ -726,15 +684,11 @@ struct Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return true if a specific RoomData is already in the dungeon\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return true if a specific RoomData is already in the dungeon" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomData;
@@ -754,7 +708,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyRoomData", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::DungeonGenerator_eventHasAlreadyRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyRoomData", Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::DungeonGenerator_eventHasAlreadyRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData_Statics::DungeonGenerator_eventHasAlreadyRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData()
 {
@@ -773,9 +727,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execHasAlreadyRoomData)
 	*(bool*)Z_Param__Result=P_THIS->HasAlreadyRoomData(Z_Param_RoomData);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function HasAlreadyRoomData
+// ********** End Class ADungeonGenerator Function HasAlreadyRoomData ******************************
 
-// Begin Class ADungeonGenerator Function HasAlreadyRoomType
+// ********** Begin Class ADungeonGenerator Function HasAlreadyRoomType ****************************
 struct Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics
 {
 	struct DungeonGenerator_eventHasAlreadyRoomType_Parms
@@ -786,15 +740,11 @@ struct Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return true if a specific RoomData type is already in the dungeon\n" },
-#endif
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use the same function from the Rooms variable." },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return true if a specific RoomData type is already in the dungeon" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomType;
@@ -814,7 +764,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyRoomType", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::DungeonGenerator_eventHasAlreadyRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "HasAlreadyRoomType", Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::DungeonGenerator_eventHasAlreadyRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType_Statics::DungeonGenerator_eventHasAlreadyRoomType_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType()
 {
@@ -833,9 +783,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execHasAlreadyRoomType)
 	*(bool*)Z_Param__Result=P_THIS->HasAlreadyRoomType(Z_Param_RoomType);
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function HasAlreadyRoomType
+// ********** End Class ADungeonGenerator Function HasAlreadyRoomType ******************************
 
-// Begin Class ADungeonGenerator Function IsValidDungeon
+// ********** Begin Class ADungeonGenerator Function IsValidDungeon ********************************
 struct DungeonGenerator_eventIsValidDungeon_Parms
 {
 	bool ReturnValue;
@@ -846,7 +796,7 @@ struct DungeonGenerator_eventIsValidDungeon_Parms
 	{
 	}
 };
-static const FName NAME_ADungeonGenerator_IsValidDungeon = FName(TEXT("IsValidDungeon"));
+static FName NAME_ADungeonGenerator_IsValidDungeon = FName(TEXT("IsValidDungeon"));
 bool ADungeonGenerator::IsValidDungeon()
 {
 	UFunction* Func = FindFunctionChecked(NAME_ADungeonGenerator_IsValidDungeon);
@@ -866,14 +816,10 @@ struct Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Dungeon Generator" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// Condition to validate a dungeon Generation\n" },
-#endif
 		{ "DisplayName", "Is Valid Dungeon" },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Condition to validate a dungeon Generation" },
-#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -890,7 +836,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "IsValidDungeon", nullptr, nullptr, Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::PropPointers), sizeof(DungeonGenerator_eventIsValidDungeon_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADungeonGenerator, nullptr, "IsValidDungeon", Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::PropPointers), sizeof(DungeonGenerator_eventIsValidDungeon_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(DungeonGenerator_eventIsValidDungeon_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon()
 {
@@ -908,9 +854,9 @@ DEFINE_FUNCTION(ADungeonGenerator::execIsValidDungeon)
 	*(bool*)Z_Param__Result=P_THIS->IsValidDungeon_Implementation();
 	P_NATIVE_END;
 }
-// End Class ADungeonGenerator Function IsValidDungeon
+// ********** End Class ADungeonGenerator Function IsValidDungeon **********************************
 
-// Begin Class ADungeonGenerator
+// ********** Begin Class ADungeonGenerator ********************************************************
 void ADungeonGenerator::StaticRegisterNativesADungeonGenerator()
 {
 	UClass* Class = ADungeonGenerator::StaticClass();
@@ -932,10 +878,34 @@ void ADungeonGenerator::StaticRegisterNativesADungeonGenerator()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ADungeonGenerator);
+FClassRegistrationInfo Z_Registration_Info_UClass_ADungeonGenerator;
+UClass* ADungeonGenerator::GetPrivateStaticClass()
+{
+	using TClass = ADungeonGenerator;
+	if (!Z_Registration_Info_UClass_ADungeonGenerator.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("DungeonGenerator"),
+			Z_Registration_Info_UClass_ADungeonGenerator.InnerSingleton,
+			StaticRegisterNativesADungeonGenerator,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_ADungeonGenerator.InnerSingleton;
+}
 UClass* Z_Construct_UClass_ADungeonGenerator_NoRegister()
 {
-	return ADungeonGenerator::StaticClass();
+	return ADungeonGenerator::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_ADungeonGenerator_Statics
 {
@@ -943,37 +913,24 @@ struct Z_Construct_UClass_ADungeonGenerator_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "ClassGroupNames", "Procedural Dungeon" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// This is the main actor of the plugin. The dungeon generator is responsible to generate dungeons and replicate them over the network. \n" },
-#endif
-		{ "HideFunctions", "StartNewDungeon,FinalizeDungeon,CreateRoomInstance,TryPlaceRoom,AddRoomToDungeon" },
+		{ "Comment", "// This is the main actor of the plugin. The dungeon generator is responsible to generate dungeons and replicate them over the network.\n" },
+		{ "HideCategories", "GenerationAlgorithm" },
 		{ "IncludePath", "DungeonGenerator.h" },
 		{ "IsBlueprintBase", "true" },
-		{ "KismetHideOverrides", "CreateDungeon" },
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This is the main actor of the plugin. The dungeon generator is responsible to generate dungeons and replicate them over the network." },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GenerationType_MetaData[] = {
 		{ "Category", "Procedural Generation" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// In which order the dungeon generate rooms.\n// Depth First: Dungeon will use the last generated room to place the next one. Resulting in a more linear dungeon.\n// Breadth First: Dungeon will generate a room at each door of the current one before going to the next room. Resulting in a more spread dungeon.\n" },
-#endif
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "In which order the dungeon generate rooms.\nDepth First: Dungeon will use the last generated room to place the next one. Resulting in a more linear dungeon.\nBreadth First: Dungeon will generate a room at each door of the current one before going to the next room. Resulting in a more spread dungeon." },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bCanLoop_MetaData[] = {
 		{ "Category", "Procedural Generation" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// If ticked, newly placed room will check if any door is aligned with another room, and if so will connect them.\n// If unticked, only the doors between CurrentRoom and NextRoom (in the function ChooseNextRoom) will be connected.\n// (will only have effect if the deprecated CanLoop in the plugin settings is ticked too, until it is removed in a future version)\n" },
-#endif
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "If ticked, newly placed room will check if any door is aligned with another room, and if so will connect them.\nIf unticked, only the doors between CurrentRoom and NextRoom (in the function ChooseNextRoom) will be connected.\n(will only have effect if the deprecated CanLoop in the plugin settings is ticked too, until it is removed in a future version)" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DungeonLimits_MetaData[] = {
 		{ "Category", "Procedural Generation" },
@@ -981,13 +938,9 @@ struct Z_Construct_UClass_ADungeonGenerator_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bAutoDiscardRoomIfNull_MetaData[] = {
 		{ "Category", "Procedural Generation" },
-#if !UE_BUILD_SHIPPING
 		{ "Comment", "// If true, returning null in ChooseNextRoom is the same as calling DiscardRoom.\n" },
-#endif
 		{ "ModuleRelativePath", "Public/DungeonGenerator.h" },
-#if !UE_BUILD_SHIPPING
 		{ "ToolTip", "If true, returning null in ChooseNextRoom is the same as calling DiscardRoom." },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_GenerationType_Underlying;
@@ -1000,20 +953,20 @@ struct Z_Construct_UClass_ADungeonGenerator_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData, "ChooseFirstRoomData" }, // 2792457932
-		{ &Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData, "ChooseNextRoomData" }, // 2230619995
-		{ &Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom, "ContinueToAddRoom" }, // 1293062094
-		{ &Z_Construct_UFunction_ADungeonGenerator_CountRoomData, "CountRoomData" }, // 1759688818
-		{ &Z_Construct_UFunction_ADungeonGenerator_CountRoomType, "CountRoomType" }, // 2557181716
-		{ &Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData, "CountTotalRoomData" }, // 2043551075
-		{ &Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType, "CountTotalRoomType" }, // 1038645697
-		{ &Z_Construct_UFunction_ADungeonGenerator_DiscardRoom, "DiscardRoom" }, // 2812913475
-		{ &Z_Construct_UFunction_ADungeonGenerator_GetNbRoom, "GetNbRoom" }, // 2594580551
-		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom, "HasAlreadyOneRoomDataFrom" }, // 2159571479
-		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom, "HasAlreadyOneRoomTypeFrom" }, // 721603391
-		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData, "HasAlreadyRoomData" }, // 715971135
-		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType, "HasAlreadyRoomType" }, // 4186938138
-		{ &Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon, "IsValidDungeon" }, // 2895030523
+		{ &Z_Construct_UFunction_ADungeonGenerator_ChooseFirstRoomData, "ChooseFirstRoomData" }, // 222071844
+		{ &Z_Construct_UFunction_ADungeonGenerator_ChooseNextRoomData, "ChooseNextRoomData" }, // 3368499598
+		{ &Z_Construct_UFunction_ADungeonGenerator_ContinueToAddRoom, "ContinueToAddRoom" }, // 4090893474
+		{ &Z_Construct_UFunction_ADungeonGenerator_CountRoomData, "CountRoomData" }, // 4074474186
+		{ &Z_Construct_UFunction_ADungeonGenerator_CountRoomType, "CountRoomType" }, // 1383274526
+		{ &Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomData, "CountTotalRoomData" }, // 4200130798
+		{ &Z_Construct_UFunction_ADungeonGenerator_CountTotalRoomType, "CountTotalRoomType" }, // 958287641
+		{ &Z_Construct_UFunction_ADungeonGenerator_DiscardRoom, "DiscardRoom" }, // 998977720
+		{ &Z_Construct_UFunction_ADungeonGenerator_GetNbRoom, "GetNbRoom" }, // 173707565
+		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomDataFrom, "HasAlreadyOneRoomDataFrom" }, // 4288475057
+		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyOneRoomTypeFrom, "HasAlreadyOneRoomTypeFrom" }, // 468338514
+		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomData, "HasAlreadyRoomData" }, // 3922457744
+		{ &Z_Construct_UFunction_ADungeonGenerator_HasAlreadyRoomType, "HasAlreadyRoomType" }, // 2980746224
+		{ &Z_Construct_UFunction_ADungeonGenerator_IsValidDungeon, "IsValidDungeon" }, // 3539503479
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1022,13 +975,13 @@ struct Z_Construct_UClass_ADungeonGenerator_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_GenerationType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_GenerationType = { "GenerationType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADungeonGenerator, GenerationType), Z_Construct_UEnum_ProceduralDungeon_EGenerationType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationType_MetaData), NewProp_GenerationType_MetaData) }; // 513687356
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_GenerationType = { "GenerationType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADungeonGenerator, GenerationType), Z_Construct_UEnum_ProceduralDungeon_EGenerationType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GenerationType_MetaData), NewProp_GenerationType_MetaData) }; // 572980388
 void Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_bCanLoop_SetBit(void* Obj)
 {
 	((ADungeonGenerator*)Obj)->bCanLoop = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_bCanLoop = { "bCanLoop", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ADungeonGenerator), &Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_bCanLoop_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bCanLoop_MetaData), NewProp_bCanLoop_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_DungeonLimits = { "DungeonLimits", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADungeonGenerator, DungeonLimits), Z_Construct_UScriptStruct_FBoundsParams, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DungeonLimits_MetaData), NewProp_DungeonLimits_MetaData) }; // 3499304364
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_DungeonLimits = { "DungeonLimits", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADungeonGenerator, DungeonLimits), Z_Construct_UScriptStruct_FBoundsParams, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DungeonLimits_MetaData), NewProp_DungeonLimits_MetaData) }; // 2717609987
 void Z_Construct_UClass_ADungeonGenerator_Statics::NewProp_bAutoDiscardRoomIfNull_SetBit(void* Obj)
 {
 	((ADungeonGenerator*)Obj)->bAutoDiscardRoomIfNull = 1;
@@ -1059,7 +1012,7 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ADungeonGenerator_Stati
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ADungeonGenerator_Statics::PropPointers),
 	0,
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ADungeonGenerator_Statics::Class_MetaDataParams), Z_Construct_UClass_ADungeonGenerator_Statics::Class_MetaDataParams)
 };
 UClass* Z_Construct_UClass_ADungeonGenerator()
@@ -1070,24 +1023,21 @@ UClass* Z_Construct_UClass_ADungeonGenerator()
 	}
 	return Z_Registration_Info_UClass_ADungeonGenerator.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<ADungeonGenerator>()
-{
-	return ADungeonGenerator::StaticClass();
-}
 DEFINE_VTABLE_PTR_HELPER_CTOR(ADungeonGenerator);
 ADungeonGenerator::~ADungeonGenerator() {}
-// End Class ADungeonGenerator
+// ********** End Class ADungeonGenerator **********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADungeonGenerator, ADungeonGenerator::StaticClass, TEXT("ADungeonGenerator"), &Z_Registration_Info_UClass_ADungeonGenerator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADungeonGenerator), 2817487561U) },
+		{ Z_Construct_UClass_ADungeonGenerator, ADungeonGenerator::StaticClass, TEXT("ADungeonGenerator"), &Z_Registration_Info_UClass_ADungeonGenerator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADungeonGenerator), 2462625240U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_951072279(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h__Script_ProceduralDungeon_950912538(TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGenerator_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

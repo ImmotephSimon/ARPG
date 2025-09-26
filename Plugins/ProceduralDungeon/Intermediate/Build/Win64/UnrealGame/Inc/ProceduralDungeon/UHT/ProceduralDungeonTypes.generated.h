@@ -5,26 +5,30 @@
 ===========================================================================*/
 
 // IWYU pragma: private, include "ProceduralDungeonTypes.h"
-#include "UObject/ObjectMacros.h"
-#include "UObject/ScriptMacros.h"
 
-PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #ifdef PROCEDURALDUNGEON_ProceduralDungeonTypes_generated_h
 #error "ProceduralDungeonTypes.generated.h already included, missing '#pragma once' in ProceduralDungeonTypes.h"
 #endif
 #define PROCEDURALDUNGEON_ProceduralDungeonTypes_generated_h
 
-#define FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h_104_GENERATED_BODY \
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+// ********** Begin ScriptStruct FDoorDef **********************************************************
+#define FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h_100_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FDoorDef_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
-template<> PROCEDURALDUNGEON_API UScriptStruct* StaticStruct<struct FDoorDef>();
+struct FDoorDef;
+// ********** End ScriptStruct FDoorDef ************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h
+#define CURRENT_FILE_ID FID_HostProject_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h
 
-
+// ********** Begin Enum EGenerationState **********************************************************
 #define FOREACH_ENUM_EGENERATIONSTATE(op) \
 	op(EGenerationState::Idle) \
 	op(EGenerationState::Generation) \
@@ -37,7 +41,9 @@ template<> PROCEDURALDUNGEON_API UScriptStruct* StaticStruct<struct FDoorDef>();
 enum class EGenerationState : uint8;
 template<> struct TIsUEnumClass<EGenerationState> { enum { Value = true }; };
 template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationState>();
+// ********** End Enum EGenerationState ************************************************************
 
+// ********** Begin Enum EDoorDirection ************************************************************
 #define FOREACH_ENUM_EDOORDIRECTION(op) \
 	op(EDoorDirection::North) \
 	op(EDoorDirection::East) \
@@ -48,7 +54,9 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationState>();
 enum class EDoorDirection : uint8;
 template<> struct TIsUEnumClass<EDoorDirection> { enum { Value = true }; };
 template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EDoorDirection>();
+// ********** End Enum EDoorDirection **************************************************************
 
+// ********** Begin Enum EGenerationType ***********************************************************
 #define FOREACH_ENUM_EGENERATIONTYPE(op) \
 	op(EGenerationType::DFS) \
 	op(EGenerationType::BFS) \
@@ -57,7 +65,9 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EDoorDirection>();
 enum class EGenerationType : uint8;
 template<> struct TIsUEnumClass<EGenerationType> { enum { Value = true }; };
 template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationType>();
+// ********** End Enum EGenerationType *************************************************************
 
+// ********** Begin Enum ESeedType *****************************************************************
 #define FOREACH_ENUM_ESEEDTYPE(op) \
 	op(ESeedType::Random) \
 	op(ESeedType::AutoIncrement) \
@@ -67,7 +77,9 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationType>();
 enum class ESeedType : uint8;
 template<> struct TIsUEnumClass<ESeedType> { enum { Value = true }; };
 template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<ESeedType>();
+// ********** End Enum ESeedType *******************************************************************
 
+// ********** Begin Enum EVisibilityMode ***********************************************************
 #define FOREACH_ENUM_EVISIBILITYMODE(op) \
 	op(EVisibilityMode::Default) \
 	op(EVisibilityMode::ForceVisible) \
@@ -78,5 +90,6 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<ESeedType>();
 enum class EVisibilityMode : uint8;
 template<> struct TIsUEnumClass<EVisibilityMode> { enum { Value = true }; };
 template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EVisibilityMode>();
+// ********** End Enum EVisibilityMode *************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

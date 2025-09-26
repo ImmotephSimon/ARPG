@@ -7,12 +7,9 @@
 
 
 // Sets default values
-AGASCharacter::AGASCharacter() : IsDead(false)
+AGASCharacter::AGASCharacter()
 {
     
-    // Set this character to call Tick() every frame. You can turn this off to improve performance if you don't need it.
-    PrimaryActorTick.bCanEverTick = true;
-
     // Create AbilitySystemComponent and attach to the character
     AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 

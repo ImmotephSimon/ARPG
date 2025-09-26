@@ -5,16 +5,18 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "GameplayMessageRuntime/Public/GameFramework/GameplayMessageTypes2.h"
+#include "GameFramework/GameplayMessageTypes2.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeGameplayMessageTypes2() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 GAMEPLAYMESSAGERUNTIME_API UEnum* Z_Construct_UEnum_GameplayMessageRuntime_EGameplayMessageMatch();
 UPackage* Z_Construct_UPackage__Script_GameplayMessageRuntime();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Enum EGameplayMessageMatch
+// ********** Begin Enum EGameplayMessageMatch *****************************************************
 static FEnumRegistrationInfo Z_Registration_Info_UEnum_EGameplayMessageMatch;
 static UEnum* EGameplayMessageMatch_StaticEnum()
 {
@@ -74,18 +76,19 @@ UEnum* Z_Construct_UEnum_GameplayMessageRuntime_EGameplayMessageMatch()
 	}
 	return Z_Registration_Info_UEnum_EGameplayMessageMatch.InnerSingleton;
 }
-// End Enum EGameplayMessageMatch
+// ********** End Enum EGameplayMessageMatch *******************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EGameplayMessageMatch_StaticEnum, TEXT("EGameplayMessageMatch"), &Z_Registration_Info_UEnum_EGameplayMessageMatch, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1992465379U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h_2137425532(TEXT("/Script/GameplayMessageRuntime"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_2137425532(TEXT("/Script/GameplayMessageRuntime"),
 	nullptr, 0,
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h_Statics::EnumInfo));
-// End Registration
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics::EnumInfo));
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

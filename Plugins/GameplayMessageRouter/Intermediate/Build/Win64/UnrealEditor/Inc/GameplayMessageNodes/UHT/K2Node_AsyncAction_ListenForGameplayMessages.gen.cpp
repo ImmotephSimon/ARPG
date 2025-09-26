@@ -5,25 +5,51 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "GameplayMessageNodes/Public/K2Node_AsyncAction_ListenForGameplayMessages.h"
+#include "K2Node_AsyncAction_ListenForGameplayMessages.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeK2Node_AsyncAction_ListenForGameplayMessages() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 BLUEPRINTGRAPH_API UClass* Z_Construct_UClass_UK2Node_AsyncAction();
 GAMEPLAYMESSAGENODES_API UClass* Z_Construct_UClass_UK2Node_AsyncAction_ListenForGameplayMessages();
 GAMEPLAYMESSAGENODES_API UClass* Z_Construct_UClass_UK2Node_AsyncAction_ListenForGameplayMessages_NoRegister();
 UPackage* Z_Construct_UPackage__Script_GameplayMessageNodes();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UK2Node_AsyncAction_ListenForGameplayMessages
+// ********** Begin Class UK2Node_AsyncAction_ListenForGameplayMessages ****************************
 void UK2Node_AsyncAction_ListenForGameplayMessages::StaticRegisterNativesUK2Node_AsyncAction_ListenForGameplayMessages()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UK2Node_AsyncAction_ListenForGameplayMessages);
+FClassRegistrationInfo Z_Registration_Info_UClass_UK2Node_AsyncAction_ListenForGameplayMessages;
+UClass* UK2Node_AsyncAction_ListenForGameplayMessages::GetPrivateStaticClass()
+{
+	using TClass = UK2Node_AsyncAction_ListenForGameplayMessages;
+	if (!Z_Registration_Info_UClass_UK2Node_AsyncAction_ListenForGameplayMessages.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("K2Node_AsyncAction_ListenForGameplayMessages"),
+			Z_Registration_Info_UClass_UK2Node_AsyncAction_ListenForGameplayMessages.InnerSingleton,
+			StaticRegisterNativesUK2Node_AsyncAction_ListenForGameplayMessages,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UK2Node_AsyncAction_ListenForGameplayMessages.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UK2Node_AsyncAction_ListenForGameplayMessages_NoRegister()
 {
-	return UK2Node_AsyncAction_ListenForGameplayMessages::StaticClass();
+	return UK2Node_AsyncAction_ListenForGameplayMessages::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UK2Node_AsyncAction_ListenForGameplayMessages_Statics
 {
@@ -73,25 +99,22 @@ UClass* Z_Construct_UClass_UK2Node_AsyncAction_ListenForGameplayMessages()
 	}
 	return Z_Registration_Info_UClass_UK2Node_AsyncAction_ListenForGameplayMessages.OuterSingleton;
 }
-template<> GAMEPLAYMESSAGENODES_API UClass* StaticClass<UK2Node_AsyncAction_ListenForGameplayMessages>()
-{
-	return UK2Node_AsyncAction_ListenForGameplayMessages::StaticClass();
-}
 UK2Node_AsyncAction_ListenForGameplayMessages::UK2Node_AsyncAction_ListenForGameplayMessages(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UK2Node_AsyncAction_ListenForGameplayMessages);
 UK2Node_AsyncAction_ListenForGameplayMessages::~UK2Node_AsyncAction_ListenForGameplayMessages() {}
-// End Class UK2Node_AsyncAction_ListenForGameplayMessages
+// ********** End Class UK2Node_AsyncAction_ListenForGameplayMessages ******************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h__Script_GameplayMessageNodes_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UK2Node_AsyncAction_ListenForGameplayMessages, UK2Node_AsyncAction_ListenForGameplayMessages::StaticClass, TEXT("UK2Node_AsyncAction_ListenForGameplayMessages"), &Z_Registration_Info_UClass_UK2Node_AsyncAction_ListenForGameplayMessages, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UK2Node_AsyncAction_ListenForGameplayMessages), 193482932U) },
+		{ Z_Construct_UClass_UK2Node_AsyncAction_ListenForGameplayMessages, UK2Node_AsyncAction_ListenForGameplayMessages::StaticClass, TEXT("UK2Node_AsyncAction_ListenForGameplayMessages"), &Z_Registration_Info_UClass_UK2Node_AsyncAction_ListenForGameplayMessages, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UK2Node_AsyncAction_ListenForGameplayMessages), 3677830328U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h_3848873811(TEXT("/Script/GameplayMessageNodes"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h__Script_GameplayMessageNodes_3406458462(TEXT("/Script/GameplayMessageNodes"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h__Script_GameplayMessageNodes_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageNodes_Public_K2Node_AsyncAction_ListenForGameplayMessages_h__Script_GameplayMessageNodes_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,31 +1,15 @@
-/*
- * MIT License
- *
- * Copyright (c) 2023-2024 Benoit Pelletier
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+// Copyright Benoit Pelletier 2023 - 2025 All Rights Reserved.
+//
+// This software is available under different licenses depending on the source from which it was obtained:
+// - The Fab EULA (https://fab.com/eula) applies when obtained from the Fab marketplace.
+// - The CeCILL-C license (https://cecill.info/licences/Licence_CeCILL-C_V1-en.html) applies when obtained from any other source.
+// Please refer to the accompanying LICENSE file for further details.
 
 #include "RoomCustomData.h"
 #include "Components/ActorComponent.h"
 #include "Components/SceneComponent.h"
 #include "RoomLevel.h"
+#include "Utils/DungeonSaveUtils.h"
 
 UActorComponent* CreateComponentOnInstance(AActor* ActorInstance, TSubclassOf<UActorComponent> ComponentClass, USceneComponent* OptionalParentForSceneComponent = nullptr)
 {
@@ -67,10 +51,76 @@ UActorComponent* CreateComponentOnInstance(AActor* ActorInstance, TSubclassOf<UA
 	return NewComp;
 }
 
-void URoomCustomData::CreateLevelComponent(ARoomLevel* LevelActor) const
+void URoomCustomData::CreateLevelComponent(ARoomLevel* LevelActor)
 {
 	if (!LevelComponent)
 		return;
 
-	CreateComponentOnInstance(LevelActor, LevelComponent);
+	LevelComponentInstance = CreateComponentOnInstance(LevelActor, LevelComponent);
+	if (!LevelComponentInstance.IsValid())
+	{
+		DungeonLog_Error("Failed to create component '%s' on room level '%s'.", *GetNameSafe(LevelComponent), *GetNameSafe(LevelActor));
+	}
+}
+
+bool URoomCustomData::SerializeObject(FStructuredArchive::FRecord& Record, bool bIsLoading)
+{
+	// Nothing more to serialize if no component
+	if (nullptr == LevelComponent)
+		return true;
+
+	SavedData = MakeUnique<FSaveData>();
+
+	if (!bIsLoading)
+	{
+		// Serialize component data
+		if (LevelComponentInstance.IsValid())
+		{
+			SerializeUObject(SavedData->ComponentData, LevelComponentInstance.Get(), false);
+		}
+	}
+
+	Record.EnterField(AR_FIELD_NAME("ComponentData")) << SavedData->ComponentData;
+
+	if (!bIsLoading)
+	{
+		// No need to keep the data after saving
+		SavedData.Reset();
+	}
+
+	return true;
+}
+
+void URoomCustomData::PreSaveDungeon_Implementation()
+{
+	if (!LevelComponentInstance.IsValid())
+		return;
+
+	if (LevelComponentInstance->Implements<UDungeonSaveInterface>())
+	{
+		IDungeonSaveInterface::Execute_PreSaveDungeon(LevelComponentInstance.Get());
+	}
+}
+
+void URoomCustomData::PostLoadDungeon_Implementation()
+{
+	if (!SavedData.IsValid())
+		return;
+
+	// Deserialize component data
+	if (LevelComponentInstance.IsValid())
+	{
+		SerializeUObject(SavedData->ComponentData, LevelComponentInstance.Get(), true);
+	}
+	else
+	{
+		DungeonLog_Error("Failed to deserialize component data for '%s' in room custom data '%s'", *GetNameSafe(LevelComponent), *GetNameSafe(this));
+	}
+
+	SavedData.Reset();
+
+	if (LevelComponentInstance.IsValid() && LevelComponentInstance->Implements<UDungeonSaveInterface>())
+	{
+		IDungeonSaveInterface::Execute_PostLoadDungeon(LevelComponentInstance.Get());
+	}
 }

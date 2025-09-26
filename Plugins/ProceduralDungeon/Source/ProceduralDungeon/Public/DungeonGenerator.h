@@ -1,26 +1,9 @@
-/*
- * MIT License
- *
- * Copyright (c) 2019-2024 Benoit Pelletier
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+// Copyright Benoit Pelletier 2019 - 2025 All Rights Reserved.
+//
+// This software is available under different licenses depending on the source from which it was obtained:
+// - The Fab EULA (https://fab.com/eula) applies when obtained from the Fab marketplace.
+// - The CeCILL-C license (https://cecill.info/licences/Licence_CeCILL-C_V1-en.html) applies when obtained from any other source.
+// Please refer to the accompanying LICENSE file for further details.
 
 #pragma once
 
@@ -31,8 +14,8 @@
 
 class IReadOnlyRoom;
 
-// This is the main actor of the plugin. The dungeon generator is responsible to generate dungeons and replicate them over the network. 
-UCLASS(Blueprintable, ClassGroup = "Procedural Dungeon", HideFunctions = "StartNewDungeon,FinalizeDungeon,CreateRoomInstance,TryPlaceRoom,AddRoomToDungeon", meta = (KismetHideOverrides = "CreateDungeon", HideFunctions = "CreateRoomInstance,TryPlaceRoom,AddRoomToDungeon"))
+// This is the main actor of the plugin. The dungeon generator is responsible to generate dungeons and replicate them over the network.
+UCLASS(Blueprintable, ClassGroup = "Procedural Dungeon", HideCategories = "GenerationAlgorithm")
 class PROCEDURALDUNGEON_API ADungeonGenerator : public ADungeonGeneratorBase
 {
 	GENERATED_BODY()
@@ -53,15 +36,15 @@ public:
 	URoomData* ChooseFirstRoomData();
 
 	/** Return the RoomData that will be connected to the Current Room
-	* @param CurrentRoom [DEPRECATED] Use CurrentRoomInstance->GetRoomData instead.
-	* @param CurrentRoomInstance The room instance to which the generator will connect the next room. This interface allows access only to some data.
-	* @param DoorData The door of the CurrentRoom on which the next room will be connected (its location in room units, its orientation and its type).
-	* @param DoorIndex The index of the door used on the next room to connect to the CurrentRoom.
-	* Use -1 for a random (compatible) door, or the door index from the RoomData door array (0 is the first door).
-	* WARNING: If the RandomDoor boolean of the RoomData is checked, then it will be considered -1 whatever you set here.
-	* @return The room data asset used to instantiate the new room instance (must not be null)
-	*/
-	UFUNCTION(BlueprintNativeEvent, Category = "Dungeon Generator", meta = (DisplayName = "Choose Next Room", ReturnDisplayName="Room Data", AutoCreateRefTerm = "DoorIndex"))
+	 * @param CurrentRoom [DEPRECATED] Use CurrentRoomInstance->GetRoomData instead.
+	 * @param CurrentRoomInstance The room instance to which the generator will connect the next room. This interface allows access only to some data.
+	 * @param DoorData The door of the CurrentRoom on which the next room will be connected (its location in room units, its orientation and its type).
+	 * @param DoorIndex The index of the door used on the next room to connect to the CurrentRoom.
+	 * Use -1 for a random (compatible) door, or the door index from the RoomData door array (0 is the first door).
+	 * WARNING: If the RandomDoor boolean of the RoomData is checked, then it will be considered -1 whatever you set here.
+	 * @return The room data asset used to instantiate the new room instance (must not be null)
+	 */
+	UFUNCTION(BlueprintNativeEvent, Category = "Dungeon Generator", meta = (DisplayName = "Choose Next Room", ReturnDisplayName = "Room Data", AutoCreateRefTerm = "DoorIndex"))
 	URoomData* ChooseNextRoomData(const URoomData* CurrentRoom, const TScriptInterface<IReadOnlyRoom>& CurrentRoomInstance, const FDoorDef& DoorData, int& DoorIndex);
 
 	// Condition to validate a dungeon Generation

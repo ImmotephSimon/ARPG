@@ -128,8 +128,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	void IncreasePhysicalTaken(float Multiplier);
 
-	bool IsDead;
-
 	// Shield properties
 	UPROPERTY(BlueprintAssignable, Category = "Damage")
 	FEnergyShieldChanged EnergyShieldChanged;

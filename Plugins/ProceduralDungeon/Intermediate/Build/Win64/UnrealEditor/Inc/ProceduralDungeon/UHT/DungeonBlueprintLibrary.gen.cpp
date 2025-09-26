@@ -5,14 +5,18 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Public/DungeonBlueprintLibrary.h"
-#include "ProceduralDungeon/Public/RoomCustomData.h"
-#include "Runtime/Engine/Classes/Engine/DataTable.h"
+#include "DungeonBlueprintLibrary.h"
+#include "Engine/DataTable.h"
+#include "ProceduralDungeonTypes.h"
+#include "RoomCustomData.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeDungeonBlueprintLibrary() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntVector();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
@@ -25,10 +29,11 @@ PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDungeonBlueprintLibrary_NoRegi
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoom_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomCustomData_NoRegister();
 PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_EDoorDirection();
+PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FDoorDef();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UDungeonBlueprintLibrary Function CompareDataTableRows
+// ********** Begin Class UDungeonBlueprintLibrary Function CompareDataTableRows *******************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics
 {
 	struct DungeonBlueprintLibrary_eventCompareDataTableRows_Parms
@@ -58,8 +63,8 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Stati
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventCompareDataTableRows_Parms, A), Z_Construct_UScriptStruct_FDataTableRowHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1360917958
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventCompareDataTableRows_Parms, B), Z_Construct_UScriptStruct_FDataTableRowHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1360917958
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventCompareDataTableRows_Parms, A), Z_Construct_UScriptStruct_FDataTableRowHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 4101738896
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventCompareDataTableRows_Parms, B), Z_Construct_UScriptStruct_FDataTableRowHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 4101738896
 void Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((DungeonBlueprintLibrary_eventCompareDataTableRows_Parms*)Obj)->ReturnValue = 1;
@@ -71,7 +76,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "CompareDataTableRows", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::DungeonBlueprintLibrary_eventCompareDataTableRows_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "CompareDataTableRows", Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::DungeonBlueprintLibrary_eventCompareDataTableRows_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows_Statics::DungeonBlueprintLibrary_eventCompareDataTableRows_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows()
 {
@@ -91,9 +96,61 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execCompareDataTableRows)
 	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::CompareDataTableRows(Z_Param_Out_A,Z_Param_Out_B);
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function CompareDataTableRows
+// ********** End Class UDungeonBlueprintLibrary Function CompareDataTableRows *********************
 
-// Begin Class UDungeonBlueprintLibrary Function DoorDirection_Add
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDef_GetOpposite ********************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics
+{
+	struct DungeonBlueprintLibrary_eventDoorDef_GetOpposite_Parms
+	{
+		FDoorDef DoorDef;
+		FDoorDef ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "DoorDef" },
+		{ "CompactNodeTitle", "Opposite" },
+		{ "DisplayName", "Opposite" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DoorDef_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_DoorDef;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::NewProp_DoorDef = { "DoorDef", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDef_GetOpposite_Parms, DoorDef), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorDef_MetaData), NewProp_DoorDef_MetaData) }; // 121548433
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDef_GetOpposite_Parms, ReturnValue), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(0, nullptr) }; // 121548433
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::NewProp_DoorDef,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDef_GetOpposite", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::DungeonBlueprintLibrary_eventDoorDef_GetOpposite_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::DungeonBlueprintLibrary_eventDoorDef_GetOpposite_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDef_GetOpposite)
+{
+	P_GET_STRUCT_REF(FDoorDef,Z_Param_Out_DoorDef);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FDoorDef*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDef_GetOpposite(Z_Param_Out_DoorDef);
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function DoorDef_GetOpposite **********************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_Add **********************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics
 {
 	struct DungeonBlueprintLibrary_eventDoorDirection_Add_Parms
@@ -133,11 +190,11 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Add_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Add_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_B_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Add_Parms, B), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Add_Parms, B), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Add_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Add_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_A_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_A,
@@ -147,7 +204,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Add", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::DungeonBlueprintLibrary_eventDoorDirection_Add_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Add", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::DungeonBlueprintLibrary_eventDoorDirection_Add_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add_Statics::DungeonBlueprintLibrary_eventDoorDirection_Add_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add()
 {
@@ -167,9 +224,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_Add)
 	*(EDoorDirection*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_Add((EDoorDirection&)(Z_Param_Out_A),(EDoorDirection&)(Z_Param_Out_B));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function DoorDirection_Add
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_Add ************************
 
-// Begin Class UDungeonBlueprintLibrary Function DoorDirection_Decrement
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_Decrement ****************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics
 {
 	struct DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms
@@ -199,9 +256,9 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_St
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_A_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_A,
@@ -209,7 +266,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Decrement", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Decrement", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement_Statics::DungeonBlueprintLibrary_eventDoorDirection_Decrement_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement()
 {
@@ -228,9 +285,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_Decrement)
 	*(EDoorDirection*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_Decrement((EDoorDirection&)(Z_Param_Out_A));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function DoorDirection_Decrement
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_Decrement ******************
 
-// Begin Class UDungeonBlueprintLibrary Function DoorDirection_Increment
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_Increment ****************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics
 {
 	struct DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms
@@ -260,9 +317,9 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_St
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_A_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_A,
@@ -270,7 +327,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Increment", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Increment", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment_Statics::DungeonBlueprintLibrary_eventDoorDirection_Increment_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment()
 {
@@ -289,9 +346,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_Increment)
 	*(EDoorDirection*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_Increment((EDoorDirection&)(Z_Param_Out_A));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function DoorDirection_Increment
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_Increment ******************
 
-// Begin Class UDungeonBlueprintLibrary Function DoorDirection_Negate
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_Negate *******************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics
 {
 	struct DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms
@@ -321,9 +378,9 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Stati
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_A_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_A,
@@ -331,7 +388,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Negate", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Negate", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate_Statics::DungeonBlueprintLibrary_eventDoorDirection_Negate_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate()
 {
@@ -350,9 +407,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_Negate)
 	*(EDoorDirection*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_Negate((EDoorDirection&)(Z_Param_Out_A));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function DoorDirection_Negate
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_Negate *********************
 
-// Begin Class UDungeonBlueprintLibrary Function DoorDirection_Opposite
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_Opposite *****************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics
 {
 	struct DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms
@@ -386,9 +443,9 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Sta
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_A_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_A,
@@ -396,7 +453,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Opposite", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Opposite", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite_Statics::DungeonBlueprintLibrary_eventDoorDirection_Opposite_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite()
 {
@@ -415,9 +472,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_Opposite)
 	*(EDoorDirection*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_Opposite((EDoorDirection&)(Z_Param_Out_A));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function DoorDirection_Opposite
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_Opposite *******************
 
-// Begin Class UDungeonBlueprintLibrary Function DoorDirection_Sub
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_Sub **********************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics
 {
 	struct DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms
@@ -457,11 +514,11 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_B_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms, B), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms, B), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 3779627541
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_A_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_A,
@@ -471,7 +528,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Sub", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Sub", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub_Statics::DungeonBlueprintLibrary_eventDoorDirection_Sub_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub()
 {
@@ -491,9 +548,133 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_Sub)
 	*(EDoorDirection*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_Sub((EDoorDirection&)(Z_Param_Out_A),(EDoorDirection&)(Z_Param_Out_B));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function DoorDirection_Sub
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_Sub ************************
 
-// Begin Class UDungeonBlueprintLibrary Function DoorDirection_Valid
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_ToAngle ******************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics
+{
+	struct DungeonBlueprintLibrary_eventDoorDirection_ToAngle_Parms
+	{
+		EDoorDirection A;
+		float ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "AutoCreateRefTerm", "A" },
+		{ "BlueprintAutocast", "" },
+		{ "Category", "Conversion|Door Direction" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Convert a DoorDirection enum value into a unit IntVector pointing in that direction.\n" },
+#endif
+		{ "DisplayName", "To Angle" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Convert a DoorDirection enum value into a unit IntVector pointing in that direction." },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_A_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_A_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_A;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_ToAngle_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 3779627541
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_ToAngle_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::NewProp_A_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::NewProp_A,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_ToAngle", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::DungeonBlueprintLibrary_eventDoorDirection_ToAngle_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::DungeonBlueprintLibrary_eventDoorDirection_ToAngle_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_ToAngle)
+{
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_A);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_ToAngle((EDoorDirection&)(Z_Param_Out_A));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_ToAngle ********************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_ToIntVector **************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics
+{
+	struct DungeonBlueprintLibrary_eventDoorDirection_ToIntVector_Parms
+	{
+		EDoorDirection A;
+		FIntVector ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "AutoCreateRefTerm", "A" },
+		{ "BlueprintAutocast", "" },
+		{ "Category", "Conversion|Door Direction" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Convert a DoorDirection enum value into a unit IntVector pointing in that direction.\n" },
+#endif
+		{ "DisplayName", "To Int Vector" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Convert a DoorDirection enum value into a unit IntVector pointing in that direction." },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_A_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_A_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_A;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_ToIntVector_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 3779627541
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_ToIntVector_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::NewProp_A_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::NewProp_A,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_ToIntVector", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::DungeonBlueprintLibrary_eventDoorDirection_ToIntVector_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::DungeonBlueprintLibrary_eventDoorDirection_ToIntVector_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_ToIntVector)
+{
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_A);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FIntVector*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_ToIntVector((EDoorDirection&)(Z_Param_Out_A));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_ToIntVector ****************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function DoorDirection_Valid ********************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics
 {
 	struct DungeonBlueprintLibrary_eventDoorDirection_Valid_Parms
@@ -526,7 +707,7 @@ struct Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Static
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::NewProp_A_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Valid_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 687843478
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDoorDirection_Valid_Parms, A), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 3779627541
 void Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((DungeonBlueprintLibrary_eventDoorDirection_Valid_Parms*)Obj)->ReturnValue = 1;
@@ -538,7 +719,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Valid", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::DungeonBlueprintLibrary_eventDoorDirection_Valid_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "DoorDirection_Valid", Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::DungeonBlueprintLibrary_eventDoorDirection_Valid_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid_Statics::DungeonBlueprintLibrary_eventDoorDirection_Valid_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid()
 {
@@ -557,9 +738,317 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDoorDirection_Valid)
 	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::DoorDirection_Valid((EDoorDirection&)(Z_Param_Out_A));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function DoorDirection_Valid
+// ********** End Class UDungeonBlueprintLibrary Function DoorDirection_Valid **********************
 
-// Begin Class UDungeonBlueprintLibrary Function GetOwningRoom
+// ********** Begin Class UDungeonBlueprintLibrary Function Dungeon_InverseTransformDoorDef ********
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics
+{
+	struct DungeonBlueprintLibrary_eventDungeon_InverseTransformDoorDef_Parms
+	{
+		FDoorDef DoorDef;
+		FIntVector Translation;
+		EDoorDirection Rotation;
+		FDoorDef ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "AutoCreateRefTerm", "Rotation" },
+		{ "Category", "Math|Dungeon" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Inverse transform a DoorDef structure from the dungeon coordinates into a local coordinates\n" },
+#endif
+		{ "DisplayName", "Inverse Transform DoorDef (Dungeon)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Inverse transform a DoorDef structure from the dungeon coordinates into a local coordinates" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DoorDef_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Translation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Rotation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_DoorDef;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Translation;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Rotation_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Rotation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_DoorDef = { "DoorDef", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformDoorDef_Parms, DoorDef), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorDef_MetaData), NewProp_DoorDef_MetaData) }; // 121548433
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_Translation = { "Translation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformDoorDef_Parms, Translation), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Translation_MetaData), NewProp_Translation_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_Rotation_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformDoorDef_Parms, Rotation), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Rotation_MetaData), NewProp_Rotation_MetaData) }; // 3779627541
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformDoorDef_Parms, ReturnValue), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(0, nullptr) }; // 121548433
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_DoorDef,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_Translation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_Rotation_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_Rotation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Dungeon_InverseTransformDoorDef", Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::DungeonBlueprintLibrary_eventDungeon_InverseTransformDoorDef_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::DungeonBlueprintLibrary_eventDungeon_InverseTransformDoorDef_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDungeon_InverseTransformDoorDef)
+{
+	P_GET_STRUCT_REF(FDoorDef,Z_Param_Out_DoorDef);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_Translation);
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_Rotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FDoorDef*)Z_Param__Result=UDungeonBlueprintLibrary::Dungeon_InverseTransformDoorDef(Z_Param_Out_DoorDef,Z_Param_Out_Translation,(EDoorDirection&)(Z_Param_Out_Rotation));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function Dungeon_InverseTransformDoorDef **********
+
+// ********** Begin Class UDungeonBlueprintLibrary Function Dungeon_InverseTransformPosition *******
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics
+{
+	struct DungeonBlueprintLibrary_eventDungeon_InverseTransformPosition_Parms
+	{
+		FIntVector DungeonPos;
+		FIntVector Translation;
+		EDoorDirection Rotation;
+		FIntVector ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "AutoCreateRefTerm", "Rotation" },
+		{ "Category", "Math|Dungeon" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Inverse transform a cell position from the dungeon coordinates into a local coordinates\n" },
+#endif
+		{ "DisplayName", "Inverse Transform Position (Dungeon)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Inverse transform a cell position from the dungeon coordinates into a local coordinates" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DungeonPos_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Translation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Rotation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_DungeonPos;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Translation;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Rotation_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Rotation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_DungeonPos = { "DungeonPos", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformPosition_Parms, DungeonPos), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DungeonPos_MetaData), NewProp_DungeonPos_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_Translation = { "Translation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformPosition_Parms, Translation), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Translation_MetaData), NewProp_Translation_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_Rotation_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformPosition_Parms, Rotation), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Rotation_MetaData), NewProp_Rotation_MetaData) }; // 3779627541
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_InverseTransformPosition_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_DungeonPos,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_Translation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_Rotation_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_Rotation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Dungeon_InverseTransformPosition", Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::DungeonBlueprintLibrary_eventDungeon_InverseTransformPosition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::DungeonBlueprintLibrary_eventDungeon_InverseTransformPosition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDungeon_InverseTransformPosition)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_DungeonPos);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_Translation);
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_Rotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FIntVector*)Z_Param__Result=UDungeonBlueprintLibrary::Dungeon_InverseTransformPosition(Z_Param_Out_DungeonPos,Z_Param_Out_Translation,(EDoorDirection&)(Z_Param_Out_Rotation));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function Dungeon_InverseTransformPosition *********
+
+// ********** Begin Class UDungeonBlueprintLibrary Function Dungeon_TransformDoorDef ***************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics
+{
+	struct DungeonBlueprintLibrary_eventDungeon_TransformDoorDef_Parms
+	{
+		FDoorDef DoorDef;
+		FIntVector Translation;
+		EDoorDirection Rotation;
+		FDoorDef ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "AutoCreateRefTerm", "Rotation" },
+		{ "Category", "Math|Dungeon" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Transform a DoorDef structure from local coordinates into the dungeon coordinates\n" },
+#endif
+		{ "DisplayName", "Transform DoorDef (Dungeon)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Transform a DoorDef structure from local coordinates into the dungeon coordinates" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DoorDef_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Translation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Rotation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_DoorDef;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Translation;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Rotation_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Rotation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_DoorDef = { "DoorDef", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformDoorDef_Parms, DoorDef), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorDef_MetaData), NewProp_DoorDef_MetaData) }; // 121548433
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_Translation = { "Translation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformDoorDef_Parms, Translation), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Translation_MetaData), NewProp_Translation_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_Rotation_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformDoorDef_Parms, Rotation), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Rotation_MetaData), NewProp_Rotation_MetaData) }; // 3779627541
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformDoorDef_Parms, ReturnValue), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(0, nullptr) }; // 121548433
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_DoorDef,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_Translation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_Rotation_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_Rotation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Dungeon_TransformDoorDef", Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::DungeonBlueprintLibrary_eventDungeon_TransformDoorDef_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::DungeonBlueprintLibrary_eventDungeon_TransformDoorDef_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDungeon_TransformDoorDef)
+{
+	P_GET_STRUCT_REF(FDoorDef,Z_Param_Out_DoorDef);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_Translation);
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_Rotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FDoorDef*)Z_Param__Result=UDungeonBlueprintLibrary::Dungeon_TransformDoorDef(Z_Param_Out_DoorDef,Z_Param_Out_Translation,(EDoorDirection&)(Z_Param_Out_Rotation));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function Dungeon_TransformDoorDef *****************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function Dungeon_TransformPosition **************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics
+{
+	struct DungeonBlueprintLibrary_eventDungeon_TransformPosition_Parms
+	{
+		FIntVector LocalPos;
+		FIntVector Translation;
+		EDoorDirection Rotation;
+		FIntVector ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "AutoCreateRefTerm", "Rotation" },
+		{ "Category", "Math|Dungeon" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Transform a cell position from local coordinates into the dungeon coordinates\n" },
+#endif
+		{ "DisplayName", "Transform Position (Dungeon)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Transform a cell position from local coordinates into the dungeon coordinates" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LocalPos_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Translation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Rotation_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_LocalPos;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Translation;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Rotation_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Rotation;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_LocalPos = { "LocalPos", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformPosition_Parms, LocalPos), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LocalPos_MetaData), NewProp_LocalPos_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_Translation = { "Translation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformPosition_Parms, Translation), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Translation_MetaData), NewProp_Translation_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_Rotation_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_Rotation = { "Rotation", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformPosition_Parms, Rotation), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Rotation_MetaData), NewProp_Rotation_MetaData) }; // 3779627541
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventDungeon_TransformPosition_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_LocalPos,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_Translation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_Rotation_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_Rotation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Dungeon_TransformPosition", Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::DungeonBlueprintLibrary_eventDungeon_TransformPosition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::DungeonBlueprintLibrary_eventDungeon_TransformPosition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execDungeon_TransformPosition)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_LocalPos);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_Translation);
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_Rotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FIntVector*)Z_Param__Result=UDungeonBlueprintLibrary::Dungeon_TransformPosition(Z_Param_Out_LocalPos,Z_Param_Out_Translation,(EDoorDirection&)(Z_Param_Out_Rotation));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function Dungeon_TransformPosition ****************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function GetOwningRoom **************************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics
 {
 	struct DungeonBlueprintLibrary_eventGetOwningRoom_Parms
@@ -595,7 +1084,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "GetOwningRoom", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::DungeonBlueprintLibrary_eventGetOwningRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "GetOwningRoom", Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::DungeonBlueprintLibrary_eventGetOwningRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom_Statics::DungeonBlueprintLibrary_eventGetOwningRoom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom()
 {
@@ -614,9 +1103,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execGetOwningRoom)
 	*(URoom**)Z_Param__Result=UDungeonBlueprintLibrary::GetOwningRoom(Z_Param_Target);
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function GetOwningRoom
+// ********** End Class UDungeonBlueprintLibrary Function GetOwningRoom ****************************
 
-// Begin Class UDungeonBlueprintLibrary Function GetOwningRoomCustomData
+// ********** Begin Class UDungeonBlueprintLibrary Function GetOwningRoomCustomData ****************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics
 {
 	struct DungeonBlueprintLibrary_eventGetOwningRoomCustomData_Parms
@@ -668,7 +1157,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "GetOwningRoomCustomData", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::DungeonBlueprintLibrary_eventGetOwningRoomCustomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "GetOwningRoomCustomData", Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::DungeonBlueprintLibrary_eventGetOwningRoomCustomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData_Statics::DungeonBlueprintLibrary_eventGetOwningRoomCustomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData()
 {
@@ -689,9 +1178,403 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execGetOwningRoomCustomData)
 	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::GetOwningRoomCustomData(Z_Param_Target,Z_Param_CustomDataClass,P_ARG_GC_BARRIER(Z_Param_Out_CustomData));
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function GetOwningRoomCustomData
+// ********** End Class UDungeonBlueprintLibrary Function GetOwningRoomCustomData ******************
 
-// Begin Class UDungeonBlueprintLibrary Function IsDoorOfType
+// ********** Begin Class UDungeonBlueprintLibrary Function IntVector_Add **************************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics
+{
+	struct DungeonBlueprintLibrary_eventIntVector_Add_Parms
+	{
+		FIntVector A;
+		FIntVector B;
+		FIntVector ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallableWithoutWorldContext", "" },
+		{ "Category", "Utilities|Operators" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// ===== Int Vector Operators =====\n" },
+#endif
+		{ "CommutativeAssociativeBinaryOperator", "" },
+		{ "CompactNodeTitle", "+" },
+		{ "DisplayName", "Add (Int Vector)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "===== Int Vector Operators =====" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_A_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_B_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_A;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_B;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Add_Parms, A), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Add_Parms, B), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Add_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::NewProp_A,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::NewProp_B,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IntVector_Add", Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::DungeonBlueprintLibrary_eventIntVector_Add_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::DungeonBlueprintLibrary_eventIntVector_Add_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execIntVector_Add)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_A);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_B);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FIntVector*)Z_Param__Result=UDungeonBlueprintLibrary::IntVector_Add(Z_Param_Out_A,Z_Param_Out_B);
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function IntVector_Add ****************************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function IntVector_Equal ************************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics
+{
+	struct DungeonBlueprintLibrary_eventIntVector_Equal_Parms
+	{
+		FIntVector A;
+		FIntVector B;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallableWithoutWorldContext", "" },
+		{ "Category", "Utilities|Operators" },
+		{ "CompactNodeTitle", "==" },
+		{ "DisplayName", "Equal (Int Vector)" },
+		{ "Keywords", "==" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_A_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_B_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_A;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_B;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Equal_Parms, A), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Equal_Parms, B), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) };
+void Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((DungeonBlueprintLibrary_eventIntVector_Equal_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(DungeonBlueprintLibrary_eventIntVector_Equal_Parms), &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_A,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_B,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IntVector_Equal", Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::DungeonBlueprintLibrary_eventIntVector_Equal_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::DungeonBlueprintLibrary_eventIntVector_Equal_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execIntVector_Equal)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_A);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_B);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::IntVector_Equal(Z_Param_Out_A,Z_Param_Out_B);
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function IntVector_Equal **************************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function IntVector_Next *************************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics
+{
+	struct DungeonBlueprintLibrary_eventIntVector_Next_Parms
+	{
+		FIntVector Vector;
+		EDoorDirection Direction;
+		FIntVector ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Math|Transform" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Returns the neighbor at the provided direction.\n// Same as Vector + ToIntVector(Direction)\n" },
+#endif
+		{ "DisplayName", "Next (Int Vector)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Returns the neighbor at the provided direction.\nSame as Vector + ToIntVector(Direction)" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Vector_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Direction_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Vector;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Direction_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Direction;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_Vector = { "Vector", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Next_Parms, Vector), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Vector_MetaData), NewProp_Vector_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_Direction_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Next_Parms, Direction), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Direction_MetaData), NewProp_Direction_MetaData) }; // 3779627541
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Next_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_Vector,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_Direction_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_Direction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IntVector_Next", Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::DungeonBlueprintLibrary_eventIntVector_Next_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::DungeonBlueprintLibrary_eventIntVector_Next_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execIntVector_Next)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_Vector);
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_Direction);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FIntVector*)Z_Param__Result=UDungeonBlueprintLibrary::IntVector_Next(Z_Param_Out_Vector,(EDoorDirection&)(Z_Param_Out_Direction));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function IntVector_Next ***************************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function IntVector_NotEqual *********************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics
+{
+	struct DungeonBlueprintLibrary_eventIntVector_NotEqual_Parms
+	{
+		FIntVector A;
+		FIntVector B;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallableWithoutWorldContext", "" },
+		{ "Category", "Utilities|Operators" },
+		{ "CompactNodeTitle", "!=" },
+		{ "DisplayName", "Not Equal (Int Vector)" },
+		{ "Keywords", "!=" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_A_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_B_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_A;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_B;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_NotEqual_Parms, A), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_NotEqual_Parms, B), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) };
+void Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((DungeonBlueprintLibrary_eventIntVector_NotEqual_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(DungeonBlueprintLibrary_eventIntVector_NotEqual_Parms), &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_A,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_B,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IntVector_NotEqual", Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::DungeonBlueprintLibrary_eventIntVector_NotEqual_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::DungeonBlueprintLibrary_eventIntVector_NotEqual_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execIntVector_NotEqual)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_A);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_B);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::IntVector_NotEqual(Z_Param_Out_A,Z_Param_Out_B);
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function IntVector_NotEqual ***********************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function IntVector_Rotate ***********************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics
+{
+	struct DungeonBlueprintLibrary_eventIntVector_Rotate_Parms
+	{
+		FIntVector Vector;
+		EDoorDirection Direction;
+		FIntVector ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Math|Transform" },
+		{ "DisplayName", "Rotate (Int Vector)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Vector_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Direction_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Vector;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Direction_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Direction;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_Vector = { "Vector", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Rotate_Parms, Vector), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Vector_MetaData), NewProp_Vector_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_Direction_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Rotate_Parms, Direction), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Direction_MetaData), NewProp_Direction_MetaData) }; // 3779627541
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Rotate_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_Vector,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_Direction_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_Direction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IntVector_Rotate", Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::DungeonBlueprintLibrary_eventIntVector_Rotate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::DungeonBlueprintLibrary_eventIntVector_Rotate_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execIntVector_Rotate)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_Vector);
+	P_GET_ENUM_REF(EDoorDirection,Z_Param_Out_Direction);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FIntVector*)Z_Param__Result=UDungeonBlueprintLibrary::IntVector_Rotate(Z_Param_Out_Vector,(EDoorDirection&)(Z_Param_Out_Direction));
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function IntVector_Rotate *************************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function IntVector_Subtract *********************
+struct Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics
+{
+	struct DungeonBlueprintLibrary_eventIntVector_Subtract_Parms
+	{
+		FIntVector A;
+		FIntVector B;
+		FIntVector ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallableWithoutWorldContext", "" },
+		{ "Category", "Utilities|Operators" },
+		{ "CommutativeAssociativeBinaryOperator", "" },
+		{ "CompactNodeTitle", "-" },
+		{ "DisplayName", "Subtract (Int Vector)" },
+		{ "ModuleRelativePath", "Public/DungeonBlueprintLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_A_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_B_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_A;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_B;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Subtract_Parms, A), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Subtract_Parms, B), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonBlueprintLibrary_eventIntVector_Subtract_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::NewProp_A,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::NewProp_B,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IntVector_Subtract", Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::DungeonBlueprintLibrary_eventIntVector_Subtract_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::DungeonBlueprintLibrary_eventIntVector_Subtract_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UDungeonBlueprintLibrary::execIntVector_Subtract)
+{
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_A);
+	P_GET_STRUCT_REF(FIntVector,Z_Param_Out_B);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FIntVector*)Z_Param__Result=UDungeonBlueprintLibrary::IntVector_Subtract(Z_Param_Out_A,Z_Param_Out_B);
+	P_NATIVE_END;
+}
+// ********** End Class UDungeonBlueprintLibrary Function IntVector_Subtract ***********************
+
+// ********** Begin Class UDungeonBlueprintLibrary Function IsDoorOfType ***************************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics
 {
 	struct DungeonBlueprintLibrary_eventIsDoorOfType_Parms
@@ -732,7 +1615,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IsDoorOfType", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::DungeonBlueprintLibrary_eventIsDoorOfType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "IsDoorOfType", Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::DungeonBlueprintLibrary_eventIsDoorOfType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType_Statics::DungeonBlueprintLibrary_eventIsDoorOfType_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType()
 {
@@ -752,9 +1635,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execIsDoorOfType)
 	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::IsDoorOfType(Z_Param_DoorClass,Z_Param_DoorType);
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function IsDoorOfType
+// ********** End Class UDungeonBlueprintLibrary Function IsDoorOfType *****************************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_DefaultDoorSize
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_DefaultDoorSize ***************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_DefaultDoorSize_Parms
@@ -783,7 +1666,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_DefaultDoorSize", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::DungeonBlueprintLibrary_eventSettings_DefaultDoorSize_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14822401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_DefaultDoorSize", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::DungeonBlueprintLibrary_eventSettings_DefaultDoorSize_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14822401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize_Statics::DungeonBlueprintLibrary_eventSettings_DefaultDoorSize_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize()
 {
@@ -801,9 +1684,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_DefaultDoorSize)
 	*(FVector*)Z_Param__Result=UDungeonBlueprintLibrary::Settings_DefaultDoorSize();
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_DefaultDoorSize
+// ********** End Class UDungeonBlueprintLibrary Function Settings_DefaultDoorSize *****************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_DoorOffset
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_DoorOffset ********************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_DoorOffset_Parms
@@ -832,7 +1715,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_DoorOffset", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::DungeonBlueprintLibrary_eventSettings_DoorOffset_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_DoorOffset", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::DungeonBlueprintLibrary_eventSettings_DoorOffset_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset_Statics::DungeonBlueprintLibrary_eventSettings_DoorOffset_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset()
 {
@@ -850,9 +1733,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_DoorOffset)
 	*(float*)Z_Param__Result=UDungeonBlueprintLibrary::Settings_DoorOffset();
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_DoorOffset
+// ********** End Class UDungeonBlueprintLibrary Function Settings_DoorOffset **********************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_OccludeDynamicActors
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_OccludeDynamicActors **********
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_OccludeDynamicActors_Parms
@@ -886,7 +1769,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_OccludeDynamicActors", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::DungeonBlueprintLibrary_eventSettings_OccludeDynamicActors_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_OccludeDynamicActors", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::DungeonBlueprintLibrary_eventSettings_OccludeDynamicActors_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors_Statics::DungeonBlueprintLibrary_eventSettings_OccludeDynamicActors_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors()
 {
@@ -904,9 +1787,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_OccludeDynamicActors)
 	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::Settings_OccludeDynamicActors();
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_OccludeDynamicActors
+// ********** End Class UDungeonBlueprintLibrary Function Settings_OccludeDynamicActors ************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_OcclusionCulling
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_OcclusionCulling **************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_OcclusionCulling_Parms
@@ -940,7 +1823,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_OcclusionCulling", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::DungeonBlueprintLibrary_eventSettings_OcclusionCulling_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_OcclusionCulling", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::DungeonBlueprintLibrary_eventSettings_OcclusionCulling_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling_Statics::DungeonBlueprintLibrary_eventSettings_OcclusionCulling_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling()
 {
@@ -958,9 +1841,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_OcclusionCulling)
 	*(bool*)Z_Param__Result=UDungeonBlueprintLibrary::Settings_OcclusionCulling();
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_OcclusionCulling
+// ********** End Class UDungeonBlueprintLibrary Function Settings_OcclusionCulling ****************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_OcclusionDistance
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_OcclusionDistance *************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_OcclusionDistance_Parms
@@ -989,7 +1872,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_OcclusionDistance", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::DungeonBlueprintLibrary_eventSettings_OcclusionDistance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_OcclusionDistance", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::DungeonBlueprintLibrary_eventSettings_OcclusionDistance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance_Statics::DungeonBlueprintLibrary_eventSettings_OcclusionDistance_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance()
 {
@@ -1007,9 +1890,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_OcclusionDistance)
 	*(int32*)Z_Param__Result=UDungeonBlueprintLibrary::Settings_OcclusionDistance();
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_OcclusionDistance
+// ********** End Class UDungeonBlueprintLibrary Function Settings_OcclusionDistance ***************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_RoomUnit
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_RoomUnit **********************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_RoomUnit_Parms
@@ -1038,7 +1921,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_RoomUnit", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::DungeonBlueprintLibrary_eventSettings_RoomUnit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14822401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_RoomUnit", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::DungeonBlueprintLibrary_eventSettings_RoomUnit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14822401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit_Statics::DungeonBlueprintLibrary_eventSettings_RoomUnit_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit()
 {
@@ -1056,9 +1939,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_RoomUnit)
 	*(FVector*)Z_Param__Result=UDungeonBlueprintLibrary::Settings_RoomUnit();
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_RoomUnit
+// ********** End Class UDungeonBlueprintLibrary Function Settings_RoomUnit ************************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_SetOcclusionCulling
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_SetOcclusionCulling ***********
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_SetOcclusionCulling_Parms
@@ -1092,7 +1975,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::NewProp_Enable,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_SetOcclusionCulling", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::DungeonBlueprintLibrary_eventSettings_SetOcclusionCulling_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_SetOcclusionCulling", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::DungeonBlueprintLibrary_eventSettings_SetOcclusionCulling_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling_Statics::DungeonBlueprintLibrary_eventSettings_SetOcclusionCulling_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling()
 {
@@ -1111,9 +1994,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_SetOcclusionCulling)
 	UDungeonBlueprintLibrary::Settings_SetOcclusionCulling(Z_Param_Enable);
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_SetOcclusionCulling
+// ********** End Class UDungeonBlueprintLibrary Function Settings_SetOcclusionCulling *************
 
-// Begin Class UDungeonBlueprintLibrary Function Settings_SetOcclusionDistance
+// ********** Begin Class UDungeonBlueprintLibrary Function Settings_SetOcclusionDistance **********
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics
 {
 	struct DungeonBlueprintLibrary_eventSettings_SetOcclusionDistance_Parms
@@ -1142,7 +2025,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::NewProp_Distance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_SetOcclusionDistance", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::DungeonBlueprintLibrary_eventSettings_SetOcclusionDistance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Settings_SetOcclusionDistance", Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::DungeonBlueprintLibrary_eventSettings_SetOcclusionDistance_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance_Statics::DungeonBlueprintLibrary_eventSettings_SetOcclusionDistance_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance()
 {
@@ -1161,9 +2044,9 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSettings_SetOcclusionDistance)
 	UDungeonBlueprintLibrary::Settings_SetOcclusionDistance(Z_Param_Distance);
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Settings_SetOcclusionDistance
+// ********** End Class UDungeonBlueprintLibrary Function Settings_SetOcclusionDistance ************
 
-// Begin Class UDungeonBlueprintLibrary Function Spectate
+// ********** Begin Class UDungeonBlueprintLibrary Function Spectate *******************************
 struct Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics
 {
 	struct DungeonBlueprintLibrary_eventSpectate_Parms
@@ -1202,7 +2085,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::NewProp_DestroyPawn,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Spectate", nullptr, nullptr, Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::DungeonBlueprintLibrary_eventSpectate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonBlueprintLibrary, nullptr, "Spectate", Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::DungeonBlueprintLibrary_eventSpectate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate_Statics::DungeonBlueprintLibrary_eventSpectate_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate()
 {
@@ -1222,23 +2105,36 @@ DEFINE_FUNCTION(UDungeonBlueprintLibrary::execSpectate)
 	UDungeonBlueprintLibrary::Spectate(Z_Param_Controller,Z_Param_DestroyPawn);
 	P_NATIVE_END;
 }
-// End Class UDungeonBlueprintLibrary Function Spectate
+// ********** End Class UDungeonBlueprintLibrary Function Spectate *********************************
 
-// Begin Class UDungeonBlueprintLibrary
+// ********** Begin Class UDungeonBlueprintLibrary *************************************************
 void UDungeonBlueprintLibrary::StaticRegisterNativesUDungeonBlueprintLibrary()
 {
 	UClass* Class = UDungeonBlueprintLibrary::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "CompareDataTableRows", &UDungeonBlueprintLibrary::execCompareDataTableRows },
+		{ "DoorDef_GetOpposite", &UDungeonBlueprintLibrary::execDoorDef_GetOpposite },
 		{ "DoorDirection_Add", &UDungeonBlueprintLibrary::execDoorDirection_Add },
 		{ "DoorDirection_Decrement", &UDungeonBlueprintLibrary::execDoorDirection_Decrement },
 		{ "DoorDirection_Increment", &UDungeonBlueprintLibrary::execDoorDirection_Increment },
 		{ "DoorDirection_Negate", &UDungeonBlueprintLibrary::execDoorDirection_Negate },
 		{ "DoorDirection_Opposite", &UDungeonBlueprintLibrary::execDoorDirection_Opposite },
 		{ "DoorDirection_Sub", &UDungeonBlueprintLibrary::execDoorDirection_Sub },
+		{ "DoorDirection_ToAngle", &UDungeonBlueprintLibrary::execDoorDirection_ToAngle },
+		{ "DoorDirection_ToIntVector", &UDungeonBlueprintLibrary::execDoorDirection_ToIntVector },
 		{ "DoorDirection_Valid", &UDungeonBlueprintLibrary::execDoorDirection_Valid },
+		{ "Dungeon_InverseTransformDoorDef", &UDungeonBlueprintLibrary::execDungeon_InverseTransformDoorDef },
+		{ "Dungeon_InverseTransformPosition", &UDungeonBlueprintLibrary::execDungeon_InverseTransformPosition },
+		{ "Dungeon_TransformDoorDef", &UDungeonBlueprintLibrary::execDungeon_TransformDoorDef },
+		{ "Dungeon_TransformPosition", &UDungeonBlueprintLibrary::execDungeon_TransformPosition },
 		{ "GetOwningRoom", &UDungeonBlueprintLibrary::execGetOwningRoom },
 		{ "GetOwningRoomCustomData", &UDungeonBlueprintLibrary::execGetOwningRoomCustomData },
+		{ "IntVector_Add", &UDungeonBlueprintLibrary::execIntVector_Add },
+		{ "IntVector_Equal", &UDungeonBlueprintLibrary::execIntVector_Equal },
+		{ "IntVector_Next", &UDungeonBlueprintLibrary::execIntVector_Next },
+		{ "IntVector_NotEqual", &UDungeonBlueprintLibrary::execIntVector_NotEqual },
+		{ "IntVector_Rotate", &UDungeonBlueprintLibrary::execIntVector_Rotate },
+		{ "IntVector_Subtract", &UDungeonBlueprintLibrary::execIntVector_Subtract },
 		{ "IsDoorOfType", &UDungeonBlueprintLibrary::execIsDoorOfType },
 		{ "Settings_DefaultDoorSize", &UDungeonBlueprintLibrary::execSettings_DefaultDoorSize },
 		{ "Settings_DoorOffset", &UDungeonBlueprintLibrary::execSettings_DoorOffset },
@@ -1252,10 +2148,34 @@ void UDungeonBlueprintLibrary::StaticRegisterNativesUDungeonBlueprintLibrary()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UDungeonBlueprintLibrary);
+FClassRegistrationInfo Z_Registration_Info_UClass_UDungeonBlueprintLibrary;
+UClass* UDungeonBlueprintLibrary::GetPrivateStaticClass()
+{
+	using TClass = UDungeonBlueprintLibrary;
+	if (!Z_Registration_Info_UClass_UDungeonBlueprintLibrary.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("DungeonBlueprintLibrary"),
+			Z_Registration_Info_UClass_UDungeonBlueprintLibrary.InnerSingleton,
+			StaticRegisterNativesUDungeonBlueprintLibrary,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UDungeonBlueprintLibrary.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UDungeonBlueprintLibrary_NoRegister()
 {
-	return UDungeonBlueprintLibrary::StaticClass();
+	return UDungeonBlueprintLibrary::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UDungeonBlueprintLibrary_Statics
 {
@@ -1267,26 +2187,39 @@ struct Z_Construct_UClass_UDungeonBlueprintLibrary_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows, "CompareDataTableRows" }, // 1698588697
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add, "DoorDirection_Add" }, // 2530733014
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement, "DoorDirection_Decrement" }, // 1846651023
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment, "DoorDirection_Increment" }, // 164865553
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate, "DoorDirection_Negate" }, // 95214931
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite, "DoorDirection_Opposite" }, // 757569933
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub, "DoorDirection_Sub" }, // 255502739
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid, "DoorDirection_Valid" }, // 119151302
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom, "GetOwningRoom" }, // 794719910
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData, "GetOwningRoomCustomData" }, // 1410920744
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType, "IsDoorOfType" }, // 4210210093
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize, "Settings_DefaultDoorSize" }, // 3099797002
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset, "Settings_DoorOffset" }, // 2986817957
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors, "Settings_OccludeDynamicActors" }, // 2018643107
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling, "Settings_OcclusionCulling" }, // 2096209389
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance, "Settings_OcclusionDistance" }, // 1418568832
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit, "Settings_RoomUnit" }, // 4209713251
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling, "Settings_SetOcclusionCulling" }, // 2857207652
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance, "Settings_SetOcclusionDistance" }, // 1784821214
-		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate, "Spectate" }, // 3047675139
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_CompareDataTableRows, "CompareDataTableRows" }, // 3331740648
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDef_GetOpposite, "DoorDef_GetOpposite" }, // 2374065030
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Add, "DoorDirection_Add" }, // 2937988325
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Decrement, "DoorDirection_Decrement" }, // 3714800241
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Increment, "DoorDirection_Increment" }, // 968033823
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Negate, "DoorDirection_Negate" }, // 3260665483
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Opposite, "DoorDirection_Opposite" }, // 1254903338
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Sub, "DoorDirection_Sub" }, // 2857744779
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToAngle, "DoorDirection_ToAngle" }, // 2075399823
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_ToIntVector, "DoorDirection_ToIntVector" }, // 1700558747
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_DoorDirection_Valid, "DoorDirection_Valid" }, // 987375556
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformDoorDef, "Dungeon_InverseTransformDoorDef" }, // 3189661269
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_InverseTransformPosition, "Dungeon_InverseTransformPosition" }, // 3881047174
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformDoorDef, "Dungeon_TransformDoorDef" }, // 1812166737
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Dungeon_TransformPosition, "Dungeon_TransformPosition" }, // 1404577
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoom, "GetOwningRoom" }, // 3646686379
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_GetOwningRoomCustomData, "GetOwningRoomCustomData" }, // 3348268907
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Add, "IntVector_Add" }, // 880525225
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Equal, "IntVector_Equal" }, // 3769829126
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Next, "IntVector_Next" }, // 3233081317
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_NotEqual, "IntVector_NotEqual" }, // 1190290533
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Rotate, "IntVector_Rotate" }, // 2725783019
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IntVector_Subtract, "IntVector_Subtract" }, // 1041518399
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_IsDoorOfType, "IsDoorOfType" }, // 3322319304
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DefaultDoorSize, "Settings_DefaultDoorSize" }, // 282255733
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_DoorOffset, "Settings_DoorOffset" }, // 3081128651
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OccludeDynamicActors, "Settings_OccludeDynamicActors" }, // 130856767
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionCulling, "Settings_OcclusionCulling" }, // 3677655361
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_OcclusionDistance, "Settings_OcclusionDistance" }, // 1552796625
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_RoomUnit, "Settings_RoomUnit" }, // 785994702
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionCulling, "Settings_SetOcclusionCulling" }, // 3288707397
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Settings_SetOcclusionDistance, "Settings_SetOcclusionDistance" }, // 2565723003
+		{ &Z_Construct_UFunction_UDungeonBlueprintLibrary_Spectate, "Spectate" }, // 2254909215
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -1322,25 +2255,22 @@ UClass* Z_Construct_UClass_UDungeonBlueprintLibrary()
 	}
 	return Z_Registration_Info_UClass_UDungeonBlueprintLibrary.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<UDungeonBlueprintLibrary>()
-{
-	return UDungeonBlueprintLibrary::StaticClass();
-}
 UDungeonBlueprintLibrary::UDungeonBlueprintLibrary(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UDungeonBlueprintLibrary);
 UDungeonBlueprintLibrary::~UDungeonBlueprintLibrary() {}
-// End Class UDungeonBlueprintLibrary
+// ********** End Class UDungeonBlueprintLibrary ***************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDungeonBlueprintLibrary, UDungeonBlueprintLibrary::StaticClass, TEXT("UDungeonBlueprintLibrary"), &Z_Registration_Info_UClass_UDungeonBlueprintLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonBlueprintLibrary), 1842867093U) },
+		{ Z_Construct_UClass_UDungeonBlueprintLibrary, UDungeonBlueprintLibrary::StaticClass, TEXT("UDungeonBlueprintLibrary"), &Z_Registration_Info_UClass_UDungeonBlueprintLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonBlueprintLibrary), 2221145110U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_543725828(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h__Script_ProceduralDungeon_203168204(TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

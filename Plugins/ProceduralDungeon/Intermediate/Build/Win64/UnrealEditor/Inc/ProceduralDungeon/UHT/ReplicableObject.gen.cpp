@@ -5,18 +5,20 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProceduralDungeon/Public/ReplicableObject.h"
+#include "ReplicableObject.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeReplicableObject() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UReplicableObject();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UReplicableObject_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UReplicableObject Function WakeUpOwnerActor
+// ********** Begin Class UReplicableObject Function WakeUpOwnerActor ******************************
 struct Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics
 {
 #if WITH_METADATA
@@ -33,7 +35,7 @@ struct Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UReplicableObject, nullptr, "WakeUpOwnerActor", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReplicableObject, nullptr, "WakeUpOwnerActor", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -50,9 +52,9 @@ DEFINE_FUNCTION(UReplicableObject::execWakeUpOwnerActor)
 	P_THIS->WakeUpOwnerActor();
 	P_NATIVE_END;
 }
-// End Class UReplicableObject Function WakeUpOwnerActor
+// ********** End Class UReplicableObject Function WakeUpOwnerActor ********************************
 
-// Begin Class UReplicableObject
+// ********** Begin Class UReplicableObject ********************************************************
 void UReplicableObject::StaticRegisterNativesUReplicableObject()
 {
 	UClass* Class = UReplicableObject::StaticClass();
@@ -61,24 +63,54 @@ void UReplicableObject::StaticRegisterNativesUReplicableObject()
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UReplicableObject);
+FClassRegistrationInfo Z_Registration_Info_UClass_UReplicableObject;
+UClass* UReplicableObject::GetPrivateStaticClass()
+{
+	using TClass = UReplicableObject;
+	if (!Z_Registration_Info_UClass_UReplicableObject.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("ReplicableObject"),
+			Z_Registration_Info_UClass_UReplicableObject.InnerSingleton,
+			StaticRegisterNativesUReplicableObject,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UReplicableObject.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UReplicableObject_NoRegister()
 {
-	return UReplicableObject::StaticClass();
+	return UReplicableObject::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UReplicableObject_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Base class for sub-objects that can be replicated.\n// This class is not blueprintable and should not be used directly in blueprints.\n" },
+#endif
 		{ "IncludePath", "ReplicableObject.h" },
 		{ "IsBlueprintBase", "false" },
 		{ "ModuleRelativePath", "Public/ReplicableObject.h" },
 		{ "NotBlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Base class for sub-objects that can be replicated.\nThis class is not blueprintable and should not be used directly in blueprints." },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor, "WakeUpOwnerActor" }, // 90360053
+		{ &Z_Construct_UFunction_UReplicableObject_WakeUpOwnerActor, "WakeUpOwnerActor" }, // 1293693871
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -114,25 +146,22 @@ UClass* Z_Construct_UClass_UReplicableObject()
 	}
 	return Z_Registration_Info_UClass_UReplicableObject.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UClass* StaticClass<UReplicableObject>()
-{
-	return UReplicableObject::StaticClass();
-}
 UReplicableObject::UReplicableObject(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UReplicableObject);
 UReplicableObject::~UReplicableObject() {}
-// End Class UReplicableObject
+// ********** End Class UReplicableObject **********************************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UReplicableObject, UReplicableObject::StaticClass, TEXT("UReplicableObject"), &Z_Registration_Info_UClass_UReplicableObject, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UReplicableObject), 2616119483U) },
+		{ Z_Construct_UClass_UReplicableObject, UReplicableObject::StaticClass, TEXT("UReplicableObject"), &Z_Registration_Info_UClass_UReplicableObject, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UReplicableObject), 304769453U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h_692416027(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h__Script_ProceduralDungeon_3784576194(TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReplicableObject_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
