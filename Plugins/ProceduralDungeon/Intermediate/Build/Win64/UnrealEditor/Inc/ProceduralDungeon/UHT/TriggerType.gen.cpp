@@ -10,11 +10,11 @@
 #include "Engine/TimerHandle.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeTriggerType() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
@@ -39,16 +39,25 @@ struct Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__Delega
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Delegate FActorTriggerEvent constinit property declarations ********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Actor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Delegate FActorTriggerEvent constinit property declarations **********************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
+
+// ********** Begin Delegate FActorTriggerEvent Property Definitions *******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventActorTriggerEvent_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::NewProp_Actor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "ActorTriggerEvent__DelegateSignature", Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventActorTriggerEvent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
+// ********** End Delegate FActorTriggerEvent Property Definitions *********************************
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "ActorTriggerEvent__DelegateSignature", 	Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::PropPointers), 
+sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventActorTriggerEvent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventActorTriggerEvent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature()
 {
@@ -83,11 +92,16 @@ struct Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__D
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Delegate FActorTriggerArrayEvent constinit property declarations ***************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Actor_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Actor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Delegate FActorTriggerArrayEvent constinit property declarations *****************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
+
+// ********** Begin Delegate FActorTriggerArrayEvent Property Definitions **************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::NewProp_Actor_Inner = { "Actor", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventActorTriggerArrayEvent_Parms, Actor), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::PropPointers[] = {
@@ -95,7 +109,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunctio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::NewProp_Actor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "ActorTriggerArrayEvent__DelegateSignature", Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventActorTriggerArrayEvent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
+// ********** End Delegate FActorTriggerArrayEvent Property Definitions ****************************
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "ActorTriggerArrayEvent__DelegateSignature", 	Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::PropPointers), 
+sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventActorTriggerArrayEvent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventActorTriggerArrayEvent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature()
 {
@@ -130,11 +148,16 @@ struct Z_Construct_UFunction_UTriggerType_GetActorList_Statics
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetActorList constinit property declarations **************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetActorList constinit property declarations ****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetActorList Property Definitions *************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTriggerType_GetActorList_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UTriggerType_GetActorList_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventGetActorList_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTriggerType_GetActorList_Statics::PropPointers[] = {
@@ -142,7 +165,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTrigg
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTriggerType_GetActorList_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_GetActorList_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "GetActorList", Z_Construct_UFunction_UTriggerType_GetActorList_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::PropPointers), sizeof(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::TriggerType_eventGetActorList_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_GetActorList_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetActorList Property Definitions ***************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_GetActorList_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "GetActorList", 	Z_Construct_UFunction_UTriggerType_GetActorList_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::TriggerType_eventGetActorList_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_GetActorList_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UTriggerType_GetActorList_Statics::TriggerType_eventGetActorList_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UTriggerType_GetActorList()
 {
@@ -174,11 +201,16 @@ struct Z_Construct_UFunction_UTriggerType_IsActivated_Statics
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function IsActivated constinit property declarations ***************************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function IsActivated constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function IsActivated Property Definitions **************************************
 void Z_Construct_UFunction_UTriggerType_IsActivated_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((TriggerType_eventIsActivated_Parms*)Obj)->ReturnValue = 1;
@@ -188,7 +220,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTrigg
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTriggerType_IsActivated_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_IsActivated_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "IsActivated", Z_Construct_UFunction_UTriggerType_IsActivated_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::PropPointers), sizeof(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::TriggerType_eventIsActivated_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_IsActivated_Statics::Function_MetaDataParams)},  };
+// ********** End Function IsActivated Property Definitions ****************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_IsActivated_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "IsActivated", 	Z_Construct_UFunction_UTriggerType_IsActivated_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::TriggerType_eventIsActivated_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_IsActivated_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UTriggerType_IsActivated_Statics::TriggerType_eventIsActivated_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UTriggerType_IsActivated()
 {
@@ -234,6 +270,8 @@ struct Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnTriggerEnter constinit property declarations ************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverlappedComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
@@ -242,8 +280,11 @@ struct Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bFromSweep;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SweepResult;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function OnTriggerEnter constinit property declarations **************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function OnTriggerEnter Property Definitions ***********************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_OverlappedComponent = { "OverlappedComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerEnter_Parms, OverlappedComponent), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverlappedComponent_MetaData), NewProp_OverlappedComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerEnter_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerEnter_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherComp_MetaData), NewProp_OtherComp_MetaData) };
@@ -253,7 +294,7 @@ void Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_bFromSwe
 	((TriggerType_eventOnTriggerEnter_Parms*)Obj)->bFromSweep = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(TriggerType_eventOnTriggerEnter_Parms), &Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerEnter_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 267591329
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerEnter_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 222120718
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_OverlappedComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_OtherActor,
@@ -263,7 +304,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTrigg
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::NewProp_SweepResult,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "OnTriggerEnter", Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::PropPointers), sizeof(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::TriggerType_eventOnTriggerEnter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::Function_MetaDataParams)},  };
+// ********** End Function OnTriggerEnter Property Definitions *************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "OnTriggerEnter", 	Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::TriggerType_eventOnTriggerEnter_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00440401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UTriggerType_OnTriggerEnter_Statics::TriggerType_eventOnTriggerEnter_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UTriggerType_OnTriggerEnter()
 {
@@ -310,13 +355,18 @@ struct Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics
 		{ "EditInline", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnTriggerExit constinit property declarations *************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverlappedComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_OtherBodyIndex;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function OnTriggerExit constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function OnTriggerExit Property Definitions ************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::NewProp_OverlappedComponent = { "OverlappedComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerExit_Parms, OverlappedComponent), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverlappedComponent_MetaData), NewProp_OverlappedComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerExit_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(TriggerType_eventOnTriggerExit_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherComp_MetaData), NewProp_OtherComp_MetaData) };
@@ -328,7 +378,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UTrigg
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::NewProp_OtherBodyIndex,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "OnTriggerExit", Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::PropPointers), sizeof(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::TriggerType_eventOnTriggerExit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::Function_MetaDataParams)},  };
+// ********** End Function OnTriggerExit Property Definitions **************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "OnTriggerExit", 	Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::TriggerType_eventOnTriggerExit_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UTriggerType_OnTriggerExit_Statics::TriggerType_eventOnTriggerExit_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UTriggerType_OnTriggerExit()
 {
@@ -360,9 +414,15 @@ struct Z_Construct_UFunction_UTriggerType_TriggerActivate_Statics
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function TriggerActivate constinit property declarations ***********************
+// ********** End Function TriggerActivate constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_TriggerActivate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "TriggerActivate", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_TriggerActivate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_TriggerActivate_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_TriggerActivate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "TriggerActivate", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_TriggerActivate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_TriggerActivate_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UTriggerType_TriggerActivate()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -389,9 +449,15 @@ struct Z_Construct_UFunction_UTriggerType_TriggerDeactivate_Statics
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function TriggerDeactivate constinit property declarations *********************
+// ********** End Function TriggerDeactivate constinit property declarations ***********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_TriggerDeactivate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "TriggerDeactivate", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_TriggerDeactivate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_TriggerDeactivate_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_TriggerDeactivate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "TriggerDeactivate", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_TriggerDeactivate_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_TriggerDeactivate_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UTriggerType_TriggerDeactivate()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -418,9 +484,15 @@ struct Z_Construct_UFunction_UTriggerType_TriggerTick_Statics
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function TriggerTick constinit property declarations ***************************
+// ********** End Function TriggerTick constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_TriggerTick_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "TriggerTick", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_TriggerTick_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_TriggerTick_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTriggerType_TriggerTick_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UTriggerType, nullptr, "TriggerTick", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTriggerType_TriggerTick_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTriggerType_TriggerTick_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UTriggerType_TriggerTick()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -440,20 +512,6 @@ DEFINE_FUNCTION(UTriggerType::execTriggerTick)
 // ********** End Class UTriggerType Function TriggerTick ******************************************
 
 // ********** Begin Class UTriggerType *************************************************************
-void UTriggerType::StaticRegisterNativesUTriggerType()
-{
-	UClass* Class = UTriggerType::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "GetActorList", &UTriggerType::execGetActorList },
-		{ "IsActivated", &UTriggerType::execIsActivated },
-		{ "OnTriggerEnter", &UTriggerType::execOnTriggerEnter },
-		{ "OnTriggerExit", &UTriggerType::execOnTriggerExit },
-		{ "TriggerActivate", &UTriggerType::execTriggerActivate },
-		{ "TriggerDeactivate", &UTriggerType::execTriggerDeactivate },
-		{ "TriggerTick", &UTriggerType::execTriggerTick },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UTriggerType;
 UClass* UTriggerType::GetPrivateStaticClass()
 {
@@ -461,7 +519,7 @@ UClass* UTriggerType::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UTriggerType.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("TriggerType"),
 			Z_Registration_Info_UClass_UTriggerType.InnerSingleton,
 			StaticRegisterNativesUTriggerType,
@@ -552,6 +610,8 @@ struct Z_Construct_UClass_UTriggerType_Statics
 		{ "ModuleRelativePath", "Public/TriggerType.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UTriggerType constinit property declarations *****************************
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TickDuration;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ActivationDelay;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_requiredActorCountToActivate;
@@ -568,31 +628,43 @@ struct Z_Construct_UClass_UTriggerType_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp_TickTimer;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ActivationTimer;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class UTriggerType constinit property declarations *******************************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("GetActorList"), .Pointer = &UTriggerType::execGetActorList },
+		{ .NameUTF8 = UTF8TEXT("IsActivated"), .Pointer = &UTriggerType::execIsActivated },
+		{ .NameUTF8 = UTF8TEXT("OnTriggerEnter"), .Pointer = &UTriggerType::execOnTriggerEnter },
+		{ .NameUTF8 = UTF8TEXT("OnTriggerExit"), .Pointer = &UTriggerType::execOnTriggerExit },
+		{ .NameUTF8 = UTF8TEXT("TriggerActivate"), .Pointer = &UTriggerType::execTriggerActivate },
+		{ .NameUTF8 = UTF8TEXT("TriggerDeactivate"), .Pointer = &UTriggerType::execTriggerDeactivate },
+		{ .NameUTF8 = UTF8TEXT("TriggerTick"), .Pointer = &UTriggerType::execTriggerTick },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UTriggerType_GetActorList, "GetActorList" }, // 1340152652
-		{ &Z_Construct_UFunction_UTriggerType_IsActivated, "IsActivated" }, // 1236729801
-		{ &Z_Construct_UFunction_UTriggerType_OnTriggerEnter, "OnTriggerEnter" }, // 2029939445
-		{ &Z_Construct_UFunction_UTriggerType_OnTriggerExit, "OnTriggerExit" }, // 796029028
-		{ &Z_Construct_UFunction_UTriggerType_TriggerActivate, "TriggerActivate" }, // 1426268383
-		{ &Z_Construct_UFunction_UTriggerType_TriggerDeactivate, "TriggerDeactivate" }, // 2362091960
-		{ &Z_Construct_UFunction_UTriggerType_TriggerTick, "TriggerTick" }, // 1978713526
+		{ &Z_Construct_UFunction_UTriggerType_GetActorList, "GetActorList" }, // 4008076448
+		{ &Z_Construct_UFunction_UTriggerType_IsActivated, "IsActivated" }, // 2356484931
+		{ &Z_Construct_UFunction_UTriggerType_OnTriggerEnter, "OnTriggerEnter" }, // 631540606
+		{ &Z_Construct_UFunction_UTriggerType_OnTriggerExit, "OnTriggerExit" }, // 3373574677
+		{ &Z_Construct_UFunction_UTriggerType_TriggerActivate, "TriggerActivate" }, // 3056122107
+		{ &Z_Construct_UFunction_UTriggerType_TriggerDeactivate, "TriggerDeactivate" }, // 3407958821
+		{ &Z_Construct_UFunction_UTriggerType_TriggerTick, "TriggerTick" }, // 1172621784
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UTriggerType>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UTriggerType_Statics
+
+// ********** Begin Class UTriggerType Property Definitions ****************************************
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_TickDuration = { "TickDuration", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, TickDuration), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TickDuration_MetaData), NewProp_TickDuration_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_ActivationDelay = { "ActivationDelay", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, ActivationDelay), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivationDelay_MetaData), NewProp_ActivationDelay_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_requiredActorCountToActivate = { "requiredActorCountToActivate", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, requiredActorCountToActivate), nullptr, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_requiredActorCountToActivate_MetaData), NewProp_requiredActorCountToActivate_MetaData) };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_ActorType = { "ActorType", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, ActorType), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorType_MetaData), NewProp_ActorType_MetaData) };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnActorEnter = { "OnActorEnter", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnActorEnter), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActorEnter_MetaData), NewProp_OnActorEnter_MetaData) }; // 569564453
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnActorExit = { "OnActorExit", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnActorExit), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActorExit_MetaData), NewProp_OnActorExit_MetaData) }; // 569564453
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnTriggerTick = { "OnTriggerTick", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnTriggerTick), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnTriggerTick_MetaData), NewProp_OnTriggerTick_MetaData) }; // 1479045915
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnActivation = { "OnActivation", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnActivation), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActivation_MetaData), NewProp_OnActivation_MetaData) }; // 1479045915
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnDeactivation = { "OnDeactivation", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnDeactivation), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnDeactivation_MetaData), NewProp_OnDeactivation_MetaData) }; // 1479045915
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_ActorType = { "ActorType", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, ActorType), Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorType_MetaData), NewProp_ActorType_MetaData) };
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnActorEnter = { "OnActorEnter", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnActorEnter), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActorEnter_MetaData), NewProp_OnActorEnter_MetaData) }; // 457238091
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnActorExit = { "OnActorExit", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnActorExit), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActorExit_MetaData), NewProp_OnActorExit_MetaData) }; // 457238091
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnTriggerTick = { "OnTriggerTick", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnTriggerTick), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnTriggerTick_MetaData), NewProp_OnTriggerTick_MetaData) }; // 2964351543
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnActivation = { "OnActivation", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnActivation), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnActivation_MetaData), NewProp_OnActivation_MetaData) }; // 2964351543
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_OnDeactivation = { "OnDeactivation", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, OnDeactivation), Z_Construct_UDelegateFunction_ProceduralDungeon_ActorTriggerArrayEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnDeactivation_MetaData), NewProp_OnDeactivation_MetaData) }; // 2964351543
 void Z_Construct_UClass_UTriggerType_Statics::NewProp_bIsActivated_SetBit(void* Obj)
 {
 	((UTriggerType*)Obj)->bIsActivated = 1;
@@ -600,8 +672,8 @@ void Z_Construct_UClass_UTriggerType_Statics::NewProp_bIsActivated_SetBit(void* 
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_bIsActivated = { "bIsActivated", nullptr, (EPropertyFlags)0x0020080000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UTriggerType), &Z_Construct_UClass_UTriggerType_Statics::NewProp_bIsActivated_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsActivated_MetaData), NewProp_bIsActivated_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_ActorList_Inner = { "ActorList", nullptr, (EPropertyFlags)0x0000000000020000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_ActorList = { "ActorList", nullptr, (EPropertyFlags)0x0020080000020015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, ActorList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorList_MetaData), NewProp_ActorList_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_TickTimer = { "TickTimer", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, TickTimer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TickTimer_MetaData), NewProp_TickTimer_MetaData) }; // 3834150579
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_ActivationTimer = { "ActivationTimer", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, ActivationTimer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivationTimer_MetaData), NewProp_ActivationTimer_MetaData) }; // 3834150579
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_TickTimer = { "TickTimer", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, TickTimer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TickTimer_MetaData), NewProp_TickTimer_MetaData) }; // 3998242883
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UTriggerType_Statics::NewProp_ActivationTimer = { "ActivationTimer", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTriggerType, ActivationTimer), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivationTimer_MetaData), NewProp_ActivationTimer_MetaData) }; // 3998242883
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTriggerType_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerType_Statics::NewProp_TickDuration,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerType_Statics::NewProp_ActivationDelay,
@@ -619,6 +691,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTriggerT
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTriggerType_Statics::NewProp_ActivationTimer,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UTriggerType_Statics::PropPointers) < 2048);
+// ********** End Class UTriggerType Property Definitions ******************************************
 UObject* (*const Z_Construct_UClass_UTriggerType_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UBoxComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -639,6 +712,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UTriggerType_Statics::C
 	0x00B010A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UTriggerType_Statics::Class_MetaDataParams), Z_Construct_UClass_UTriggerType_Statics::Class_MetaDataParams)
 };
+void UTriggerType::StaticRegisterNativesUTriggerType()
+{
+	UClass* Class = UTriggerType::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UTriggerType_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_UTriggerType()
 {
 	if (!Z_Registration_Info_UClass_UTriggerType.OuterSingleton)
@@ -647,21 +725,23 @@ UClass* Z_Construct_UClass_UTriggerType()
 	}
 	return Z_Registration_Info_UClass_UTriggerType.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(UTriggerType);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UTriggerType);
 UTriggerType::~UTriggerType() {}
 // ********** End Class UTriggerType ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UTriggerType, UTriggerType::StaticClass, TEXT("UTriggerType"), &Z_Registration_Info_UClass_UTriggerType, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTriggerType), 2353254965U) },
+		{ Z_Construct_UClass_UTriggerType, UTriggerType::StaticClass, TEXT("UTriggerType"), &Z_Registration_Info_UClass_UTriggerType, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTriggerType), 1071523332U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_1965098044(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_1975296934{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

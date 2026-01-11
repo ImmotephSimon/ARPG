@@ -1,9 +1,10 @@
-Binaries
-DerivedDataCache
-Intermediate
-Saved
-.vscode
-.vs
+# Unreal project
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vscode/
+.vs/
 *.VC.db
 *.opensdf
 *.opendb
@@ -13,12 +14,15 @@ Saved
 *.xcodeproj
 *.xcworkspace
 
-# Allow specific plugin files
-!Plugins/
-!Plugins/**/
-!Plugins/**/Binaries/
-!Plugins/**/Intermediate/
+# Plugin source (keep)
+!Plugins/**/Source/
+!Plugins/**/Content/
 
+# Ignore plugin build outputs
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+Plugins/**/Saved/
 
+# Content exceptions
 /Content/*
 !/Content/TopDown/

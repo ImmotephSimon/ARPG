@@ -8,7 +8,7 @@
 #include "VoxelBounds/VoxelBounds.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeVoxelBounds() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -30,7 +30,7 @@ static UEnum* EVoxelBoundsConnectionType_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_EVoxelBoundsConnectionType.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EVoxelBoundsConnectionType>()
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EVoxelBoundsConnectionType>()
 {
 	return EVoxelBoundsConnectionType_StaticEnum();
 }
@@ -52,7 +52,7 @@ struct Z_Construct_UEnum_ProceduralDungeon_EVoxelBoundsConnectionType_Statics
 		{ "EVoxelBoundsConnectionType::Door", (int64)EVoxelBoundsConnectionType::Door },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-};
+}; // struct Z_Construct_UEnum_ProceduralDungeon_EVoxelBoundsConnectionType_Statics 
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProceduralDungeon_EVoxelBoundsConnectionType_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -76,17 +76,10 @@ UEnum* Z_Construct_UEnum_ProceduralDungeon_EVoxelBoundsConnectionType()
 // ********** End Enum EVoxelBoundsConnectionType **************************************************
 
 // ********** Begin ScriptStruct FVoxelBoundsConnection ********************************************
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection;
-class UScriptStruct* FVoxelBoundsConnection::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FVoxelBoundsConnection, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("VoxelBoundsConnection"));
-	}
-	return Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.OuterSingleton;
-}
 struct Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics
 {
+	static inline consteval int32 GetStructSize() { return sizeof(FVoxelBoundsConnection); }
+	static inline consteval int16 GetStructAlignment() { return alignof(FVoxelBoundsConnection); }
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
@@ -114,18 +107,32 @@ struct Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin ScriptStruct FVoxelBoundsConnection constinit property declarations ************
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Type_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_Type;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DoorType;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End ScriptStruct FVoxelBoundsConnection constinit property declarations **************
 	static void* NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVoxelBoundsConnection>();
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
-};
+}; // struct Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection;
+class UScriptStruct* FVoxelBoundsConnection::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FVoxelBoundsConnection, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("VoxelBoundsConnection"));
+	}
+	return Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.OuterSingleton;
+	}
+
+// ********** Begin ScriptStruct FVoxelBoundsConnection Property Definitions ***********************
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewProp_Type_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FVoxelBoundsConnection, Type), Z_Construct_UEnum_ProceduralDungeon_EVoxelBoundsConnectionType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Type_MetaData), NewProp_Type_MetaData) }; // 1177054314
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FVoxelBoundsConnection, Type), Z_Construct_UEnum_ProceduralDungeon_EVoxelBoundsConnectionType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Type_MetaData), NewProp_Type_MetaData) }; // 4012138151
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewProp_DoorType = { "DoorType", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FVoxelBoundsConnection, DoorType), Z_Construct_UClass_UDoorType_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorType_MetaData), NewProp_DoorType_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewProp_Type_Underlying,
@@ -133,6 +140,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FV
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewProp_DoorType,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::PropPointers) < 2048);
+// ********** End ScriptStruct FVoxelBoundsConnection Property Definitions *************************
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -152,7 +160,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FVoxelBoundsConnection()
 	{
 		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.InnerSingleton, Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.InnerSingleton;
+	return CastChecked<UScriptStruct>(Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection.InnerSingleton);
 }
 // ********** End ScriptStruct FVoxelBoundsConnection **********************************************
 
@@ -177,16 +185,21 @@ struct Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSi
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Delegate FScoreCallback constinit property declarations ************************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_A;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_B;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Score;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Delegate FScoreCallback constinit property declarations **************************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventScoreCallback_Parms, A), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1308034747
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventScoreCallback_Parms, B), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1308034747
+
+// ********** Begin Delegate FScoreCallback Property Definitions ***********************************
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventScoreCallback_Parms, A), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 2282400538
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventScoreCallback_Parms, B), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 2282400538
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0010000008000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventScoreCallback_Parms, Score), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -200,7 +213,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunctio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "ScoreCallback__DelegateSignature", Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::_Script_ProceduralDungeon_eventScoreCallback_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00520000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::Function_MetaDataParams)},  };
+// ********** End Delegate FScoreCallback Property Definitions *************************************
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "ScoreCallback__DelegateSignature", 	Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::PropPointers), 
+sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::_Script_ProceduralDungeon_eventScoreCallback_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00520000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature_Statics::_Script_ProceduralDungeon_eventScoreCallback_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature()
 {
@@ -237,6 +254,24 @@ bool FScoreCallback_DelegateWrapper(const FScriptDelegate& ScoreCallback, FVoxel
 // ********** End Delegate FScoreCallback **********************************************************
 
 // ********** Begin ScriptStruct FVoxelBounds ******************************************************
+struct Z_Construct_UScriptStruct_FVoxelBounds_Statics
+{
+	static inline consteval int32 GetStructSize() { return sizeof(FVoxelBounds); }
+	static inline consteval int16 GetStructAlignment() { return alignof(FVoxelBounds); }
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/VoxelBounds/VoxelBounds.h" },
+	};
+#endif // WITH_METADATA
+
+// ********** Begin ScriptStruct FVoxelBounds constinit property declarations **********************
+// ********** End ScriptStruct FVoxelBounds constinit property declarations ************************
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVoxelBounds>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+}; // struct Z_Construct_UScriptStruct_FVoxelBounds_Statics
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FVoxelBounds;
 class UScriptStruct* FVoxelBounds::StaticStruct()
 {
@@ -245,20 +280,7 @@ class UScriptStruct* FVoxelBounds::StaticStruct()
 		Z_Registration_Info_UScriptStruct_FVoxelBounds.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FVoxelBounds, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("VoxelBounds"));
 	}
 	return Z_Registration_Info_UScriptStruct_FVoxelBounds.OuterSingleton;
-}
-struct Z_Construct_UScriptStruct_FVoxelBounds_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/VoxelBounds/VoxelBounds.h" },
-	};
-#endif // WITH_METADATA
-	static void* NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FVoxelBounds>();
 	}
-	static const UECodeGen_Private::FStructParams StructParams;
-};
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FVoxelBounds_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -278,25 +300,27 @@ UScriptStruct* Z_Construct_UScriptStruct_FVoxelBounds()
 	{
 		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FVoxelBounds.InnerSingleton, Z_Construct_UScriptStruct_FVoxelBounds_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_FVoxelBounds.InnerSingleton;
+	return CastChecked<UScriptStruct>(Z_Registration_Info_UScriptStruct_FVoxelBounds.InnerSingleton);
 }
 // ********** End ScriptStruct FVoxelBounds ********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EVoxelBoundsConnectionType_StaticEnum, TEXT("EVoxelBoundsConnectionType"), &Z_Registration_Info_UEnum_EVoxelBoundsConnectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1177054314U) },
+		{ EVoxelBoundsConnectionType_StaticEnum, TEXT("EVoxelBoundsConnectionType"), &Z_Registration_Info_UEnum_EVoxelBoundsConnectionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4012138151U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FVoxelBoundsConnection::StaticStruct, Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewStructOps, TEXT("VoxelBoundsConnection"), &Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FVoxelBoundsConnection), 1308034747U) },
-		{ FVoxelBounds::StaticStruct, Z_Construct_UScriptStruct_FVoxelBounds_Statics::NewStructOps, TEXT("VoxelBounds"), &Z_Registration_Info_UScriptStruct_FVoxelBounds, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FVoxelBounds), 245726750U) },
+		{ FVoxelBoundsConnection::StaticStruct, Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics::NewStructOps, TEXT("VoxelBoundsConnection"),&Z_Registration_Info_UScriptStruct_FVoxelBoundsConnection, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FVoxelBoundsConnection), 2282400538U) },
+		{ FVoxelBounds::StaticStruct, Z_Construct_UScriptStruct_FVoxelBounds_Statics::NewStructOps, TEXT("VoxelBounds"),&Z_Registration_Info_UScriptStruct_FVoxelBounds, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FVoxelBounds), 2887659980U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_474674492(TEXT("/Script/ProceduralDungeon"),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_183223738{
+	TEXT("/Script/ProceduralDungeon"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h__Script_ProceduralDungeon_Statics::EnumInfo),
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

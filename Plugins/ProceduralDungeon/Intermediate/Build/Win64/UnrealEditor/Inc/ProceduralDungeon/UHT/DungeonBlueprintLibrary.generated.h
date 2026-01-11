@@ -15,19 +15,20 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
 class AActor;
 class ADoor;
 class APlayerController;
+class UClass;
 class UDoorType;
 class URoom;
 class URoomCustomData;
+class URoomData;
 enum class EDoorDirection : uint8;
 struct FDataTableRowHandle;
 struct FDoorDef;
 
 // ********** Begin Class UDungeonBlueprintLibrary *************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execSpectate); \
 	DECLARE_FUNCTION(execSettings_OccludeDynamicActors); \
 	DECLARE_FUNCTION(execSettings_SetOcclusionDistance); \
@@ -57,26 +58,28 @@ struct FDoorDef;
 	DECLARE_FUNCTION(execDoorDirection_Add); \
 	DECLARE_FUNCTION(execDoorDirection_Valid); \
 	DECLARE_FUNCTION(execDoorDef_GetOpposite); \
+	DECLARE_FUNCTION(execGetLevelRoomData); \
 	DECLARE_FUNCTION(execGetOwningRoomCustomData); \
 	DECLARE_FUNCTION(execGetOwningRoom); \
 	DECLARE_FUNCTION(execCompareDataTableRows); \
 	DECLARE_FUNCTION(execIsDoorOfType);
 
 
+struct Z_Construct_UClass_UDungeonBlueprintLibrary_Statics;
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDungeonBlueprintLibrary_NoRegister();
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDungeonBlueprintLibrary(); \
-	friend struct Z_Construct_UClass_UDungeonBlueprintLibrary_Statics; \
+	friend struct ::Z_Construct_UClass_UDungeonBlueprintLibrary_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDungeonBlueprintLibrary_NoRegister(); \
+	friend PROCEDURALDUNGEON_API UClass* ::Z_Construct_UClass_UDungeonBlueprintLibrary_NoRegister(); \
 public: \
 	DECLARE_CLASS2(UDungeonBlueprintLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/ProceduralDungeon"), Z_Construct_UClass_UDungeonBlueprintLibrary_NoRegister) \
 	DECLARE_SERIALIZER(UDungeonBlueprintLibrary)
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_23_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UDungeonBlueprintLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -88,13 +91,13 @@ public: \
 	NO_API virtual ~UDungeonBlueprintLibrary();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_19_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_22_GENERATED_BODY \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_20_PROLOG
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_23_INCLASS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -104,6 +107,6 @@ class UDungeonBlueprintLibrary;
 // ********** End Class UDungeonBlueprintLibrary ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonBlueprintLibrary_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -8,7 +8,7 @@
 #include "Components/StaticRoomVisibilityComponent.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeStaticRoomVisibilityComponent() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -35,12 +35,17 @@ struct Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__Dele
 		{ "ModuleRelativePath", "Public/Components/StaticRoomVisibilityComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Delegate FRoomVisibilityEvent constinit property declarations ******************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Actor;
 	static void NewProp_IsInVisibleRoom_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsInVisibleRoom;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Delegate FRoomVisibilityEvent constinit property declarations ********************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
+
+// ********** Begin Delegate FRoomVisibilityEvent Property Definitions *****************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventRoomVisibilityEvent_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::NewProp_IsInVisibleRoom_SetBit(void* Obj)
 {
@@ -52,7 +57,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunctio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::NewProp_IsInVisibleRoom,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "RoomVisibilityEvent__DelegateSignature", Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomVisibilityEvent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
+// ********** End Delegate FRoomVisibilityEvent Property Definitions *******************************
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "RoomVisibilityEvent__DelegateSignature", 	Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::PropPointers), 
+sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomVisibilityEvent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomVisibilityEvent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature()
 {
@@ -90,19 +99,28 @@ struct Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_St
 		{ "ModuleRelativePath", "Public/Components/StaticRoomVisibilityComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetVisibilityMode constinit property declarations *********************
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetVisibilityMode constinit property declarations ***********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetVisibilityMode Property Definitions ********************************
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomVisibilityComponent_eventGetVisibilityMode_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode, METADATA_PARAMS(0, nullptr) }; // 151926989
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomVisibilityComponent_eventGetVisibilityMode_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode, METADATA_PARAMS(0, nullptr) }; // 1696523330
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "GetVisibilityMode", Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::StaticRoomVisibilityComponent_eventGetVisibilityMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetVisibilityMode Property Definitions **********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "GetVisibilityMode", 	Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::StaticRoomVisibilityComponent_eventGetVisibilityMode_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode_Statics::StaticRoomVisibilityComponent_eventGetVisibilityMode_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode()
 {
@@ -143,11 +161,16 @@ struct Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function IsVisible constinit property declarations *****************************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function IsVisible constinit property declarations *******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function IsVisible Property Definitions ****************************************
 void Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((StaticRoomVisibilityComponent_eventIsVisible_Parms*)Obj)->ReturnValue = 1;
@@ -157,7 +180,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStati
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "IsVisible", Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::StaticRoomVisibilityComponent_eventIsVisible_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::Function_MetaDataParams)},  };
+// ********** End Function IsVisible Property Definitions ******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "IsVisible", 	Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::StaticRoomVisibilityComponent_eventIsVisible_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible_Statics::StaticRoomVisibilityComponent_eventIsVisible_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible()
 {
@@ -190,12 +217,17 @@ struct Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChange
 		{ "ModuleRelativePath", "Public/Components/StaticRoomVisibilityComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function RoomVisibilityChanged constinit property declarations *****************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomLevel;
 	static void NewProp_IsVisible_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsVisible;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function RoomVisibilityChanged constinit property declarations *******************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function RoomVisibilityChanged Property Definitions ****************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::NewProp_RoomLevel = { "RoomLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomVisibilityComponent_eventRoomVisibilityChanged_Parms, RoomLevel), Z_Construct_UClass_ARoomLevel_NoRegister, METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::NewProp_IsVisible_SetBit(void* Obj)
 {
@@ -207,7 +239,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStati
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::NewProp_IsVisible,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "RoomVisibilityChanged", Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::StaticRoomVisibilityComponent_eventRoomVisibilityChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::Function_MetaDataParams)},  };
+// ********** End Function RoomVisibilityChanged Property Definitions ******************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "RoomVisibilityChanged", 	Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::StaticRoomVisibilityComponent_eventRoomVisibilityChanged_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged_Statics::StaticRoomVisibilityComponent_eventRoomVisibilityChanged_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged()
 {
@@ -242,19 +278,28 @@ struct Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_St
 		{ "ModuleRelativePath", "Public/Components/StaticRoomVisibilityComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function SetVisibilityMode constinit property declarations *********************
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Mode_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_Mode;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function SetVisibilityMode constinit property declarations ***********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function SetVisibilityMode Property Definitions ********************************
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::NewProp_Mode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::NewProp_Mode = { "Mode", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomVisibilityComponent_eventSetVisibilityMode_Parms, Mode), Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode, METADATA_PARAMS(0, nullptr) }; // 151926989
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::NewProp_Mode = { "Mode", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomVisibilityComponent_eventSetVisibilityMode_Parms, Mode), Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode, METADATA_PARAMS(0, nullptr) }; // 1696523330
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::NewProp_Mode_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::NewProp_Mode,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "SetVisibilityMode", Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::StaticRoomVisibilityComponent_eventSetVisibilityMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::Function_MetaDataParams)},  };
+// ********** End Function SetVisibilityMode Property Definitions **********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomVisibilityComponent, nullptr, "SetVisibilityMode", 	Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::StaticRoomVisibilityComponent_eventSetVisibilityMode_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode_Statics::StaticRoomVisibilityComponent_eventSetVisibilityMode_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode()
 {
@@ -276,17 +321,6 @@ DEFINE_FUNCTION(UStaticRoomVisibilityComponent::execSetVisibilityMode)
 // ********** End Class UStaticRoomVisibilityComponent Function SetVisibilityMode ******************
 
 // ********** Begin Class UStaticRoomVisibilityComponent *******************************************
-void UStaticRoomVisibilityComponent::StaticRegisterNativesUStaticRoomVisibilityComponent()
-{
-	UClass* Class = UStaticRoomVisibilityComponent::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "GetVisibilityMode", &UStaticRoomVisibilityComponent::execGetVisibilityMode },
-		{ "IsVisible", &UStaticRoomVisibilityComponent::execIsVisible },
-		{ "RoomVisibilityChanged", &UStaticRoomVisibilityComponent::execRoomVisibilityChanged },
-		{ "SetVisibilityMode", &UStaticRoomVisibilityComponent::execSetVisibilityMode },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UStaticRoomVisibilityComponent;
 UClass* UStaticRoomVisibilityComponent::GetPrivateStaticClass()
 {
@@ -294,7 +328,7 @@ UClass* UStaticRoomVisibilityComponent::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UStaticRoomVisibilityComponent.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("StaticRoomVisibilityComponent"),
 			Z_Registration_Info_UClass_UStaticRoomVisibilityComponent.InnerSingleton,
 			StaticRegisterNativesUStaticRoomVisibilityComponent,
@@ -350,32 +384,44 @@ struct Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics
 		{ "ModuleRelativePath", "Public/Components/StaticRoomVisibilityComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UStaticRoomVisibilityComponent constinit property declarations ***********
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnRoomVisibilityChanged;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_VisibilityMode_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_VisibilityMode;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class UStaticRoomVisibilityComponent constinit property declarations *************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("GetVisibilityMode"), .Pointer = &UStaticRoomVisibilityComponent::execGetVisibilityMode },
+		{ .NameUTF8 = UTF8TEXT("IsVisible"), .Pointer = &UStaticRoomVisibilityComponent::execIsVisible },
+		{ .NameUTF8 = UTF8TEXT("RoomVisibilityChanged"), .Pointer = &UStaticRoomVisibilityComponent::execRoomVisibilityChanged },
+		{ .NameUTF8 = UTF8TEXT("SetVisibilityMode"), .Pointer = &UStaticRoomVisibilityComponent::execSetVisibilityMode },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode, "GetVisibilityMode" }, // 2762714884
-		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible, "IsVisible" }, // 1436168688
-		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged, "RoomVisibilityChanged" }, // 3842830816
-		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode, "SetVisibilityMode" }, // 3629032702
+		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_GetVisibilityMode, "GetVisibilityMode" }, // 2080084629
+		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_IsVisible, "IsVisible" }, // 2725821745
+		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_RoomVisibilityChanged, "RoomVisibilityChanged" }, // 2053509789
+		{ &Z_Construct_UFunction_UStaticRoomVisibilityComponent_SetVisibilityMode, "SetVisibilityMode" }, // 1192744375
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UStaticRoomVisibilityComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_OnRoomVisibilityChanged = { "OnRoomVisibilityChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomVisibilityComponent, OnRoomVisibilityChanged), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnRoomVisibilityChanged_MetaData), NewProp_OnRoomVisibilityChanged_MetaData) }; // 3124056702
+}; // struct Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics
+
+// ********** Begin Class UStaticRoomVisibilityComponent Property Definitions **********************
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_OnRoomVisibilityChanged = { "OnRoomVisibilityChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomVisibilityComponent, OnRoomVisibilityChanged), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomVisibilityEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnRoomVisibilityChanged_MetaData), NewProp_OnRoomVisibilityChanged_MetaData) }; // 3086579779
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_VisibilityMode_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_VisibilityMode = { "VisibilityMode", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomVisibilityComponent, VisibilityMode), Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VisibilityMode_MetaData), NewProp_VisibilityMode_MetaData) }; // 151926989
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_VisibilityMode = { "VisibilityMode", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomVisibilityComponent, VisibilityMode), Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VisibilityMode_MetaData), NewProp_VisibilityMode_MetaData) }; // 1696523330
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_OnRoomVisibilityChanged,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_VisibilityMode_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::NewProp_VisibilityMode,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::PropPointers) < 2048);
+// ********** End Class UStaticRoomVisibilityComponent Property Definitions ************************
 UObject* (*const Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -396,6 +442,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UStaticRoomVisibilityCo
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::Class_MetaDataParams)
 };
+void UStaticRoomVisibilityComponent::StaticRegisterNativesUStaticRoomVisibilityComponent()
+{
+	UClass* Class = UStaticRoomVisibilityComponent::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UStaticRoomVisibilityComponent_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_UStaticRoomVisibilityComponent()
 {
 	if (!Z_Registration_Info_UClass_UStaticRoomVisibilityComponent.OuterSingleton)
@@ -404,21 +455,23 @@ UClass* Z_Construct_UClass_UStaticRoomVisibilityComponent()
 	}
 	return Z_Registration_Info_UClass_UStaticRoomVisibilityComponent.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(UStaticRoomVisibilityComponent);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UStaticRoomVisibilityComponent);
 UStaticRoomVisibilityComponent::~UStaticRoomVisibilityComponent() {}
 // ********** End Class UStaticRoomVisibilityComponent *********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStaticRoomVisibilityComponent, UStaticRoomVisibilityComponent::StaticClass, TEXT("UStaticRoomVisibilityComponent"), &Z_Registration_Info_UClass_UStaticRoomVisibilityComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStaticRoomVisibilityComponent), 2281292235U) },
+		{ Z_Construct_UClass_UStaticRoomVisibilityComponent, UStaticRoomVisibilityComponent::StaticClass, TEXT("UStaticRoomVisibilityComponent"), &Z_Registration_Info_UClass_UStaticRoomVisibilityComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStaticRoomVisibilityComponent), 3645981913U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_1351067765(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_194442209{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomVisibilityComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -17,21 +17,22 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class URoomVisibilityComponent *************************************************
+struct Z_Construct_UClass_URoomVisibilityComponent_Statics;
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomVisibilityComponent_NoRegister();
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_INCLASS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURoomVisibilityComponent(); \
-	friend struct Z_Construct_UClass_URoomVisibilityComponent_Statics; \
+	friend struct ::Z_Construct_UClass_URoomVisibilityComponent_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomVisibilityComponent_NoRegister(); \
+	friend PROCEDURALDUNGEON_API UClass* ::Z_Construct_UClass_URoomVisibilityComponent_NoRegister(); \
 public: \
 	DECLARE_CLASS2(URoomVisibilityComponent, UStaticRoomVisibilityComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProceduralDungeon"), Z_Construct_UClass_URoomVisibilityComponent_NoRegister) \
 	DECLARE_SERIALIZER(URoomVisibilityComponent) \
 	virtual UObject* _getUObject() const override { return const_cast<URoomVisibilityComponent*>(this); }
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_ENHANCED_CONSTRUCTORS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	URoomVisibilityComponent(URoomVisibilityComponent&&) = delete; \
 	URoomVisibilityComponent(const URoomVisibilityComponent&) = delete; \
@@ -41,12 +42,12 @@ public: \
 	NO_API virtual ~URoomVisibilityComponent();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_18_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_GENERATED_BODY \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_18_PROLOG
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_ENHANCED_CONSTRUCTORS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,6 +57,6 @@ class URoomVisibilityComponent;
 // ********** End Class URoomVisibilityComponent ***************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomVisibilityComponent_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

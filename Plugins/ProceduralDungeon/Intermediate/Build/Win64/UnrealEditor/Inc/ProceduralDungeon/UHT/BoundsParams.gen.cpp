@@ -8,7 +8,7 @@
 #include "BoundsParams.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeBoundsParams() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -17,17 +17,10 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin ScriptStruct FBoundsParams *****************************************************
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FBoundsParams;
-class UScriptStruct* FBoundsParams::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FBoundsParams, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("BoundsParams"));
-	}
-	return Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton;
-}
 struct Z_Construct_UScriptStruct_FBoundsParams_Statics
 {
+	static inline consteval int32 GetStructSize() { return sizeof(FBoundsParams); }
+	static inline consteval int16 GetStructAlignment() { return alignof(FBoundsParams); }
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
@@ -185,6 +178,8 @@ struct Z_Construct_UScriptStruct_FBoundsParams_Statics
 		{ "UIMin", "0" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin ScriptStruct FBoundsParams constinit property declarations *********************
 	static void NewProp_bLimitMaxX_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bLimitMaxX;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_MaxX;
@@ -204,12 +199,24 @@ struct Z_Construct_UScriptStruct_FBoundsParams_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bLimitMinZ;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_MinZ;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End ScriptStruct FBoundsParams constinit property declarations ***********************
 	static void* NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FBoundsParams>();
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
-};
+}; // struct Z_Construct_UScriptStruct_FBoundsParams_Statics
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FBoundsParams;
+class UScriptStruct* FBoundsParams::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FBoundsParams, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("BoundsParams"));
+	}
+	return Z_Registration_Info_UScriptStruct_FBoundsParams.OuterSingleton;
+	}
+
+// ********** Begin ScriptStruct FBoundsParams Property Definitions ********************************
 void Z_Construct_UScriptStruct_FBoundsParams_Statics::NewProp_bLimitMaxX_SetBit(void* Obj)
 {
 	((FBoundsParams*)Obj)->bLimitMaxX = 1;
@@ -261,6 +268,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FB
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FBoundsParams_Statics::NewProp_MinZ,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FBoundsParams_Statics::PropPointers) < 2048);
+// ********** End ScriptStruct FBoundsParams Property Definitions **********************************
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FBoundsParams_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -280,21 +288,23 @@ UScriptStruct* Z_Construct_UScriptStruct_FBoundsParams()
 	{
 		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FBoundsParams.InnerSingleton, Z_Construct_UScriptStruct_FBoundsParams_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_FBoundsParams.InnerSingleton;
+	return CastChecked<UScriptStruct>(Z_Registration_Info_UScriptStruct_FBoundsParams.InnerSingleton);
 }
 // ********** End ScriptStruct FBoundsParams *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FBoundsParams::StaticStruct, Z_Construct_UScriptStruct_FBoundsParams_Statics::NewStructOps, TEXT("BoundsParams"), &Z_Registration_Info_UScriptStruct_FBoundsParams, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBoundsParams), 3987177792U) },
+		{ FBoundsParams::StaticStruct, Z_Construct_UScriptStruct_FBoundsParams_Statics::NewStructOps, TEXT("BoundsParams"),&Z_Registration_Info_UScriptStruct_FBoundsParams, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FBoundsParams), 606268345U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_1022927639(TEXT("/Script/ProceduralDungeon"),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_722498023{
+	TEXT("/Script/ProceduralDungeon"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

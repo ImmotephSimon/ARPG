@@ -8,7 +8,7 @@
 #include "Components/StaticRoomObserverComponent.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeStaticRoomObserverComponent() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -34,11 +34,16 @@ struct Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__
 		{ "ModuleRelativePath", "Public/Components/StaticRoomObserverComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Delegate FStaticRoomObserverEvent constinit property declarations **************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomLevel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Actor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Delegate FStaticRoomObserverEvent constinit property declarations ****************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
+
+// ********** Begin Delegate FStaticRoomObserverEvent Property Definitions *************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::NewProp_RoomLevel = { "RoomLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventStaticRoomObserverEvent_Parms, RoomLevel), Z_Construct_UClass_ARoomLevel_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventStaticRoomObserverEvent_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::PropPointers[] = {
@@ -46,7 +51,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunctio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::NewProp_Actor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "StaticRoomObserverEvent__DelegateSignature", Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventStaticRoomObserverEvent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
+// ********** End Delegate FStaticRoomObserverEvent Property Definitions ***************************
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "StaticRoomObserverEvent__DelegateSignature", 	Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::PropPointers), 
+sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventStaticRoomObserverEvent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventStaticRoomObserverEvent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature()
 {
@@ -84,11 +93,16 @@ struct Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Stati
 		{ "ModuleRelativePath", "Public/Components/StaticRoomObserverComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnActorEnterRoom constinit property declarations **********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomLevel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Visitor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function OnActorEnterRoom constinit property declarations ************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function OnActorEnterRoom Property Definitions *********************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::NewProp_RoomLevel = { "RoomLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomObserverComponent_eventOnActorEnterRoom_Parms, RoomLevel), Z_Construct_UClass_ARoomLevel_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::NewProp_Visitor = { "Visitor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomObserverComponent_eventOnActorEnterRoom_Parms, Visitor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::PropPointers[] = {
@@ -96,7 +110,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStati
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::NewProp_Visitor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomObserverComponent, nullptr, "OnActorEnterRoom", Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::StaticRoomObserverComponent_eventOnActorEnterRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::Function_MetaDataParams)},  };
+// ********** End Function OnActorEnterRoom Property Definitions ***********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomObserverComponent, nullptr, "OnActorEnterRoom", 	Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::StaticRoomObserverComponent_eventOnActorEnterRoom_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom_Statics::StaticRoomObserverComponent_eventOnActorEnterRoom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom()
 {
@@ -131,11 +149,16 @@ struct Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Static
 		{ "ModuleRelativePath", "Public/Components/StaticRoomObserverComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnActorExitRoom constinit property declarations ***********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomLevel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Visitor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function OnActorExitRoom constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function OnActorExitRoom Property Definitions **********************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::NewProp_RoomLevel = { "RoomLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomObserverComponent_eventOnActorExitRoom_Parms, RoomLevel), Z_Construct_UClass_ARoomLevel_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::NewProp_Visitor = { "Visitor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StaticRoomObserverComponent_eventOnActorExitRoom_Parms, Visitor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::PropPointers[] = {
@@ -143,7 +166,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStati
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::NewProp_Visitor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomObserverComponent, nullptr, "OnActorExitRoom", Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::StaticRoomObserverComponent_eventOnActorExitRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::Function_MetaDataParams)},  };
+// ********** End Function OnActorExitRoom Property Definitions ************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UStaticRoomObserverComponent, nullptr, "OnActorExitRoom", 	Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::StaticRoomObserverComponent_eventOnActorExitRoom_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom_Statics::StaticRoomObserverComponent_eventOnActorExitRoom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom()
 {
@@ -166,15 +193,6 @@ DEFINE_FUNCTION(UStaticRoomObserverComponent::execOnActorExitRoom)
 // ********** End Class UStaticRoomObserverComponent Function OnActorExitRoom **********************
 
 // ********** Begin Class UStaticRoomObserverComponent *********************************************
-void UStaticRoomObserverComponent::StaticRegisterNativesUStaticRoomObserverComponent()
-{
-	UClass* Class = UStaticRoomObserverComponent::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "OnActorEnterRoom", &UStaticRoomObserverComponent::execOnActorEnterRoom },
-		{ "OnActorExitRoom", &UStaticRoomObserverComponent::execOnActorExitRoom },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UStaticRoomObserverComponent;
 UClass* UStaticRoomObserverComponent::GetPrivateStaticClass()
 {
@@ -182,7 +200,7 @@ UClass* UStaticRoomObserverComponent::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UStaticRoomObserverComponent.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("StaticRoomObserverComponent"),
 			Z_Registration_Info_UClass_UStaticRoomObserverComponent.InnerSingleton,
 			StaticRegisterNativesUStaticRoomObserverComponent,
@@ -230,27 +248,37 @@ struct Z_Construct_UClass_UStaticRoomObserverComponent_Statics
 		{ "ModuleRelativePath", "Public/Components/StaticRoomObserverComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UStaticRoomObserverComponent constinit property declarations *************
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_ActorEnterRoomEvent;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_ActorExitRoomEvent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class UStaticRoomObserverComponent constinit property declarations ***************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("OnActorEnterRoom"), .Pointer = &UStaticRoomObserverComponent::execOnActorEnterRoom },
+		{ .NameUTF8 = UTF8TEXT("OnActorExitRoom"), .Pointer = &UStaticRoomObserverComponent::execOnActorExitRoom },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom, "OnActorEnterRoom" }, // 3796995628
-		{ &Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom, "OnActorExitRoom" }, // 1601815774
+		{ &Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorEnterRoom, "OnActorEnterRoom" }, // 4291433643
+		{ &Z_Construct_UFunction_UStaticRoomObserverComponent_OnActorExitRoom, "OnActorExitRoom" }, // 112370063
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UStaticRoomObserverComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaticRoomObserverComponent_Statics::NewProp_ActorEnterRoomEvent = { "ActorEnterRoomEvent", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomObserverComponent, ActorEnterRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorEnterRoomEvent_MetaData), NewProp_ActorEnterRoomEvent_MetaData) }; // 4182311267
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaticRoomObserverComponent_Statics::NewProp_ActorExitRoomEvent = { "ActorExitRoomEvent", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomObserverComponent, ActorExitRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorExitRoomEvent_MetaData), NewProp_ActorExitRoomEvent_MetaData) }; // 4182311267
+}; // struct Z_Construct_UClass_UStaticRoomObserverComponent_Statics
+
+// ********** Begin Class UStaticRoomObserverComponent Property Definitions ************************
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaticRoomObserverComponent_Statics::NewProp_ActorEnterRoomEvent = { "ActorEnterRoomEvent", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomObserverComponent, ActorEnterRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorEnterRoomEvent_MetaData), NewProp_ActorEnterRoomEvent_MetaData) }; // 1774925639
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStaticRoomObserverComponent_Statics::NewProp_ActorExitRoomEvent = { "ActorExitRoomEvent", nullptr, (EPropertyFlags)0x0020080010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStaticRoomObserverComponent, ActorExitRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_StaticRoomObserverEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorExitRoomEvent_MetaData), NewProp_ActorExitRoomEvent_MetaData) }; // 1774925639
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStaticRoomObserverComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaticRoomObserverComponent_Statics::NewProp_ActorEnterRoomEvent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStaticRoomObserverComponent_Statics::NewProp_ActorExitRoomEvent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UStaticRoomObserverComponent_Statics::PropPointers) < 2048);
+// ********** End Class UStaticRoomObserverComponent Property Definitions **************************
 UObject* (*const Z_Construct_UClass_UStaticRoomObserverComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -271,6 +299,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UStaticRoomObserverComp
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UStaticRoomObserverComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UStaticRoomObserverComponent_Statics::Class_MetaDataParams)
 };
+void UStaticRoomObserverComponent::StaticRegisterNativesUStaticRoomObserverComponent()
+{
+	UClass* Class = UStaticRoomObserverComponent::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UStaticRoomObserverComponent_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_UStaticRoomObserverComponent()
 {
 	if (!Z_Registration_Info_UClass_UStaticRoomObserverComponent.OuterSingleton)
@@ -279,21 +312,23 @@ UClass* Z_Construct_UClass_UStaticRoomObserverComponent()
 	}
 	return Z_Registration_Info_UClass_UStaticRoomObserverComponent.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(UStaticRoomObserverComponent);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UStaticRoomObserverComponent);
 UStaticRoomObserverComponent::~UStaticRoomObserverComponent() {}
 // ********** End Class UStaticRoomObserverComponent ***********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStaticRoomObserverComponent, UStaticRoomObserverComponent::StaticClass, TEXT("UStaticRoomObserverComponent"), &Z_Registration_Info_UClass_UStaticRoomObserverComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStaticRoomObserverComponent), 3678487423U) },
+		{ Z_Construct_UClass_UStaticRoomObserverComponent, UStaticRoomObserverComponent::StaticClass, TEXT("UStaticRoomObserverComponent"), &Z_Registration_Info_UClass_UStaticRoomObserverComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStaticRoomObserverComponent), 3236386415U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_3613987420(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_3503710377{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

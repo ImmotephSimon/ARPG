@@ -8,7 +8,7 @@
 #include "Door.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeDoor() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -35,11 +35,16 @@ struct Z_Construct_UFunction_ADoor_IsLocked_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function IsLocked constinit property declarations ******************************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function IsLocked constinit property declarations ********************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function IsLocked Property Definitions *****************************************
 void Z_Construct_UFunction_ADoor_IsLocked_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((Door_eventIsLocked_Parms*)Obj)->ReturnValue = 1;
@@ -49,7 +54,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADoor_
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADoor_IsLocked_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsLocked_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_IsLocked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "IsLocked", Z_Construct_UFunction_ADoor_IsLocked_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsLocked_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADoor_IsLocked_Statics::Door_eventIsLocked_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsLocked_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_IsLocked_Statics::Function_MetaDataParams)},  };
+// ********** End Function IsLocked Property Definitions *******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_IsLocked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "IsLocked", 	Z_Construct_UFunction_ADoor_IsLocked_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsLocked_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ADoor_IsLocked_Statics::Door_eventIsLocked_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsLocked_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_IsLocked_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADoor_IsLocked_Statics::Door_eventIsLocked_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADoor_IsLocked()
 {
@@ -83,11 +92,16 @@ struct Z_Construct_UFunction_ADoor_IsOpen_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function IsOpen constinit property declarations ********************************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function IsOpen constinit property declarations **********************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function IsOpen Property Definitions *******************************************
 void Z_Construct_UFunction_ADoor_IsOpen_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((Door_eventIsOpen_Parms*)Obj)->ReturnValue = 1;
@@ -97,7 +111,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADoor_
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADoor_IsOpen_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsOpen_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_IsOpen_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "IsOpen", Z_Construct_UFunction_ADoor_IsOpen_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsOpen_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADoor_IsOpen_Statics::Door_eventIsOpen_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsOpen_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_IsOpen_Statics::Function_MetaDataParams)},  };
+// ********** End Function IsOpen Property Definitions *********************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_IsOpen_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "IsOpen", 	Z_Construct_UFunction_ADoor_IsOpen_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsOpen_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ADoor_IsOpen_Statics::Door_eventIsOpen_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_IsOpen_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_IsOpen_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADoor_IsOpen_Statics::Door_eventIsOpen_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADoor_IsOpen()
 {
@@ -130,11 +148,16 @@ struct Z_Construct_UFunction_ADoor_Lock_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function Lock constinit property declarations **********************************
 	static void NewProp_lock_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_lock;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function Lock constinit property declarations ************************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function Lock Property Definitions *********************************************
 void Z_Construct_UFunction_ADoor_Lock_Statics::NewProp_lock_SetBit(void* Obj)
 {
 	((Door_eventLock_Parms*)Obj)->lock = 1;
@@ -144,7 +167,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADoor_
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADoor_Lock_Statics::NewProp_lock,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Lock_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_Lock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "Lock", Z_Construct_UFunction_ADoor_Lock_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Lock_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADoor_Lock_Statics::Door_eventLock_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Lock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_Lock_Statics::Function_MetaDataParams)},  };
+// ********** End Function Lock Property Definitions ***********************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_Lock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "Lock", 	Z_Construct_UFunction_ADoor_Lock_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Lock_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ADoor_Lock_Statics::Door_eventLock_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Lock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_Lock_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADoor_Lock_Statics::Door_eventLock_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADoor_Lock()
 {
@@ -173,9 +200,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorClose_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorClose constinit property declarations ***************************
+// ********** End Function OnDoorClose constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorClose_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorClose", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorClose_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorClose_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorClose_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorClose", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorClose_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorClose_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorClose()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -210,9 +243,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorClose_BP_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorClose_BP constinit property declarations ************************
+// ********** End Function OnDoorClose_BP constinit property declarations **************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorClose_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorClose_BP", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorClose_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorClose_BP_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorClose_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorClose_BP", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorClose_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorClose_BP_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorClose_BP()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -232,9 +271,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorLock_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorLock constinit property declarations ****************************
+// ********** End Function OnDoorLock constinit property declarations ******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorLock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorLock", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorLock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorLock_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorLock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorLock", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorLock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorLock_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorLock()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -269,9 +314,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorLock_BP_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorLock_BP constinit property declarations *************************
+// ********** End Function OnDoorLock_BP constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorLock_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorLock_BP", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorLock_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorLock_BP_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorLock_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorLock_BP", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorLock_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorLock_BP_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorLock_BP()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -291,9 +342,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorOpen_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorOpen constinit property declarations ****************************
+// ********** End Function OnDoorOpen constinit property declarations ******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorOpen_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorOpen", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorOpen_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorOpen_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorOpen_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorOpen", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorOpen_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorOpen_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorOpen()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -328,9 +385,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorOpen_BP_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorOpen_BP constinit property declarations *************************
+// ********** End Function OnDoorOpen_BP constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorOpen_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorOpen_BP", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorOpen_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorOpen_BP_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorOpen_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorOpen_BP", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorOpen_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorOpen_BP_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorOpen_BP()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -350,9 +413,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorUnlock_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorUnlock constinit property declarations **************************
+// ********** End Function OnDoorUnlock constinit property declarations ****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorUnlock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorUnlock", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorUnlock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorUnlock_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorUnlock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorUnlock", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorUnlock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorUnlock_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorUnlock()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -387,9 +456,15 @@ struct Z_Construct_UFunction_ADoor_OnDoorUnlock_BP_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnDoorUnlock_BP constinit property declarations ***********************
+// ********** End Function OnDoorUnlock_BP constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorUnlock_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorUnlock_BP", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorUnlock_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorUnlock_BP_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_OnDoorUnlock_BP_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "OnDoorUnlock_BP", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_OnDoorUnlock_BP_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_OnDoorUnlock_BP_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ADoor_OnDoorUnlock_BP()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -414,11 +489,16 @@ struct Z_Construct_UFunction_ADoor_Open_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function Open constinit property declarations **********************************
 	static void NewProp_open_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_open;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function Open constinit property declarations ************************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function Open Property Definitions *********************************************
 void Z_Construct_UFunction_ADoor_Open_Statics::NewProp_open_SetBit(void* Obj)
 {
 	((Door_eventOpen_Parms*)Obj)->open = 1;
@@ -428,7 +508,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADoor_
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADoor_Open_Statics::NewProp_open,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Open_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_Open_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "Open", Z_Construct_UFunction_ADoor_Open_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Open_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADoor_Open_Statics::Door_eventOpen_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Open_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_Open_Statics::Function_MetaDataParams)},  };
+// ********** End Function Open Property Definitions ***********************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADoor_Open_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ADoor, nullptr, "Open", 	Z_Construct_UFunction_ADoor_Open_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Open_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ADoor_Open_Statics::Door_eventOpen_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020405, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADoor_Open_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADoor_Open_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ADoor_Open_Statics::Door_eventOpen_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ADoor_Open()
 {
@@ -450,21 +534,6 @@ DEFINE_FUNCTION(ADoor::execOpen)
 // ********** End Class ADoor Function Open ********************************************************
 
 // ********** Begin Class ADoor ********************************************************************
-void ADoor::StaticRegisterNativesADoor()
-{
-	UClass* Class = ADoor::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "IsLocked", &ADoor::execIsLocked },
-		{ "IsOpen", &ADoor::execIsOpen },
-		{ "Lock", &ADoor::execLock },
-		{ "OnDoorClose", &ADoor::execOnDoorClose },
-		{ "OnDoorLock", &ADoor::execOnDoorLock },
-		{ "OnDoorOpen", &ADoor::execOnDoorOpen },
-		{ "OnDoorUnlock", &ADoor::execOnDoorUnlock },
-		{ "Open", &ADoor::execOpen },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_ADoor;
 UClass* ADoor::GetPrivateStaticClass()
 {
@@ -472,7 +541,7 @@ UClass* ADoor::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_ADoor.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("Door"),
 			Z_Registration_Info_UClass_ADoor.InnerSingleton,
 			StaticRegisterNativesADoor,
@@ -551,6 +620,8 @@ struct Z_Construct_UClass_ADoor_Statics
 		{ "ModuleRelativePath", "Public/Door.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class ADoor constinit property declarations ************************************
 	static void NewProp_bShouldBeLocked_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShouldBeLocked;
 	static void NewProp_bShouldBeOpen_SetBit(void* Obj);
@@ -564,27 +635,40 @@ struct Z_Construct_UClass_ADoor_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Type;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultSceneComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class ADoor constinit property declarations **************************************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("IsLocked"), .Pointer = &ADoor::execIsLocked },
+		{ .NameUTF8 = UTF8TEXT("IsOpen"), .Pointer = &ADoor::execIsOpen },
+		{ .NameUTF8 = UTF8TEXT("Lock"), .Pointer = &ADoor::execLock },
+		{ .NameUTF8 = UTF8TEXT("OnDoorClose"), .Pointer = &ADoor::execOnDoorClose },
+		{ .NameUTF8 = UTF8TEXT("OnDoorLock"), .Pointer = &ADoor::execOnDoorLock },
+		{ .NameUTF8 = UTF8TEXT("OnDoorOpen"), .Pointer = &ADoor::execOnDoorOpen },
+		{ .NameUTF8 = UTF8TEXT("OnDoorUnlock"), .Pointer = &ADoor::execOnDoorUnlock },
+		{ .NameUTF8 = UTF8TEXT("Open"), .Pointer = &ADoor::execOpen },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ADoor_IsLocked, "IsLocked" }, // 1359208806
-		{ &Z_Construct_UFunction_ADoor_IsOpen, "IsOpen" }, // 240956274
-		{ &Z_Construct_UFunction_ADoor_Lock, "Lock" }, // 581917633
-		{ &Z_Construct_UFunction_ADoor_OnDoorClose, "OnDoorClose" }, // 3025867012
-		{ &Z_Construct_UFunction_ADoor_OnDoorClose_BP, "OnDoorClose_BP" }, // 3032200444
-		{ &Z_Construct_UFunction_ADoor_OnDoorLock, "OnDoorLock" }, // 2319405707
-		{ &Z_Construct_UFunction_ADoor_OnDoorLock_BP, "OnDoorLock_BP" }, // 3813468311
-		{ &Z_Construct_UFunction_ADoor_OnDoorOpen, "OnDoorOpen" }, // 4056818182
-		{ &Z_Construct_UFunction_ADoor_OnDoorOpen_BP, "OnDoorOpen_BP" }, // 3822866259
-		{ &Z_Construct_UFunction_ADoor_OnDoorUnlock, "OnDoorUnlock" }, // 684520283
-		{ &Z_Construct_UFunction_ADoor_OnDoorUnlock_BP, "OnDoorUnlock_BP" }, // 2318565316
-		{ &Z_Construct_UFunction_ADoor_Open, "Open" }, // 2575173567
+		{ &Z_Construct_UFunction_ADoor_IsLocked, "IsLocked" }, // 3397728883
+		{ &Z_Construct_UFunction_ADoor_IsOpen, "IsOpen" }, // 2312102379
+		{ &Z_Construct_UFunction_ADoor_Lock, "Lock" }, // 2557552916
+		{ &Z_Construct_UFunction_ADoor_OnDoorClose, "OnDoorClose" }, // 2819711262
+		{ &Z_Construct_UFunction_ADoor_OnDoorClose_BP, "OnDoorClose_BP" }, // 3661722584
+		{ &Z_Construct_UFunction_ADoor_OnDoorLock, "OnDoorLock" }, // 409590932
+		{ &Z_Construct_UFunction_ADoor_OnDoorLock_BP, "OnDoorLock_BP" }, // 3763658896
+		{ &Z_Construct_UFunction_ADoor_OnDoorOpen, "OnDoorOpen" }, // 3481580590
+		{ &Z_Construct_UFunction_ADoor_OnDoorOpen_BP, "OnDoorOpen_BP" }, // 3326566384
+		{ &Z_Construct_UFunction_ADoor_OnDoorUnlock, "OnDoorUnlock" }, // 2910212332
+		{ &Z_Construct_UFunction_ADoor_OnDoorUnlock_BP, "OnDoorUnlock_BP" }, // 208985734
+		{ &Z_Construct_UFunction_ADoor_Open, "Open" }, // 3692848802
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ADoor>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_ADoor_Statics
+
+// ********** Begin Class ADoor Property Definitions ***********************************************
 void Z_Construct_UClass_ADoor_Statics::NewProp_bShouldBeLocked_SetBit(void* Obj)
 {
 	((ADoor*)Obj)->bShouldBeLocked = 1;
@@ -620,6 +704,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADoor_Sta
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADoor_Statics::NewProp_DefaultSceneComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADoor_Statics::PropPointers) < 2048);
+// ********** End Class ADoor Property Definitions *************************************************
 UObject* (*const Z_Construct_UClass_ADoor_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -637,9 +722,14 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ADoor_Statics::ClassPar
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ADoor_Statics::PropPointers),
 	0,
-	0x009001A4u,
+	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ADoor_Statics::Class_MetaDataParams), Z_Construct_UClass_ADoor_Statics::Class_MetaDataParams)
 };
+void ADoor::StaticRegisterNativesADoor()
+{
+	UClass* Class = ADoor::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_ADoor_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_ADoor()
 {
 	if (!Z_Registration_Info_UClass_ADoor.OuterSingleton)
@@ -663,21 +753,23 @@ void ADoor::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps
 	checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ADoor"));
 }
 #endif
-DEFINE_VTABLE_PTR_HELPER_CTOR(ADoor);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, ADoor);
 ADoor::~ADoor() {}
 // ********** End Class ADoor **********************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADoor, ADoor::StaticClass, TEXT("ADoor"), &Z_Registration_Info_UClass_ADoor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADoor), 3510511733U) },
+		{ Z_Construct_UClass_ADoor, ADoor::StaticClass, TEXT("ADoor"), &Z_Registration_Info_UClass_ADoor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADoor), 3070771807U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_398405021(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_237096001{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Door_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

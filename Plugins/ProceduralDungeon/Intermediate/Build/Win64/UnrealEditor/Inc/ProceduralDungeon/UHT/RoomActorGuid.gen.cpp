@@ -8,7 +8,7 @@
 #include "Interfaces/RoomActorGuid.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeRoomActorGuid() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -61,16 +61,25 @@ struct Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetGuid constinit property declarations *******************************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetGuid constinit property declarations *********************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetGuid Property Definitions ******************************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomActorGuid_eventGetGuid_Parms, ReturnValue), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_URoomActorGuid, nullptr, "GetGuid", Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::PropPointers), sizeof(RoomActorGuid_eventGetGuid_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x5C820C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetGuid Property Definitions ********************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_URoomActorGuid, nullptr, "GetGuid", 	Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::PropPointers), 
+sizeof(RoomActorGuid_eventGetGuid_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x5C820C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomActorGuid_GetGuid_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(RoomActorGuid_eventGetGuid_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_URoomActorGuid_GetGuid()
 {
@@ -138,11 +147,16 @@ struct Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function ShouldSaveActor constinit property declarations ***********************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function ShouldSaveActor constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function ShouldSaveActor Property Definitions **********************************
 void Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((RoomActorGuid_eventShouldSaveActor_Parms*)Obj)->ReturnValue = 1;
@@ -152,7 +166,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URoomA
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_URoomActorGuid, nullptr, "ShouldSaveActor", Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::PropPointers), sizeof(RoomActorGuid_eventShouldSaveActor_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::Function_MetaDataParams)},  };
+// ********** End Function ShouldSaveActor Property Definitions ************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_URoomActorGuid, nullptr, "ShouldSaveActor", 	Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::PropPointers), 
+sizeof(RoomActorGuid_eventShouldSaveActor_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(RoomActorGuid_eventShouldSaveActor_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor()
 {
@@ -173,15 +191,6 @@ DEFINE_FUNCTION(IRoomActorGuid::execShouldSaveActor)
 // ********** End Interface URoomActorGuid Function ShouldSaveActor ********************************
 
 // ********** Begin Interface URoomActorGuid *******************************************************
-void URoomActorGuid::StaticRegisterNativesURoomActorGuid()
-{
-	UClass* Class = URoomActorGuid::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "GetGuid", &IRoomActorGuid::execGetGuid },
-		{ "ShouldSaveActor", &IRoomActorGuid::execShouldSaveActor },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_URoomActorGuid;
 UClass* URoomActorGuid::GetPrivateStaticClass()
 {
@@ -189,7 +198,7 @@ UClass* URoomActorGuid::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_URoomActorGuid.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("RoomActorGuid"),
 			Z_Registration_Info_UClass_URoomActorGuid.InnerSingleton,
 			StaticRegisterNativesURoomActorGuid,
@@ -223,17 +232,24 @@ struct Z_Construct_UClass_URoomActorGuid_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Interface URoomActorGuid constinit property declarations ***********************
+// ********** End Interface URoomActorGuid constinit property declarations *************************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("GetGuid"), .Pointer = &IRoomActorGuid::execGetGuid },
+		{ .NameUTF8 = UTF8TEXT("ShouldSaveActor"), .Pointer = &IRoomActorGuid::execShouldSaveActor },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_URoomActorGuid_GetGuid, "GetGuid" }, // 1845691024
-		{ &Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor, "ShouldSaveActor" }, // 1214142878
+		{ &Z_Construct_UFunction_URoomActorGuid_GetGuid, "GetGuid" }, // 4015978788
+		{ &Z_Construct_UFunction_URoomActorGuid_ShouldSaveActor, "ShouldSaveActor" }, // 1674952572
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<IRoomActorGuid>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_URoomActorGuid_Statics
 UObject* (*const Z_Construct_UClass_URoomActorGuid_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UInterface,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -254,6 +270,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_URoomActorGuid_Statics:
 	0x000040A1u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_URoomActorGuid_Statics::Class_MetaDataParams), Z_Construct_UClass_URoomActorGuid_Statics::Class_MetaDataParams)
 };
+void URoomActorGuid::StaticRegisterNativesURoomActorGuid()
+{
+	UClass* Class = URoomActorGuid::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_URoomActorGuid_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_URoomActorGuid()
 {
 	if (!Z_Registration_Info_UClass_URoomActorGuid.OuterSingleton)
@@ -263,20 +284,22 @@ UClass* Z_Construct_UClass_URoomActorGuid()
 	return Z_Registration_Info_UClass_URoomActorGuid.OuterSingleton;
 }
 URoomActorGuid::URoomActorGuid(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(URoomActorGuid);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, URoomActorGuid);
 // ********** End Interface URoomActorGuid *********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_URoomActorGuid, URoomActorGuid::StaticClass, TEXT("URoomActorGuid"), &Z_Registration_Info_UClass_URoomActorGuid, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomActorGuid), 8697722U) },
+		{ Z_Construct_UClass_URoomActorGuid, URoomActorGuid::StaticClass, TEXT("URoomActorGuid"), &Z_Registration_Info_UClass_URoomActorGuid, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomActorGuid), 3856908736U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_183391852(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_730729055{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_RoomActorGuid_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

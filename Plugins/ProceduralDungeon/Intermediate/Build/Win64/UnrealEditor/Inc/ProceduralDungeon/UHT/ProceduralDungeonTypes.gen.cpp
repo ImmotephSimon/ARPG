@@ -8,18 +8,21 @@
 #include "ProceduralDungeonTypes.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeProceduralDungeonTypes() {}
 
 // ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntVector();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDoorType_NoRegister();
+PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomData_NoRegister();
 PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_EDoorDirection();
 PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_EGenerationState();
+PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus();
 PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_EGenerationType();
 PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_ESeedType();
 PROCEDURALDUNGEON_API UEnum* Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode();
 PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FDoorDef();
+PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FRoomCandidate();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
@@ -33,7 +36,7 @@ static UEnum* EGenerationState_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_EGenerationState.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationState>()
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EGenerationState>()
 {
 	return EGenerationState_StaticEnum();
 }
@@ -68,7 +71,7 @@ struct Z_Construct_UEnum_ProceduralDungeon_EGenerationState_Statics
 		{ "EGenerationState::NbState", (int64)EGenerationState::NbState },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-};
+}; // struct Z_Construct_UEnum_ProceduralDungeon_EGenerationState_Statics 
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProceduralDungeon_EGenerationState_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -91,6 +94,68 @@ UEnum* Z_Construct_UEnum_ProceduralDungeon_EGenerationState()
 }
 // ********** End Enum EGenerationState ************************************************************
 
+// ********** Begin Enum EGenerationStatus *********************************************************
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EGenerationStatus;
+static UEnum* EGenerationStatus_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EGenerationStatus.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EGenerationStatus.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("EGenerationStatus"));
+	}
+	return Z_Registration_Info_UEnum_EGenerationStatus.OuterSingleton;
+}
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EGenerationStatus>()
+{
+	return EGenerationStatus_StaticEnum();
+}
+struct Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "Completed.DisplayName", "Completed" },
+		{ "Completed.Name", "EGenerationStatus::Completed" },
+		{ "Failed.DisplayName", "Failed" },
+		{ "Failed.Name", "EGenerationStatus::Failed" },
+		{ "InProgress.DisplayName", "In Progress" },
+		{ "InProgress.Name", "EGenerationStatus::InProgress" },
+		{ "ModuleRelativePath", "Public/ProceduralDungeonTypes.h" },
+		{ "NbStatus.Hidden", "" },
+		{ "NbStatus.Name", "EGenerationStatus::NbStatus" },
+		{ "NotStarted.DisplayName", "Not Started" },
+		{ "NotStarted.Name", "EGenerationStatus::NotStarted" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EGenerationStatus::NotStarted", (int64)EGenerationStatus::NotStarted },
+		{ "EGenerationStatus::InProgress", (int64)EGenerationStatus::InProgress },
+		{ "EGenerationStatus::Completed", (int64)EGenerationStatus::Completed },
+		{ "EGenerationStatus::Failed", (int64)EGenerationStatus::Failed },
+		{ "EGenerationStatus::NbStatus", (int64)EGenerationStatus::NbStatus },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+}; // struct Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics 
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon,
+	nullptr,
+	"EGenerationStatus",
+	"EGenerationStatus",
+	Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus()
+{
+	if (!Z_Registration_Info_UEnum_EGenerationStatus.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EGenerationStatus.InnerSingleton, Z_Construct_UEnum_ProceduralDungeon_EGenerationStatus_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EGenerationStatus.InnerSingleton;
+}
+// ********** End Enum EGenerationStatus ***********************************************************
+
 // ********** Begin Enum EDoorDirection ************************************************************
 static FEnumRegistrationInfo Z_Registration_Info_UEnum_EDoorDirection;
 static UEnum* EDoorDirection_StaticEnum()
@@ -101,7 +166,7 @@ static UEnum* EDoorDirection_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_EDoorDirection.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EDoorDirection>()
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EDoorDirection>()
 {
 	return EDoorDirection_StaticEnum();
 }
@@ -142,7 +207,7 @@ struct Z_Construct_UEnum_ProceduralDungeon_EDoorDirection_Statics
 		{ "EDoorDirection::NbDirection", (int64)EDoorDirection::NbDirection },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-};
+}; // struct Z_Construct_UEnum_ProceduralDungeon_EDoorDirection_Statics 
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProceduralDungeon_EDoorDirection_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -175,7 +240,7 @@ static UEnum* EGenerationType_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_EGenerationType.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationType>()
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EGenerationType>()
 {
 	return EGenerationType_StaticEnum();
 }
@@ -208,7 +273,7 @@ struct Z_Construct_UEnum_ProceduralDungeon_EGenerationType_Statics
 		{ "EGenerationType::NbType", (int64)EGenerationType::NbType },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-};
+}; // struct Z_Construct_UEnum_ProceduralDungeon_EGenerationType_Statics 
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProceduralDungeon_EGenerationType_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -241,7 +306,7 @@ static UEnum* ESeedType_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_ESeedType.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<ESeedType>()
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<ESeedType>()
 {
 	return ESeedType_StaticEnum();
 }
@@ -278,7 +343,7 @@ struct Z_Construct_UEnum_ProceduralDungeon_ESeedType_Statics
 		{ "ESeedType::NbType", (int64)ESeedType::NbType },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-};
+}; // struct Z_Construct_UEnum_ProceduralDungeon_ESeedType_Statics 
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProceduralDungeon_ESeedType_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -311,7 +376,7 @@ static UEnum* EVisibilityMode_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_EVisibilityMode.OuterSingleton;
 }
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EVisibilityMode>()
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EVisibilityMode>()
 {
 	return EVisibilityMode_StaticEnum();
 }
@@ -348,7 +413,7 @@ struct Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode_Statics
 		{ "EVisibilityMode::NbMode", (int64)EVisibilityMode::NbMode },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-};
+}; // struct Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode_Statics 
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -372,17 +437,10 @@ UEnum* Z_Construct_UEnum_ProceduralDungeon_EVisibilityMode()
 // ********** End Enum EVisibilityMode *************************************************************
 
 // ********** Begin ScriptStruct FDoorDef **********************************************************
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FDoorDef;
-class UScriptStruct* FDoorDef::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_FDoorDef.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_FDoorDef.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FDoorDef, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("DoorDef"));
-	}
-	return Z_Registration_Info_UScriptStruct_FDoorDef.OuterSingleton;
-}
 struct Z_Construct_UScriptStruct_FDoorDef_Statics
 {
+	static inline consteval int32 GetStructSize() { return sizeof(FDoorDef); }
+	static inline consteval int16 GetStructAlignment() { return alignof(FDoorDef); }
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
@@ -408,20 +466,34 @@ struct Z_Construct_UScriptStruct_FDoorDef_Statics
 		{ "ModuleRelativePath", "Public/ProceduralDungeonTypes.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin ScriptStruct FDoorDef constinit property declarations **************************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Position;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Direction_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_Direction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Type;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End ScriptStruct FDoorDef constinit property declarations ****************************
 	static void* NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDoorDef>();
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
-};
+}; // struct Z_Construct_UScriptStruct_FDoorDef_Statics
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FDoorDef;
+class UScriptStruct* FDoorDef::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FDoorDef.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FDoorDef.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FDoorDef, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("DoorDef"));
+	}
+	return Z_Registration_Info_UScriptStruct_FDoorDef.OuterSingleton;
+	}
+
+// ********** Begin ScriptStruct FDoorDef Property Definitions *************************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FDoorDef_Statics::NewProp_Position = { "Position", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FDoorDef, Position), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Position_MetaData), NewProp_Position_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FDoorDef_Statics::NewProp_Direction_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FDoorDef_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FDoorDef, Direction), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Direction_MetaData), NewProp_Direction_MetaData) }; // 3779627541
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FDoorDef_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FDoorDef, Direction), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Direction_MetaData), NewProp_Direction_MetaData) }; // 4084058555
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FDoorDef_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FDoorDef, Type), Z_Construct_UClass_UDoorType_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Type_MetaData), NewProp_Type_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FDoorDef_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDoorDef_Statics::NewProp_Position,
@@ -430,6 +502,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FD
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDoorDef_Statics::NewProp_Type,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FDoorDef_Statics::PropPointers) < 2048);
+// ********** End ScriptStruct FDoorDef Property Definitions ***************************************
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDoorDef_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 	nullptr,
@@ -449,28 +522,118 @@ UScriptStruct* Z_Construct_UScriptStruct_FDoorDef()
 	{
 		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FDoorDef.InnerSingleton, Z_Construct_UScriptStruct_FDoorDef_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_FDoorDef.InnerSingleton;
+	return CastChecked<UScriptStruct>(Z_Registration_Info_UScriptStruct_FDoorDef.InnerSingleton);
 }
 // ********** End ScriptStruct FDoorDef ************************************************************
 
+// ********** Begin ScriptStruct FRoomCandidate ****************************************************
+struct Z_Construct_UScriptStruct_FRoomCandidate_Statics
+{
+	static inline consteval int32 GetStructSize() { return sizeof(FRoomCandidate); }
+	static inline consteval int16 GetStructAlignment() { return alignof(FRoomCandidate); }
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Describe a potential room to be added to the dungeon.\n// Mainly used by FilterAndSortRooms function.\n" },
+#endif
+		{ "ModuleRelativePath", "Public/ProceduralDungeonTypes.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Describe a potential room to be added to the dungeon.\nMainly used by FilterAndSortRooms function." },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
+		{ "Category", "Room Candidate" },
+		{ "ModuleRelativePath", "Public/ProceduralDungeonTypes.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DoorIndex_MetaData[] = {
+		{ "Category", "Room Candidate" },
+		{ "ModuleRelativePath", "Public/ProceduralDungeonTypes.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Score_MetaData[] = {
+		{ "Category", "Room Candidate" },
+		{ "ModuleRelativePath", "Public/ProceduralDungeonTypes.h" },
+	};
+#endif // WITH_METADATA
+
+// ********** Begin ScriptStruct FRoomCandidate constinit property declarations ********************
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Data;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_DoorIndex;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Score;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End ScriptStruct FRoomCandidate constinit property declarations **********************
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRoomCandidate>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+}; // struct Z_Construct_UScriptStruct_FRoomCandidate_Statics
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FRoomCandidate;
+class UScriptStruct* FRoomCandidate::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_FRoomCandidate.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_FRoomCandidate.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FRoomCandidate, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("RoomCandidate"));
+	}
+	return Z_Registration_Info_UScriptStruct_FRoomCandidate.OuterSingleton;
+	}
+
+// ********** Begin ScriptStruct FRoomCandidate Property Definitions *******************************
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRoomCandidate, Data), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_DoorIndex = { "DoorIndex", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRoomCandidate, DoorIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorIndex_MetaData), NewProp_DoorIndex_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRoomCandidate, Score), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Score_MetaData), NewProp_Score_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Data,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_DoorIndex,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Score,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers) < 2048);
+// ********** End ScriptStruct FRoomCandidate Property Definitions *********************************
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
+	nullptr,
+	&NewStructOps,
+	"RoomCandidate",
+	Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers),
+	sizeof(FRoomCandidate),
+	alignof(FRoomCandidate),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000201),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRoomCandidate_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FRoomCandidate_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FRoomCandidate()
+{
+	if (!Z_Registration_Info_UScriptStruct_FRoomCandidate.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FRoomCandidate.InnerSingleton, Z_Construct_UScriptStruct_FRoomCandidate_Statics::StructParams);
+	}
+	return CastChecked<UScriptStruct>(Z_Registration_Info_UScriptStruct_FRoomCandidate.InnerSingleton);
+}
+// ********** End ScriptStruct FRoomCandidate ******************************************************
+
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EGenerationState_StaticEnum, TEXT("EGenerationState"), &Z_Registration_Info_UEnum_EGenerationState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3727864342U) },
-		{ EDoorDirection_StaticEnum, TEXT("EDoorDirection"), &Z_Registration_Info_UEnum_EDoorDirection, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3779627541U) },
-		{ EGenerationType_StaticEnum, TEXT("EGenerationType"), &Z_Registration_Info_UEnum_EGenerationType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 247530443U) },
-		{ ESeedType_StaticEnum, TEXT("ESeedType"), &Z_Registration_Info_UEnum_ESeedType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1936488073U) },
-		{ EVisibilityMode_StaticEnum, TEXT("EVisibilityMode"), &Z_Registration_Info_UEnum_EVisibilityMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 151926989U) },
+		{ EGenerationState_StaticEnum, TEXT("EGenerationState"), &Z_Registration_Info_UEnum_EGenerationState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2660198979U) },
+		{ EGenerationStatus_StaticEnum, TEXT("EGenerationStatus"), &Z_Registration_Info_UEnum_EGenerationStatus, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2068750748U) },
+		{ EDoorDirection_StaticEnum, TEXT("EDoorDirection"), &Z_Registration_Info_UEnum_EDoorDirection, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4084058555U) },
+		{ EGenerationType_StaticEnum, TEXT("EGenerationType"), &Z_Registration_Info_UEnum_EGenerationType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2318661752U) },
+		{ ESeedType_StaticEnum, TEXT("ESeedType"), &Z_Registration_Info_UEnum_ESeedType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 317062502U) },
+		{ EVisibilityMode_StaticEnum, TEXT("EVisibilityMode"), &Z_Registration_Info_UEnum_EVisibilityMode, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1696523330U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FDoorDef::StaticStruct, Z_Construct_UScriptStruct_FDoorDef_Statics::NewStructOps, TEXT("DoorDef"), &Z_Registration_Info_UScriptStruct_FDoorDef, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDoorDef), 121548433U) },
+		{ FDoorDef::StaticStruct, Z_Construct_UScriptStruct_FDoorDef_Statics::NewStructOps, TEXT("DoorDef"),&Z_Registration_Info_UScriptStruct_FDoorDef, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDoorDef), 3029669120U) },
+		{ FRoomCandidate::StaticStruct, Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewStructOps, TEXT("RoomCandidate"),&Z_Registration_Info_UScriptStruct_FRoomCandidate, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRoomCandidate), 1992037597U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_3730253288(TEXT("/Script/ProceduralDungeon"),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_1201979977{
+	TEXT("/Script/ProceduralDungeon"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h__Script_ProceduralDungeon_Statics::EnumInfo),
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

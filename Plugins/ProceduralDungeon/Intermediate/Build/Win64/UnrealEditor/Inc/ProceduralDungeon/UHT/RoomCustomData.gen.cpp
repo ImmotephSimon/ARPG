@@ -8,11 +8,11 @@
 #include "RoomCustomData.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeRoomCustomData() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDungeonCustomSerialization_NoRegister();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDungeonSaveInterface_NoRegister();
@@ -23,9 +23,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class URoomCustomData **********************************************************
-void URoomCustomData::StaticRegisterNativesURoomCustomData()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_URoomCustomData;
 UClass* URoomCustomData::GetPrivateStaticClass()
 {
@@ -33,7 +30,7 @@ UClass* URoomCustomData::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_URoomCustomData.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("RoomCustomData"),
 			Z_Registration_Info_UClass_URoomCustomData.InnerSingleton,
 			StaticRegisterNativesURoomCustomData,
@@ -92,31 +89,37 @@ struct Z_Construct_UClass_URoomCustomData_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class URoomCustomData constinit property declarations **************************
 	static const UECodeGen_Private::FClassPropertyParams NewProp_LevelComponent;
 	static const UECodeGen_Private::FWeakObjectPropertyParams NewProp_LevelComponentInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class URoomCustomData constinit property declarations ****************************
 	static UObject* (*const DependentSingletons[])();
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<URoomCustomData>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_URoomCustomData_Statics::NewProp_LevelComponent = { "LevelComponent", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(URoomCustomData, LevelComponent), Z_Construct_UClass_UClass, Z_Construct_UClass_UActorComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelComponent_MetaData), NewProp_LevelComponent_MetaData) };
+}; // struct Z_Construct_UClass_URoomCustomData_Statics
+
+// ********** Begin Class URoomCustomData Property Definitions *************************************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_URoomCustomData_Statics::NewProp_LevelComponent = { "LevelComponent", nullptr, (EPropertyFlags)0x0044000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(URoomCustomData, LevelComponent), Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_UActorComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelComponent_MetaData), NewProp_LevelComponent_MetaData) };
 const UECodeGen_Private::FWeakObjectPropertyParams Z_Construct_UClass_URoomCustomData_Statics::NewProp_LevelComponentInstance = { "LevelComponentInstance", nullptr, (EPropertyFlags)0x0044000000082008, UECodeGen_Private::EPropertyGenFlags::WeakObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(URoomCustomData, LevelComponentInstance), Z_Construct_UClass_UActorComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelComponentInstance_MetaData), NewProp_LevelComponentInstance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_URoomCustomData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URoomCustomData_Statics::NewProp_LevelComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_URoomCustomData_Statics::NewProp_LevelComponentInstance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_URoomCustomData_Statics::PropPointers) < 2048);
+// ********** End Class URoomCustomData Property Definitions ***************************************
 UObject* (*const Z_Construct_UClass_URoomCustomData_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UReplicableObject,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_URoomCustomData_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_URoomCustomData_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UDungeonCustomSerialization_NoRegister, (int32)VTABLE_OFFSET(URoomCustomData, IDungeonCustomSerialization), false },  // 3173650839
-	{ Z_Construct_UClass_UDungeonSaveInterface_NoRegister, (int32)VTABLE_OFFSET(URoomCustomData, IDungeonSaveInterface), false },  // 893009087
+	{ Z_Construct_UClass_UDungeonCustomSerialization_NoRegister, (int32)VTABLE_OFFSET(URoomCustomData, IDungeonCustomSerialization), false },  // 1577964527
+	{ Z_Construct_UClass_UDungeonSaveInterface_NoRegister, (int32)VTABLE_OFFSET(URoomCustomData, IDungeonSaveInterface), false },  // 728230088
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_URoomCustomData_Statics::ClassParams = {
 	&URoomCustomData::StaticClass,
@@ -133,6 +136,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_URoomCustomData_Statics
 	0x009000A1u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_URoomCustomData_Statics::Class_MetaDataParams), Z_Construct_UClass_URoomCustomData_Statics::Class_MetaDataParams)
 };
+void URoomCustomData::StaticRegisterNativesURoomCustomData()
+{
+}
 UClass* Z_Construct_UClass_URoomCustomData()
 {
 	if (!Z_Registration_Info_UClass_URoomCustomData.OuterSingleton)
@@ -142,21 +148,23 @@ UClass* Z_Construct_UClass_URoomCustomData()
 	return Z_Registration_Info_UClass_URoomCustomData.OuterSingleton;
 }
 URoomCustomData::URoomCustomData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(URoomCustomData);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, URoomCustomData);
 URoomCustomData::~URoomCustomData() {}
 // ********** End Class URoomCustomData ************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_URoomCustomData, URoomCustomData::StaticClass, TEXT("URoomCustomData"), &Z_Registration_Info_UClass_URoomCustomData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomCustomData), 1413150997U) },
+		{ Z_Construct_UClass_URoomCustomData, URoomCustomData::StaticClass, TEXT("URoomCustomData"), &Z_Registration_Info_UClass_URoomCustomData, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomCustomData), 1849605070U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_2741462370(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_2591119080{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomCustomData_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

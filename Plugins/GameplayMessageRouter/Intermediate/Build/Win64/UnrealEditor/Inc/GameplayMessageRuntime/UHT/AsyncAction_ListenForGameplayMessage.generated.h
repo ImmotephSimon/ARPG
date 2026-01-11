@@ -15,7 +15,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
 class UAsyncAction_ListenForGameplayMessage;
 class UObject;
 class UScriptStruct;
@@ -23,31 +22,34 @@ enum class EGameplayMessageMatch : uint8;
 struct FGameplayTag;
 
 // ********** Begin Delegate FAsyncGameplayMessageDelegate *****************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_20_DELEGATE \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_20_DELEGATE \
 GAMEPLAYMESSAGERUNTIME_API void FAsyncGameplayMessageDelegate_DelegateWrapper(const FMulticastScriptDelegate& AsyncGameplayMessageDelegate, UAsyncAction_ListenForGameplayMessage* ProxyObject, FGameplayTag ActualChannel);
 
 
 // ********** End Delegate FAsyncGameplayMessageDelegate *******************************************
 
 // ********** Begin Class UAsyncAction_ListenForGameplayMessage ************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execListenForGameplayMessages);
 
 
+struct Z_Construct_UClass_UAsyncAction_ListenForGameplayMessage_Statics;
+	struct Z_Construct_UFunction_UAsyncAction_ListenForGameplayMessage_GetPayload_Statics; \
 GAMEPLAYMESSAGERUNTIME_API UClass* Z_Construct_UClass_UAsyncAction_ListenForGameplayMessage_NoRegister();
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAsyncAction_ListenForGameplayMessage(); \
-	friend struct Z_Construct_UClass_UAsyncAction_ListenForGameplayMessage_Statics; \
+	friend struct ::Z_Construct_UClass_UAsyncAction_ListenForGameplayMessage_Statics; \
+	friend struct ::Z_Construct_UFunction_UAsyncAction_ListenForGameplayMessage_GetPayload_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend GAMEPLAYMESSAGERUNTIME_API UClass* Z_Construct_UClass_UAsyncAction_ListenForGameplayMessage_NoRegister(); \
+	friend GAMEPLAYMESSAGERUNTIME_API UClass* ::Z_Construct_UClass_UAsyncAction_ListenForGameplayMessage_NoRegister(); \
 public: \
 	DECLARE_CLASS2(UAsyncAction_ListenForGameplayMessage, UCancellableAsyncAction, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GameplayMessageRuntime"), Z_Construct_UClass_UAsyncAction_ListenForGameplayMessage_NoRegister) \
 	DECLARE_SERIALIZER(UAsyncAction_ListenForGameplayMessage)
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAsyncAction_ListenForGameplayMessage(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -59,13 +61,13 @@ public: \
 	NO_API virtual ~UAsyncAction_ListenForGameplayMessage();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_22_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_GENERATED_BODY \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_22_PROLOG
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_ENHANCED_CONSTRUCTORS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_INCLASS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h_25_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,6 +77,6 @@ class UAsyncAction_ListenForGameplayMessage;
 // ********** End Class UAsyncAction_ListenForGameplayMessage **************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_AsyncAction_ListenForGameplayMessage_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

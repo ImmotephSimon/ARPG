@@ -17,8 +17,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FBoundsParams *****************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_22_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FBoundsParams_Statics; \
+struct Z_Construct_UScriptStruct_FBoundsParams_Statics;
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h_22_GENERATED_BODY \
+	friend struct ::Z_Construct_UScriptStruct_FBoundsParams_Statics; \
 	PROCEDURALDUNGEON_API static class UScriptStruct* StaticStruct();
 
 
@@ -26,6 +27,6 @@ struct FBoundsParams;
 // ********** End ScriptStruct FBoundsParams *******************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_BoundsParams_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

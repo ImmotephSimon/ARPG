@@ -15,37 +15,37 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
 class AActor;
 class ARoomLevel;
 
 // ********** Begin Delegate FStaticRoomObserverEvent **********************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_14_DELEGATE \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_14_DELEGATE \
 PROCEDURALDUNGEON_API void FStaticRoomObserverEvent_DelegateWrapper(const FMulticastScriptDelegate& StaticRoomObserverEvent, ARoomLevel* RoomLevel, AActor* Actor);
 
 
 // ********** End Delegate FStaticRoomObserverEvent ************************************************
 
 // ********** Begin Class UStaticRoomObserverComponent *********************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnActorExitRoom); \
 	DECLARE_FUNCTION(execOnActorEnterRoom);
 
 
+struct Z_Construct_UClass_UStaticRoomObserverComponent_Statics;
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UStaticRoomObserverComponent_NoRegister();
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUStaticRoomObserverComponent(); \
-	friend struct Z_Construct_UClass_UStaticRoomObserverComponent_Statics; \
+	friend struct ::Z_Construct_UClass_UStaticRoomObserverComponent_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UStaticRoomObserverComponent_NoRegister(); \
+	friend PROCEDURALDUNGEON_API UClass* ::Z_Construct_UClass_UStaticRoomObserverComponent_NoRegister(); \
 public: \
 	DECLARE_CLASS2(UStaticRoomObserverComponent, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProceduralDungeon"), Z_Construct_UClass_UStaticRoomObserverComponent_NoRegister) \
 	DECLARE_SERIALIZER(UStaticRoomObserverComponent)
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UStaticRoomObserverComponent(UStaticRoomObserverComponent&&) = delete; \
 	UStaticRoomObserverComponent(const UStaticRoomObserverComponent&) = delete; \
@@ -55,13 +55,13 @@ public: \
 	NO_API virtual ~UStaticRoomObserverComponent();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_19_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_GENERATED_BODY \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_19_PROLOG
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_INCLASS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -71,6 +71,6 @@ class UStaticRoomObserverComponent;
 // ********** End Class UStaticRoomObserverComponent ***********************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_StaticRoomObserverComponent_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

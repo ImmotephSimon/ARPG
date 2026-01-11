@@ -8,7 +8,7 @@
 #include "Tests/Classes/RoomCustomDataChildClasses.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeRoomCustomDataChildClasses() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -23,9 +23,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class UCustomDataA *************************************************************
-void UCustomDataA::StaticRegisterNativesUCustomDataA()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UCustomDataA;
 UClass* UCustomDataA::GetPrivateStaticClass()
 {
@@ -33,7 +30,7 @@ UClass* UCustomDataA::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UCustomDataA.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("CustomDataA"),
 			Z_Registration_Info_UClass_UCustomDataA.InnerSingleton,
 			StaticRegisterNativesUCustomDataA,
@@ -66,12 +63,15 @@ struct Z_Construct_UClass_UCustomDataA_Statics
 		{ "NotBlueprintType", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UCustomDataA constinit property declarations *****************************
+// ********** End Class UCustomDataA constinit property declarations *******************************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCustomDataA>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UCustomDataA_Statics
 UObject* (*const Z_Construct_UClass_UCustomDataA_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_URoomCustomData,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -92,6 +92,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCustomDataA_Statics::C
 	0x048000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomDataA_Statics::Class_MetaDataParams), Z_Construct_UClass_UCustomDataA_Statics::Class_MetaDataParams)
 };
+void UCustomDataA::StaticRegisterNativesUCustomDataA()
+{
+}
 UClass* Z_Construct_UClass_UCustomDataA()
 {
 	if (!Z_Registration_Info_UClass_UCustomDataA.OuterSingleton)
@@ -101,14 +104,11 @@ UClass* Z_Construct_UClass_UCustomDataA()
 	return Z_Registration_Info_UClass_UCustomDataA.OuterSingleton;
 }
 UCustomDataA::UCustomDataA(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomDataA);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UCustomDataA);
 UCustomDataA::~UCustomDataA() {}
 // ********** End Class UCustomDataA ***************************************************************
 
 // ********** Begin Class UCustomDataB *************************************************************
-void UCustomDataB::StaticRegisterNativesUCustomDataB()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UCustomDataB;
 UClass* UCustomDataB::GetPrivateStaticClass()
 {
@@ -116,7 +116,7 @@ UClass* UCustomDataB::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UCustomDataB.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("CustomDataB"),
 			Z_Registration_Info_UClass_UCustomDataB.InnerSingleton,
 			StaticRegisterNativesUCustomDataB,
@@ -149,12 +149,15 @@ struct Z_Construct_UClass_UCustomDataB_Statics
 		{ "NotBlueprintType", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UCustomDataB constinit property declarations *****************************
+// ********** End Class UCustomDataB constinit property declarations *******************************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCustomDataB>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UCustomDataB_Statics
 UObject* (*const Z_Construct_UClass_UCustomDataB_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_URoomCustomData,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -175,6 +178,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCustomDataB_Statics::C
 	0x048000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomDataB_Statics::Class_MetaDataParams), Z_Construct_UClass_UCustomDataB_Statics::Class_MetaDataParams)
 };
+void UCustomDataB::StaticRegisterNativesUCustomDataB()
+{
+}
 UClass* Z_Construct_UClass_UCustomDataB()
 {
 	if (!Z_Registration_Info_UClass_UCustomDataB.OuterSingleton)
@@ -184,14 +190,11 @@ UClass* Z_Construct_UClass_UCustomDataB()
 	return Z_Registration_Info_UClass_UCustomDataB.OuterSingleton;
 }
 UCustomDataB::UCustomDataB(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomDataB);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UCustomDataB);
 UCustomDataB::~UCustomDataB() {}
 // ********** End Class UCustomDataB ***************************************************************
 
 // ********** Begin Class UCustomDataC *************************************************************
-void UCustomDataC::StaticRegisterNativesUCustomDataC()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UCustomDataC;
 UClass* UCustomDataC::GetPrivateStaticClass()
 {
@@ -199,7 +202,7 @@ UClass* UCustomDataC::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UCustomDataC.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("CustomDataC"),
 			Z_Registration_Info_UClass_UCustomDataC.InnerSingleton,
 			StaticRegisterNativesUCustomDataC,
@@ -232,12 +235,15 @@ struct Z_Construct_UClass_UCustomDataC_Statics
 		{ "NotBlueprintType", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UCustomDataC constinit property declarations *****************************
+// ********** End Class UCustomDataC constinit property declarations *******************************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCustomDataC>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UCustomDataC_Statics
 UObject* (*const Z_Construct_UClass_UCustomDataC_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_URoomCustomData,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -258,6 +264,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCustomDataC_Statics::C
 	0x048000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomDataC_Statics::Class_MetaDataParams), Z_Construct_UClass_UCustomDataC_Statics::Class_MetaDataParams)
 };
+void UCustomDataC::StaticRegisterNativesUCustomDataC()
+{
+}
 UClass* Z_Construct_UClass_UCustomDataC()
 {
 	if (!Z_Registration_Info_UClass_UCustomDataC.OuterSingleton)
@@ -267,23 +276,25 @@ UClass* Z_Construct_UClass_UCustomDataC()
 	return Z_Registration_Info_UClass_UCustomDataC.OuterSingleton;
 }
 UCustomDataC::UCustomDataC(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomDataC);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UCustomDataC);
 UCustomDataC::~UCustomDataC() {}
 // ********** End Class UCustomDataC ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCustomDataA, UCustomDataA::StaticClass, TEXT("UCustomDataA"), &Z_Registration_Info_UClass_UCustomDataA, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataA), 4022667536U) },
-		{ Z_Construct_UClass_UCustomDataB, UCustomDataB::StaticClass, TEXT("UCustomDataB"), &Z_Registration_Info_UClass_UCustomDataB, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataB), 933601369U) },
-		{ Z_Construct_UClass_UCustomDataC, UCustomDataC::StaticClass, TEXT("UCustomDataC"), &Z_Registration_Info_UClass_UCustomDataC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataC), 2722503285U) },
+		{ Z_Construct_UClass_UCustomDataA, UCustomDataA::StaticClass, TEXT("UCustomDataA"), &Z_Registration_Info_UClass_UCustomDataA, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataA), 2971883893U) },
+		{ Z_Construct_UClass_UCustomDataB, UCustomDataB::StaticClass, TEXT("UCustomDataB"), &Z_Registration_Info_UClass_UCustomDataB, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataB), 2745111049U) },
+		{ Z_Construct_UClass_UCustomDataC, UCustomDataC::StaticClass, TEXT("UCustomDataC"), &Z_Registration_Info_UClass_UCustomDataC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomDataC), 4065004078U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_457294348(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_447987073{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_RoomCustomDataChildClasses_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

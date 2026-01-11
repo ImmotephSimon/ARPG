@@ -7,23 +7,23 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeProceduralDungeonEditor_init() {}
-	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor;
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_ProceduralDungeonEditor()
 	{
 		if (!Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor.OuterSingleton)
 		{
-			static const UECodeGen_Private::FPackageParams PackageParams = {
-				"/Script/ProceduralDungeonEditor",
-				nullptr,
-				0,
-				PKG_CompiledIn | 0x00000040,
-				0x54571EC8,
-				0xD6E29855,
-				METADATA_PARAMS(0, nullptr)
-			};
-			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor.OuterSingleton, PackageParams);
-		}
-		return Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor.OuterSingleton;
+		static const UECodeGen_Private::FPackageParams PackageParams = {
+			"/Script/ProceduralDungeonEditor",
+			nullptr,
+			0,
+			PKG_CompiledIn | 0x00000040,
+			0xDB242FF5,
+			0xD6E29855,
+			METADATA_PARAMS(0, nullptr)
+		};
+		UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor.OuterSingleton, PackageParams);
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProceduralDungeonEditor(Z_Construct_UPackage__Script_ProceduralDungeonEditor, TEXT("/Script/ProceduralDungeonEditor"), Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x54571EC8, 0xD6E29855));
+	return Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor.OuterSingleton;
+}
+static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProceduralDungeonEditor(Z_Construct_UPackage__Script_ProceduralDungeonEditor, TEXT("/Script/ProceduralDungeonEditor"), Z_Registration_Info_UPackage__Script_ProceduralDungeonEditor, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xDB242FF5, 0xD6E29855));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

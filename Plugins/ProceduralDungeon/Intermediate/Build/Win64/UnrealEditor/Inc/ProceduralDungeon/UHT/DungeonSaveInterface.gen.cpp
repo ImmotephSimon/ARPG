@@ -8,7 +8,7 @@
 #include "Interfaces/DungeonSaveInterface.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeDungeonSaveInterface() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -36,7 +36,7 @@ void IDungeonSaveInterface::Execute_DungeonPostSerialize(UObject* O, bool bIsLoa
 	UFunction* const Func = O->FindFunction(NAME_UDungeonSaveInterface_DungeonPostSerialize);
 	if (Func)
 	{
-		Parms.bIsLoading=bIsLoading;
+		Parms.bIsLoading=std::move(bIsLoading);
 		O->ProcessEvent(Func, &Parms);
 	}
 	else if (auto I = (IDungeonSaveInterface*)(O->GetNativeInterfaceAddress(UDungeonSaveInterface::StaticClass())))
@@ -58,11 +58,16 @@ struct Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function DungeonPostSerialize constinit property declarations ******************
 	static void NewProp_bIsLoading_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsLoading;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function DungeonPostSerialize constinit property declarations ********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function DungeonPostSerialize Property Definitions *****************************
 void Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::NewProp_bIsLoading_SetBit(void* Obj)
 {
 	((DungeonSaveInterface_eventDungeonPostSerialize_Parms*)Obj)->bIsLoading = 1;
@@ -72,7 +77,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::NewProp_bIsLoading,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "DungeonPostSerialize", Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::PropPointers), sizeof(DungeonSaveInterface_eventDungeonPostSerialize_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::Function_MetaDataParams)},  };
+// ********** End Function DungeonPostSerialize Property Definitions *******************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "DungeonPostSerialize", 	Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::PropPointers), 
+sizeof(DungeonSaveInterface_eventDungeonPostSerialize_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(DungeonSaveInterface_eventDungeonPostSerialize_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize()
 {
@@ -111,7 +120,7 @@ void IDungeonSaveInterface::Execute_DungeonPreSerialize(UObject* O, bool bIsLoad
 	UFunction* const Func = O->FindFunction(NAME_UDungeonSaveInterface_DungeonPreSerialize);
 	if (Func)
 	{
-		Parms.bIsLoading=bIsLoading;
+		Parms.bIsLoading=std::move(bIsLoading);
 		O->ProcessEvent(Func, &Parms);
 	}
 	else if (auto I = (IDungeonSaveInterface*)(O->GetNativeInterfaceAddress(UDungeonSaveInterface::StaticClass())))
@@ -133,11 +142,16 @@ struct Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function DungeonPreSerialize constinit property declarations *******************
 	static void NewProp_bIsLoading_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsLoading;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function DungeonPreSerialize constinit property declarations *********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function DungeonPreSerialize Property Definitions ******************************
 void Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::NewProp_bIsLoading_SetBit(void* Obj)
 {
 	((DungeonSaveInterface_eventDungeonPreSerialize_Parms*)Obj)->bIsLoading = 1;
@@ -147,7 +161,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::NewProp_bIsLoading,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "DungeonPreSerialize", Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::PropPointers), sizeof(DungeonSaveInterface_eventDungeonPreSerialize_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::Function_MetaDataParams)},  };
+// ********** End Function DungeonPreSerialize Property Definitions ********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "DungeonPreSerialize", 	Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::PropPointers), 
+sizeof(DungeonSaveInterface_eventDungeonPreSerialize_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(DungeonSaveInterface_eventDungeonPreSerialize_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize()
 {
@@ -202,9 +220,15 @@ struct Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function PostLoadDungeon constinit property declarations ***********************
+// ********** End Function PostLoadDungeon constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "PostLoadDungeon", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "PostLoadDungeon", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -257,9 +281,15 @@ struct Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function PreSaveDungeon constinit property declarations ************************
+// ********** End Function PreSaveDungeon constinit property declarations **************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "PreSaveDungeon", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonSaveInterface, nullptr, "PreSaveDungeon", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -279,17 +309,6 @@ DEFINE_FUNCTION(IDungeonSaveInterface::execPreSaveDungeon)
 // ********** End Interface UDungeonSaveInterface Function PreSaveDungeon **************************
 
 // ********** Begin Interface UDungeonSaveInterface ************************************************
-void UDungeonSaveInterface::StaticRegisterNativesUDungeonSaveInterface()
-{
-	UClass* Class = UDungeonSaveInterface::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "DungeonPostSerialize", &IDungeonSaveInterface::execDungeonPostSerialize },
-		{ "DungeonPreSerialize", &IDungeonSaveInterface::execDungeonPreSerialize },
-		{ "PostLoadDungeon", &IDungeonSaveInterface::execPostLoadDungeon },
-		{ "PreSaveDungeon", &IDungeonSaveInterface::execPreSaveDungeon },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UDungeonSaveInterface;
 UClass* UDungeonSaveInterface::GetPrivateStaticClass()
 {
@@ -297,7 +316,7 @@ UClass* UDungeonSaveInterface::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UDungeonSaveInterface.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("DungeonSaveInterface"),
 			Z_Registration_Info_UClass_UDungeonSaveInterface.InnerSingleton,
 			StaticRegisterNativesUDungeonSaveInterface,
@@ -331,19 +350,28 @@ struct Z_Construct_UClass_UDungeonSaveInterface_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Interface UDungeonSaveInterface constinit property declarations ****************
+// ********** End Interface UDungeonSaveInterface constinit property declarations ******************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("DungeonPostSerialize"), .Pointer = &IDungeonSaveInterface::execDungeonPostSerialize },
+		{ .NameUTF8 = UTF8TEXT("DungeonPreSerialize"), .Pointer = &IDungeonSaveInterface::execDungeonPreSerialize },
+		{ .NameUTF8 = UTF8TEXT("PostLoadDungeon"), .Pointer = &IDungeonSaveInterface::execPostLoadDungeon },
+		{ .NameUTF8 = UTF8TEXT("PreSaveDungeon"), .Pointer = &IDungeonSaveInterface::execPreSaveDungeon },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize, "DungeonPostSerialize" }, // 420035657
-		{ &Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize, "DungeonPreSerialize" }, // 1337672648
-		{ &Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon, "PostLoadDungeon" }, // 3947939659
-		{ &Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon, "PreSaveDungeon" }, // 148951260
+		{ &Z_Construct_UFunction_UDungeonSaveInterface_DungeonPostSerialize, "DungeonPostSerialize" }, // 3976053973
+		{ &Z_Construct_UFunction_UDungeonSaveInterface_DungeonPreSerialize, "DungeonPreSerialize" }, // 1269694573
+		{ &Z_Construct_UFunction_UDungeonSaveInterface_PostLoadDungeon, "PostLoadDungeon" }, // 3639464141
+		{ &Z_Construct_UFunction_UDungeonSaveInterface_PreSaveDungeon, "PreSaveDungeon" }, // 2345761158
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<IDungeonSaveInterface>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UDungeonSaveInterface_Statics
 UObject* (*const Z_Construct_UClass_UDungeonSaveInterface_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UInterface,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -364,6 +392,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UDungeonSaveInterface_S
 	0x000040A1u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDungeonSaveInterface_Statics::Class_MetaDataParams), Z_Construct_UClass_UDungeonSaveInterface_Statics::Class_MetaDataParams)
 };
+void UDungeonSaveInterface::StaticRegisterNativesUDungeonSaveInterface()
+{
+	UClass* Class = UDungeonSaveInterface::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UDungeonSaveInterface_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_UDungeonSaveInterface()
 {
 	if (!Z_Registration_Info_UClass_UDungeonSaveInterface.OuterSingleton)
@@ -373,20 +406,22 @@ UClass* Z_Construct_UClass_UDungeonSaveInterface()
 	return Z_Registration_Info_UClass_UDungeonSaveInterface.OuterSingleton;
 }
 UDungeonSaveInterface::UDungeonSaveInterface(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UDungeonSaveInterface);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UDungeonSaveInterface);
 // ********** End Interface UDungeonSaveInterface **************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDungeonSaveInterface, UDungeonSaveInterface::StaticClass, TEXT("UDungeonSaveInterface"), &Z_Registration_Info_UClass_UDungeonSaveInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonSaveInterface), 893009087U) },
+		{ Z_Construct_UClass_UDungeonSaveInterface, UDungeonSaveInterface::StaticClass, TEXT("UDungeonSaveInterface"), &Z_Registration_Info_UClass_UDungeonSaveInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonSaveInterface), 728230088U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_3854301128(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_3727785523{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonSaveInterface_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

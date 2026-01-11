@@ -9,7 +9,7 @@
 #include "VoxelBounds/VoxelBounds.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeCustomScoreCallbacks() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -41,16 +41,21 @@ struct Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function NeverPass constinit property declarations *****************************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_A;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_B;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Score;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function NeverPass constinit property declarations *******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventNeverPass_Parms, A), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1308034747
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventNeverPass_Parms, B), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1308034747
+
+// ********** Begin Function NeverPass Property Definitions ****************************************
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventNeverPass_Parms, A), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 2282400538
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventNeverPass_Parms, B), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 2282400538
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventNeverPass_Parms, Score), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -64,7 +69,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCusto
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCustomScoreCallback, nullptr, "NeverPass", Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::CustomScoreCallback_eventNeverPass_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::Function_MetaDataParams)},  };
+// ********** End Function NeverPass Property Definitions ******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCustomScoreCallback, nullptr, "NeverPass", 	Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::CustomScoreCallback_eventNeverPass_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UCustomScoreCallback_NeverPass_Statics::CustomScoreCallback_eventNeverPass_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UCustomScoreCallback_NeverPass()
 {
@@ -108,16 +117,21 @@ struct Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function ZeroScore constinit property declarations *****************************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_A;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_B;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Score;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function ZeroScore constinit property declarations *******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventZeroScore_Parms, A), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 1308034747
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventZeroScore_Parms, B), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 1308034747
+
+// ********** Begin Function ZeroScore Property Definitions ****************************************
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventZeroScore_Parms, A), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) }; // 2282400538
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventZeroScore_Parms, B), Z_Construct_UScriptStruct_FVoxelBoundsConnection, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) }; // 2282400538
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CustomScoreCallback_eventZeroScore_Parms, Score), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -131,7 +145,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCusto
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCustomScoreCallback, nullptr, "ZeroScore", Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::CustomScoreCallback_eventZeroScore_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::Function_MetaDataParams)},  };
+// ********** End Function ZeroScore Property Definitions ******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCustomScoreCallback, nullptr, "ZeroScore", 	Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::CustomScoreCallback_eventZeroScore_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UCustomScoreCallback_ZeroScore_Statics::CustomScoreCallback_eventZeroScore_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UCustomScoreCallback_ZeroScore()
 {
@@ -155,15 +173,6 @@ DEFINE_FUNCTION(UCustomScoreCallback::execZeroScore)
 // ********** End Class UCustomScoreCallback Function ZeroScore ************************************
 
 // ********** Begin Class UCustomScoreCallback *****************************************************
-void UCustomScoreCallback::StaticRegisterNativesUCustomScoreCallback()
-{
-	UClass* Class = UCustomScoreCallback::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "NeverPass", &UCustomScoreCallback::execNeverPass },
-		{ "ZeroScore", &UCustomScoreCallback::execZeroScore },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UCustomScoreCallback;
 UClass* UCustomScoreCallback::GetPrivateStaticClass()
 {
@@ -171,7 +180,7 @@ UClass* UCustomScoreCallback::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UCustomScoreCallback.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("CustomScoreCallback"),
 			Z_Registration_Info_UClass_UCustomScoreCallback.InnerSingleton,
 			StaticRegisterNativesUCustomScoreCallback,
@@ -204,17 +213,24 @@ struct Z_Construct_UClass_UCustomScoreCallback_Statics
 		{ "NotBlueprintType", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UCustomScoreCallback constinit property declarations *********************
+// ********** End Class UCustomScoreCallback constinit property declarations ***********************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("NeverPass"), .Pointer = &UCustomScoreCallback::execNeverPass },
+		{ .NameUTF8 = UTF8TEXT("ZeroScore"), .Pointer = &UCustomScoreCallback::execZeroScore },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCustomScoreCallback_NeverPass, "NeverPass" }, // 361380767
-		{ &Z_Construct_UFunction_UCustomScoreCallback_ZeroScore, "ZeroScore" }, // 3481587911
+		{ &Z_Construct_UFunction_UCustomScoreCallback_NeverPass, "NeverPass" }, // 721536867
+		{ &Z_Construct_UFunction_UCustomScoreCallback_ZeroScore, "ZeroScore" }, // 313166824
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCustomScoreCallback>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UCustomScoreCallback_Statics
 UObject* (*const Z_Construct_UClass_UCustomScoreCallback_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UObject,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -235,6 +251,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UCustomScoreCallback_St
 	0x040000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCustomScoreCallback_Statics::Class_MetaDataParams), Z_Construct_UClass_UCustomScoreCallback_Statics::Class_MetaDataParams)
 };
+void UCustomScoreCallback::StaticRegisterNativesUCustomScoreCallback()
+{
+	UClass* Class = UCustomScoreCallback::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UCustomScoreCallback_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_UCustomScoreCallback()
 {
 	if (!Z_Registration_Info_UClass_UCustomScoreCallback.OuterSingleton)
@@ -244,21 +265,23 @@ UClass* Z_Construct_UClass_UCustomScoreCallback()
 	return Z_Registration_Info_UClass_UCustomScoreCallback.OuterSingleton;
 }
 UCustomScoreCallback::UCustomScoreCallback(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UCustomScoreCallback);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UCustomScoreCallback);
 UCustomScoreCallback::~UCustomScoreCallback() {}
 // ********** End Class UCustomScoreCallback *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCustomScoreCallback, UCustomScoreCallback::StaticClass, TEXT("UCustomScoreCallback"), &Z_Registration_Info_UClass_UCustomScoreCallback, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomScoreCallback), 1151334538U) },
+		{ Z_Construct_UClass_UCustomScoreCallback, UCustomScoreCallback::StaticClass, TEXT("UCustomScoreCallback"), &Z_Registration_Info_UClass_UCustomScoreCallback, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCustomScoreCallback), 3625407283U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_551975328(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_1773286423{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Private_Tests_Classes_CustomScoreCallbacks_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

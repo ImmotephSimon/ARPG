@@ -8,7 +8,7 @@
 #include "Interfaces/GeneratorProvider.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeGeneratorProvider() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -19,9 +19,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Interface UGeneratorProvider ***************************************************
-void UGeneratorProvider::StaticRegisterNativesUGeneratorProvider()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UGeneratorProvider;
 UClass* UGeneratorProvider::GetPrivateStaticClass()
 {
@@ -29,7 +26,7 @@ UClass* UGeneratorProvider::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UGeneratorProvider.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("GeneratorProvider"),
 			Z_Registration_Info_UClass_UGeneratorProvider.InnerSingleton,
 			StaticRegisterNativesUGeneratorProvider,
@@ -61,12 +58,15 @@ struct Z_Construct_UClass_UGeneratorProvider_Statics
 		{ "NotBlueprintType", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Interface UGeneratorProvider constinit property declarations *******************
+// ********** End Interface UGeneratorProvider constinit property declarations *********************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<IGeneratorProvider>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UGeneratorProvider_Statics
 UObject* (*const Z_Construct_UClass_UGeneratorProvider_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UInterface,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -87,6 +87,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UGeneratorProvider_Stat
 	0x000840A1u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UGeneratorProvider_Statics::Class_MetaDataParams), Z_Construct_UClass_UGeneratorProvider_Statics::Class_MetaDataParams)
 };
+void UGeneratorProvider::StaticRegisterNativesUGeneratorProvider()
+{
+}
 UClass* Z_Construct_UClass_UGeneratorProvider()
 {
 	if (!Z_Registration_Info_UClass_UGeneratorProvider.OuterSingleton)
@@ -96,20 +99,22 @@ UClass* Z_Construct_UClass_UGeneratorProvider()
 	return Z_Registration_Info_UClass_UGeneratorProvider.OuterSingleton;
 }
 UGeneratorProvider::UGeneratorProvider(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UGeneratorProvider);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UGeneratorProvider);
 // ********** End Interface UGeneratorProvider *****************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UGeneratorProvider, UGeneratorProvider::StaticClass, TEXT("UGeneratorProvider"), &Z_Registration_Info_UClass_UGeneratorProvider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGeneratorProvider), 392268654U) },
+		{ Z_Construct_UClass_UGeneratorProvider, UGeneratorProvider::StaticClass, TEXT("UGeneratorProvider"), &Z_Registration_Info_UClass_UGeneratorProvider, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UGeneratorProvider), 1304859982U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_865503399(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_2395261339{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_GeneratorProvider_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -7,13 +7,14 @@
 #include "UObject/GeneratedCppIncludes.h"
 #include "DungeonGraph.h"
 #include "ProceduralDungeonTypes.h"
+#include "UObject/Class.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeDungeonGraph() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass_NoRegister();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntVector();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UDungeonCustomSerialization_NoRegister();
@@ -33,84 +34,6 @@ PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FDoorDef();
 PROCEDURALDUNGEON_API UScriptStruct* Z_Construct_UScriptStruct_FRoomCandidate();
 UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
-
-// ********** Begin ScriptStruct FRoomCandidate ****************************************************
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_FRoomCandidate;
-class UScriptStruct* FRoomCandidate::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_FRoomCandidate.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_FRoomCandidate.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FRoomCandidate, (UObject*)Z_Construct_UPackage__Script_ProceduralDungeon(), TEXT("RoomCandidate"));
-	}
-	return Z_Registration_Info_UScriptStruct_FRoomCandidate.OuterSingleton;
-}
-struct Z_Construct_UScriptStruct_FRoomCandidate_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
-		{ "BlueprintType", "true" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Describe a potential room to be added to the dungeon.\n// Mainly used by FilterAndSortRooms function.\n" },
-#endif
-		{ "ModuleRelativePath", "Public/DungeonGraph.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Describe a potential room to be added to the dungeon.\nMainly used by FilterAndSortRooms function." },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Data_MetaData[] = {
-		{ "Category", "Room Candidate" },
-		{ "ModuleRelativePath", "Public/DungeonGraph.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DoorIndex_MetaData[] = {
-		{ "Category", "Room Candidate" },
-		{ "ModuleRelativePath", "Public/DungeonGraph.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Score_MetaData[] = {
-		{ "Category", "Room Candidate" },
-		{ "ModuleRelativePath", "Public/DungeonGraph.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Data;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_DoorIndex;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_Score;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static void* NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRoomCandidate>();
-	}
-	static const UECodeGen_Private::FStructParams StructParams;
-};
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRoomCandidate, Data), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_DoorIndex = { "DoorIndex", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRoomCandidate, DoorIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DoorIndex_MetaData), NewProp_DoorIndex_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRoomCandidate, Score), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Score_MetaData), NewProp_Score_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Data,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_DoorIndex,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewProp_Score,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRoomCandidate_Statics::StructParams = {
-	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
-	nullptr,
-	&NewStructOps,
-	"RoomCandidate",
-	Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers,
-	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRoomCandidate_Statics::PropPointers),
-	sizeof(FRoomCandidate),
-	alignof(FRoomCandidate),
-	RF_Public|RF_Transient|RF_MarkAsNative,
-	EStructFlags(0x00000001),
-	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRoomCandidate_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FRoomCandidate_Statics::Struct_MetaDataParams)
-};
-UScriptStruct* Z_Construct_UScriptStruct_FRoomCandidate()
-{
-	if (!Z_Registration_Info_UScriptStruct_FRoomCandidate.InnerSingleton)
-	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_FRoomCandidate.InnerSingleton, Z_Construct_UScriptStruct_FRoomCandidate_Statics::StructParams);
-	}
-	return Z_Registration_Info_UScriptStruct_FRoomCandidate.InnerSingleton;
-}
-// ********** End ScriptStruct FRoomCandidate ******************************************************
 
 // ********** Begin Class UDungeonGraph Function Count *********************************************
 struct Z_Construct_UFunction_UDungeonGraph_Count_Statics
@@ -132,16 +55,25 @@ struct Z_Construct_UFunction_UDungeonGraph_Count_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function Count constinit property declarations *********************************
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function Count constinit property declarations ***********************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function Count Property Definitions ********************************************
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UDungeonGraph_Count_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCount_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_Count_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_Count_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_Count_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_Count_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "Count", Z_Construct_UFunction_UDungeonGraph_Count_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_Count_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_Count_Statics::DungeonGraph_eventCount_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_Count_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_Count_Statics::Function_MetaDataParams)},  };
+// ********** End Function Count Property Definitions **********************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_Count_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "Count", 	Z_Construct_UFunction_UDungeonGraph_Count_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_Count_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_Count_Statics::DungeonGraph_eventCount_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_Count_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_Count_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_Count_Statics::DungeonGraph_eventCount_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_Count()
 {
@@ -184,11 +116,16 @@ struct Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function CountRoomData constinit property declarations *************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomData;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function CountRoomData constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function CountRoomData Property Definitions ************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::NewProp_RoomData = { "RoomData", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountRoomData_Parms, RoomData), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomData_MetaData), NewProp_RoomData_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountRoomData_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::PropPointers[] = {
@@ -196,7 +133,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountRoomData", Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::DungeonGraph_eventCountRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::Function_MetaDataParams)},  };
+// ********** End Function CountRoomData Property Definitions **************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountRoomData", 	Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::DungeonGraph_eventCountRoomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_CountRoomData_Statics::DungeonGraph_eventCountRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_CountRoomData()
 {
@@ -241,19 +182,28 @@ struct Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function CountRoomType constinit property declarations *************************
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomType;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function CountRoomType constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::NewProp_RoomType = { "RoomType", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountRoomType_Parms, RoomType), Z_Construct_UClass_UClass, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomType_MetaData), NewProp_RoomType_MetaData) };
+
+// ********** Begin Function CountRoomType Property Definitions ************************************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::NewProp_RoomType = { "RoomType", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountRoomType_Parms, RoomType), Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomType_MetaData), NewProp_RoomType_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountRoomType_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::NewProp_RoomType,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountRoomType", Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::DungeonGraph_eventCountRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::Function_MetaDataParams)},  };
+// ********** End Function CountRoomType Property Definitions **************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountRoomType", 	Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::DungeonGraph_eventCountRoomType_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_CountRoomType_Statics::DungeonGraph_eventCountRoomType_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_CountRoomType()
 {
@@ -297,12 +247,17 @@ struct Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function CountTotalRoomData constinit property declarations ********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomDataList_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_RoomDataList;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function CountTotalRoomData constinit property declarations **********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function CountTotalRoomData Property Definitions *******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::NewProp_RoomDataList_Inner = { "RoomDataList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::NewProp_RoomDataList = { "RoomDataList", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountTotalRoomData_Parms, RoomDataList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomDataList_MetaData), NewProp_RoomDataList_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountTotalRoomData_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
@@ -312,7 +267,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountTotalRoomData", Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::DungeonGraph_eventCountTotalRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::Function_MetaDataParams)},  };
+// ********** End Function CountTotalRoomData Property Definitions *********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountTotalRoomData", 	Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::DungeonGraph_eventCountTotalRoomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData_Statics::DungeonGraph_eventCountTotalRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData()
 {
@@ -356,13 +315,18 @@ struct Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function CountTotalRoomType constinit property declarations ********************
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomTypeList_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_RoomTypeList;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function CountTotalRoomType constinit property declarations **********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::NewProp_RoomTypeList_Inner = { "RoomTypeList", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
+
+// ********** Begin Function CountTotalRoomType Property Definitions *******************************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::NewProp_RoomTypeList_Inner = { "RoomTypeList", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::NewProp_RoomTypeList = { "RoomTypeList", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountTotalRoomType_Parms, RoomTypeList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomTypeList_MetaData), NewProp_RoomTypeList_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventCountTotalRoomType_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::PropPointers[] = {
@@ -371,7 +335,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountTotalRoomType", Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::DungeonGraph_eventCountTotalRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::Function_MetaDataParams)},  };
+// ********** End Function CountTotalRoomType Property Definitions *********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "CountTotalRoomType", 	Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::DungeonGraph_eventCountTotalRoomType_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType_Statics::DungeonGraph_eventCountTotalRoomType_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType()
 {
@@ -421,6 +389,8 @@ struct Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function FilterAndSortRooms constinit property declarations ********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomList_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_RoomList;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_FromDoor;
@@ -430,14 +400,17 @@ struct Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function FilterAndSortRooms constinit property declarations **********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function FilterAndSortRooms Property Definitions *******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_RoomList_Inner = { "RoomList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_RoomList = { "RoomList", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventFilterAndSortRooms_Parms, RoomList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomList_MetaData), NewProp_RoomList_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_FromDoor = { "FromDoor", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventFilterAndSortRooms_Parms, FromDoor), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FromDoor_MetaData), NewProp_FromDoor_MetaData) }; // 121548433
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_SortedRooms_Inner = { "SortedRooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FRoomCandidate, METADATA_PARAMS(0, nullptr) }; // 1361562446
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_SortedRooms = { "SortedRooms", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventFilterAndSortRooms_Parms, SortedRooms), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 1361562446
-const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_CustomScore = { "CustomScore", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventFilterAndSortRooms_Parms, CustomScore), Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CustomScore_MetaData), NewProp_CustomScore_MetaData) }; // 2086486071
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_FromDoor = { "FromDoor", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventFilterAndSortRooms_Parms, FromDoor), Z_Construct_UScriptStruct_FDoorDef, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FromDoor_MetaData), NewProp_FromDoor_MetaData) }; // 3029669120
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_SortedRooms_Inner = { "SortedRooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FRoomCandidate, METADATA_PARAMS(0, nullptr) }; // 1992037597
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_SortedRooms = { "SortedRooms", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventFilterAndSortRooms_Parms, SortedRooms), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) }; // 1992037597
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_CustomScore = { "CustomScore", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventFilterAndSortRooms_Parms, CustomScore), Z_Construct_UDelegateFunction_ProceduralDungeon_ScoreCallback__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CustomScore_MetaData), NewProp_CustomScore_MetaData) }; // 3726044131
 void Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((DungeonGraph_eventFilterAndSortRooms_Parms*)Obj)->ReturnValue = 1;
@@ -453,7 +426,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "FilterAndSortRooms", Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::DungeonGraph_eventFilterAndSortRooms_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::Function_MetaDataParams)},  };
+// ********** End Function FilterAndSortRooms Property Definitions *********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "FilterAndSortRooms", 	Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::DungeonGraph_eventFilterAndSortRooms_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms_Statics::DungeonGraph_eventFilterAndSortRooms_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms()
 {
@@ -499,11 +476,16 @@ struct Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetAllConnections constinit property declarations *********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetAllConnections constinit property declarations ***********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetAllConnections Property Definitions ********************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoomConnection_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000008000582, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllConnections_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::PropPointers[] = {
@@ -511,7 +493,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllConnections", Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::DungeonGraph_eventGetAllConnections_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetAllConnections Property Definitions **********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllConnections", 	Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::DungeonGraph_eventGetAllConnections_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllConnections_Statics::DungeonGraph_eventGetAllConnections_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetAllConnections()
 {
@@ -553,11 +539,16 @@ struct Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetAllRooms constinit property declarations ***************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetAllRooms constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetAllRooms Property Definitions **************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000008000582, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRooms_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::PropPointers[] = {
@@ -565,7 +556,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRooms", Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::DungeonGraph_eventGetAllRooms_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetAllRooms Property Definitions ****************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRooms", 	Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::DungeonGraph_eventGetAllRooms_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRooms_Statics::DungeonGraph_eventGetAllRooms_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetAllRooms()
 {
@@ -608,12 +603,17 @@ struct Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetAllRoomsFromData constinit property declarations *******************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Data;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Rooms_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Rooms;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetAllRoomsFromData constinit property declarations *********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetAllRoomsFromData Property Definitions ******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsFromData_Parms, Data), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::NewProp_Rooms_Inner = { "Rooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::NewProp_Rooms = { "Rooms", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsFromData_Parms, Rooms), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
@@ -623,7 +623,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::NewProp_Rooms,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsFromData", Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::DungeonGraph_eventGetAllRoomsFromData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetAllRoomsFromData Property Definitions ********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsFromData", 	Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::DungeonGraph_eventGetAllRoomsFromData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData_Statics::DungeonGraph_eventGetAllRoomsFromData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData()
 {
@@ -668,13 +672,18 @@ struct Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetAllRoomsFromDataList constinit property declarations ***************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Data_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Data;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Rooms_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Rooms;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetAllRoomsFromDataList constinit property declarations *****************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetAllRoomsFromDataList Property Definitions **************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::NewProp_Data_Inner = { "Data", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsFromDataList_Parms, Data), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::NewProp_Rooms_Inner = { "Rooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
@@ -686,7 +695,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::NewProp_Rooms,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsFromDataList", Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::DungeonGraph_eventGetAllRoomsFromDataList_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetAllRoomsFromDataList Property Definitions ****************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsFromDataList", 	Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::DungeonGraph_eventGetAllRoomsFromDataList_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList_Statics::DungeonGraph_eventGetAllRoomsFromDataList_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList()
 {
@@ -731,14 +744,19 @@ struct Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetAllRoomsWithAllCustomData constinit property declarations **********
 	static const UECodeGen_Private::FClassPropertyParams NewProp_CustomData_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_CustomData;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Rooms_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Rooms;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetAllRoomsWithAllCustomData constinit property declarations ************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::NewProp_CustomData_Inner = { "CustomData", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_URoomCustomData_NoRegister, METADATA_PARAMS(0, nullptr) };
+
+// ********** Begin Function GetAllRoomsWithAllCustomData Property Definitions *********************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::NewProp_CustomData_Inner = { "CustomData", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomCustomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::NewProp_CustomData = { "CustomData", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsWithAllCustomData_Parms, CustomData), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CustomData_MetaData), NewProp_CustomData_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::NewProp_Rooms_Inner = { "Rooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::NewProp_Rooms = { "Rooms", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsWithAllCustomData_Parms, Rooms), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
@@ -749,7 +767,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::NewProp_Rooms,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsWithAllCustomData", Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::DungeonGraph_eventGetAllRoomsWithAllCustomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetAllRoomsWithAllCustomData Property Definitions ***********************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsWithAllCustomData", 	Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::DungeonGraph_eventGetAllRoomsWithAllCustomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData_Statics::DungeonGraph_eventGetAllRoomsWithAllCustomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData()
 {
@@ -794,14 +816,19 @@ struct Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetAllRoomsWithAnyCustomData constinit property declarations **********
 	static const UECodeGen_Private::FClassPropertyParams NewProp_CustomData_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_CustomData;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Rooms_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Rooms;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetAllRoomsWithAnyCustomData constinit property declarations ************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::NewProp_CustomData_Inner = { "CustomData", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_URoomCustomData_NoRegister, METADATA_PARAMS(0, nullptr) };
+
+// ********** Begin Function GetAllRoomsWithAnyCustomData Property Definitions *********************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::NewProp_CustomData_Inner = { "CustomData", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomCustomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::NewProp_CustomData = { "CustomData", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsWithAnyCustomData_Parms, CustomData), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CustomData_MetaData), NewProp_CustomData_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::NewProp_Rooms_Inner = { "Rooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::NewProp_Rooms = { "Rooms", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsWithAnyCustomData_Parms, Rooms), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
@@ -812,7 +839,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::NewProp_Rooms,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsWithAnyCustomData", Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::DungeonGraph_eventGetAllRoomsWithAnyCustomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetAllRoomsWithAnyCustomData Property Definitions ***********************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsWithAnyCustomData", 	Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::DungeonGraph_eventGetAllRoomsWithAnyCustomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData_Statics::DungeonGraph_eventGetAllRoomsWithAnyCustomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData()
 {
@@ -858,13 +889,18 @@ struct Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetAllRoomsWithCustomData constinit property declarations *************
 	static const UECodeGen_Private::FClassPropertyParams NewProp_CustomData;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Rooms_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Rooms;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetAllRoomsWithCustomData constinit property declarations ***************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::NewProp_CustomData = { "CustomData", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsWithCustomData_Parms, CustomData), Z_Construct_UClass_UClass, Z_Construct_UClass_URoomCustomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CustomData_MetaData), NewProp_CustomData_MetaData) };
+
+// ********** Begin Function GetAllRoomsWithCustomData Property Definitions ************************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::NewProp_CustomData = { "CustomData", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsWithCustomData_Parms, CustomData), Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomCustomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CustomData_MetaData), NewProp_CustomData_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::NewProp_Rooms_Inner = { "Rooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::NewProp_Rooms = { "Rooms", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetAllRoomsWithCustomData_Parms, Rooms), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::PropPointers[] = {
@@ -873,7 +909,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::NewProp_Rooms,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsWithCustomData", Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::DungeonGraph_eventGetAllRoomsWithCustomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetAllRoomsWithCustomData Property Definitions **************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetAllRoomsWithCustomData", 	Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::DungeonGraph_eventGetAllRoomsWithCustomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData_Statics::DungeonGraph_eventGetAllRoomsWithCustomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData()
 {
@@ -914,16 +954,25 @@ struct Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetDungeonBoundsCenter constinit property declarations ****************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetDungeonBoundsCenter constinit property declarations ******************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetDungeonBoundsCenter Property Definitions ***************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetDungeonBoundsCenter_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetDungeonBoundsCenter", Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::DungeonGraph_eventGetDungeonBoundsCenter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetDungeonBoundsCenter Property Definitions *****************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetDungeonBoundsCenter", 	Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::DungeonGraph_eventGetDungeonBoundsCenter_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter_Statics::DungeonGraph_eventGetDungeonBoundsCenter_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter()
 {
@@ -962,16 +1011,25 @@ struct Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetDungeonBoundsExtent constinit property declarations ****************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetDungeonBoundsExtent constinit property declarations ******************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetDungeonBoundsExtent Property Definitions ***************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetDungeonBoundsExtent_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetDungeonBoundsExtent", Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::DungeonGraph_eventGetDungeonBoundsExtent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetDungeonBoundsExtent Property Definitions *****************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetDungeonBoundsExtent", 	Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::DungeonGraph_eventGetDungeonBoundsExtent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent_Statics::DungeonGraph_eventGetDungeonBoundsExtent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent()
 {
@@ -1017,11 +1075,16 @@ struct Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetFirstRoomFromData constinit property declarations ******************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Data;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetFirstRoomFromData constinit property declarations ********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetFirstRoomFromData Property Definitions *****************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetFirstRoomFromData_Parms, Data), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000582, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetFirstRoomFromData_Parms, ReturnValue), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::PropPointers[] = {
@@ -1029,7 +1092,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetFirstRoomFromData", Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::DungeonGraph_eventGetFirstRoomFromData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetFirstRoomFromData Property Definitions *******************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetFirstRoomFromData", 	Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::DungeonGraph_eventGetFirstRoomFromData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData_Statics::DungeonGraph_eventGetFirstRoomFromData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData()
 {
@@ -1081,6 +1148,8 @@ struct Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetPathBetween constinit property declarations ************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_A;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_B;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResultPath_Inner;
@@ -1090,8 +1159,11 @@ struct Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetPathBetween constinit property declarations **************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetPathBetween Property Definitions ***********************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetPathBetween_Parms, A), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetPathBetween_Parms, B), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::NewProp_ResultPath_Inner = { "ResultPath", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
@@ -1115,7 +1187,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetPathBetween", Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::DungeonGraph_eventGetPathBetween_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetPathBetween Property Definitions *************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetPathBetween", 	Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::DungeonGraph_eventGetPathBetween_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetPathBetween_Statics::DungeonGraph_eventGetPathBetween_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetPathBetween()
 {
@@ -1162,12 +1238,17 @@ struct Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetRandomRoom constinit property declarations *************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomList_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_RoomList;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetRandomRoom constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetRandomRoom Property Definitions ************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::NewProp_RoomList_Inner = { "RoomList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::NewProp_RoomList = { "RoomList", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetRandomRoom_Parms, RoomList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomList_MetaData), NewProp_RoomList_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetRandomRoom_Parms, ReturnValue), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
@@ -1177,7 +1258,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetRandomRoom", Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::DungeonGraph_eventGetRandomRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetRandomRoom Property Definitions **************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetRandomRoom", 	Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::DungeonGraph_eventGetRandomRoom_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetRandomRoom_Statics::DungeonGraph_eventGetRandomRoom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetRandomRoom()
 {
@@ -1218,11 +1303,16 @@ struct Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetRoomAt constinit property declarations *****************************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_RoomCell;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetRoomAt constinit property declarations *******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetRoomAt Property Definitions ****************************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::NewProp_RoomCell = { "RoomCell", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetRoomAt_Parms, RoomCell), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetRoomAt_Parms, ReturnValue), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::PropPointers[] = {
@@ -1230,7 +1320,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetRoomAt", Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::DungeonGraph_eventGetRoomAt_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetRoomAt Property Definitions ******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetRoomAt", 	Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::DungeonGraph_eventGetRoomAt_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetRoomAt_Statics::DungeonGraph_eventGetRoomAt_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetRoomAt()
 {
@@ -1271,11 +1365,16 @@ struct Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetRoomByIndex constinit property declarations ************************
 	static const UECodeGen_Private::FInt64PropertyParams NewProp_Index;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetRoomByIndex constinit property declarations **************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetRoomByIndex Property Definitions ***********************************
 const UECodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetRoomByIndex_Parms, Index), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventGetRoomByIndex_Parms, ReturnValue), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::PropPointers[] = {
@@ -1283,7 +1382,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetRoomByIndex", Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::DungeonGraph_eventGetRoomByIndex_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetRoomByIndex Property Definitions *************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "GetRoomByIndex", 	Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::DungeonGraph_eventGetRoomByIndex_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex_Statics::DungeonGraph_eventGetRoomByIndex_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex()
 {
@@ -1327,13 +1430,18 @@ struct Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function HasAlreadyOneRoomDataFrom constinit property declarations *************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomDataList_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_RoomDataList;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function HasAlreadyOneRoomDataFrom constinit property declarations ***************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function HasAlreadyOneRoomDataFrom Property Definitions ************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::NewProp_RoomDataList_Inner = { "RoomDataList", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::NewProp_RoomDataList = { "RoomDataList", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventHasAlreadyOneRoomDataFrom_Parms, RoomDataList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomDataList_MetaData), NewProp_RoomDataList_MetaData) };
 void Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::NewProp_ReturnValue_SetBit(void* Obj)
@@ -1347,7 +1455,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyOneRoomDataFrom", Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::DungeonGraph_eventHasAlreadyOneRoomDataFrom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams)},  };
+// ********** End Function HasAlreadyOneRoomDataFrom Property Definitions **************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyOneRoomDataFrom", 	Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::DungeonGraph_eventHasAlreadyOneRoomDataFrom_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom_Statics::DungeonGraph_eventHasAlreadyOneRoomDataFrom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom()
 {
@@ -1391,14 +1503,19 @@ struct Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function HasAlreadyOneRoomTypeFrom constinit property declarations *************
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomTypeList_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_RoomTypeList;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function HasAlreadyOneRoomTypeFrom constinit property declarations ***************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::NewProp_RoomTypeList_Inner = { "RoomTypeList", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
+
+// ********** Begin Function HasAlreadyOneRoomTypeFrom Property Definitions ************************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::NewProp_RoomTypeList_Inner = { "RoomTypeList", nullptr, (EPropertyFlags)0x0004000000000000, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::NewProp_RoomTypeList = { "RoomTypeList", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventHasAlreadyOneRoomTypeFrom_Parms, RoomTypeList), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomTypeList_MetaData), NewProp_RoomTypeList_MetaData) };
 void Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -1411,7 +1528,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyOneRoomTypeFrom", Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::DungeonGraph_eventHasAlreadyOneRoomTypeFrom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams)},  };
+// ********** End Function HasAlreadyOneRoomTypeFrom Property Definitions **************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyOneRoomTypeFrom", 	Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::DungeonGraph_eventHasAlreadyOneRoomTypeFrom_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom_Statics::DungeonGraph_eventHasAlreadyOneRoomTypeFrom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom()
 {
@@ -1455,12 +1576,17 @@ struct Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function HasAlreadyRoomData constinit property declarations ********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomData;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function HasAlreadyRoomData constinit property declarations **********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function HasAlreadyRoomData Property Definitions *******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::NewProp_RoomData = { "RoomData", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventHasAlreadyRoomData_Parms, RoomData), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomData_MetaData), NewProp_RoomData_MetaData) };
 void Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -1472,7 +1598,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyRoomData", Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::DungeonGraph_eventHasAlreadyRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::Function_MetaDataParams)},  };
+// ********** End Function HasAlreadyRoomData Property Definitions *********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyRoomData", 	Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::DungeonGraph_eventHasAlreadyRoomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData_Statics::DungeonGraph_eventHasAlreadyRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData()
 {
@@ -1517,13 +1647,18 @@ struct Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function HasAlreadyRoomType constinit property declarations ********************
 	static const UECodeGen_Private::FClassPropertyParams NewProp_RoomType;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function HasAlreadyRoomType constinit property declarations **********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::NewProp_RoomType = { "RoomType", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventHasAlreadyRoomType_Parms, RoomType), Z_Construct_UClass_UClass, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomType_MetaData), NewProp_RoomType_MetaData) };
+
+// ********** Begin Function HasAlreadyRoomType Property Definitions *******************************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::NewProp_RoomType = { "RoomType", nullptr, (EPropertyFlags)0x0014000008000182, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventHasAlreadyRoomType_Parms, RoomType), Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomType_MetaData), NewProp_RoomType_MetaData) };
 void Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((DungeonGraph_eventHasAlreadyRoomType_Parms*)Obj)->ReturnValue = 1;
@@ -1534,7 +1669,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyRoomType", Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::DungeonGraph_eventHasAlreadyRoomType_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::Function_MetaDataParams)},  };
+// ********** End Function HasAlreadyRoomType Property Definitions *********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasAlreadyRoomType", 	Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::DungeonGraph_eventHasAlreadyRoomType_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType_Statics::DungeonGraph_eventHasAlreadyRoomType_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType()
 {
@@ -1585,6 +1724,8 @@ struct Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function HasValidPath constinit property declarations **************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_From;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_To;
 	static void NewProp_IgnoreLockedRooms_SetBit(void* Obj);
@@ -1592,8 +1733,11 @@ struct Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function HasValidPath constinit property declarations ****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function HasValidPath Property Definitions *************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::NewProp_From = { "From", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventHasValidPath_Parms, From), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_From_MetaData), NewProp_From_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::NewProp_To = { "To", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventHasValidPath_Parms, To), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_To_MetaData), NewProp_To_MetaData) };
 void Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::NewProp_IgnoreLockedRooms_SetBit(void* Obj)
@@ -1613,7 +1757,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasValidPath", Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::DungeonGraph_eventHasValidPath_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::Function_MetaDataParams)},  };
+// ********** End Function HasValidPath Property Definitions ***************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "HasValidPath", 	Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::DungeonGraph_eventHasValidPath_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_HasValidPath_Statics::DungeonGraph_eventHasValidPath_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_HasValidPath()
 {
@@ -1665,14 +1813,19 @@ struct Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function NumberOfRoomBetween constinit property declarations *******************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_A;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_B;
 	static void NewProp_IgnoreLockedRooms_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IgnoreLockedRooms;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function NumberOfRoomBetween constinit property declarations *********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function NumberOfRoomBetween Property Definitions ******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventNumberOfRoomBetween_Parms, A), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_A_MetaData), NewProp_A_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventNumberOfRoomBetween_Parms, B), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_B_MetaData), NewProp_B_MetaData) };
 void Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::NewProp_IgnoreLockedRooms_SetBit(void* Obj)
@@ -1688,7 +1841,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "NumberOfRoomBetween", Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::DungeonGraph_eventNumberOfRoomBetween_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::Function_MetaDataParams)},  };
+// ********** End Function NumberOfRoomBetween Property Definitions ********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "NumberOfRoomBetween", 	Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::DungeonGraph_eventNumberOfRoomBetween_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_Statics::DungeonGraph_eventNumberOfRoomBetween_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween()
 {
@@ -1733,12 +1890,17 @@ struct Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function NumberOfRoomBetween_ReadOnly constinit property declarations **********
 	static const UECodeGen_Private::FInterfacePropertyParams NewProp_A;
 	static const UECodeGen_Private::FInterfacePropertyParams NewProp_B;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function NumberOfRoomBetween_ReadOnly constinit property declarations ************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function NumberOfRoomBetween_ReadOnly Property Definitions *********************
 const UECodeGen_Private::FInterfacePropertyParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::NewProp_A = { "A", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Interface, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventNumberOfRoomBetween_ReadOnly_Parms, A), Z_Construct_UClass_UReadOnlyRoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FInterfacePropertyParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::NewProp_B = { "B", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Interface, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventNumberOfRoomBetween_ReadOnly_Parms, B), Z_Construct_UClass_UReadOnlyRoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(DungeonGraph_eventNumberOfRoomBetween_ReadOnly_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
@@ -1748,7 +1910,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UDunge
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "NumberOfRoomBetween_ReadOnly", Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::PropPointers), sizeof(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::DungeonGraph_eventNumberOfRoomBetween_ReadOnly_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::Function_MetaDataParams)},  };
+// ********** End Function NumberOfRoomBetween_ReadOnly Property Definitions ***********************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "NumberOfRoomBetween_ReadOnly", 	Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::DungeonGraph_eventNumberOfRoomBetween_ReadOnly_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly_Statics::DungeonGraph_eventNumberOfRoomBetween_ReadOnly_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly()
 {
@@ -1778,9 +1944,15 @@ struct Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms_Statics
 		{ "ModuleRelativePath", "Public/DungeonGraph.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnRep_Rooms constinit property declarations ***************************
+// ********** End Function OnRep_Rooms constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "OnRep_Rooms", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UDungeonGraph, nullptr, "OnRep_Rooms", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms_Statics::Function_MetaDataParams), Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -1800,41 +1972,6 @@ DEFINE_FUNCTION(UDungeonGraph::execOnRep_Rooms)
 // ********** End Class UDungeonGraph Function OnRep_Rooms *****************************************
 
 // ********** Begin Class UDungeonGraph ************************************************************
-void UDungeonGraph::StaticRegisterNativesUDungeonGraph()
-{
-	UClass* Class = UDungeonGraph::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "Count", &UDungeonGraph::execCount },
-		{ "CountRoomData", &UDungeonGraph::execCountRoomData },
-		{ "CountRoomType", &UDungeonGraph::execCountRoomType },
-		{ "CountTotalRoomData", &UDungeonGraph::execCountTotalRoomData },
-		{ "CountTotalRoomType", &UDungeonGraph::execCountTotalRoomType },
-		{ "FilterAndSortRooms", &UDungeonGraph::execFilterAndSortRooms },
-		{ "GetAllConnections", &UDungeonGraph::execGetAllConnections },
-		{ "GetAllRooms", &UDungeonGraph::execGetAllRooms },
-		{ "GetAllRoomsFromData", &UDungeonGraph::execGetAllRoomsFromData },
-		{ "GetAllRoomsFromDataList", &UDungeonGraph::execGetAllRoomsFromDataList },
-		{ "GetAllRoomsWithAllCustomData", &UDungeonGraph::execGetAllRoomsWithAllCustomData },
-		{ "GetAllRoomsWithAnyCustomData", &UDungeonGraph::execGetAllRoomsWithAnyCustomData },
-		{ "GetAllRoomsWithCustomData", &UDungeonGraph::execGetAllRoomsWithCustomData },
-		{ "GetDungeonBoundsCenter", &UDungeonGraph::execGetDungeonBoundsCenter },
-		{ "GetDungeonBoundsExtent", &UDungeonGraph::execGetDungeonBoundsExtent },
-		{ "GetFirstRoomFromData", &UDungeonGraph::execGetFirstRoomFromData },
-		{ "GetPathBetween", &UDungeonGraph::execGetPathBetween },
-		{ "GetRandomRoom", &UDungeonGraph::execGetRandomRoom },
-		{ "GetRoomAt", &UDungeonGraph::execGetRoomAt },
-		{ "GetRoomByIndex", &UDungeonGraph::execGetRoomByIndex },
-		{ "HasAlreadyOneRoomDataFrom", &UDungeonGraph::execHasAlreadyOneRoomDataFrom },
-		{ "HasAlreadyOneRoomTypeFrom", &UDungeonGraph::execHasAlreadyOneRoomTypeFrom },
-		{ "HasAlreadyRoomData", &UDungeonGraph::execHasAlreadyRoomData },
-		{ "HasAlreadyRoomType", &UDungeonGraph::execHasAlreadyRoomType },
-		{ "HasValidPath", &UDungeonGraph::execHasValidPath },
-		{ "NumberOfRoomBetween", &UDungeonGraph::execNumberOfRoomBetween },
-		{ "NumberOfRoomBetween_ReadOnly", &UDungeonGraph::execNumberOfRoomBetween_ReadOnly },
-		{ "OnRep_Rooms", &UDungeonGraph::execOnRep_Rooms },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UDungeonGraph;
 UClass* UDungeonGraph::GetPrivateStaticClass()
 {
@@ -1842,7 +1979,7 @@ UClass* UDungeonGraph::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UDungeonGraph.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("DungeonGraph"),
 			Z_Registration_Info_UClass_UDungeonGraph.InnerSingleton,
 			StaticRegisterNativesUDungeonGraph,
@@ -1894,6 +2031,8 @@ struct Z_Construct_UClass_UDungeonGraph_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UDungeonGraph constinit property declarations ****************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Rooms_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Rooms;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomConnections_Inner;
@@ -1901,36 +2040,67 @@ struct Z_Construct_UClass_UDungeonGraph_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReplicatedRooms_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReplicatedRooms;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class UDungeonGraph constinit property declarations ******************************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("Count"), .Pointer = &UDungeonGraph::execCount },
+		{ .NameUTF8 = UTF8TEXT("CountRoomData"), .Pointer = &UDungeonGraph::execCountRoomData },
+		{ .NameUTF8 = UTF8TEXT("CountRoomType"), .Pointer = &UDungeonGraph::execCountRoomType },
+		{ .NameUTF8 = UTF8TEXT("CountTotalRoomData"), .Pointer = &UDungeonGraph::execCountTotalRoomData },
+		{ .NameUTF8 = UTF8TEXT("CountTotalRoomType"), .Pointer = &UDungeonGraph::execCountTotalRoomType },
+		{ .NameUTF8 = UTF8TEXT("FilterAndSortRooms"), .Pointer = &UDungeonGraph::execFilterAndSortRooms },
+		{ .NameUTF8 = UTF8TEXT("GetAllConnections"), .Pointer = &UDungeonGraph::execGetAllConnections },
+		{ .NameUTF8 = UTF8TEXT("GetAllRooms"), .Pointer = &UDungeonGraph::execGetAllRooms },
+		{ .NameUTF8 = UTF8TEXT("GetAllRoomsFromData"), .Pointer = &UDungeonGraph::execGetAllRoomsFromData },
+		{ .NameUTF8 = UTF8TEXT("GetAllRoomsFromDataList"), .Pointer = &UDungeonGraph::execGetAllRoomsFromDataList },
+		{ .NameUTF8 = UTF8TEXT("GetAllRoomsWithAllCustomData"), .Pointer = &UDungeonGraph::execGetAllRoomsWithAllCustomData },
+		{ .NameUTF8 = UTF8TEXT("GetAllRoomsWithAnyCustomData"), .Pointer = &UDungeonGraph::execGetAllRoomsWithAnyCustomData },
+		{ .NameUTF8 = UTF8TEXT("GetAllRoomsWithCustomData"), .Pointer = &UDungeonGraph::execGetAllRoomsWithCustomData },
+		{ .NameUTF8 = UTF8TEXT("GetDungeonBoundsCenter"), .Pointer = &UDungeonGraph::execGetDungeonBoundsCenter },
+		{ .NameUTF8 = UTF8TEXT("GetDungeonBoundsExtent"), .Pointer = &UDungeonGraph::execGetDungeonBoundsExtent },
+		{ .NameUTF8 = UTF8TEXT("GetFirstRoomFromData"), .Pointer = &UDungeonGraph::execGetFirstRoomFromData },
+		{ .NameUTF8 = UTF8TEXT("GetPathBetween"), .Pointer = &UDungeonGraph::execGetPathBetween },
+		{ .NameUTF8 = UTF8TEXT("GetRandomRoom"), .Pointer = &UDungeonGraph::execGetRandomRoom },
+		{ .NameUTF8 = UTF8TEXT("GetRoomAt"), .Pointer = &UDungeonGraph::execGetRoomAt },
+		{ .NameUTF8 = UTF8TEXT("GetRoomByIndex"), .Pointer = &UDungeonGraph::execGetRoomByIndex },
+		{ .NameUTF8 = UTF8TEXT("HasAlreadyOneRoomDataFrom"), .Pointer = &UDungeonGraph::execHasAlreadyOneRoomDataFrom },
+		{ .NameUTF8 = UTF8TEXT("HasAlreadyOneRoomTypeFrom"), .Pointer = &UDungeonGraph::execHasAlreadyOneRoomTypeFrom },
+		{ .NameUTF8 = UTF8TEXT("HasAlreadyRoomData"), .Pointer = &UDungeonGraph::execHasAlreadyRoomData },
+		{ .NameUTF8 = UTF8TEXT("HasAlreadyRoomType"), .Pointer = &UDungeonGraph::execHasAlreadyRoomType },
+		{ .NameUTF8 = UTF8TEXT("HasValidPath"), .Pointer = &UDungeonGraph::execHasValidPath },
+		{ .NameUTF8 = UTF8TEXT("NumberOfRoomBetween"), .Pointer = &UDungeonGraph::execNumberOfRoomBetween },
+		{ .NameUTF8 = UTF8TEXT("NumberOfRoomBetween_ReadOnly"), .Pointer = &UDungeonGraph::execNumberOfRoomBetween_ReadOnly },
+		{ .NameUTF8 = UTF8TEXT("OnRep_Rooms"), .Pointer = &UDungeonGraph::execOnRep_Rooms },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDungeonGraph_Count, "Count" }, // 3628958782
-		{ &Z_Construct_UFunction_UDungeonGraph_CountRoomData, "CountRoomData" }, // 974436705
-		{ &Z_Construct_UFunction_UDungeonGraph_CountRoomType, "CountRoomType" }, // 3103189361
-		{ &Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData, "CountTotalRoomData" }, // 2331278350
-		{ &Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType, "CountTotalRoomType" }, // 1313797160
-		{ &Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms, "FilterAndSortRooms" }, // 3908624484
-		{ &Z_Construct_UFunction_UDungeonGraph_GetAllConnections, "GetAllConnections" }, // 1543841136
-		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRooms, "GetAllRooms" }, // 3469602664
-		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData, "GetAllRoomsFromData" }, // 4049105341
-		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList, "GetAllRoomsFromDataList" }, // 1666497405
-		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData, "GetAllRoomsWithAllCustomData" }, // 1512079643
-		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData, "GetAllRoomsWithAnyCustomData" }, // 2496757419
-		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData, "GetAllRoomsWithCustomData" }, // 1031456033
-		{ &Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter, "GetDungeonBoundsCenter" }, // 2286259058
-		{ &Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent, "GetDungeonBoundsExtent" }, // 2050860091
-		{ &Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData, "GetFirstRoomFromData" }, // 1837141187
-		{ &Z_Construct_UFunction_UDungeonGraph_GetPathBetween, "GetPathBetween" }, // 3066854710
-		{ &Z_Construct_UFunction_UDungeonGraph_GetRandomRoom, "GetRandomRoom" }, // 2305986174
-		{ &Z_Construct_UFunction_UDungeonGraph_GetRoomAt, "GetRoomAt" }, // 2767578384
-		{ &Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex, "GetRoomByIndex" }, // 2470574508
-		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom, "HasAlreadyOneRoomDataFrom" }, // 1714621136
-		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom, "HasAlreadyOneRoomTypeFrom" }, // 865039679
-		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData, "HasAlreadyRoomData" }, // 287926337
-		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType, "HasAlreadyRoomType" }, // 2959834382
-		{ &Z_Construct_UFunction_UDungeonGraph_HasValidPath, "HasValidPath" }, // 2827960312
-		{ &Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween, "NumberOfRoomBetween" }, // 1258579620
-		{ &Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly, "NumberOfRoomBetween_ReadOnly" }, // 153276669
-		{ &Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms, "OnRep_Rooms" }, // 1853273797
+		{ &Z_Construct_UFunction_UDungeonGraph_Count, "Count" }, // 908876576
+		{ &Z_Construct_UFunction_UDungeonGraph_CountRoomData, "CountRoomData" }, // 2409686162
+		{ &Z_Construct_UFunction_UDungeonGraph_CountRoomType, "CountRoomType" }, // 4255011178
+		{ &Z_Construct_UFunction_UDungeonGraph_CountTotalRoomData, "CountTotalRoomData" }, // 3811207771
+		{ &Z_Construct_UFunction_UDungeonGraph_CountTotalRoomType, "CountTotalRoomType" }, // 1226570890
+		{ &Z_Construct_UFunction_UDungeonGraph_FilterAndSortRooms, "FilterAndSortRooms" }, // 3887346229
+		{ &Z_Construct_UFunction_UDungeonGraph_GetAllConnections, "GetAllConnections" }, // 3149505449
+		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRooms, "GetAllRooms" }, // 2673235500
+		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromData, "GetAllRoomsFromData" }, // 1783575937
+		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsFromDataList, "GetAllRoomsFromDataList" }, // 3884434079
+		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAllCustomData, "GetAllRoomsWithAllCustomData" }, // 3554338424
+		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithAnyCustomData, "GetAllRoomsWithAnyCustomData" }, // 3393964164
+		{ &Z_Construct_UFunction_UDungeonGraph_GetAllRoomsWithCustomData, "GetAllRoomsWithCustomData" }, // 3998133388
+		{ &Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsCenter, "GetDungeonBoundsCenter" }, // 3043335214
+		{ &Z_Construct_UFunction_UDungeonGraph_GetDungeonBoundsExtent, "GetDungeonBoundsExtent" }, // 428747042
+		{ &Z_Construct_UFunction_UDungeonGraph_GetFirstRoomFromData, "GetFirstRoomFromData" }, // 2793520753
+		{ &Z_Construct_UFunction_UDungeonGraph_GetPathBetween, "GetPathBetween" }, // 3965509429
+		{ &Z_Construct_UFunction_UDungeonGraph_GetRandomRoom, "GetRandomRoom" }, // 1217145772
+		{ &Z_Construct_UFunction_UDungeonGraph_GetRoomAt, "GetRoomAt" }, // 3082951481
+		{ &Z_Construct_UFunction_UDungeonGraph_GetRoomByIndex, "GetRoomByIndex" }, // 2529258337
+		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomDataFrom, "HasAlreadyOneRoomDataFrom" }, // 3790117748
+		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyOneRoomTypeFrom, "HasAlreadyOneRoomTypeFrom" }, // 1724155777
+		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomData, "HasAlreadyRoomData" }, // 4186217101
+		{ &Z_Construct_UFunction_UDungeonGraph_HasAlreadyRoomType, "HasAlreadyRoomType" }, // 808809082
+		{ &Z_Construct_UFunction_UDungeonGraph_HasValidPath, "HasValidPath" }, // 922860210
+		{ &Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween, "NumberOfRoomBetween" }, // 1580801226
+		{ &Z_Construct_UFunction_UDungeonGraph_NumberOfRoomBetween_ReadOnly, "NumberOfRoomBetween_ReadOnly" }, // 944700027
+		{ &Z_Construct_UFunction_UDungeonGraph_OnRep_Rooms, "OnRep_Rooms" }, // 1393524536
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -1938,7 +2108,9 @@ struct Z_Construct_UClass_UDungeonGraph_Statics
 		TCppClassTypeTraits<UDungeonGraph>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UDungeonGraph_Statics
+
+// ********** Begin Class UDungeonGraph Property Definitions ***************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UDungeonGraph_Statics::NewProp_Rooms_Inner = { "Rooms", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UDungeonGraph_Statics::NewProp_Rooms = { "Rooms", nullptr, (EPropertyFlags)0x0040000000002000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDungeonGraph, Rooms), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Rooms_MetaData), NewProp_Rooms_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UDungeonGraph_Statics::NewProp_RoomConnections_Inner = { "RoomConnections", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_URoomConnection_NoRegister, METADATA_PARAMS(0, nullptr) };
@@ -1954,16 +2126,17 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDungeonG
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDungeonGraph_Statics::NewProp_ReplicatedRooms,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UDungeonGraph_Statics::PropPointers) < 2048);
+// ********** End Class UDungeonGraph Property Definitions *****************************************
 UObject* (*const Z_Construct_UClass_UDungeonGraph_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UReplicableObject,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UDungeonGraph_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_UDungeonGraph_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_URoomContainer_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IRoomContainer), false },  // 3414910679
-	{ Z_Construct_UClass_UGeneratorProvider_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IGeneratorProvider), false },  // 392268654
-	{ Z_Construct_UClass_UDungeonCustomSerialization_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IDungeonCustomSerialization), false },  // 3173650839
-	{ Z_Construct_UClass_UDungeonSaveInterface_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IDungeonSaveInterface), false },  // 893009087
+	{ Z_Construct_UClass_URoomContainer_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IRoomContainer), false },  // 3877411089
+	{ Z_Construct_UClass_UGeneratorProvider_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IGeneratorProvider), false },  // 1304859982
+	{ Z_Construct_UClass_UDungeonCustomSerialization_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IDungeonCustomSerialization), false },  // 1577964527
+	{ Z_Construct_UClass_UDungeonSaveInterface_NoRegister, (int32)VTABLE_OFFSET(UDungeonGraph, IDungeonSaveInterface), false },  // 728230088
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_UDungeonGraph_Statics::ClassParams = {
 	&UDungeonGraph::StaticClass,
@@ -1980,6 +2153,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UDungeonGraph_Statics::
 	0x001000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDungeonGraph_Statics::Class_MetaDataParams), Z_Construct_UClass_UDungeonGraph_Statics::Class_MetaDataParams)
 };
+void UDungeonGraph::StaticRegisterNativesUDungeonGraph()
+{
+	UClass* Class = UDungeonGraph::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UDungeonGraph_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_UDungeonGraph()
 {
 	if (!Z_Registration_Info_UClass_UDungeonGraph.OuterSingleton)
@@ -2000,24 +2178,23 @@ void UDungeonGraph::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& C
 }
 #endif
 UDungeonGraph::UDungeonGraph(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UDungeonGraph);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UDungeonGraph);
 UDungeonGraph::~UDungeonGraph() {}
 // ********** End Class UDungeonGraph **************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics
 {
-	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FRoomCandidate::StaticStruct, Z_Construct_UScriptStruct_FRoomCandidate_Statics::NewStructOps, TEXT("RoomCandidate"), &Z_Registration_Info_UScriptStruct_FRoomCandidate, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRoomCandidate), 1361562446U) },
-	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDungeonGraph, UDungeonGraph::StaticClass, TEXT("UDungeonGraph"), &Z_Registration_Info_UClass_UDungeonGraph, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonGraph), 2887784221U) },
+		{ Z_Construct_UClass_UDungeonGraph, UDungeonGraph::StaticClass, TEXT("UDungeonGraph"), &Z_Registration_Info_UClass_UDungeonGraph, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonGraph), 1710821244U) },
 	};
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_1395995378{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0,
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_3593715597(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_DungeonGraph_h__Script_ProceduralDungeon_Statics::ScriptStructInfo),
-	nullptr, 0);
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

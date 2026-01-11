@@ -14,11 +14,12 @@
 #include "Templates/IsUEnumClass.h"
 #include "UObject/ObjectMacros.h"
 #include "UObject/ReflectedTypeAccessors.h"
+#include "Templates/NoDestroy.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h
 
 // ********** Begin Enum EGameplayMessageMatch *****************************************************
 #define FOREACH_ENUM_EGAMEPLAYMESSAGEMATCH(op) \
@@ -27,7 +28,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 enum class EGameplayMessageMatch : uint8;
 template<> struct TIsUEnumClass<EGameplayMessageMatch> { enum { Value = true }; };
-template<> GAMEPLAYMESSAGERUNTIME_API UEnum* StaticEnum<EGameplayMessageMatch>();
+template<> GAMEPLAYMESSAGERUNTIME_NON_ATTRIBUTED_API UEnum* StaticEnum<EGameplayMessageMatch>();
 // ********** End Enum EGameplayMessageMatch *******************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

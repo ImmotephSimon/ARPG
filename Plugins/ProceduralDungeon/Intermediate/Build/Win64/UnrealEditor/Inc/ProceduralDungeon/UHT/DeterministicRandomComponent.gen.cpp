@@ -8,7 +8,7 @@
 #include "Components/DeterministicRandomComponent.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeDeterministicRandomComponent() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -20,9 +20,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class UDeterministicRandomComponent ********************************************
-void UDeterministicRandomComponent::StaticRegisterNativesUDeterministicRandomComponent()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UDeterministicRandomComponent;
 UClass* UDeterministicRandomComponent::GetPrivateStaticClass()
 {
@@ -30,7 +27,7 @@ UClass* UDeterministicRandomComponent::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UDeterministicRandomComponent.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("DeterministicRandomComponent"),
 			Z_Registration_Info_UClass_UDeterministicRandomComponent.InnerSingleton,
 			StaticRegisterNativesUDeterministicRandomComponent,
@@ -75,19 +72,25 @@ struct Z_Construct_UClass_UDeterministicRandomComponent_Statics
 		{ "ModuleRelativePath", "Public/Components/DeterministicRandomComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UDeterministicRandomComponent constinit property declarations ************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Random;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class UDeterministicRandomComponent constinit property declarations **************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UDeterministicRandomComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UDeterministicRandomComponent_Statics
+
+// ********** Begin Class UDeterministicRandomComponent Property Definitions ***********************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UDeterministicRandomComponent_Statics::NewProp_Random = { "Random", nullptr, (EPropertyFlags)0x0040000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDeterministicRandomComponent, Random), Z_Construct_UScriptStruct_FRandomStream, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Random_MetaData), NewProp_Random_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDeterministicRandomComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDeterministicRandomComponent_Statics::NewProp_Random,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UDeterministicRandomComponent_Statics::PropPointers) < 2048);
+// ********** End Class UDeterministicRandomComponent Property Definitions *************************
 UObject* (*const Z_Construct_UClass_UDeterministicRandomComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -108,6 +111,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UDeterministicRandomCom
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDeterministicRandomComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UDeterministicRandomComponent_Statics::Class_MetaDataParams)
 };
+void UDeterministicRandomComponent::StaticRegisterNativesUDeterministicRandomComponent()
+{
+}
 UClass* Z_Construct_UClass_UDeterministicRandomComponent()
 {
 	if (!Z_Registration_Info_UClass_UDeterministicRandomComponent.OuterSingleton)
@@ -116,21 +122,23 @@ UClass* Z_Construct_UClass_UDeterministicRandomComponent()
 	}
 	return Z_Registration_Info_UClass_UDeterministicRandomComponent.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(UDeterministicRandomComponent);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UDeterministicRandomComponent);
 UDeterministicRandomComponent::~UDeterministicRandomComponent() {}
 // ********** End Class UDeterministicRandomComponent **********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDeterministicRandomComponent, UDeterministicRandomComponent::StaticClass, TEXT("UDeterministicRandomComponent"), &Z_Registration_Info_UClass_UDeterministicRandomComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDeterministicRandomComponent), 1151786866U) },
+		{ Z_Construct_UClass_UDeterministicRandomComponent, UDeterministicRandomComponent::StaticClass, TEXT("UDeterministicRandomComponent"), &Z_Registration_Info_UClass_UDeterministicRandomComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDeterministicRandomComponent), 2881951931U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_72190568(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_3286080867{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_DeterministicRandomComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

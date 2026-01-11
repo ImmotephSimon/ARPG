@@ -16,16 +16,25 @@
 #include "Net/Core/PushModel/PushModelMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
 class ADoor;
+class APlayerController;
+class UClass;
 class URoom;
 class URoomCustomData;
 struct FDoorDef;
 struct FRandomStream;
 
+// ********** Begin Delegate FRelevancyEvent *******************************************************
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_22_DELEGATE \
+PROCEDURALDUNGEON_API void FRelevancyEvent_DelegateWrapper(const FMulticastScriptDelegate& RelevancyEvent, URoom* Room, APlayerController* PlayerController, int32 NewRelevancyLevel);
+
+
+// ********** End Delegate FRelevancyEvent *********************************************************
+
 // ********** Begin ScriptStruct FCustomDataPair ***************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_33_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FCustomDataPair_Statics; \
+struct Z_Construct_UScriptStruct_FCustomDataPair_Statics;
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_34_GENERATED_BODY \
+	friend struct ::Z_Construct_UScriptStruct_FCustomDataPair_Statics; \
 	PROCEDURALDUNGEON_API static class UScriptStruct* StaticStruct();
 
 
@@ -33,7 +42,7 @@ struct FCustomDataPair;
 // ********** End ScriptStruct FCustomDataPair *****************************************************
 
 // ********** Begin Class URoom ********************************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetDoorDef); \
 	DECLARE_FUNCTION(execOnInstanceLoaded); \
 	DECLARE_FUNCTION(execOnRep_IsLocked); \
@@ -52,19 +61,24 @@ struct FCustomDataPair;
 	DECLARE_FUNCTION(execGetCustomData_BP); \
 	DECLARE_FUNCTION(execLock); \
 	DECLARE_FUNCTION(execIsLocked); \
+	DECLARE_FUNCTION(execGetAllRelevancyLevels); \
+	DECLARE_FUNCTION(execGetMinRelevancyLevel); \
+	DECLARE_FUNCTION(execGetMaxRelevancyLevel); \
+	DECLARE_FUNCTION(execGetRelevancyLevel); \
 	DECLARE_FUNCTION(execForceVisibility); \
 	DECLARE_FUNCTION(execIsVisible); \
 	DECLARE_FUNCTION(execIsPlayerInside);
 
 
+struct Z_Construct_UClass_URoom_Statics;
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoom_NoRegister();
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_47_INCLASS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_48_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURoom(); \
-	friend struct Z_Construct_UClass_URoom_Statics; \
+	friend struct ::Z_Construct_UClass_URoom_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoom_NoRegister(); \
+	friend PROCEDURALDUNGEON_API UClass* ::Z_Construct_UClass_URoom_NoRegister(); \
 public: \
 	DECLARE_CLASS2(URoom, UReplicableObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/ProceduralDungeon"), Z_Construct_UClass_URoom_NoRegister) \
 	DECLARE_SERIALIZER(URoom) \
@@ -88,7 +102,7 @@ private: \
 public:
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_47_ENHANCED_CONSTRUCTORS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_48_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API URoom(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -100,13 +114,13 @@ public:
 	NO_API virtual ~URoom();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_44_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_47_GENERATED_BODY \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_45_PROLOG
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_48_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_47_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_47_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_47_ENHANCED_CONSTRUCTORS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_48_INCLASS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h_48_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -116,6 +130,6 @@ class URoom;
 // ********** End Class URoom **********************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Room_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

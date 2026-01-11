@@ -15,27 +15,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
 class AActor;
 class UPrimitiveComponent;
 struct FHitResult;
 
 // ********** Begin Delegate FActorTriggerEvent ****************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_15_DELEGATE \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_15_DELEGATE \
 PROCEDURALDUNGEON_API void FActorTriggerEvent_DelegateWrapper(const FMulticastScriptDelegate& ActorTriggerEvent, AActor* Actor);
 
 
 // ********** End Delegate FActorTriggerEvent ******************************************************
 
 // ********** Begin Delegate FActorTriggerArrayEvent ***********************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_16_DELEGATE \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_16_DELEGATE \
 PROCEDURALDUNGEON_API void FActorTriggerArrayEvent_DelegateWrapper(const FMulticastScriptDelegate& ActorTriggerArrayEvent, const TArray<AActor*>& Actor);
 
 
 // ********** End Delegate FActorTriggerArrayEvent *************************************************
 
 // ********** Begin Class UTriggerType *************************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execTriggerDeactivate); \
 	DECLARE_FUNCTION(execTriggerActivate); \
 	DECLARE_FUNCTION(execTriggerTick); \
@@ -45,20 +44,21 @@ PROCEDURALDUNGEON_API void FActorTriggerArrayEvent_DelegateWrapper(const FMultic
 	DECLARE_FUNCTION(execIsActivated);
 
 
+struct Z_Construct_UClass_UTriggerType_Statics;
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UTriggerType_NoRegister();
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUTriggerType(); \
-	friend struct Z_Construct_UClass_UTriggerType_Statics; \
+	friend struct ::Z_Construct_UClass_UTriggerType_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_UTriggerType_NoRegister(); \
+	friend PROCEDURALDUNGEON_API UClass* ::Z_Construct_UClass_UTriggerType_NoRegister(); \
 public: \
 	DECLARE_CLASS2(UTriggerType, UBoxComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProceduralDungeon"), Z_Construct_UClass_UTriggerType_NoRegister) \
 	DECLARE_SERIALIZER(UTriggerType)
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UTriggerType(UTriggerType&&) = delete; \
 	UTriggerType(const UTriggerType&) = delete; \
@@ -68,13 +68,13 @@ public: \
 	NO_API virtual ~UTriggerType();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_21_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_GENERATED_BODY \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_21_PROLOG
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_ENHANCED_CONSTRUCTORS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_INCLASS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -84,6 +84,6 @@ class UTriggerType;
 // ********** End Class UTriggerType ***************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_TriggerType_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

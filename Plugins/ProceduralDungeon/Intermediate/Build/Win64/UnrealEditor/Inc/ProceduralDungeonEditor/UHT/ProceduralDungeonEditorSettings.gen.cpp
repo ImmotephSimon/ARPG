@@ -9,11 +9,11 @@
 #include "ProceduralDungeonEdTypes.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeProceduralDungeonEditorSettings() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 PROCEDURALDUNGEON_API UClass* Z_Construct_UClass_URoomData_NoRegister();
 PROCEDURALDUNGEONEDITOR_API UClass* Z_Construct_UClass_UProceduralDungeonEditorSettings();
@@ -23,9 +23,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeonEditor();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class UProceduralDungeonEditorSettings *****************************************
-void UProceduralDungeonEditorSettings::StaticRegisterNativesUProceduralDungeonEditorSettings()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UProceduralDungeonEditorSettings;
 UClass* UProceduralDungeonEditorSettings::GetPrivateStaticClass()
 {
@@ -33,7 +30,7 @@ UClass* UProceduralDungeonEditorSettings::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UProceduralDungeonEditorSettings.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("ProceduralDungeonEditorSettings"),
 			Z_Registration_Info_UClass_UProceduralDungeonEditorSettings.InnerSingleton,
 			StaticRegisterNativesUProceduralDungeonEditorSettings,
@@ -107,6 +104,8 @@ struct Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class UProceduralDungeonEditorSettings constinit property declarations *********
 	static const UECodeGen_Private::FClassPropertyParams NewProp_DefaultRoomDataClass;
 	static void NewProp_bUseDefaultIfNoChild_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseDefaultIfNoChild;
@@ -114,19 +113,22 @@ struct Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics
 	static void NewProp_bUseRoomAsOrbitPivot_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseRoomAsOrbitPivot;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class UProceduralDungeonEditorSettings constinit property declarations ***********
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UProceduralDungeonEditorSettings>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_DefaultRoomDataClass = { "DefaultRoomDataClass", nullptr, (EPropertyFlags)0x0014000002004001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UProceduralDungeonEditorSettings, DefaultRoomDataClass), Z_Construct_UClass_UClass, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultRoomDataClass_MetaData), NewProp_DefaultRoomDataClass_MetaData) };
+}; // struct Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics
+
+// ********** Begin Class UProceduralDungeonEditorSettings Property Definitions ********************
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_DefaultRoomDataClass = { "DefaultRoomDataClass", nullptr, (EPropertyFlags)0x0014000002004001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UProceduralDungeonEditorSettings, DefaultRoomDataClass), Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultRoomDataClass_MetaData), NewProp_DefaultRoomDataClass_MetaData) };
 void Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_bUseDefaultIfNoChild_SetBit(void* Obj)
 {
 	((UProceduralDungeonEditorSettings*)Obj)->bUseDefaultIfNoChild = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_bUseDefaultIfNoChild = { "bUseDefaultIfNoChild", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UProceduralDungeonEditorSettings), &Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_bUseDefaultIfNoChild_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bUseDefaultIfNoChild_MetaData), NewProp_bUseDefaultIfNoChild_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_DefaultMargins = { "DefaultMargins", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UProceduralDungeonEditorSettings, DefaultMargins), Z_Construct_UScriptStruct_FMargin3D, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultMargins_MetaData), NewProp_DefaultMargins_MetaData) }; // 2755788825
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_DefaultMargins = { "DefaultMargins", nullptr, (EPropertyFlags)0x0010000000004001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UProceduralDungeonEditorSettings, DefaultMargins), Z_Construct_UScriptStruct_FMargin3D, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultMargins_MetaData), NewProp_DefaultMargins_MetaData) }; // 2234843285
 void Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_bUseRoomAsOrbitPivot_SetBit(void* Obj)
 {
 	((UProceduralDungeonEditorSettings*)Obj)->bUseRoomAsOrbitPivot = 1;
@@ -139,6 +141,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UProcedur
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::NewProp_bUseRoomAsOrbitPivot,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::PropPointers) < 2048);
+// ********** End Class UProceduralDungeonEditorSettings Property Definitions **********************
 UObject* (*const Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UObject,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeonEditor,
@@ -159,6 +162,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UProceduralDungeonEdito
 	0x000000A6u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::Class_MetaDataParams), Z_Construct_UClass_UProceduralDungeonEditorSettings_Statics::Class_MetaDataParams)
 };
+void UProceduralDungeonEditorSettings::StaticRegisterNativesUProceduralDungeonEditorSettings()
+{
+}
 UClass* Z_Construct_UClass_UProceduralDungeonEditorSettings()
 {
 	if (!Z_Registration_Info_UClass_UProceduralDungeonEditorSettings.OuterSingleton)
@@ -167,21 +173,23 @@ UClass* Z_Construct_UClass_UProceduralDungeonEditorSettings()
 	}
 	return Z_Registration_Info_UClass_UProceduralDungeonEditorSettings.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(UProceduralDungeonEditorSettings);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UProceduralDungeonEditorSettings);
 UProceduralDungeonEditorSettings::~UProceduralDungeonEditorSettings() {}
 // ********** End Class UProceduralDungeonEditorSettings *******************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UProceduralDungeonEditorSettings, UProceduralDungeonEditorSettings::StaticClass, TEXT("UProceduralDungeonEditorSettings"), &Z_Registration_Info_UClass_UProceduralDungeonEditorSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProceduralDungeonEditorSettings), 521272156U) },
+		{ Z_Construct_UClass_UProceduralDungeonEditorSettings, UProceduralDungeonEditorSettings::StaticClass, TEXT("UProceduralDungeonEditorSettings"), &Z_Registration_Info_UClass_UProceduralDungeonEditorSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProceduralDungeonEditorSettings), 3703886880U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_758573724(TEXT("/Script/ProceduralDungeonEditor"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_783892179{
+	TEXT("/Script/ProceduralDungeonEditor"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEditorSettings_h__Script_ProceduralDungeonEditor_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

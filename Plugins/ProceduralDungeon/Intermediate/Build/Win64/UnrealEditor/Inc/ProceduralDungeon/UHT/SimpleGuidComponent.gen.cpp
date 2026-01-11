@@ -8,7 +8,7 @@
 #include "Components/SimpleGuidComponent.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeSimpleGuidComponent() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -21,9 +21,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class USimpleGuidComponent *****************************************************
-void USimpleGuidComponent::StaticRegisterNativesUSimpleGuidComponent()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_USimpleGuidComponent;
 UClass* USimpleGuidComponent::GetPrivateStaticClass()
 {
@@ -31,7 +28,7 @@ UClass* USimpleGuidComponent::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_USimpleGuidComponent.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("SimpleGuidComponent"),
 			Z_Registration_Info_UClass_USimpleGuidComponent.InnerSingleton,
 			StaticRegisterNativesUSimpleGuidComponent,
@@ -79,17 +76,22 @@ struct Z_Construct_UClass_USimpleGuidComponent_Statics
 		{ "ModuleRelativePath", "Public/Components/SimpleGuidComponent.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class USimpleGuidComponent constinit property declarations *********************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Guid;
 	static void NewProp_bSaveActorInDungeon_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bSaveActorInDungeon;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class USimpleGuidComponent constinit property declarations ***********************
 	static UObject* (*const DependentSingletons[])();
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<USimpleGuidComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_USimpleGuidComponent_Statics
+
+// ********** Begin Class USimpleGuidComponent Property Definitions ********************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_USimpleGuidComponent_Statics::NewProp_Guid = { "Guid", nullptr, (EPropertyFlags)0x0010c00000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(USimpleGuidComponent, Guid), Z_Construct_UScriptStruct_FGuid, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Guid_MetaData), NewProp_Guid_MetaData) };
 void Z_Construct_UClass_USimpleGuidComponent_Statics::NewProp_bSaveActorInDungeon_SetBit(void* Obj)
 {
@@ -101,13 +103,14 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USimpleGu
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USimpleGuidComponent_Statics::NewProp_bSaveActorInDungeon,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_USimpleGuidComponent_Statics::PropPointers) < 2048);
+// ********** End Class USimpleGuidComponent Property Definitions **********************************
 UObject* (*const Z_Construct_UClass_USimpleGuidComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_USimpleGuidComponent_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_USimpleGuidComponent_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_URoomActorGuid_NoRegister, (int32)VTABLE_OFFSET(USimpleGuidComponent, IRoomActorGuid), false },  // 8697722
+	{ Z_Construct_UClass_URoomActorGuid_NoRegister, (int32)VTABLE_OFFSET(USimpleGuidComponent, IRoomActorGuid), false },  // 3856908736
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_USimpleGuidComponent_Statics::ClassParams = {
 	&USimpleGuidComponent::StaticClass,
@@ -124,6 +127,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_USimpleGuidComponent_St
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_USimpleGuidComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_USimpleGuidComponent_Statics::Class_MetaDataParams)
 };
+void USimpleGuidComponent::StaticRegisterNativesUSimpleGuidComponent()
+{
+}
 UClass* Z_Construct_UClass_USimpleGuidComponent()
 {
 	if (!Z_Registration_Info_UClass_USimpleGuidComponent.OuterSingleton)
@@ -132,21 +138,23 @@ UClass* Z_Construct_UClass_USimpleGuidComponent()
 	}
 	return Z_Registration_Info_UClass_USimpleGuidComponent.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(USimpleGuidComponent);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, USimpleGuidComponent);
 USimpleGuidComponent::~USimpleGuidComponent() {}
 // ********** End Class USimpleGuidComponent *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USimpleGuidComponent, USimpleGuidComponent::StaticClass, TEXT("USimpleGuidComponent"), &Z_Registration_Info_UClass_USimpleGuidComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USimpleGuidComponent), 3961589812U) },
+		{ Z_Construct_UClass_USimpleGuidComponent, USimpleGuidComponent::StaticClass, TEXT("USimpleGuidComponent"), &Z_Registration_Info_UClass_USimpleGuidComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USimpleGuidComponent), 2023975020U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_669324561(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_4272287861{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Components_SimpleGuidComponent_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

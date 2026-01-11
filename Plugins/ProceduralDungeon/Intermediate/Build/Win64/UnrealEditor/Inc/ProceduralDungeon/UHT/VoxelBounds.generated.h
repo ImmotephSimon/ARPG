@@ -15,12 +15,12 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
 struct FVoxelBoundsConnection;
 
 // ********** Begin ScriptStruct FVoxelBoundsConnection ********************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h_28_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics; \
+struct Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics;
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h_28_GENERATED_BODY \
+	friend struct ::Z_Construct_UScriptStruct_FVoxelBoundsConnection_Statics; \
 	PROCEDURALDUNGEON_API static class UScriptStruct* StaticStruct();
 
 
@@ -28,15 +28,16 @@ struct FVoxelBoundsConnection;
 // ********** End ScriptStruct FVoxelBoundsConnection **********************************************
 
 // ********** Begin Delegate FScoreCallback ********************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h_52_DELEGATE \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h_52_DELEGATE \
 PROCEDURALDUNGEON_API bool FScoreCallback_DelegateWrapper(const FScriptDelegate& ScoreCallback, FVoxelBoundsConnection const& A, FVoxelBoundsConnection const& B, int32& Score);
 
 
 // ********** End Delegate FScoreCallback **********************************************************
 
 // ********** Begin ScriptStruct FVoxelBounds ******************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h_57_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FVoxelBounds_Statics; \
+struct Z_Construct_UScriptStruct_FVoxelBounds_Statics;
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h_57_GENERATED_BODY \
+	friend struct ::Z_Construct_UScriptStruct_FVoxelBounds_Statics; \
 	PROCEDURALDUNGEON_API static class UScriptStruct* StaticStruct();
 
 
@@ -44,7 +45,7 @@ struct FVoxelBounds;
 // ********** End ScriptStruct FVoxelBounds ********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_VoxelBounds_VoxelBounds_h
 
 // ********** Begin Enum EVoxelBoundsConnectionType ************************************************
 #define FOREACH_ENUM_EVOXELBOUNDSCONNECTIONTYPE(op) \
@@ -54,7 +55,7 @@ struct FVoxelBounds;
 
 enum class EVoxelBoundsConnectionType : uint8;
 template<> struct TIsUEnumClass<EVoxelBoundsConnectionType> { enum { Value = true }; };
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EVoxelBoundsConnectionType>();
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EVoxelBoundsConnectionType>();
 // ********** End Enum EVoxelBoundsConnectionType **************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

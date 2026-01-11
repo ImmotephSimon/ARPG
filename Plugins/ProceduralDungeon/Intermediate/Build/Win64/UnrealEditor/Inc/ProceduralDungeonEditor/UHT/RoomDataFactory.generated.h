@@ -17,20 +17,21 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class URoomDataFactory *********************************************************
+struct Z_Construct_UClass_URoomDataFactory_Statics;
 PROCEDURALDUNGEONEDITOR_API UClass* Z_Construct_UClass_URoomDataFactory_NoRegister();
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesURoomDataFactory(); \
-	friend struct Z_Construct_UClass_URoomDataFactory_Statics; \
+	friend struct ::Z_Construct_UClass_URoomDataFactory_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend PROCEDURALDUNGEONEDITOR_API UClass* Z_Construct_UClass_URoomDataFactory_NoRegister(); \
+	friend PROCEDURALDUNGEONEDITOR_API UClass* ::Z_Construct_UClass_URoomDataFactory_NoRegister(); \
 public: \
 	DECLARE_CLASS2(URoomDataFactory, UFactory, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/ProceduralDungeonEditor"), Z_Construct_UClass_URoomDataFactory_NoRegister) \
 	DECLARE_SERIALIZER(URoomDataFactory)
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	URoomDataFactory(URoomDataFactory&&) = delete; \
 	URoomDataFactory(const URoomDataFactory&) = delete; \
@@ -40,12 +41,12 @@ public: \
 	NO_API virtual ~URoomDataFactory();
 
 
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_14_PROLOG
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_GENERATED_BODY \
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_14_PROLOG
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +56,6 @@ class URoomDataFactory;
 // ********** End Class URoomDataFactory ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

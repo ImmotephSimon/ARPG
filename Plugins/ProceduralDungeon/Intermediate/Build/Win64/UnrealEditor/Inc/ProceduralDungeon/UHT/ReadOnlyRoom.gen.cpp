@@ -8,7 +8,7 @@
 #include "ReadOnlyRoom.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeReadOnlyRoom() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -41,11 +41,16 @@ struct Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function AreAllDoorsConnected constinit property declarations ******************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function AreAllDoorsConnected constinit property declarations ********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function AreAllDoorsConnected Property Definitions *****************************
 void Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((ReadOnlyRoom_eventAreAllDoorsConnected_Parms*)Obj)->ReturnValue = 1;
@@ -55,7 +60,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadO
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "AreAllDoorsConnected", Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::ReadOnlyRoom_eventAreAllDoorsConnected_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::Function_MetaDataParams)},  };
+// ********** End Function AreAllDoorsConnected Property Definitions *******************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "AreAllDoorsConnected", 	Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::ReadOnlyRoom_eventAreAllDoorsConnected_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected_Statics::ReadOnlyRoom_eventAreAllDoorsConnected_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected()
 {
@@ -94,16 +103,25 @@ struct Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function CountConnectedDoors constinit property declarations *******************
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function CountConnectedDoors constinit property declarations *********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function CountConnectedDoors Property Definitions ******************************
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventCountConnectedDoors_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "CountConnectedDoors", Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::ReadOnlyRoom_eventCountConnectedDoors_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::Function_MetaDataParams)},  };
+// ********** End Function CountConnectedDoors Property Definitions ********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "CountConnectedDoors", 	Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::ReadOnlyRoom_eventCountConnectedDoors_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors_Statics::ReadOnlyRoom_eventCountConnectedDoors_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors()
 {
@@ -142,16 +160,25 @@ struct Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetBoundsCenter constinit property declarations ***********************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetBoundsCenter constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetBoundsCenter Property Definitions **********************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventGetBoundsCenter_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetBoundsCenter", Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::ReadOnlyRoom_eventGetBoundsCenter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetBoundsCenter Property Definitions ************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetBoundsCenter", 	Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::ReadOnlyRoom_eventGetBoundsCenter_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter_Statics::ReadOnlyRoom_eventGetBoundsCenter_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter()
 {
@@ -190,16 +217,25 @@ struct Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetBoundsExtent constinit property declarations ***********************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetBoundsExtent constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetBoundsExtent Property Definitions **********************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventGetBoundsExtent_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetBoundsExtent", Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::ReadOnlyRoom_eventGetBoundsExtent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetBoundsExtent Property Definitions ************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetBoundsExtent", 	Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::ReadOnlyRoom_eventGetBoundsExtent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent_Statics::ReadOnlyRoom_eventGetBoundsExtent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent()
 {
@@ -238,19 +274,28 @@ struct Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetDirection constinit property declarations **************************
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetDirection constinit property declarations ****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetDirection Property Definitions *************************************
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventGetDirection_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 3779627541
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventGetDirection_Parms, ReturnValue), Z_Construct_UEnum_ProceduralDungeon_EDoorDirection, METADATA_PARAMS(0, nullptr) }; // 4084058555
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetDirection", Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::ReadOnlyRoom_eventGetDirection_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetDirection Property Definitions ***************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetDirection", 	Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::ReadOnlyRoom_eventGetDirection_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetDirection_Statics::ReadOnlyRoom_eventGetDirection_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_GetDirection()
 {
@@ -289,16 +334,25 @@ struct Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetPosition constinit property declarations ***************************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetPosition constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetPosition Property Definitions **************************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventGetPosition_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetPosition", Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::ReadOnlyRoom_eventGetPosition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetPosition Property Definitions ****************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetPosition", 	Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::ReadOnlyRoom_eventGetPosition_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetPosition_Statics::ReadOnlyRoom_eventGetPosition_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_GetPosition()
 {
@@ -340,16 +394,25 @@ struct Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetRoomData constinit property declarations ***************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetRoomData constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetRoomData Property Definitions **************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000582, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventGetRoomData_Parms, ReturnValue), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetRoomData", Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::ReadOnlyRoom_eventGetRoomData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetRoomData Property Definitions ****************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetRoomData", 	Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::ReadOnlyRoom_eventGetRoomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetRoomData_Statics::ReadOnlyRoom_eventGetRoomData_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_GetRoomData()
 {
@@ -388,16 +451,25 @@ struct Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetRoomID constinit property declarations *****************************
 	static const UECodeGen_Private::FInt64PropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetRoomID constinit property declarations *******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetRoomID Property Definitions ****************************************
 const UECodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ReadOnlyRoom_eventGetRoomID_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetRoomID", Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::PropPointers), sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::ReadOnlyRoom_eventGetRoomID_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetRoomID Property Definitions ******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UReadOnlyRoom, nullptr, "GetRoomID", 	Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::ReadOnlyRoom_eventGetRoomID_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::Function_MetaDataParams), Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UReadOnlyRoom_GetRoomID_Statics::ReadOnlyRoom_eventGetRoomID_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UReadOnlyRoom_GetRoomID()
 {
@@ -418,21 +490,6 @@ DEFINE_FUNCTION(IReadOnlyRoom::execGetRoomID)
 // ********** End Interface UReadOnlyRoom Function GetRoomID ***************************************
 
 // ********** Begin Interface UReadOnlyRoom ********************************************************
-void UReadOnlyRoom::StaticRegisterNativesUReadOnlyRoom()
-{
-	UClass* Class = UReadOnlyRoom::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "AreAllDoorsConnected", &IReadOnlyRoom::execAreAllDoorsConnected },
-		{ "CountConnectedDoors", &IReadOnlyRoom::execCountConnectedDoors },
-		{ "GetBoundsCenter", &IReadOnlyRoom::execGetBoundsCenter },
-		{ "GetBoundsExtent", &IReadOnlyRoom::execGetBoundsExtent },
-		{ "GetDirection", &IReadOnlyRoom::execGetDirection },
-		{ "GetPosition", &IReadOnlyRoom::execGetPosition },
-		{ "GetRoomData", &IReadOnlyRoom::execGetRoomData },
-		{ "GetRoomID", &IReadOnlyRoom::execGetRoomID },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UReadOnlyRoom;
 UClass* UReadOnlyRoom::GetPrivateStaticClass()
 {
@@ -440,7 +497,7 @@ UClass* UReadOnlyRoom::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UReadOnlyRoom.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("ReadOnlyRoom"),
 			Z_Registration_Info_UClass_UReadOnlyRoom.InnerSingleton,
 			StaticRegisterNativesUReadOnlyRoom,
@@ -475,23 +532,36 @@ struct Z_Construct_UClass_UReadOnlyRoom_Statics
 #endif
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Interface UReadOnlyRoom constinit property declarations ************************
+// ********** End Interface UReadOnlyRoom constinit property declarations **************************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("AreAllDoorsConnected"), .Pointer = &IReadOnlyRoom::execAreAllDoorsConnected },
+		{ .NameUTF8 = UTF8TEXT("CountConnectedDoors"), .Pointer = &IReadOnlyRoom::execCountConnectedDoors },
+		{ .NameUTF8 = UTF8TEXT("GetBoundsCenter"), .Pointer = &IReadOnlyRoom::execGetBoundsCenter },
+		{ .NameUTF8 = UTF8TEXT("GetBoundsExtent"), .Pointer = &IReadOnlyRoom::execGetBoundsExtent },
+		{ .NameUTF8 = UTF8TEXT("GetDirection"), .Pointer = &IReadOnlyRoom::execGetDirection },
+		{ .NameUTF8 = UTF8TEXT("GetPosition"), .Pointer = &IReadOnlyRoom::execGetPosition },
+		{ .NameUTF8 = UTF8TEXT("GetRoomData"), .Pointer = &IReadOnlyRoom::execGetRoomData },
+		{ .NameUTF8 = UTF8TEXT("GetRoomID"), .Pointer = &IReadOnlyRoom::execGetRoomID },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected, "AreAllDoorsConnected" }, // 1166575210
-		{ &Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors, "CountConnectedDoors" }, // 500097566
-		{ &Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter, "GetBoundsCenter" }, // 1591759153
-		{ &Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent, "GetBoundsExtent" }, // 1778962580
-		{ &Z_Construct_UFunction_UReadOnlyRoom_GetDirection, "GetDirection" }, // 2600266764
-		{ &Z_Construct_UFunction_UReadOnlyRoom_GetPosition, "GetPosition" }, // 502435880
-		{ &Z_Construct_UFunction_UReadOnlyRoom_GetRoomData, "GetRoomData" }, // 1840966877
-		{ &Z_Construct_UFunction_UReadOnlyRoom_GetRoomID, "GetRoomID" }, // 1065689832
+		{ &Z_Construct_UFunction_UReadOnlyRoom_AreAllDoorsConnected, "AreAllDoorsConnected" }, // 2092517495
+		{ &Z_Construct_UFunction_UReadOnlyRoom_CountConnectedDoors, "CountConnectedDoors" }, // 456348173
+		{ &Z_Construct_UFunction_UReadOnlyRoom_GetBoundsCenter, "GetBoundsCenter" }, // 3958812644
+		{ &Z_Construct_UFunction_UReadOnlyRoom_GetBoundsExtent, "GetBoundsExtent" }, // 676961308
+		{ &Z_Construct_UFunction_UReadOnlyRoom_GetDirection, "GetDirection" }, // 1684026737
+		{ &Z_Construct_UFunction_UReadOnlyRoom_GetPosition, "GetPosition" }, // 1363775761
+		{ &Z_Construct_UFunction_UReadOnlyRoom_GetRoomData, "GetRoomData" }, // 1411999247
+		{ &Z_Construct_UFunction_UReadOnlyRoom_GetRoomID, "GetRoomID" }, // 3788603430
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<IReadOnlyRoom>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UReadOnlyRoom_Statics
 UObject* (*const Z_Construct_UClass_UReadOnlyRoom_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UInterface,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -512,6 +582,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UReadOnlyRoom_Statics::
 	0x000840A1u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UReadOnlyRoom_Statics::Class_MetaDataParams), Z_Construct_UClass_UReadOnlyRoom_Statics::Class_MetaDataParams)
 };
+void UReadOnlyRoom::StaticRegisterNativesUReadOnlyRoom()
+{
+	UClass* Class = UReadOnlyRoom::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UReadOnlyRoom_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_UReadOnlyRoom()
 {
 	if (!Z_Registration_Info_UClass_UReadOnlyRoom.OuterSingleton)
@@ -521,20 +596,22 @@ UClass* Z_Construct_UClass_UReadOnlyRoom()
 	return Z_Registration_Info_UClass_UReadOnlyRoom.OuterSingleton;
 }
 UReadOnlyRoom::UReadOnlyRoom(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UReadOnlyRoom);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UReadOnlyRoom);
 // ********** End Interface UReadOnlyRoom **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UReadOnlyRoom, UReadOnlyRoom::StaticClass, TEXT("UReadOnlyRoom"), &Z_Registration_Info_UClass_UReadOnlyRoom, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UReadOnlyRoom), 2538612182U) },
+		{ Z_Construct_UClass_UReadOnlyRoom, UReadOnlyRoom::StaticClass, TEXT("UReadOnlyRoom"), &Z_Registration_Info_UClass_UReadOnlyRoom, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UReadOnlyRoom), 1569470869U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_817966257(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_2504890727{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ReadOnlyRoom_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

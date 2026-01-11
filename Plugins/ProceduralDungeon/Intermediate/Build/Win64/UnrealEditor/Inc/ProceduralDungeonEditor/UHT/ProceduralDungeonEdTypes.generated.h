@@ -17,8 +17,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FMargin3D *********************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h_45_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FMargin3D_Statics; \
+struct Z_Construct_UScriptStruct_FMargin3D_Statics;
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h_45_GENERATED_BODY \
+	friend struct ::Z_Construct_UScriptStruct_FMargin3D_Statics; \
 	PROCEDURALDUNGEONEDITOR_API static class UScriptStruct* StaticStruct();
 
 
@@ -26,6 +27,6 @@ struct FMargin3D;
 // ********** End ScriptStruct FMargin3D ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_ProceduralDungeonEdTypes_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

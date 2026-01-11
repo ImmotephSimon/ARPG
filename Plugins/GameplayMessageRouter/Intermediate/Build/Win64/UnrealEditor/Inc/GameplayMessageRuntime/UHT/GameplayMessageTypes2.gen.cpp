@@ -8,7 +8,7 @@
 #include "GameFramework/GameplayMessageTypes2.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeGameplayMessageTypes2() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -26,7 +26,7 @@ static UEnum* EGameplayMessageMatch_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_EGameplayMessageMatch.OuterSingleton;
 }
-template<> GAMEPLAYMESSAGERUNTIME_API UEnum* StaticEnum<EGameplayMessageMatch>()
+template<> GAMEPLAYMESSAGERUNTIME_NON_ATTRIBUTED_API UEnum* StaticEnum<EGameplayMessageMatch>()
 {
 	return EGameplayMessageMatch_StaticEnum();
 }
@@ -55,7 +55,7 @@ struct Z_Construct_UEnum_GameplayMessageRuntime_EGameplayMessageMatch_Statics
 		{ "EGameplayMessageMatch::PartialMatch", (int64)EGameplayMessageMatch::PartialMatch },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-};
+}; // struct Z_Construct_UEnum_GameplayMessageRuntime_EGameplayMessageMatch_Statics 
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_GameplayMessageRuntime_EGameplayMessageMatch_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_GameplayMessageRuntime,
 	nullptr,
@@ -79,16 +79,18 @@ UEnum* Z_Construct_UEnum_GameplayMessageRuntime_EGameplayMessageMatch()
 // ********** End Enum EGameplayMessageMatch *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EGameplayMessageMatch_StaticEnum, TEXT("EGameplayMessageMatch"), &Z_Registration_Info_UEnum_EGameplayMessageMatch, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1992465379U) },
+		{ EGameplayMessageMatch_StaticEnum, TEXT("EGameplayMessageMatch"), &Z_Registration_Info_UEnum_EGameplayMessageMatch, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1286090161U) },
 	};
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_3467126075{
+	TEXT("/Script/GameplayMessageRuntime"),
+	nullptr, 0,
+	nullptr, 0,
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics::EnumInfo),
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_2137425532(TEXT("/Script/GameplayMessageRuntime"),
-	nullptr, 0,
-	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_GameplayMessageRouter_Source_GameplayMessageRuntime_Public_GameFramework_GameplayMessageTypes2_h__Script_GameplayMessageRuntime_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

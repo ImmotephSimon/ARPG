@@ -8,7 +8,7 @@
 #include "Interfaces/DungeonCustomSerialization.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeDungeonCustomSerialization() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -19,9 +19,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeon();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Interface UDungeonCustomSerialization ******************************************
-void UDungeonCustomSerialization::StaticRegisterNativesUDungeonCustomSerialization()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_UDungeonCustomSerialization;
 UClass* UDungeonCustomSerialization::GetPrivateStaticClass()
 {
@@ -29,7 +26,7 @@ UClass* UDungeonCustomSerialization::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UDungeonCustomSerialization.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("DungeonCustomSerialization"),
 			Z_Registration_Info_UClass_UDungeonCustomSerialization.InnerSingleton,
 			StaticRegisterNativesUDungeonCustomSerialization,
@@ -61,12 +58,15 @@ struct Z_Construct_UClass_UDungeonCustomSerialization_Statics
 		{ "NotBlueprintType", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Interface UDungeonCustomSerialization constinit property declarations **********
+// ********** End Interface UDungeonCustomSerialization constinit property declarations ************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<IDungeonCustomSerialization>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_UDungeonCustomSerialization_Statics
 UObject* (*const Z_Construct_UClass_UDungeonCustomSerialization_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UInterface,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -87,6 +87,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UDungeonCustomSerializa
 	0x000840A1u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UDungeonCustomSerialization_Statics::Class_MetaDataParams), Z_Construct_UClass_UDungeonCustomSerialization_Statics::Class_MetaDataParams)
 };
+void UDungeonCustomSerialization::StaticRegisterNativesUDungeonCustomSerialization()
+{
+}
 UClass* Z_Construct_UClass_UDungeonCustomSerialization()
 {
 	if (!Z_Registration_Info_UClass_UDungeonCustomSerialization.OuterSingleton)
@@ -96,20 +99,22 @@ UClass* Z_Construct_UClass_UDungeonCustomSerialization()
 	return Z_Registration_Info_UClass_UDungeonCustomSerialization.OuterSingleton;
 }
 UDungeonCustomSerialization::UDungeonCustomSerialization(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR(UDungeonCustomSerialization);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UDungeonCustomSerialization);
 // ********** End Interface UDungeonCustomSerialization ********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDungeonCustomSerialization, UDungeonCustomSerialization::StaticClass, TEXT("UDungeonCustomSerialization"), &Z_Registration_Info_UClass_UDungeonCustomSerialization, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonCustomSerialization), 3173650839U) },
+		{ Z_Construct_UClass_UDungeonCustomSerialization, UDungeonCustomSerialization::StaticClass, TEXT("UDungeonCustomSerialization"), &Z_Registration_Info_UClass_UDungeonCustomSerialization, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDungeonCustomSerialization), 1577964527U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_2291680563(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_293100589{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_Interfaces_DungeonCustomSerialization_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

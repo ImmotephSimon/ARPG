@@ -9,13 +9,14 @@
 #include "Engine/HitResult.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeRoomLevel() {}
 
 // ********** Begin Cross Module References ********************************************************
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ALevelScriptActor();
+ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
@@ -41,12 +42,17 @@ struct Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent_
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Delegate FRoomLevelVisibilityEvent constinit property declarations *************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomLevel;
 	static void NewProp_IsVisible_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsVisible;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Delegate FRoomLevelVisibilityEvent constinit property declarations ***************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
+
+// ********** Begin Delegate FRoomLevelVisibilityEvent Property Definitions ************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::NewProp_RoomLevel = { "RoomLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventRoomLevelVisibilityEvent_Parms, RoomLevel), Z_Construct_UClass_ARoomLevel_NoRegister, METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::NewProp_IsVisible_SetBit(void* Obj)
 {
@@ -58,7 +64,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunctio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::NewProp_IsVisible,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "RoomLevelVisibilityEvent__DelegateSignature", Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomLevelVisibilityEvent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
+// ********** End Delegate FRoomLevelVisibilityEvent Property Definitions **************************
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "RoomLevelVisibilityEvent__DelegateSignature", 	Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::PropPointers), 
+sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomLevelVisibilityEvent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomLevelVisibilityEvent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature()
 {
@@ -96,11 +106,16 @@ struct Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__Dele
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Delegate FRoomLevelActorEvent constinit property declarations ******************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomLevel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Actor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Delegate FRoomLevelActorEvent constinit property declarations ********************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
+
+// ********** Begin Delegate FRoomLevelActorEvent Property Definitions *****************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::NewProp_RoomLevel = { "RoomLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventRoomLevelActorEvent_Parms, RoomLevel), Z_Construct_UClass_ARoomLevel_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProceduralDungeon_eventRoomLevelActorEvent_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::PropPointers[] = {
@@ -108,7 +123,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunctio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::NewProp_Actor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "RoomLevelActorEvent__DelegateSignature", Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomLevelActorEvent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
+// ********** End Delegate FRoomLevelActorEvent Property Definitions *******************************
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_ProceduralDungeon, nullptr, "RoomLevelActorEvent__DelegateSignature", 	Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::PropPointers), 
+sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomLevelActorEvent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature_Statics::_Script_ProceduralDungeon_eventRoomLevelActorEvent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature()
 {
@@ -146,16 +165,25 @@ struct Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetBoundsCenter constinit property declarations ***********************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetBoundsCenter constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetBoundsCenter Property Definitions **********************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventGetBoundsCenter_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "GetBoundsCenter", Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::RoomLevel_eventGetBoundsCenter_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetBoundsCenter Property Definitions ************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "GetBoundsCenter", 	Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::RoomLevel_eventGetBoundsCenter_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_GetBoundsCenter_Statics::RoomLevel_eventGetBoundsCenter_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_GetBoundsCenter()
 {
@@ -188,16 +216,25 @@ struct Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetBoundsExtent constinit property declarations ***********************
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetBoundsExtent constinit property declarations *************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetBoundsExtent Property Definitions **********************************
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventGetBoundsExtent_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "GetBoundsExtent", Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::RoomLevel_eventGetBoundsExtent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetBoundsExtent Property Definitions ************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "GetBoundsExtent", 	Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::RoomLevel_eventGetBoundsExtent_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_GetBoundsExtent_Statics::RoomLevel_eventGetBoundsExtent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_GetBoundsExtent()
 {
@@ -231,16 +268,25 @@ struct Z_Construct_UFunction_ARoomLevel_GetRoom_Statics
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function GetRoom constinit property declarations *******************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetRoom constinit property declarations *********************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function GetRoom Property Definitions ******************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventGetRoom_Parms, ReturnValue), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "GetRoom", Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::RoomLevel_eventGetRoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::Function_MetaDataParams)},  };
+// ********** End Function GetRoom Property Definitions ********************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "GetRoom", 	Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::RoomLevel_eventGetRoom_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_GetRoom_Statics::RoomLevel_eventGetRoom_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_GetRoom()
 {
@@ -260,6 +306,61 @@ DEFINE_FUNCTION(ARoomLevel::execGetRoom)
 }
 // ********** End Class ARoomLevel Function GetRoom ************************************************
 
+// ********** Begin Class ARoomLevel Function GetRoomData ******************************************
+struct Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics
+{
+	struct RoomLevel_eventGetRoomData_Parms
+	{
+		const URoomData* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Procedural Dungeon" },
+		{ "CompactNodeTitle", "Room Data" },
+		{ "ModuleRelativePath", "Public/RoomLevel.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+
+// ********** Begin Function GetRoomData constinit property declarations ***************************
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function GetRoomData constinit property declarations *****************************
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+
+// ********** Begin Function GetRoomData Property Definitions **************************************
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000582, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventGetRoomData_Parms, ReturnValue), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::PropPointers) < 2048);
+// ********** End Function GetRoomData Property Definitions ****************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "GetRoomData", 	Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::RoomLevel_eventGetRoomData_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::RoomLevel_eventGetRoomData_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ARoomLevel_GetRoomData()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARoomLevel_GetRoomData_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ARoomLevel::execGetRoomData)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(const URoomData**)Z_Param__Result=P_THIS->GetRoomData();
+	P_NATIVE_END;
+}
+// ********** End Class ARoomLevel Function GetRoomData ********************************************
+
 // ********** Begin Class ARoomLevel Function IsLocked *********************************************
 struct Z_Construct_UFunction_ARoomLevel_IsLocked_Statics
 {
@@ -276,11 +377,16 @@ struct Z_Construct_UFunction_ARoomLevel_IsLocked_Statics
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function IsLocked constinit property declarations ******************************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function IsLocked constinit property declarations ********************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function IsLocked Property Definitions *****************************************
 void Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((RoomLevel_eventIsLocked_Parms*)Obj)->ReturnValue = 1;
@@ -290,7 +396,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomL
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "IsLocked", Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::RoomLevel_eventIsLocked_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::Function_MetaDataParams)},  };
+// ********** End Function IsLocked Property Definitions *******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "IsLocked", 	Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::RoomLevel_eventIsLocked_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_IsLocked_Statics::RoomLevel_eventIsLocked_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_IsLocked()
 {
@@ -315,32 +425,49 @@ struct Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics
 {
 	struct RoomLevel_eventIsPlayerInside_Parms
 	{
+		const APlayerController* PlayerController;
 		bool ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Procedural Dungeon" },
 		{ "CompactNodeTitle", "Is Player Inside" },
+		{ "CPP_Default_PlayerController", "None" },
 		{ "DeprecatedFunction", "" },
 		{ "DeprecationMessage", "Use GetRoom() instead to access directly the room functions." },
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayerController_MetaData[] = {
+		{ "NativeConst", "" },
+	};
 #endif // WITH_METADATA
+
+// ********** Begin Function IsPlayerInside constinit property declarations ************************
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerController;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function IsPlayerInside constinit property declarations **************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function IsPlayerInside Property Definitions ***********************************
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::NewProp_PlayerController = { "PlayerController", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventIsPlayerInside_Parms, PlayerController), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerController_MetaData), NewProp_PlayerController_MetaData) };
 void Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((RoomLevel_eventIsPlayerInside_Parms*)Obj)->ReturnValue = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(RoomLevel_eventIsPlayerInside_Parms), &Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::NewProp_PlayerController,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "IsPlayerInside", Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::RoomLevel_eventIsPlayerInside_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::Function_MetaDataParams)},  };
+// ********** End Function IsPlayerInside Property Definitions *************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "IsPlayerInside", 	Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::RoomLevel_eventIsPlayerInside_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_IsPlayerInside_Statics::RoomLevel_eventIsPlayerInside_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_IsPlayerInside()
 {
@@ -353,9 +480,10 @@ UFunction* Z_Construct_UFunction_ARoomLevel_IsPlayerInside()
 }
 DEFINE_FUNCTION(ARoomLevel::execIsPlayerInside)
 {
+	P_GET_OBJECT(APlayerController,Z_Param_PlayerController);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(bool*)Z_Param__Result=P_THIS->IsPlayerInside();
+	*(bool*)Z_Param__Result=P_THIS->IsPlayerInside(Z_Param_PlayerController);
 	P_NATIVE_END;
 }
 // ********** End Class ARoomLevel Function IsPlayerInside *****************************************
@@ -376,11 +504,16 @@ struct Z_Construct_UFunction_ARoomLevel_IsVisible_Statics
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function IsVisible constinit property declarations *****************************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function IsVisible constinit property declarations *******************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function IsVisible Property Definitions ****************************************
 void Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((RoomLevel_eventIsVisible_Parms*)Obj)->ReturnValue = 1;
@@ -390,7 +523,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomL
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "IsVisible", Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::RoomLevel_eventIsVisible_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::Function_MetaDataParams)},  };
+// ********** End Function IsVisible Property Definitions ******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "IsVisible", 	Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::RoomLevel_eventIsVisible_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_IsVisible_Statics::RoomLevel_eventIsVisible_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_IsVisible()
 {
@@ -425,11 +562,16 @@ struct Z_Construct_UFunction_ARoomLevel_Lock_Statics
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function Lock constinit property declarations **********************************
 	static void NewProp_lock_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_lock;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function Lock constinit property declarations ************************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function Lock Property Definitions *********************************************
 void Z_Construct_UFunction_ARoomLevel_Lock_Statics::NewProp_lock_SetBit(void* Obj)
 {
 	((RoomLevel_eventLock_Parms*)Obj)->lock = 1;
@@ -439,7 +581,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomL
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_Lock_Statics::NewProp_lock,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_Lock_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_Lock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "Lock", Z_Construct_UFunction_ARoomLevel_Lock_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_Lock_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_Lock_Statics::RoomLevel_eventLock_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_Lock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_Lock_Statics::Function_MetaDataParams)},  };
+// ********** End Function Lock Property Definitions ***********************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_Lock_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "Lock", 	Z_Construct_UFunction_ARoomLevel_Lock_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_Lock_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_Lock_Statics::RoomLevel_eventLock_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_Lock_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_Lock_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_Lock_Statics::RoomLevel_eventLock_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_Lock()
 {
@@ -486,6 +632,8 @@ struct Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnTriggerBeginOverlap constinit property declarations *****************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverlappedComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
@@ -494,8 +642,11 @@ struct Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bFromSweep;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SweepResult;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function OnTriggerBeginOverlap constinit property declarations *******************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function OnTriggerBeginOverlap Property Definitions ****************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_OverlappedComp = { "OverlappedComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerBeginOverlap_Parms, OverlappedComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverlappedComp_MetaData), NewProp_OverlappedComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerBeginOverlap_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerBeginOverlap_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherComp_MetaData), NewProp_OtherComp_MetaData) };
@@ -505,7 +656,7 @@ void Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_bFr
 	((RoomLevel_eventOnTriggerBeginOverlap_Parms*)Obj)->bFromSweep = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(RoomLevel_eventOnTriggerBeginOverlap_Parms), &Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 267591329
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerBeginOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 222120718
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_OverlappedComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_OtherActor,
@@ -515,7 +666,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomL
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::NewProp_SweepResult,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "OnTriggerBeginOverlap", Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::RoomLevel_eventOnTriggerBeginOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::Function_MetaDataParams)},  };
+// ********** End Function OnTriggerBeginOverlap Property Definitions ******************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "OnTriggerBeginOverlap", 	Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::RoomLevel_eventOnTriggerBeginOverlap_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap_Statics::RoomLevel_eventOnTriggerBeginOverlap_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap()
 {
@@ -562,13 +717,18 @@ struct Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics
 		{ "EditInline", "true" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Function OnTriggerEndOverlap constinit property declarations *******************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OverlappedComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_OtherBodyIndex;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function OnTriggerEndOverlap constinit property declarations *********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+
+// ********** Begin Function OnTriggerEndOverlap Property Definitions ******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::NewProp_OverlappedComp = { "OverlappedComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerEndOverlap_Parms, OverlappedComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverlappedComp_MetaData), NewProp_OverlappedComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerEndOverlap_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RoomLevel_eventOnTriggerEndOverlap_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherComp_MetaData), NewProp_OtherComp_MetaData) };
@@ -580,7 +740,11 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARoomL
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::NewProp_OtherBodyIndex,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "OnTriggerEndOverlap", Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::RoomLevel_eventOnTriggerEndOverlap_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::Function_MetaDataParams)},  };
+// ********** End Function OnTriggerEndOverlap Property Definitions ********************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ARoomLevel, nullptr, "OnTriggerEndOverlap", 	Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::RoomLevel_eventOnTriggerEndOverlap_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap_Statics::RoomLevel_eventOnTriggerEndOverlap_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap()
 {
@@ -605,22 +769,6 @@ DEFINE_FUNCTION(ARoomLevel::execOnTriggerEndOverlap)
 // ********** End Class ARoomLevel Function OnTriggerEndOverlap ************************************
 
 // ********** Begin Class ARoomLevel ***************************************************************
-void ARoomLevel::StaticRegisterNativesARoomLevel()
-{
-	UClass* Class = ARoomLevel::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "GetBoundsCenter", &ARoomLevel::execGetBoundsCenter },
-		{ "GetBoundsExtent", &ARoomLevel::execGetBoundsExtent },
-		{ "GetRoom", &ARoomLevel::execGetRoom },
-		{ "IsLocked", &ARoomLevel::execIsLocked },
-		{ "IsPlayerInside", &ARoomLevel::execIsPlayerInside },
-		{ "IsVisible", &ARoomLevel::execIsVisible },
-		{ "Lock", &ARoomLevel::execLock },
-		{ "OnTriggerBeginOverlap", &ARoomLevel::execOnTriggerBeginOverlap },
-		{ "OnTriggerEndOverlap", &ARoomLevel::execOnTriggerEndOverlap },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_ARoomLevel;
 UClass* ARoomLevel::GetPrivateStaticClass()
 {
@@ -628,7 +776,7 @@ UClass* ARoomLevel::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_ARoomLevel.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("RoomLevel"),
 			Z_Registration_Info_UClass_ARoomLevel.InnerSingleton,
 			StaticRegisterNativesARoomLevel,
@@ -716,6 +864,8 @@ struct Z_Construct_UClass_ARoomLevel_Statics
 		{ "ModuleRelativePath", "Public/RoomLevel.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class ARoomLevel constinit property declarations *******************************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Data;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Room;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_VisibilityChangedEvent;
@@ -723,29 +873,45 @@ struct Z_Construct_UClass_ARoomLevel_Statics
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_ActorExitRoomEvent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RoomTrigger;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Class ARoomLevel constinit property declarations *********************************
+	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("GetBoundsCenter"), .Pointer = &ARoomLevel::execGetBoundsCenter },
+		{ .NameUTF8 = UTF8TEXT("GetBoundsExtent"), .Pointer = &ARoomLevel::execGetBoundsExtent },
+		{ .NameUTF8 = UTF8TEXT("GetRoom"), .Pointer = &ARoomLevel::execGetRoom },
+		{ .NameUTF8 = UTF8TEXT("GetRoomData"), .Pointer = &ARoomLevel::execGetRoomData },
+		{ .NameUTF8 = UTF8TEXT("IsLocked"), .Pointer = &ARoomLevel::execIsLocked },
+		{ .NameUTF8 = UTF8TEXT("IsPlayerInside"), .Pointer = &ARoomLevel::execIsPlayerInside },
+		{ .NameUTF8 = UTF8TEXT("IsVisible"), .Pointer = &ARoomLevel::execIsVisible },
+		{ .NameUTF8 = UTF8TEXT("Lock"), .Pointer = &ARoomLevel::execLock },
+		{ .NameUTF8 = UTF8TEXT("OnTriggerBeginOverlap"), .Pointer = &ARoomLevel::execOnTriggerBeginOverlap },
+		{ .NameUTF8 = UTF8TEXT("OnTriggerEndOverlap"), .Pointer = &ARoomLevel::execOnTriggerEndOverlap },
+	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ARoomLevel_GetBoundsCenter, "GetBoundsCenter" }, // 946881363
-		{ &Z_Construct_UFunction_ARoomLevel_GetBoundsExtent, "GetBoundsExtent" }, // 462725947
-		{ &Z_Construct_UFunction_ARoomLevel_GetRoom, "GetRoom" }, // 3687643954
-		{ &Z_Construct_UFunction_ARoomLevel_IsLocked, "IsLocked" }, // 1133198097
-		{ &Z_Construct_UFunction_ARoomLevel_IsPlayerInside, "IsPlayerInside" }, // 2652060573
-		{ &Z_Construct_UFunction_ARoomLevel_IsVisible, "IsVisible" }, // 414194017
-		{ &Z_Construct_UFunction_ARoomLevel_Lock, "Lock" }, // 3099552713
-		{ &Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap, "OnTriggerBeginOverlap" }, // 323867430
-		{ &Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap, "OnTriggerEndOverlap" }, // 2847019788
+		{ &Z_Construct_UFunction_ARoomLevel_GetBoundsCenter, "GetBoundsCenter" }, // 573229074
+		{ &Z_Construct_UFunction_ARoomLevel_GetBoundsExtent, "GetBoundsExtent" }, // 3259623496
+		{ &Z_Construct_UFunction_ARoomLevel_GetRoom, "GetRoom" }, // 3960002508
+		{ &Z_Construct_UFunction_ARoomLevel_GetRoomData, "GetRoomData" }, // 2540367843
+		{ &Z_Construct_UFunction_ARoomLevel_IsLocked, "IsLocked" }, // 1795292058
+		{ &Z_Construct_UFunction_ARoomLevel_IsPlayerInside, "IsPlayerInside" }, // 3503555454
+		{ &Z_Construct_UFunction_ARoomLevel_IsVisible, "IsVisible" }, // 1322652601
+		{ &Z_Construct_UFunction_ARoomLevel_Lock, "Lock" }, // 103880081
+		{ &Z_Construct_UFunction_ARoomLevel_OnTriggerBeginOverlap, "OnTriggerBeginOverlap" }, // 3337058046
+		{ &Z_Construct_UFunction_ARoomLevel_OnTriggerEndOverlap, "OnTriggerEndOverlap" }, // 1599527286
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARoomLevel>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_ARoomLevel_Statics
+
+// ********** Begin Class ARoomLevel Property Definitions ******************************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_Data = { "Data", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, Data), Z_Construct_UClass_URoomData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Data_MetaData), NewProp_Data_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_Room = { "Room", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, Room), Z_Construct_UClass_URoom_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Room_MetaData), NewProp_Room_MetaData) };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_VisibilityChangedEvent = { "VisibilityChangedEvent", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, VisibilityChangedEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VisibilityChangedEvent_MetaData), NewProp_VisibilityChangedEvent_MetaData) }; // 2652638603
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_ActorEnterRoomEvent = { "ActorEnterRoomEvent", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, ActorEnterRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorEnterRoomEvent_MetaData), NewProp_ActorEnterRoomEvent_MetaData) }; // 976125904
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_ActorExitRoomEvent = { "ActorExitRoomEvent", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, ActorExitRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorExitRoomEvent_MetaData), NewProp_ActorExitRoomEvent_MetaData) }; // 976125904
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_VisibilityChangedEvent = { "VisibilityChangedEvent", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, VisibilityChangedEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelVisibilityEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VisibilityChangedEvent_MetaData), NewProp_VisibilityChangedEvent_MetaData) }; // 2386920810
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_ActorEnterRoomEvent = { "ActorEnterRoomEvent", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, ActorEnterRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorEnterRoomEvent_MetaData), NewProp_ActorEnterRoomEvent_MetaData) }; // 3362528065
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_ActorExitRoomEvent = { "ActorExitRoomEvent", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, ActorExitRoomEvent), Z_Construct_UDelegateFunction_ProceduralDungeon_RoomLevelActorEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorExitRoomEvent_MetaData), NewProp_ActorExitRoomEvent_MetaData) }; // 3362528065
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARoomLevel_Statics::NewProp_RoomTrigger = { "RoomTrigger", nullptr, (EPropertyFlags)0x0040000000082008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARoomLevel, RoomTrigger), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RoomTrigger_MetaData), NewProp_RoomTrigger_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARoomLevel_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARoomLevel_Statics::NewProp_Data,
@@ -756,6 +922,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARoomLeve
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARoomLevel_Statics::NewProp_RoomTrigger,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARoomLevel_Statics::PropPointers) < 2048);
+// ********** End Class ARoomLevel Property Definitions ********************************************
 UObject* (*const Z_Construct_UClass_ARoomLevel_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_ALevelScriptActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeon,
@@ -773,9 +940,14 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ARoomLevel_Statics::Cla
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ARoomLevel_Statics::PropPointers),
 	0,
-	0x009003A4u,
+	0x009002A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ARoomLevel_Statics::Class_MetaDataParams), Z_Construct_UClass_ARoomLevel_Statics::Class_MetaDataParams)
 };
+void ARoomLevel::StaticRegisterNativesARoomLevel()
+{
+	UClass* Class = ARoomLevel::StaticClass();
+	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_ARoomLevel_Statics::Funcs));
+}
 UClass* Z_Construct_UClass_ARoomLevel()
 {
 	if (!Z_Registration_Info_UClass_ARoomLevel.OuterSingleton)
@@ -784,21 +956,23 @@ UClass* Z_Construct_UClass_ARoomLevel()
 	}
 	return Z_Registration_Info_UClass_ARoomLevel.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(ARoomLevel);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, ARoomLevel);
 ARoomLevel::~ARoomLevel() {}
 // ********** End Class ARoomLevel *****************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARoomLevel, ARoomLevel::StaticClass, TEXT("ARoomLevel"), &Z_Registration_Info_UClass_ARoomLevel, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARoomLevel), 987906920U) },
+		{ Z_Construct_UClass_ARoomLevel, ARoomLevel::StaticClass, TEXT("ARoomLevel"), &Z_Registration_Info_UClass_ARoomLevel, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARoomLevel), 3670192155U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_3171686441(TEXT("/Script/ProceduralDungeon"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_483674112{
+	TEXT("/Script/ProceduralDungeon"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_RoomLevel_h__Script_ProceduralDungeon_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

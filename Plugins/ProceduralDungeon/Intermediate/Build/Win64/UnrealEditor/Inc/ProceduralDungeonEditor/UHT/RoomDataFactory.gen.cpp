@@ -8,7 +8,7 @@
 #include "Factories/RoomDataFactory.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
 void EmptyLinkFunctionForGeneratedCodeRoomDataFactory() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -19,9 +19,6 @@ UPackage* Z_Construct_UPackage__Script_ProceduralDungeonEditor();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class URoomDataFactory *********************************************************
-void URoomDataFactory::StaticRegisterNativesURoomDataFactory()
-{
-}
 FClassRegistrationInfo Z_Registration_Info_UClass_URoomDataFactory;
 UClass* URoomDataFactory::GetPrivateStaticClass()
 {
@@ -29,7 +26,7 @@ UClass* URoomDataFactory::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_URoomDataFactory.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			StaticPackage(),
+			TClass::StaticPackage(),
 			TEXT("RoomDataFactory"),
 			Z_Registration_Info_UClass_URoomDataFactory.InnerSingleton,
 			StaticRegisterNativesURoomDataFactory,
@@ -59,12 +56,15 @@ struct Z_Construct_UClass_URoomDataFactory_Statics
 		{ "ModuleRelativePath", "Private/Factories/RoomDataFactory.h" },
 	};
 #endif // WITH_METADATA
+
+// ********** Begin Class URoomDataFactory constinit property declarations *************************
+// ********** End Class URoomDataFactory constinit property declarations ***************************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<URoomDataFactory>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-};
+}; // struct Z_Construct_UClass_URoomDataFactory_Statics
 UObject* (*const Z_Construct_UClass_URoomDataFactory_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UFactory,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProceduralDungeonEditor,
@@ -85,6 +85,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_URoomDataFactory_Static
 	0x000000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_URoomDataFactory_Statics::Class_MetaDataParams), Z_Construct_UClass_URoomDataFactory_Statics::Class_MetaDataParams)
 };
+void URoomDataFactory::StaticRegisterNativesURoomDataFactory()
+{
+}
 UClass* Z_Construct_UClass_URoomDataFactory()
 {
 	if (!Z_Registration_Info_UClass_URoomDataFactory.OuterSingleton)
@@ -93,21 +96,23 @@ UClass* Z_Construct_UClass_URoomDataFactory()
 	}
 	return Z_Registration_Info_UClass_URoomDataFactory.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR(URoomDataFactory);
+DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, URoomDataFactory);
 URoomDataFactory::~URoomDataFactory() {}
 // ********** End Class URoomDataFactory ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics
+struct Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_URoomDataFactory, URoomDataFactory::StaticClass, TEXT("URoomDataFactory"), &Z_Registration_Info_UClass_URoomDataFactory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomDataFactory), 538178260U) },
+		{ Z_Construct_UClass_URoomDataFactory, URoomDataFactory::StaticClass, TEXT("URoomDataFactory"), &Z_Registration_Info_UClass_URoomDataFactory, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URoomDataFactory), 110441141U) },
 	};
-};
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_2671087351(TEXT("/Script/ProceduralDungeonEditor"),
-	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics::ClassInfo),
+}; // Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics 
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_3361284164{
+	TEXT("/Script/ProceduralDungeonEditor"),
+	Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeonEditor_Private_Factories_RoomDataFactory_h__Script_ProceduralDungeonEditor_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	nullptr, 0,
+};
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

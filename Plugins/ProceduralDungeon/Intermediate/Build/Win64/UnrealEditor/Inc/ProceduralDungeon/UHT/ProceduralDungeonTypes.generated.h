@@ -17,16 +17,27 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin ScriptStruct FDoorDef **********************************************************
-#define FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h_100_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FDoorDef_Statics; \
+struct Z_Construct_UScriptStruct_FDoorDef_Statics;
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h_110_GENERATED_BODY \
+	friend struct ::Z_Construct_UScriptStruct_FDoorDef_Statics; \
 	static class UScriptStruct* StaticStruct();
 
 
 struct FDoorDef;
 // ********** End ScriptStruct FDoorDef ************************************************************
 
+// ********** Begin ScriptStruct FRoomCandidate ****************************************************
+struct Z_Construct_UScriptStruct_FRoomCandidate_Statics;
+#define FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h_194_GENERATED_BODY \
+	friend struct ::Z_Construct_UScriptStruct_FRoomCandidate_Statics; \
+	static class UScriptStruct* StaticStruct();
+
+
+struct FRoomCandidate;
+// ********** End ScriptStruct FRoomCandidate ******************************************************
+
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_6_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h
+#define CURRENT_FILE_ID FID_Users_symig_Documents_GitHub_ARPG_5_7_Plugins_ProceduralDungeon_Source_ProceduralDungeon_Public_ProceduralDungeonTypes_h
 
 // ********** Begin Enum EGenerationState **********************************************************
 #define FOREACH_ENUM_EGENERATIONSTATE(op) \
@@ -40,8 +51,21 @@ struct FDoorDef;
 
 enum class EGenerationState : uint8;
 template<> struct TIsUEnumClass<EGenerationState> { enum { Value = true }; };
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationState>();
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EGenerationState>();
 // ********** End Enum EGenerationState ************************************************************
+
+// ********** Begin Enum EGenerationStatus *********************************************************
+#define FOREACH_ENUM_EGENERATIONSTATUS(op) \
+	op(EGenerationStatus::NotStarted) \
+	op(EGenerationStatus::InProgress) \
+	op(EGenerationStatus::Completed) \
+	op(EGenerationStatus::Failed) \
+	op(EGenerationStatus::NbStatus) 
+
+enum class EGenerationStatus : uint8;
+template<> struct TIsUEnumClass<EGenerationStatus> { enum { Value = true }; };
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EGenerationStatus>();
+// ********** End Enum EGenerationStatus ***********************************************************
 
 // ********** Begin Enum EDoorDirection ************************************************************
 #define FOREACH_ENUM_EDOORDIRECTION(op) \
@@ -53,7 +77,7 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationState>();
 
 enum class EDoorDirection : uint8;
 template<> struct TIsUEnumClass<EDoorDirection> { enum { Value = true }; };
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EDoorDirection>();
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EDoorDirection>();
 // ********** End Enum EDoorDirection **************************************************************
 
 // ********** Begin Enum EGenerationType ***********************************************************
@@ -64,7 +88,7 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EDoorDirection>();
 
 enum class EGenerationType : uint8;
 template<> struct TIsUEnumClass<EGenerationType> { enum { Value = true }; };
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationType>();
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EGenerationType>();
 // ********** End Enum EGenerationType *************************************************************
 
 // ********** Begin Enum ESeedType *****************************************************************
@@ -76,7 +100,7 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EGenerationType>();
 
 enum class ESeedType : uint8;
 template<> struct TIsUEnumClass<ESeedType> { enum { Value = true }; };
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<ESeedType>();
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<ESeedType>();
 // ********** End Enum ESeedType *******************************************************************
 
 // ********** Begin Enum EVisibilityMode ***********************************************************
@@ -89,7 +113,7 @@ template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<ESeedType>();
 
 enum class EVisibilityMode : uint8;
 template<> struct TIsUEnumClass<EVisibilityMode> { enum { Value = true }; };
-template<> PROCEDURALDUNGEON_API UEnum* StaticEnum<EVisibilityMode>();
+template<> PROCEDURALDUNGEON_NON_ATTRIBUTED_API UEnum* StaticEnum<EVisibilityMode>();
 // ********** End Enum EVisibilityMode *************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
