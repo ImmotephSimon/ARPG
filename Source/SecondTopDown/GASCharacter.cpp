@@ -150,3 +150,27 @@ void AGASCharacter::InitializeAttributes()
     }
 }
 
+FGameplayEffectContextHandle AGASCharacter::MakeEffectContextWithCauser(AActor* EffectCauser)
+{
+    if (!AbilitySystemComponent)
+    {
+        return FGameplayEffectContextHandle();
+    }
+
+    // Create context
+    FGameplayEffectContextHandle ContextHandle = AbilitySystemComponent->MakeEffectContext();
+
+    FGameplayEffectContext* Context = ContextHandle.Get();
+    if (Context)
+    {
+        // Set the instigator (the character causing the effect)
+        Context->AddInstigator(this, this);
+
+        // Set the optional effect causer
+        Context->AddInstigator(EffectCauser, EffectCauser); // Yes, same method, different actor
+    }
+
+    return ContextHandle;
+}
+
+

@@ -45,6 +45,8 @@ public:
 	// Implement IAbilitySystemInterface
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 
+	UFUNCTION(BlueprintCallable, Category = "GAS|Effects")
+	FGameplayEffectContextHandle MakeEffectContextWithCauser(AActor* EffectCauser);
 	
 	/*virtual FGenericTeamId GetGenericTeamId() const override { return TeamId; }
 
@@ -88,7 +90,7 @@ public:
 	void OnHealthChanged(float CurrentHealth, float MaxHealth);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Gameplay")
-	void OnDeath(const FVector& ImpactVelocity);
+	void OnDeath(const FVector& ImpactVelocity, AActor* Killer);
 
 	UFUNCTION(BlueprintCallable, Category = "Event")
 	void TriggerHealthChanged();

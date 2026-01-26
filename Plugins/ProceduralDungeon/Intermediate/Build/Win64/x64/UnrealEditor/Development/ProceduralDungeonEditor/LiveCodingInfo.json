@@ -18,15 +18,15 @@
 			"ProceduralDungeonEdMode.cpp.obj",
 			"ProceduralDungeonEdModeToolkit.cpp.obj",
 			"SProceduralDungeonEdModeWidget.cpp.obj",
+			"ProceduralDungeonEditorTool.cpp.obj",
+			"ProceduralDungeonEditorTool_Door.cpp.obj",
+			"ProceduralDungeonEditorTool_Size.cpp.obj",
 			"DoorTypeFactory.cpp.obj",
 			"RoomDataFactory.cpp.obj",
 			"ProceduralDungeonEditor.cpp.obj",
 			"ProceduralDungeonEditorSettings.cpp.obj",
 			"ProceduralDungeonEdLog.cpp.obj",
-			"ProceduralDungeonEdTypes.cpp.obj",
-			"ProceduralDungeonEditorTool.cpp.obj",
-			"ProceduralDungeonEditorTool_Door.cpp.obj",
-			"ProceduralDungeonEditorTool_Size.cpp.obj"
+			"ProceduralDungeonEdTypes.cpp.obj"
 		]
 	}
 }
