@@ -1,8 +1,0 @@
-{
-	"BuildId": "47537391",
-	"Modules": 
-	{
-		"ProceduralDungeon": "UnrealEditor-ProceduralDungeon.dll",
-		"ProceduralDungeonEditor": "UnrealEditor-ProceduralDungeonEditor.dll"
-	}
-}
