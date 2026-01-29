@@ -208,7 +208,13 @@ void UCombatantAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
                 // Handle OnDeath
                 if (OldHealth > 0.f && GetCurrentHealth() <= 0.f)
                 {
-                    Character->OnDeath(DamageInstigator->GetActorForwardVector());
+                    if (Character && DamageCauser)
+                    {
+                        Character->OnDeath(
+                            DamageCauser->GetActorForwardVector(),
+                            DamageCauser
+                        );
+                    }
                 }
 
                 
