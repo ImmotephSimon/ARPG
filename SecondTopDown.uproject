@@ -59,6 +59,10 @@
 		{
 			"Name": "NiagaraFluids",
 			"Enabled": true
+		},
+		{
+			"Name": "SearchMaths",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
