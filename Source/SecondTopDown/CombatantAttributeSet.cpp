@@ -35,36 +35,6 @@ FGameplayAttribute UCombatantAttributeSet::GetInDamageAttribute()
 }
 
 
-FGameplayAttribute UCombatantAttributeSet::GetFireTakenAttribute()
-{
-    static FGameplayAttribute FireTakenAttribute(UCombatantAttributeSet::StaticClass()->FindPropertyByName(GET_MEMBER_NAME_CHECKED(UCombatantAttributeSet, FireTaken)));
-    return FireTakenAttribute;
-}
-
-FGameplayAttribute UCombatantAttributeSet::GetColdTakenAttribute()
-{
-    static FGameplayAttribute ColdTakenAttribute(UCombatantAttributeSet::StaticClass()->FindPropertyByName(GET_MEMBER_NAME_CHECKED(UCombatantAttributeSet, ColdTaken)));
-    return ColdTakenAttribute;
-}
-
-FGameplayAttribute UCombatantAttributeSet::GetLightningTakenAttribute()
-{
-    static FGameplayAttribute LightningTakenAttribute(UCombatantAttributeSet::StaticClass()->FindPropertyByName(GET_MEMBER_NAME_CHECKED(UCombatantAttributeSet, LightningTaken)));
-    return LightningTakenAttribute;
-}
-
-FGameplayAttribute UCombatantAttributeSet::GetChaosTakenAttribute()
-{
-    static FGameplayAttribute ChaosTakenAttribute(UCombatantAttributeSet::StaticClass()->FindPropertyByName(GET_MEMBER_NAME_CHECKED(UCombatantAttributeSet, ChaosTaken)));
-    return ChaosTakenAttribute;
-}
-
-FGameplayAttribute UCombatantAttributeSet::GetPhysicalTakenAttribute()
-{
-    static FGameplayAttribute PhysicalTakenAttribute(UCombatantAttributeSet::StaticClass()->FindPropertyByName(GET_MEMBER_NAME_CHECKED(UCombatantAttributeSet, PhysicalTaken)));
-    return PhysicalTakenAttribute;
-}
-
 float UCombatantAttributeSet::GetCurrentHealth() const
 {
     return CurrentHealth.GetCurrentValue();
@@ -112,55 +82,7 @@ void UCombatantAttributeSet::SetInDamage(float Value)
 }
 
 
-float UCombatantAttributeSet::GetFireTaken() const
-{
-    return FireTaken.GetCurrentValue();
-}
 
-void UCombatantAttributeSet::SetFireTaken(float Value)
-{
-    FireTaken.SetCurrentValue(Value);
-}
-
-float UCombatantAttributeSet::GetColdTaken() const
-{
-    return ColdTaken.GetCurrentValue();
-}
-
-void UCombatantAttributeSet::SetColdTaken(float Value)
-{
-    ColdTaken.SetCurrentValue(Value);
-}
-
-float UCombatantAttributeSet::GetLightningTaken() const
-{
-    return LightningTaken.GetCurrentValue();
-}
-
-void UCombatantAttributeSet::SetLightningTaken(float Value)
-{
-    LightningTaken.SetCurrentValue(Value);
-}
-
-float UCombatantAttributeSet::GetChaosTaken() const
-{
-    return ChaosTaken.GetCurrentValue();
-}
-
-void UCombatantAttributeSet::SetChaosTaken(float Value)
-{
-    ChaosTaken.SetCurrentValue(Value);
-}
-
-float UCombatantAttributeSet::GetPhysicalTaken() const
-{
-    return PhysicalTaken.GetCurrentValue();
-}
-
-void UCombatantAttributeSet::SetPhysicalTaken(float Value)
-{
-    PhysicalTaken.SetCurrentValue(Value);
-}
 
 
 
@@ -191,17 +113,15 @@ void UCombatantAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
 
 
             // Apply mitigation to damage
-            UE_LOG(LogTemp, Warning, TEXT("Damage Applied before mitigation: %f"), Damage);
-            Damage = ApplyDamageMitigation(Data, GameplayTagContainer, Damage);
-            UE_LOG(LogTemp, Warning, TEXT("Damage Applied after mitigation: %f"), Damage);
+            UE_LOG(LogTemp, Log, TEXT("Damage Applied after mitigation: %f"), Damage);
             
             float ExcessDamage = AddShieldCurrent(-Damage);
             if (ExcessDamage > 0.001f) 
             {
                 float OldHealth = GetCurrentHealth();
-                UE_LOG(LogTemp, Warning, TEXT("Health before hit: %f"), GetCurrentHealth());
+                UE_LOG(LogTemp, Log, TEXT("Health before hit: %f"), GetCurrentHealth());
                 SetCurrentHealth(FMath::Clamp(GetCurrentHealth() - ExcessDamage, 0.0f, GetTotalMaxHealth()));
-                UE_LOG(LogTemp, Warning, TEXT("Health after hit: %f"), GetCurrentHealth());
+                UE_LOG(LogTemp, Log, TEXT("Health after hit: %f"), GetCurrentHealth());
                 // Call OnHealthChanged event
                 Character->TriggerHealthChanged();
 
@@ -233,41 +153,6 @@ void UCombatantAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModC
     
 }
 
-float UCombatantAttributeSet::ApplyDamageMitigation(const FGameplayEffectModCallbackData& Data, FGameplayTagContainer& GameplayTagContainer, float& Damage)
-{
-    float DamageMultiplier = 0.0f;
-
-    if (GameplayTagContainer.HasTag(FGameplayTag::RequestGameplayTag(FName("Damage.Type.Physical"))))
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Physical damage: %f"), Damage);
-        DamageMultiplier = GetPhysicalTakenAttribute().GetNumericValue(this);
-    }
-    else if (GameplayTagContainer.HasTag(FGameplayTag::RequestGameplayTag(FName("Damage.Type.Fire"))))
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Fire damage: %f"), Damage);
-        DamageMultiplier = GetFireTakenAttribute().GetNumericValue(this);
-    }
-    else if (GameplayTagContainer.HasTag(FGameplayTag::RequestGameplayTag(FName("Damage.Type.Cold"))))
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Cold damage: %f"), Damage);
-        DamageMultiplier = GetColdTakenAttribute().GetNumericValue(this);
-    }
-    else if (GameplayTagContainer.HasTag(FGameplayTag::RequestGameplayTag(FName("Damage.Type.Lightning"))))
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Lightning damage: %f"), Damage);
-        DamageMultiplier = GetLightningTakenAttribute().GetNumericValue(this);
-    }
-    else if (GameplayTagContainer.HasTag(FGameplayTag::RequestGameplayTag(FName("Damage.Type.Chaos"))))
-    {
-        UE_LOG(LogTemp, Warning, TEXT("Chaos damage: %f"), Damage);
-        DamageMultiplier = GetChaosTakenAttribute().GetNumericValue(this);
-    }
-
-    
-
-    return Damage * (DamageMultiplier);
-    
-}
 
 
 float UCombatantAttributeSet::AddShieldCurrent(float Addition)
@@ -286,7 +171,7 @@ float UCombatantAttributeSet::AddShieldCurrent(float Addition)
 
     AGASCharacter* Character = Cast<AGASCharacter>(GetOwningActor());
     Character->EnergyShieldChanged.Broadcast();
-    UE_LOG(LogTemp, Warning, TEXT("Returning excess damage: %f"), ExcessDamage);
+    UE_LOG(LogTemp, Log, TEXT("Returning excess damage: %f"), ExcessDamage);
 
     return ExcessDamage;
 }

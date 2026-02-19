@@ -74,36 +74,34 @@ void AGASCharacter::AddIncreasedHealth(float AddedIncreasedHealth)
     
 }
 
+float AGASCharacter::GetCurrentHealth() const
+{
+    return AttributeSet->GetCurrentHealth();
+}
+
+float AGASCharacter::GetBaseMaxHealth() const
+{
+    return AttributeSet->GetBaseMaxHealth(); 
+}
+
+float AGASCharacter::GetIncreasedHealth() const
+{
+    return AttributeSet->GetIncreasedHealth();
+}
+
+float AGASCharacter::GetTotalMaxHealth() const
+{
+    return AttributeSet->GetTotalMaxHealth();
+}
+
+
+
 
 void AGASCharacter::AddInDamage(float AddedInDamage)
 {
     AttributeSet->SetInDamage(AttributeSet->GetInDamage() + AddedInDamage);
 }
 
-void AGASCharacter::IncreaseFireTaken(float Multiplier)
-{
-    AttributeSet->SetFireTaken(AttributeSet->GetFireTaken() * Multiplier);
-}
-
-void AGASCharacter::IncreaseColdTaken(float Multiplier)
-{
-    AttributeSet->SetColdTaken(AttributeSet->GetColdTaken() * Multiplier);
-}
-
-void AGASCharacter::IncreaseLightningTaken(float Multiplier)
-{
-    AttributeSet->SetLightningTaken(AttributeSet->GetLightningTaken() * Multiplier);
-}
-
-void AGASCharacter::IncreaseChaosTaken(float Multiplier)
-{
-    AttributeSet->SetChaosTaken(AttributeSet->GetChaosTaken() * Multiplier);
-}
-
-void AGASCharacter::IncreasePhysicalTaken(float Multiplier)
-{
-    AttributeSet->SetPhysicalTaken(AttributeSet->GetPhysicalTaken() * Multiplier);
-}
 
 void AGASCharacter::AddShield(float AddedShield)
 {

@@ -105,30 +105,23 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	void AddIncreasedHealth(float AddedIncreasedHealth);
 
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetCurrentHealth() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetBaseMaxHealth() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetIncreasedHealth() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetTotalMaxHealth() const;
+
 
 	// Add In Damage
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	void AddInDamage(float AddedInDamage);
 
-	// Add Fire Resistance
-	UFUNCTION(BlueprintCallable, Category = "Attributes")
-	void IncreaseFireTaken(float Multiplier);
-
-	// Add Cold Resistance
-	UFUNCTION(BlueprintCallable, Category = "Attributes")
-	void IncreaseColdTaken(float Multiplier);
-
-	// Add Lightning Resistance
-	UFUNCTION(BlueprintCallable, Category = "Attributes")
-	void IncreaseLightningTaken(float Multiplier);
-
-	// Add Chaos Resistance
-	UFUNCTION(BlueprintCallable, Category = "Attributes")
-	void IncreaseChaosTaken(float Multiplier);
-
-	// Add Armour
-	UFUNCTION(BlueprintCallable, Category = "Attributes")
-	void IncreasePhysicalTaken(float Multiplier);
 
 	// Shield properties
 	UPROPERTY(BlueprintAssignable, Category = "Damage")

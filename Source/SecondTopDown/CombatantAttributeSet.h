@@ -34,20 +34,6 @@ public:
 
 
 
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	static FGameplayAttribute GetFireTakenAttribute();
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	static FGameplayAttribute GetColdTakenAttribute();
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	static FGameplayAttribute GetLightningTakenAttribute();
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	static FGameplayAttribute GetChaosTakenAttribute();
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	static FGameplayAttribute GetPhysicalTakenAttribute();
 
 
 
@@ -71,27 +57,6 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Attributes")
 	float GetInDamage() const;
 	void SetInDamage(float Value);
-
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	float GetFireTaken() const;
-	void SetFireTaken(float Value);
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	float GetColdTaken() const;
-	void SetColdTaken(float Value);
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	float GetLightningTaken() const;
-	void SetLightningTaken(float Value);
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	float GetChaosTaken() const;
-	void SetChaosTaken(float Value);
-
-	UFUNCTION(BlueprintPure, Category = "Attributes")
-	float GetPhysicalTaken() const;
-	void SetPhysicalTaken(float Value);
 
 
 	// Energy Shield variables
@@ -118,26 +83,6 @@ private:
 
 	UPROPERTY()
 	FGameplayAttributeData InDamage;
-
-
-	UPROPERTY()
-	FGameplayAttributeData FireTaken = 1;
-
-	UPROPERTY()
-	FGameplayAttributeData ColdTaken = 1;
-
-	UPROPERTY()
-	FGameplayAttributeData LightningTaken = 1;
-
-	UPROPERTY()
-	FGameplayAttributeData ChaosTaken = 1;
-
-	UPROPERTY()
-	FGameplayAttributeData PhysicalTaken = 1;
-
-
-	float ApplyDamageMitigation(const FGameplayEffectModCallbackData& Data, FGameplayTagContainer& GameplayTagContainer, float& Damage);
-
 
 	// Energy Shield variables
 	UPROPERTY()
