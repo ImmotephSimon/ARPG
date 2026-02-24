@@ -1,10 +1,10 @@
-Project: Modular Systems Architecture (ARPG Framework)
-A high-performance, data-driven framework built in UE5.7 (Blueprints). This project serves as a deep dive into decoupled logic, event-driven communication, and scalable data structures.
+# ARPG Systems Framework (UE5.7)
 
-Data-Driven Design: Utilized Data Tables and Structs to externalize game constants, mirroring SQL-style relational data management.
+A modular, data-driven framework focused on decoupled systems and real-time logic.
 
-Component-Based Architecture: Implemented a modular Attribute and Ability system to ensure Separation of Concerns and maintainability.
+### Architectural Features:
+* **Component-Based Design:** Attribute and Ability systems encapsulated in Actor Components to avoid "God Object" patterns.
+* **Data-Driven Logic:** System constants and item scaling managed via Data Tables/Structs for easy iteration and externalization.
+* **Event-Driven UI/Logic:** Utilized Delegates and Blueprint Interfaces to eliminate Tick-dependency and optimize CPU overhead.
 
-Event-Driven Logic: Replaced polling/tick logic with Delegates and Interfaces to optimize CPU overhead and ensure a reactive UI/UX.
-
-Version Control Hygiene: Focused on atomic commits with detailed technical documentation to simulate a professional team workflow.
+> **Note on Version Control:** Logic is implemented via Blueprints (.uasset). Architectural changes, refactors, and logic flows are documented through detailed, atomic commit messages.
