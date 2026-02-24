@@ -1,53 +1,10 @@
-Project folders:
+# ARPG Systems Framework (UE5.7)
 
-Ancient_Golem
+A modular, data-driven framework focused on decoupled systems and real-time logic.
 
-AncientTreasures
+### Architectural Features:
+* **Component-Based Design:** Attribute and Ability systems encapsulated in Actor Components to avoid "God Object" patterns.
+* **Data-Driven Logic:** System constants and item scaling managed via Data Tables/Structs for easy iteration and externalization.
+* **Event-Driven UI/Logic:** Utilized Delegates and Blueprint Interfaces to eliminate Tick-dependency and optimize CPU overhead.
 
-Cave_Ruins
-
-Characters
-
-CityofBrass_Enemies
-
-Collections
-
-Developers
-
-Dungeon
-
-Fab
-
-Fantastic_Village_Pack
-
-Gothic_Cathedral
-
-HandPaintedEnvironment
-
-InfinityBladeEffects
-
-InfinityBladeFireLands
-
-Kobo_Dungeon
-
-LootSet
-
-MegaMagicVFXBundle
-
-Megascans
-
-MS
-
-MSPresets
-
-ParagonSevarog
-
-PinRPG_IconSet_01_Assets
-
-Primitive_Characters_Pack
-
-SKnight_modular
-
-TemplesOfCambodia
-
-TopDown
+> **Note on Version Control:** Logic is implemented via Blueprints (.uasset). Architectural changes, refactors, and logic flows are documented through detailed, atomic commit messages.
