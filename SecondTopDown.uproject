@@ -29,7 +29,8 @@
 		},
 		{
 			"Name": "CircularDependenciesDetector",
-			"Enabled": false
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/698a2106995e41cb934ada3bb0088a5f"
 		},
 		{
 			"Name": "ActorLocker",
