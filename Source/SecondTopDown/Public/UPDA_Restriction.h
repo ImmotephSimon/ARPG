@@ -56,6 +56,7 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     FGuid ScopeGuid;
 
+    UFUNCTION(BlueprintCallable, Category = "Restriction")
     bool IsMet(const FGameplayTag& ContextTag, UObject* ContextObj, FGuid ContextGuid) const;
 };
 
@@ -97,7 +98,7 @@ struct FUpgradeDto
     EModifierOp MathOp = EModifierOp::Additive;
  
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TSoftObjectPtr<UPDA_Restriction> Restriction;
+    UPDA_Restriction* Restriction;
  
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     FGameplayTag Modifier;
