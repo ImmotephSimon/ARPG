@@ -23,12 +23,15 @@ enum class EModSlot : uint8
 UENUM(BlueprintType)
 enum class EEquipmentType : uint8
 {
-    Unset      UMETA(DisplayName = "Unset"),
-    Weapon     UMETA(DisplayName = "Weapon"),
-    Armour     UMETA(DisplayName = "Armour"),
-    Boots      UMETA(DisplayName = "Boots"),
-    Jewellery  UMETA(DisplayName = "Jewellery"),
-    Utility    UMETA(DisplayName = "Utility")
+    Unset,
+    Mainhand,
+    Armour,
+    Boots,
+    Ring,
+    Utility,
+    Charm,
+    Chart,
+    Offhand
 };
 
 UENUM(BlueprintType)
