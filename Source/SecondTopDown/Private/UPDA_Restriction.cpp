@@ -21,3 +21,9 @@ bool UPDA_Restriction::IsMet(const FGameplayTag& ContextTag, UObject* ContextObj
 
     return !ScopeGuid.IsValid() || ContextGuid == ScopeGuid;
 }
+
+void UPDA_Restriction::OverrideScopeTag(FGameplayTag Tag)
+{
+    ScopeTags.Reset(); // Correct method to clear a container
+    ScopeTags.AddTag(Tag);
+}

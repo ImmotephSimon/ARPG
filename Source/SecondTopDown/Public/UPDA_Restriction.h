@@ -61,6 +61,10 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = "Restriction")
     bool IsMet(const FGameplayTag& ContextTag, UObject* ContextObj, FGuid ContextGuid) const;
+
+    // In Header
+    UFUNCTION(BlueprintCallable, Category = "Restriction")
+    void OverrideScopeTag(FGameplayTag Tag);
 };
 
 USTRUCT(BlueprintType)
