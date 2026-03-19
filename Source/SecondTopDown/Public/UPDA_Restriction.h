@@ -88,9 +88,6 @@ struct FModifierRow : public FTableRowBase {
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     EModSlot SlotType = EModSlot::Unset;
-
-    UPROPERTY(EditAnywhere, BlueprintReadOnly)
-    TSet<EEquipmentType> AllowedTypes;
 };
 
 USTRUCT(BlueprintType)
