@@ -71,6 +71,7 @@ USTRUCT(BlueprintType)
 struct FModifierRow : public FTableRowBase {
     GENERATED_BODY()
 
+
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     float Weight = 1.0f;
 
@@ -94,12 +95,18 @@ USTRUCT(BlueprintType)
 struct FUpgradeDto 
 {
     GENERATED_BODY()
+    FUpgradeDto()
+        : FinalValue(0.0f)
+        , MathOp(EModifierOp::Additive)
+        , Restriction(nullptr)
+    {
+    }
  
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    float FinalValue = 0.0f;
+    float FinalValue;
  
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    EModifierOp MathOp = EModifierOp::Additive;
+    EModifierOp MathOp;
  
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     UPDA_Restriction* Restriction;
