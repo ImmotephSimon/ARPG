@@ -39,9 +39,7 @@ enum class EModifierOp : uint8 {
     Additive,
     Multiplicative,
     Added,
-    FlatMin,
-    FlatMax,
-    Override
+    StatVariance
 };
 
 UCLASS()
@@ -73,7 +71,7 @@ struct FModifierRow : public FTableRowBase {
 
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
-    float Weight = 1.0f;
+    int Weight = 100;
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     float BaseValue = 0.0f;
