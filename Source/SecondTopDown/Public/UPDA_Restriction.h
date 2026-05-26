@@ -17,7 +17,8 @@ enum class EModSlot : uint8
 {
     Unset    UMETA(DisplayName = "Unset"),
     Prefix   UMETA(DisplayName = "Prefix"),
-    Suffix   UMETA(DisplayName = "Suffix")
+    Suffix   UMETA(DisplayName = "Suffix"),
+    Implicit   UMETA(DisplayName = "Implicit")
 };
 
 UENUM(BlueprintType)
@@ -80,7 +81,7 @@ struct FModifierRow : public FTableRowBase {
     FGameplayTag Modifier;
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
-    TSoftObjectPtr<UPDA_Restriction> Restriction;
+    UPDA_Restriction* Restriction;
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
     EModifierOp MathOp = EModifierOp::Additive;

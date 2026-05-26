@@ -7,10 +7,21 @@ public class SecondTopDown : ModuleRules
 	public SecondTopDown(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" , "GameplayTags", "GameplayAbilities", "GameplayTasks", "AIModule"});
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core",
+			"CoreUObject",
+			"Engine",
+			"InputCore",
+			"GameplayTags",
+			"GameplayAbilities",
+			"GameplayTasks",
+			"AIModule",
 
-		PrivateDependencyModuleNames.AddRange(new string[] { });
+			"UMG",
+			"Slate",
+			"SlateCore"
+		});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
