@@ -20,4 +20,7 @@ public:
 
     UFUNCTION(BlueprintCallable, BlueprintPure, Category = "String|Markup")
     static FString FixTooltipMarkup(const FString& Input);
+
+    UFUNCTION(BlueprintPure, Category = "Level Utilities", meta = (DisplayName = "To World Soft Reference", CompactNodeTitle = "->World"))
+    static TSoftObjectPtr<UWorld> Conv_SoftObjectToWorld(const TSoftObjectPtr<UObject>& SoftObject);
 };

@@ -17,7 +17,7 @@ public class SecondTopDown : ModuleRules
 			"GameplayAbilities",
 			"GameplayTasks",
 			"AIModule",
-
+			"EnhancedInput",
 			"UMG",
 			"Slate",
 			"SlateCore"

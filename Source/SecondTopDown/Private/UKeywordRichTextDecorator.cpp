@@ -1,5 +1,5 @@
 // KeywordRichTextDecorator.cpp
-#include "KeywordRichTextDecorator.h"
+#include "UKeywordRichTextDecorator.h"
 #include "Components/RichTextBlock.h"
 #include "Framework/Text/SlateHyperlinkRun.h"
 #include "Widgets/Text/STextBlock.h"

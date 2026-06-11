@@ -143,3 +143,8 @@ FString UGlobalBlueprintFunctionLibrary::FixTooltipMarkup(const FString& Input)
     }
     return Output;
 }
+
+TSoftObjectPtr<UWorld> UGlobalBlueprintFunctionLibrary::Conv_SoftObjectToWorld(const TSoftObjectPtr<UObject>& SoftObject)
+{
+    return TSoftObjectPtr<UWorld>(SoftObject.ToSoftObjectPath());
+}

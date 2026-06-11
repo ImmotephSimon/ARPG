@@ -3,7 +3,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/RichTextBlockDecorator.h"
-#include "KeywordRichTextDecorator.generated.h"
+#include "UKeywordRichTextDecorator.generated.h"
 
 UCLASS(Abstract, Blueprintable)
 class UKeywordRichTextDecorator : public URichTextBlockDecorator
