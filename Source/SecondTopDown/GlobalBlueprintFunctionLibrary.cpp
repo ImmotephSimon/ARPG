@@ -1,5 +1,6 @@
 #include "GlobalBlueprintFunctionLibrary.h"
 #include "Internationalization/Regex.h"
+#include "GenericPlatform/GenericPlatformMemory.h"
 
 int32 UGlobalBlueprintFunctionLibrary::BinarySearch(const TArray<int32>& arr, int32 target) {
     if (arr.Num() == 0) {
@@ -144,7 +145,20 @@ FString UGlobalBlueprintFunctionLibrary::FixTooltipMarkup(const FString& Input)
     return Output;
 }
 
-TSoftObjectPtr<UWorld> UGlobalBlueprintFunctionLibrary::Conv_SoftObjectToWorld(const TSoftObjectPtr<UObject>& SoftObject)
+
+void UGlobalBlueprintFunctionLibrary::LogConciseMemory()
 {
-    return TSoftObjectPtr<UWorld>(SoftObject.ToSoftObjectPath());
+    // 1. Grab low-level OS memory stats
+    FPlatformMemoryStats MemStats = FPlatformMemory::GetStats();
+
+    // 2. Convert bytes to Megabytes for clean numbers
+    uint64 UsedPhysicalMB = MemStats.UsedPhysical / (1024 * 1024);
+    uint64 PeakUsedPhysicalMB = MemStats.PeakUsedPhysical / (1024 * 1024);
+
+    // 3. Grab current tracking count of active UObjects in the engine pool
+    int32 ActiveUObjects = GUObjectArray.GetObjectArrayNum();
+
+    // 4. Print the clean one-liner
+    UE_LOG(LogTemp, Log, TEXT("[MEM TICK] Physical RAM: %llu MB (Peak: %llu MB) | Active UObjects: %d"),
+        UsedPhysicalMB, PeakUsedPhysicalMB, ActiveUObjects);
 }
