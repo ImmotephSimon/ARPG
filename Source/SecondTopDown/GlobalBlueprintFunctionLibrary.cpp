@@ -1,6 +1,7 @@
 #include "GlobalBlueprintFunctionLibrary.h"
 #include "Internationalization/Regex.h"
 #include "GenericPlatform/GenericPlatformMemory.h"
+#include "Containers/Set.h"
 
 int32 UGlobalBlueprintFunctionLibrary::BinarySearch(const TArray<int32>& arr, int32 target) {
     if (arr.Num() == 0) {
@@ -161,4 +162,86 @@ void UGlobalBlueprintFunctionLibrary::LogConciseMemory()
     // 4. Print the clean one-liner
     UE_LOG(LogTemp, Log, TEXT("[MEM TICK] Physical RAM: %llu MB (Peak: %llu MB) | Active UObjects: %d"),
         UsedPhysicalMB, PeakUsedPhysicalMB, ActiveUObjects);
+}
+
+
+
+// Helper structure to track connected rooms (Disjoint Set / Union-Find)
+struct DisjointSet {
+    TMap<FVector2D, FVector2D> Parent;
+
+    FVector2D Find(FVector2D Point) {
+        if (!Parent.Contains(Point)) {
+            Parent.Add(Point, Point);
+            return Point;
+        }
+        if (Parent[Point] == Point) return Point;
+        Parent[Point] = Find(Parent[Point]); // Path compression
+        return Parent[Point];
+    }
+
+    bool Union(FVector2D PointA, FVector2D PointB) {
+        FVector2D RootA = Find(PointA);
+        FVector2D RootB = Find(PointB);
+        if (RootA == RootB) return false; // Already connected, adding this creates a loop!
+        Parent[RootA] = RootB;
+        return true;
+    }
+};
+
+TArray<FCEdge> UGlobalBlueprintFunctionLibrary::GetMinimumSpanningTree(const TArray<FCTriangle>& Triangles)
+{
+    TArray<FCEdge> AllEdges;
+    TArray<FCEdge> MST_Edges;
+
+    // 1. Extract unique edges from your 80 triangles
+    for (const FCTriangle& Tri : Triangles) {
+        TArray<FCEdge> TriEdges = { {Tri.A, Tri.B}, {Tri.B, Tri.C}, {Tri.C, Tri.A} };
+        for (FCEdge& NewEdge : TriEdges) {
+            // Ensure consistent ordering (A always smaller than B) so duplicates match perfectly
+            if (NewEdge.B.X < NewEdge.A.X || (NewEdge.B.X == NewEdge.A.X && NewEdge.B.Y < NewEdge.A.Y)) {
+                Swap(NewEdge.A, NewEdge.B);
+            }
+            if (!AllEdges.Contains(NewEdge)) {
+                AllEdges.Add(NewEdge);
+            }
+        }
+    }
+
+    // 2. Sort edges by squared distance (avoids expensive square roots)
+    AllEdges.Sort([](const FCEdge& Left, const FCEdge& Right) {
+        return FVector2D::DistSquared(Left.A, Left.B) < FVector2D::DistSquared(Right.A, Right.B);
+        });
+
+    // 3. Kruskal's Loop
+    DisjointSet RoomNetwork;
+    for (const FCEdge& Edge : AllEdges) {
+        // If they aren't already connected, link them and keep the edge
+        if (RoomNetwork.Union(Edge.A, Edge.B)) {
+            MST_Edges.Add(Edge);
+        }
+    }
+
+    return MST_Edges;
+}
+
+void UGlobalBlueprintFunctionLibrary::SortEdgesByDistance(UPARAM(ref) TArray<FCEdge>& Edges, bool bAscending)
+{
+    Edges.Sort([bAscending](const FCEdge& A, const FCEdge& B)
+        {
+            return bAscending ? A.Distance < B.Distance
+                : A.Distance > B.Distance;
+        });
+}
+
+FCEdge UGlobalBlueprintFunctionLibrary::MakeCEdge(FVector2D A, FVector2D B)
+{
+    FCEdge NewEdge;
+    NewEdge.A = A;
+    NewEdge.B = B;
+
+    // The explicit, readable property assignment you wanted
+    NewEdge.Distance = FVector2D::Distance(A, B);
+
+    return NewEdge;
 }
